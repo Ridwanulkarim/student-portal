@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Apex University Student Portal - Results, CGPA & Grade Sheets">
-  <title>Results & Grades | Apex University Student Portal</title>
+  <meta name="description" content="IIUC Student Portal - Results & Academic Grade Sheets">
+  <title>Results & Grades | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
 
   <!-- Header -->
   <header class="dashboard-header">
-    <a href="dashboard.html" class="portal-brand" aria-label="Apex University Portal Dashboard">
-      <div class="portal-logo" aria-hidden="true">A</div>
+    <a href="dashboard.html" class="portal-brand" aria-label="IIUC Portal Dashboard">
+      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
       <div class="portal-title-wrapper">
-        <h1>Apex University</h1>
-        <p>Student Portal & Academic Information System</p>
+        <h1>International Islamic University Chittagong</h1>
+        <p>Official Student Portal (IIUC)</p>
       </div>
     </a>
 
     <div class="user-profile-widget">
       <div class="user-details">
         <span class="user-name">Alex Morgan</span>
-        <span class="user-id">ID: SU-2024-8842</span>
+        <span class="user-id">Matric: C201042</span>
       </div>
       <div class="avatar-circle" title="Student Profile Avatar" aria-label="Student Profile Avatar">AM</div>
       <a href="index.html" class="btn btn-secondary btn-sm">Logout</a>
@@ -74,17 +74,14 @@
 
     <!-- Main Content -->
     <main class="dashboard-main">
-
-      <!-- Page Banner -->
       <section class="page-intro-banner">
         <div>
-          <h2 class="page-intro-title">Academic Results & Grade Sheet</h2>
-          <p class="page-intro-subtitle">Cumulative GPA: <strong>3.84 / 4.00</strong> | Earned Credits: 78.0 Hours</p>
+          <h2 class="page-intro-title">IIUC Grade Sheet & Transcripts</h2>
+          <p class="page-intro-subtitle">Cumulative CGPA: <strong>3.84 / 4.00</strong> | Earned Credits: 78.0 Hours</p>
         </div>
-        <a href="#" class="btn btn-primary btn-sm" onclick="alert('Official Transcript PDF downloaded.'); return false;">📄 Official Transcript (PDF)</a>
+        <a href="#" class="btn btn-primary btn-sm" onclick="alert('Downloading official IIUC Transcript PDF...'); return false;">📄 Download Transcript (PDF)</a>
       </section>
 
-      <!-- Previous Semester Result Breakdown (Semester 4) -->
       <section aria-label="Spring 2026 Grade Sheet">
         <div class="section-header">
           <h2 class="section-title">
@@ -94,7 +91,7 @@
         </div>
 
         <div class="table-responsive">
-          <table class="schedule-table" summary="Grade sheet breakdown for Spring 2026 semester">
+          <table class="schedule-table" summary="Grade sheet breakdown">
             <thead>
               <tr>
                 <th scope="col">Course Code</th>
@@ -107,7 +104,7 @@
             </thead>
             <tbody>
               <tr>
-                <td><strong>CSE-201</strong></td>
+                <td><strong>CSE-2401</strong></td>
                 <td>Object Oriented Programming (Java)</td>
                 <td>4.0</td>
                 <td>92%</td>
@@ -115,7 +112,7 @@
                 <td>4.00</td>
               </tr>
               <tr>
-                <td><strong>CSE-203</strong></td>
+                <td><strong>CSE-2403</strong></td>
                 <td>Computer Architecture & Organization</td>
                 <td>3.0</td>
                 <td>86%</td>
@@ -123,26 +120,10 @@
                 <td>3.75</td>
               </tr>
               <tr>
-                <td><strong>MAT-201</strong></td>
-                <td>Linear Algebra & Matrices</td>
+                <td><strong>MATH-2301</strong></td>
+                <td>Linear Algebra & Differential Equations</td>
                 <td>3.0</td>
                 <td>94%</td>
-                <td><span class="badge badge-success">A+</span></td>
-                <td>4.00</td>
-              </tr>
-              <tr>
-                <td><strong>EEE-201</strong></td>
-                <td>Electrical Circuits & Network Analysis</td>
-                <td>3.0</td>
-                <td>88%</td>
-                <td><span class="badge badge-success">A</span></td>
-                <td>3.75</td>
-              </tr>
-              <tr>
-                <td><strong>HUM-101</strong></td>
-                <td>Ethics & Society</td>
-                <td>2.0</td>
-                <td>95%</td>
                 <td><span class="badge badge-success">A+</span></td>
                 <td>4.00</td>
               </tr>
@@ -150,33 +131,30 @@
           </table>
         </div>
       </section>
-
     </main>
 
     <!-- Aside Sidebar -->
-    <aside class="dashboard-aside" aria-label="Grading Scale Information">
+    <aside class="dashboard-aside" aria-label="IIUC Grading Policy">
       <div class="aside-widget">
         <h3 class="aside-widget-title">
-          <span>📈</span> University Grading Scale
+          <span>📈</span> IIUC Grading System
         </h3>
         <ul style="font-size: 0.825rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.35rem;">
-          <li><strong>90% - 100%:</strong> Grade A+ (4.00)</li>
-          <li><strong>85% - 89%:</strong> Grade A (3.75)</li>
-          <li><strong>80% - 84%:</strong> Grade B+ (3.50)</li>
-          <li><strong>75% - 79%:</strong> Grade B (3.00)</li>
-          <li><strong>70% - 74%:</strong> Grade C+ (2.50)</li>
+          <li><strong>80% - 100%:</strong> Grade A+ (4.00)</li>
+          <li><strong>75% - 79%:</strong> Grade A (3.75)</li>
+          <li><strong>70% - 74%:</strong> Grade A- (3.50)</li>
+          <li><strong>65% - 69%:</strong> Grade B+ (3.25)</li>
         </ul>
       </div>
     </aside>
-
   </div>
 
   <!-- Footer -->
   <footer class="dashboard-footer">
     <div class="footer-content-grid">
       <div class="footer-col">
-        <h3>Apex University</h3>
-        <p>Empowering future leaders through excellence in education, research, and innovation.</p>
+        <h3>International Islamic University Chittagong</h3>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh. Official IIUC Student Portal.</p>
       </div>
       <div class="footer-col">
         <h4>Navigation</h4>
@@ -187,7 +165,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Support</h4>
+        <h4>Services</h4>
         <div class="footer-links">
           <a href="attendance.html">Attendance</a>
           <a href="assignments.html">Assignments</a>
@@ -196,11 +174,11 @@
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>📍 100 University Avenue, Science City<br>✉️ support@apex.edu</p>
+        <p>📍 Kumira, Chattogram, Bangladesh<br>✉️ info@iiuc.ac.bd</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Apex University Student Information System. All rights reserved.</p>
+      <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
     </div>
   </footer>
 

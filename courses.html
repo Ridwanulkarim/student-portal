@@ -3,33 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Apex University Student Portal - My Enrolled Courses & Syllabi">
-  <title>My Courses | Apex University Student Portal</title>
+  <meta name="description" content="IIUC Student Portal - My Enrolled Courses & Syllabi">
+  <title>My Courses | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
 
   <!-- Header -->
   <header class="dashboard-header">
-    <a href="dashboard.html" class="portal-brand" aria-label="Apex University Portal Dashboard">
-      <div class="portal-logo" aria-hidden="true">A</div>
+    <a href="dashboard.html" class="portal-brand" aria-label="IIUC Portal Dashboard">
+      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
       <div class="portal-title-wrapper">
-        <h1>Apex University</h1>
-        <p>Student Portal & Academic Information System</p>
+        <h1>International Islamic University Chittagong</h1>
+        <p>Official Student Portal (IIUC)</p>
       </div>
     </a>
 
     <div class="user-profile-widget">
       <div class="user-details">
         <span class="user-name">Alex Morgan</span>
-        <span class="user-id">ID: SU-2024-8842</span>
+        <span class="user-id">Matric: C201042</span>
       </div>
       <div class="avatar-circle" title="Student Profile Avatar" aria-label="Student Profile Avatar">AM</div>
       <a href="index.html" class="btn btn-secondary btn-sm">Logout</a>
     </div>
   </header>
 
-  <!-- Layout Container (Nav + Main + Aside) -->
+  <!-- Layout Container -->
   <div class="dashboard-layout">
 
     <!-- Navigation -->
@@ -74,31 +74,26 @@
 
     <!-- Main Content -->
     <main class="dashboard-main">
-
-      <!-- Page Banner -->
       <section class="page-intro-banner">
         <div>
           <h2 class="page-intro-title">Enrolled Courses & Syllabi</h2>
-          <p class="page-intro-subtitle">Fall Semester 2026 | Total Enrolled Credits: 16.0 Hours</p>
+          <p class="page-intro-subtitle">Spring Semester 2026 | IIUC CSE Department | 16.0 Credit Hours</p>
         </div>
         <div class="filter-tabs">
           <a href="#" class="filter-tab active">All Courses (5)</a>
-          <a href="#" class="filter-tab">Core CS (3)</a>
+          <a href="#" class="filter-tab">Core CSE (3)</a>
           <a href="#" class="filter-tab">Electives (2)</a>
         </div>
       </section>
 
-      <!-- Courses List Section -->
       <section aria-label="Course Syllabi & Cards">
         <div class="courses-grid">
-          
-          <!-- Course Card 1 -->
           <article class="course-card">
             <div>
-              <div class="course-code">CSE-301</div>
+              <div class="course-code">CSE-3501</div>
               <h3 class="course-title">Data Structures & Algorithms</h3>
               <div class="course-instructor">
-                <span>👨‍🏫 Prof. Dr. Sarah Jenkins (Department Head)</span>
+                <span>👨‍🏫 Prof. Dr. Sarah Jenkins (IIUC CSE)</span>
               </div>
               <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
                 Advanced algorithm analysis, asymptotic notation, balanced trees, graph traversal algorithms, dynamic programming, and NP-completeness.
@@ -123,10 +118,9 @@
             </div>
           </article>
 
-          <!-- Course Card 2 -->
           <article class="course-card">
             <div>
-              <div class="course-code">CSE-305</div>
+              <div class="course-code">CSE-3505</div>
               <h3 class="course-title">Database Management Systems</h3>
               <div class="course-instructor">
                 <span>👨‍🏫 Assoc. Prof. Robert Chen</span>
@@ -154,10 +148,9 @@
             </div>
           </article>
 
-          <!-- Course Card 3 -->
           <article class="course-card">
             <div>
-              <div class="course-code">MAT-204</div>
+              <div class="course-code">MATH-2401</div>
               <h3 class="course-title">Discrete Mathematics & Graph Theory</h3>
               <div class="course-instructor">
                 <span>👨‍🏫 Dr. Alan Turing</span>
@@ -184,114 +177,29 @@
               </div>
             </div>
           </article>
-
-          <!-- Course Card 4 -->
-          <article class="course-card">
-            <div>
-              <div class="course-code">EEE-210</div>
-              <h3 class="course-title">Digital Logic Design & Hardware</h3>
-              <div class="course-instructor">
-                <span>👩‍🏫 Dr. Elena Rostova</span>
-              </div>
-              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
-                Boolean algebra, logic gates, combinational and sequential circuit design, flip-flops, registers, counters, Verilog HDL basics.
-              </p>
-              <div class="course-meta">
-                <span>Credits: 4.0</span>
-                <span>Type: Allied Engineering</span>
-              </div>
-            </div>
-            <div class="progress-bar-container">
-              <div class="progress-label-row">
-                <span>Syllabus Covered</span>
-                <span>50%</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill" style="width: 50%;"></div>
-              </div>
-              <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
-                <a href="#" class="btn btn-secondary btn-sm" style="flex: 1;">View Syllabus</a>
-                <a href="#" class="btn btn-primary btn-sm" style="flex: 1;">Course Materials</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Course Card 5 -->
-          <article class="course-card">
-            <div>
-              <div class="course-code">ENG-102</div>
-              <h3 class="course-title">Technical Writing & Communication</h3>
-              <div class="course-instructor">
-                <span>👨‍🏫 Prof. Marcus Vance</span>
-              </div>
-              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
-                Professional engineering documentation, technical reporting, research paper structure, presentation skills, and scientific style.
-              </p>
-              <div class="course-meta">
-                <span>Credits: 2.0</span>
-                <span>Type: Institutional Core</span>
-              </div>
-            </div>
-            <div class="progress-bar-container">
-              <div class="progress-label-row">
-                <span>Syllabus Covered</span>
-                <span>85%</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill" style="width: 85%;"></div>
-              </div>
-              <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
-                <a href="#" class="btn btn-secondary btn-sm" style="flex: 1;">View Syllabus</a>
-                <a href="#" class="btn btn-primary btn-sm" style="flex: 1;">Course Materials</a>
-              </div>
-            </div>
-          </article>
-
         </div>
       </section>
-
     </main>
 
     <!-- Aside Sidebar -->
     <aside class="dashboard-aside" aria-label="Course Advisors & Quick Info">
       <div class="aside-widget">
         <h3 class="aside-widget-title">
-          <span>🎓</span> Academic Advisor
+          <span>🎓</span> IIUC Academic Advisor
         </h3>
         <p style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark);">Prof. Dr. Sarah Jenkins</p>
-        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">Office: Science Bldg Room 410<br>Hours: Tue & Thu 02:00 PM - 04:00 PM</p>
-        <a href="mailto:s.jenkins@apex.edu" class="btn btn-secondary btn-sm btn-block">Email Advisor</a>
-      </div>
-
-      <div class="aside-widget">
-        <h3 class="aside-widget-title">
-          <span>📊</span> Semester Credit Load
-        </h3>
-        <div style="font-size: 0.85rem; color: var(--text-muted);">
-          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-            <span>Enrolled Credits:</span>
-            <strong>16.0 / 18.0 Max</strong>
-          </div>
-          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-            <span>Theory Courses:</span>
-            <strong>4 Courses</strong>
-          </div>
-          <div style="display: flex; justify-content: space-between;">
-            <span>Lab Sessions:</span>
-            <strong>2 Sessions</strong>
-          </div>
-        </div>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">Office: Academic Bldg 410<br>Hours: Tue & Thu 02:00 PM - 04:00 PM</p>
+        <a href="mailto:s.jenkins@iiuc.ac.bd" class="btn btn-secondary btn-sm btn-block">Email Advisor</a>
       </div>
     </aside>
-
   </div>
 
   <!-- Footer -->
   <footer class="dashboard-footer">
     <div class="footer-content-grid">
       <div class="footer-col">
-        <h3>Apex University</h3>
-        <p>Empowering future leaders through excellence in education, research, and innovation.</p>
+        <h3>International Islamic University Chittagong</h3>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh. Official IIUC Student Portal.</p>
       </div>
       <div class="footer-col">
         <h4>Navigation</h4>
@@ -302,20 +210,20 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Support</h4>
+        <h4>Services</h4>
         <div class="footer-links">
           <a href="attendance.html">Attendance</a>
           <a href="assignments.html">Assignments</a>
-          <a href="notices.html">Notices</a>
+          <a href="notices.html">IIUC Notices</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>📍 100 University Avenue, Science City<br>✉️ support@apex.edu</p>
+        <p>📍 Kumira, Chattogram, Bangladesh<br>✉️ info@iiuc.ac.bd</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Apex University Student Information System. All rights reserved.</p>
+      <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
     </div>
   </footer>
 

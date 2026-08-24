@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Apex University Student Portal Dashboard - Overview of courses, schedule, grades, and announcements.">
-  <title>Student Dashboard | Apex University Portal</title>
+  <meta name="description" content="IIUC Student Portal Dashboard - International Islamic University Chittagong.">
+  <title>Student Dashboard | IIUC Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
 
-  <!-- Header: University Branding, Student Profile & Logout -->
+  <!-- Header: IIUC Branding, Student Profile & Logout -->
   <header class="dashboard-header">
-    <a href="dashboard.html" class="portal-brand" aria-label="Apex University Portal Dashboard">
-      <div class="portal-logo" aria-hidden="true">A</div>
+    <a href="dashboard.html" class="portal-brand" aria-label="IIUC Portal Dashboard">
+      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
       <div class="portal-title-wrapper">
-        <h1>Apex University</h1>
-        <p>Student Portal & Academic Information System</p>
+        <h1>International Islamic University Chittagong</h1>
+        <p>Official Student Portal (IIUC)</p>
       </div>
     </a>
 
@@ -23,10 +23,10 @@
     <div class="user-profile-widget">
       <div class="user-details">
         <span class="user-name">Alex Morgan</span>
-        <span class="user-id">ID: SU-2024-8842</span>
+        <span class="user-id">Matric: C201042</span>
       </div>
       <div class="avatar-circle" title="Student Profile Avatar" aria-label="Student Profile Avatar">AM</div>
-      <a href="index.html" class="btn btn-secondary btn-sm" aria-label="Log out of student portal">
+      <a href="index.html" class="btn btn-secondary btn-sm" aria-label="Log out of IIUC portal">
         <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
         </svg>
@@ -78,47 +78,44 @@
       </div>
     </nav>
 
-    <!-- Unique Primary Content: Main (Exactly one per page) -->
+    <!-- Unique Primary Content -->
     <main class="dashboard-main">
 
-      <!-- Section 1: Welcome Banner -->
+      <!-- Welcome Banner -->
       <section class="welcome-banner" aria-label="Welcome Section">
         <div class="welcome-text">
-          <h2>Welcome back, Alex Morgan! 👋</h2>
-          <p>Department of Computer Science & Engineering | B.Sc. Program</p>
+          <h2>Welcome back to IIUC, Alex Morgan! 👋</h2>
+          <p>Department of Computer Science & Engineering (CSE) | IIUC Kumira Campus</p>
           <div class="welcome-badges">
-            <span class="welcome-badge-item">Fall Semester 2026</span>
-            <span class="welcome-badge-item">Year 3, Semester 5</span>
-            <span class="welcome-badge-item">Status: Active Regular</span>
+            <span class="welcome-badge-item">Spring Semester 2026</span>
+            <span class="welcome-badge-item">5th Semester (Junior)</span>
+            <span class="welcome-badge-item">Status: Regular</span>
           </div>
         </div>
       </section>
 
-      <!-- Section 2: Academic Performance KPI Stats Overview -->
+      <!-- Academic Performance KPI Stats Overview -->
       <section aria-label="Academic Statistics Overview">
         <div class="section-header">
           <h2 class="section-title">
-            <span class="section-title-icon">📊</span> Academic Overview
+            <span class="section-title-icon">📊</span> Academic Performance
           </h2>
         </div>
         <div class="stats-grid">
-          <!-- Stat Card 1: CGPA -->
           <div class="stat-card">
-            <div class="stat-label">Current CGPA</div>
+            <div class="stat-label">Cumulative CGPA</div>
             <div class="stat-value">3.84</div>
             <div class="stat-foot">
-              <span class="badge badge-success">Top 5%</span> Cumulative out of 4.00
+              <span class="badge badge-success">Top 5%</span> Out of 4.00
             </div>
           </div>
-          <!-- Stat Card 2: Enrolled Courses -->
           <div class="stat-card">
             <div class="stat-label">Enrolled Courses</div>
             <div class="stat-value">5</div>
             <div class="stat-foot">
-              <span class="badge badge-info">Fall 2026</span> 16 Credit Hours
+              <span class="badge badge-info">Spring 2026</span> 16.0 Credit Hours
             </div>
           </div>
-          <!-- Stat Card 3: Attendance -->
           <div class="stat-card">
             <div class="stat-label">Overall Attendance</div>
             <div class="stat-value">94.2%</div>
@@ -126,15 +123,13 @@
               <span class="badge badge-success">Good</span> 132/140 Classes
             </div>
           </div>
-          <!-- Stat Card 4: Credits Completed -->
           <div class="stat-card">
             <div class="stat-label">Completed Credits</div>
             <div class="stat-value">78</div>
             <div class="stat-foot">
-              <span class="badge badge-info">Degree Progress</span> 78 / 130 Credits
+              <span class="badge badge-info">B.Sc. Progress</span> 78 / 138 Credits
             </div>
           </div>
-          <!-- Stat Card 5: Pending Assignments -->
           <div class="stat-card">
             <div class="stat-label">Pending Tasks</div>
             <div class="stat-value">3</div>
@@ -145,27 +140,26 @@
         </div>
       </section>
 
-      <!-- Section 3: Current Enrolled Courses Summary -->
+      <!-- Current Enrolled Courses Summary -->
       <section aria-label="Current Enrolled Courses Overview">
         <div class="section-header">
           <h2 class="section-title">
-            <span class="section-title-icon">📚</span> Enrolled Courses Summary
+            <span class="section-title-icon">📚</span> Enrolled Courses Overview
           </h2>
           <a href="courses.html" class="btn btn-secondary btn-sm">View All Courses &rarr;</a>
         </div>
 
         <div class="courses-grid">
-          <!-- Course Article 1 -->
           <article class="course-card">
             <div>
-              <div class="course-code">CSE-301</div>
+              <div class="course-code">CSE-3501</div>
               <h3 class="course-title">Data Structures & Algorithms</h3>
               <div class="course-instructor">
                 <span>👨‍🏫 Prof. Dr. Sarah Jenkins</span>
               </div>
               <div class="course-meta">
                 <span>Credit: 4.0</span>
-                <span>Room: Science Bldg 402</span>
+                <span>Room: Academic Bldg 302</span>
               </div>
             </div>
             <div class="progress-bar-container">
@@ -179,17 +173,16 @@
             </div>
           </article>
 
-          <!-- Course Article 2 -->
           <article class="course-card">
             <div>
-              <div class="course-code">CSE-305</div>
+              <div class="course-code">CSE-3505</div>
               <h3 class="course-title">Database Management Systems</h3>
               <div class="course-instructor">
                 <span>👨‍🏫 Assoc. Prof. Robert Chen</span>
               </div>
               <div class="course-meta">
                 <span>Credit: 3.0</span>
-                <span>Room: Tech Annex Lab 2B</span>
+                <span>Room: CSE Lab 2B</span>
               </div>
             </div>
             <div class="progress-bar-container">
@@ -203,17 +196,16 @@
             </div>
           </article>
 
-          <!-- Course Article 3 -->
           <article class="course-card">
             <div>
-              <div class="course-code">MAT-204</div>
+              <div class="course-code">MATH-2401</div>
               <h3 class="course-title">Discrete Mathematics & Graph Theory</h3>
               <div class="course-instructor">
                 <span>👨‍🏫 Dr. Alan Turing</span>
               </div>
               <div class="course-meta">
                 <span>Credit: 3.0</span>
-                <span>Room: Main Hall 305</span>
+                <span>Room: Science Hall 105</span>
               </div>
             </div>
             <div class="progress-bar-container">
@@ -229,38 +221,38 @@
         </div>
       </section>
 
-      <!-- Section 4: Upcoming Class Schedule Summary -->
+      <!-- Today's Schedule -->
       <section aria-label="Upcoming Schedule Overview">
         <div class="section-header">
           <h2 class="section-title">
-            <span class="section-title-icon">🗓️</span> Today's Class Schedule
+            <span class="section-title-icon">🗓️</span> Today's IIUC Class Routine
           </h2>
-          <a href="schedule.html" class="btn btn-secondary btn-sm">Full Timetable &rarr;</a>
+          <a href="schedule.html" class="btn btn-secondary btn-sm">Full Routine &rarr;</a>
         </div>
 
         <div class="table-responsive">
-          <table class="schedule-table" summary="Today's class schedule preview">
+          <table class="schedule-table" summary="Today's class routine preview">
             <thead>
               <tr>
                 <th scope="col">Course</th>
                 <th scope="col">Time</th>
-                <th scope="col">Room</th>
+                <th scope="col">Room / Lab</th>
                 <th scope="col">Instructor</th>
                 <th scope="col">Status</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><span class="course-pill">CSE-301</span> — Data Structures</td>
+                <td><span class="course-pill">CSE-3501</span> — Data Structures</td>
                 <td>10:00 AM - 11:30 AM</td>
-                <td>Science Bldg 402</td>
+                <td>Academic Bldg 302</td>
                 <td>Prof. Dr. Sarah Jenkins</td>
                 <td><span class="badge badge-success">Completed</span></td>
               </tr>
               <tr>
-                <td><span class="course-pill">CSE-305</span> — Database Systems</td>
+                <td><span class="course-pill">CSE-3505</span> — Database Systems</td>
                 <td>01:30 PM - 03:00 PM</td>
-                <td>Tech Annex Lab 2B</td>
+                <td>CSE Lab 2B</td>
                 <td>Assoc. Prof. Robert Chen</td>
                 <td><span class="badge badge-info">Next Class</span></td>
               </tr>
@@ -271,13 +263,11 @@
 
     </main>
 
-    <!-- Secondary Related Content Sidebar: Aside -->
+    <!-- Sidebar Aside -->
     <aside class="dashboard-aside" aria-label="Quick Tools and Notices">
-
-      <!-- Quick Links Widget -->
       <div class="aside-widget">
         <h3 class="aside-widget-title">
-          <span>🔗</span> Quick Actions
+          <span>🔗</span> IIUC Quick Actions
         </h3>
         <div class="quick-links-list">
           <a href="courses.html" class="quick-link-item">
@@ -287,22 +277,21 @@
             <span>📝</span> Submit Assignments
           </a>
           <a href="results.html" class="quick-link-item">
-            <span>🎓</span> View Semester Grade Sheet
+            <span>🎓</span> IIUC Grade Sheet
           </a>
           <a href="attendance.html" class="quick-link-item">
-            <span>📊</span> Check Attendance Records
+            <span>📊</span> Attendance Record
           </a>
         </div>
       </div>
 
-      <!-- Upcoming Deadlines Widget -->
       <div class="aside-widget">
         <h3 class="aside-widget-title">
           <span>⏰</span> Upcoming Deadlines
         </h3>
         <div class="deadlines-list">
           <div class="deadline-item">
-            <div class="deadline-title">CSE-301: Assignment #3</div>
+            <div class="deadline-title">CSE-3501: Assignment #3</div>
             <div class="deadline-sub">Binary Search Trees</div>
             <div class="deadline-date">Due: Aug 26, 2026</div>
           </div>
@@ -313,17 +302,16 @@
           </div>
         </div>
       </div>
-
     </aside>
 
   </div>
 
-  <!-- Footer: Institutional Info & Legal -->
+  <!-- Footer -->
   <footer class="dashboard-footer">
     <div class="footer-content-grid">
       <div class="footer-col">
-        <h3>Apex University</h3>
-        <p>Empowering future leaders through excellence in education, research, and innovation. Student Information System v4.2.</p>
+        <h3>International Islamic University Chittagong</h3>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh. Official Student Information System (IIUC).</p>
       </div>
       <div class="footer-col">
         <h4>Navigation</h4>
@@ -335,22 +323,22 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Student Portal</h4>
+        <h4>IIUC Services</h4>
         <div class="footer-links">
           <a href="attendance.html">Attendance</a>
           <a href="assignments.html">Assignments</a>
-          <a href="notices.html">Campus Notices</a>
+          <a href="notices.html">IIUC Notices</a>
           <a href="profile.html">My Profile</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Contact Desk</h4>
-        <p>📍 100 University Avenue, Science City<br>📞 +1 (800) 555-0199<br>✉️ support@apex.edu</p>
+        <p>📍 Kumira, Chattogram-4318, Bangladesh<br>📞 +880 2334461900<br>✉️ info@iiuc.ac.bd</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 Apex University Student Information System. All rights reserved.</p>
+      <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
       <div class="auth-footer-nav" style="margin: 0;">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>

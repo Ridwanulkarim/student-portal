@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Apex University Student Portal - Course Assignments & Online Submissions">
-  <title>Assignments | Apex University Student Portal</title>
+  <meta name="description" content="IIUC Student Portal - Assignments & Course Submissions">
+  <title>Assignments | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
 
   <!-- Header -->
   <header class="dashboard-header">
-    <a href="dashboard.html" class="portal-brand" aria-label="Apex University Portal Dashboard">
-      <div class="portal-logo" aria-hidden="true">A</div>
+    <a href="dashboard.html" class="portal-brand" aria-label="IIUC Portal Dashboard">
+      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
       <div class="portal-title-wrapper">
-        <h1>Apex University</h1>
-        <p>Student Portal & Academic Information System</p>
+        <h1>International Islamic University Chittagong</h1>
+        <p>Official Student Portal (IIUC)</p>
       </div>
     </a>
 
     <div class="user-profile-widget">
       <div class="user-details">
         <span class="user-name">Alex Morgan</span>
-        <span class="user-id">ID: SU-2024-8842</span>
+        <span class="user-id">Matric: C201042</span>
       </div>
       <div class="avatar-circle" title="Student Profile Avatar" aria-label="Student Profile Avatar">AM</div>
       <a href="index.html" class="btn btn-secondary btn-sm">Logout</a>
@@ -74,12 +74,10 @@
 
     <!-- Main Content -->
     <main class="dashboard-main">
-
-      <!-- Page Banner -->
       <section class="page-intro-banner">
         <div>
-          <h2 class="page-intro-title">Assignments & Submissions</h2>
-          <p class="page-intro-subtitle">Track pending homework, submit solutions, and review grades.</p>
+          <h2 class="page-intro-title">Assignments & Project Submissions</h2>
+          <p class="page-intro-subtitle">Track pending coursework and submit solutions directly to IIUC faculty.</p>
         </div>
         <div class="filter-tabs">
           <a href="#" class="filter-tab active">Pending (3)</a>
@@ -88,15 +86,12 @@
         </div>
       </section>
 
-      <!-- Active Assignments Section -->
       <section aria-label="Pending Assignments List">
         <div class="announcements-list">
-
-          <!-- Assignment Item 1 -->
           <article class="announcement-card">
             <div class="announcement-header">
               <div>
-                <span class="course-code">CSE-301</span>
+                <span class="course-code">CSE-3501</span>
                 <h3 class="announcement-title">Assignment 3: Binary Search Trees & Heaps</h3>
               </div>
               <span class="badge badge-warning">Due: Aug 26, 2026</span>
@@ -110,75 +105,34 @@
                   <label for="file1" class="form-label">Upload Submission File (.zip or .pdf)</label>
                   <input type="file" id="file1" name="submission_file" class="form-input">
                 </div>
-                <button type="submit" class="btn btn-primary btn-sm" onclick="alert('Assignment submitted successfully!'); return false;">Submit Assignment</button>
+                <button type="submit" class="btn btn-primary btn-sm" onclick="alert('Assignment submitted to IIUC server successfully!'); return false;">Submit Assignment</button>
               </form>
             </div>
           </article>
-
-          <!-- Assignment Item 2 -->
-          <article class="announcement-card">
-            <div class="announcement-header">
-              <div>
-                <span class="course-code">CSE-305</span>
-                <h3 class="announcement-title">Milestone 1: Relational Schema & ER Diagram</h3>
-              </div>
-              <span class="badge badge-warning">Due: Aug 29, 2026</span>
-            </div>
-            <p class="announcement-desc">
-              Design the complete ER Diagram and relational schema normalization (up to 3NF) for the University Library Management project.
-            </p>
-            <div style="background-color: var(--bg-surface-alt); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1rem;">
-              <form action="#" method="POST" enctype="multipart/form-data">
-                <div class="form-group" style="margin-bottom: 0.75rem;">
-                  <label for="file2" class="form-label">Upload Project PDF</label>
-                  <input type="file" id="file2" name="submission_file" class="form-input">
-                </div>
-                <button type="submit" class="btn btn-primary btn-sm" onclick="alert('Milestone submitted successfully!'); return false;">Submit Milestone</button>
-              </form>
-            </div>
-          </article>
-
-          <!-- Assignment Item 3 -->
-          <article class="announcement-card">
-            <div class="announcement-header">
-              <div>
-                <span class="course-code">EEE-210</span>
-                <h3 class="announcement-title">Lab Report 4: Sequential Logic Circuit Design</h3>
-              </div>
-              <span class="badge badge-info">Due: Sept 02, 2026</span>
-            </div>
-            <p class="announcement-desc">
-              Complete the timing diagram analysis for JK Flip-Flop counter circuits simulated in Logisim.
-            </p>
-          </article>
-
         </div>
       </section>
-
     </main>
 
     <!-- Aside Sidebar -->
     <aside class="dashboard-aside" aria-label="Submission Guidelines">
       <div class="aside-widget">
         <h3 class="aside-widget-title">
-          <span>📋</span> Submission Rules
+          <span>📋</span> IIUC Submission Rules
         </h3>
         <ul style="font-size: 0.825rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.5rem;">
           <li>• Max file upload size is <strong>25 MB</strong>.</li>
-          <li>• Allowed file types: <code>.pdf</code>, <code>.zip</code>, <code>.docx</code>.</li>
-          <li>• Submissions after deadline incur a <strong>10% daily penalty</strong>.</li>
+          <li>• Allowed formats: <code>.pdf</code>, <code>.zip</code>.</li>
         </ul>
       </div>
     </aside>
-
   </div>
 
   <!-- Footer -->
   <footer class="dashboard-footer">
     <div class="footer-content-grid">
       <div class="footer-col">
-        <h3>Apex University</h3>
-        <p>Empowering future leaders through excellence in education, research, and innovation.</p>
+        <h3>International Islamic University Chittagong</h3>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh. Official IIUC Student Portal.</p>
       </div>
       <div class="footer-col">
         <h4>Navigation</h4>
@@ -189,7 +143,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Support</h4>
+        <h4>Services</h4>
         <div class="footer-links">
           <a href="results.html">Results & Grades</a>
           <a href="attendance.html">Attendance</a>
@@ -198,11 +152,11 @@
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>📍 100 University Avenue, Science City<br>✉️ support@apex.edu</p>
+        <p>📍 Kumira, Chattogram, Bangladesh<br>✉️ info@iiuc.ac.bd</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Apex University Student Information System. All rights reserved.</p>
+      <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
     </div>
   </footer>
 

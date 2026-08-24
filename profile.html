@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Apex University Student Portal - Student Profile & Information Management">
-  <title>Student Profile | Apex University Student Portal</title>
+  <meta name="description" content="IIUC Student Portal - Student Profile & Record">
+  <title>Student Profile | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
 
   <!-- Header -->
   <header class="dashboard-header">
-    <a href="dashboard.html" class="portal-brand" aria-label="Apex University Portal Dashboard">
-      <div class="portal-logo" aria-hidden="true">A</div>
+    <a href="dashboard.html" class="portal-brand" aria-label="IIUC Portal Dashboard">
+      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
       <div class="portal-title-wrapper">
-        <h1>Apex University</h1>
-        <p>Student Portal & Academic Information System</p>
+        <h1>International Islamic University Chittagong</h1>
+        <p>Official Student Portal (IIUC)</p>
       </div>
     </a>
 
     <div class="user-profile-widget">
       <div class="user-details">
         <span class="user-name">Alex Morgan</span>
-        <span class="user-id">ID: SU-2024-8842</span>
+        <span class="user-id">Matric: C201042</span>
       </div>
       <div class="avatar-circle" title="Student Profile Avatar" aria-label="Student Profile Avatar">AM</div>
       <a href="index.html" class="btn btn-secondary btn-sm">Logout</a>
@@ -74,37 +74,31 @@
 
     <!-- Main Content -->
     <main class="dashboard-main">
-
-      <!-- Page Banner -->
       <section class="page-intro-banner">
         <div>
-          <h2 class="page-intro-title">Student Profile & Settings</h2>
-          <p class="page-intro-subtitle">Manage your personal record, contact details, and account security.</p>
+          <h2 class="page-intro-title">IIUC Student Profile & Information</h2>
+          <p class="page-intro-subtitle">Manage your academic record, contact information, and security preferences.</p>
         </div>
       </section>
 
-      <!-- Profile Card Grid -->
       <section class="profile-card-grid" aria-label="Student Personal Profile Form">
-
-        <!-- Sidebar Summary Card -->
         <div class="profile-sidebar-card">
           <div class="profile-avatar-large">AM</div>
           <h3 style="font-size: 1.2rem; color: var(--primary-dark);">Alex Morgan</h3>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">ID: SU-2024-8842</p>
-          <span class="badge badge-success" style="margin-bottom: 1.5rem;">Regular Active Student</span>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Matric: C201042</p>
+          <span class="badge badge-success" style="margin-bottom: 1.5rem;">IIUC Regular Student</span>
 
           <div style="text-align: left; border-top: 1px solid var(--border-color); padding-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
+            <p style="margin-bottom: 0.5rem;"><strong>University:</strong> IIUC Kumira Campus</p>
             <p style="margin-bottom: 0.5rem;"><strong>Department:</strong> Computer Science & Engineering</p>
             <p style="margin-bottom: 0.5rem;"><strong>Degree:</strong> B.Sc. in CSE</p>
-            <p style="margin-bottom: 0.5rem;"><strong>Batch:</strong> 2024 - 2028</p>
-            <p><strong>Semester:</strong> Semester 5 (Junior)</p>
+            <p><strong>Semester:</strong> Spring 2026 (5th Sem)</p>
           </div>
         </div>
 
-        <!-- Main Form Card -->
         <div class="profile-main-card">
           <h3 style="font-size: 1.15rem; color: var(--primary-dark); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent-blue);">
-            Personal & Contact Information
+            Contact & Academic Details
           </h3>
 
           <form action="#" method="POST" aria-label="Edit Profile Form">
@@ -114,57 +108,48 @@
                 <input type="text" id="prof-name" class="form-input" value="Alex Morgan" readonly style="background-color: var(--bg-surface-alt);">
               </div>
               <div class="form-group">
-                <label for="prof-id" class="form-label">Student ID</label>
-                <input type="text" id="prof-id" class="form-input" value="SU-2024-8842" readonly style="background-color: var(--bg-surface-alt);">
+                <label for="prof-id" class="form-label">Matriculation No.</label>
+                <input type="text" id="prof-id" class="form-input" value="C201042" readonly style="background-color: var(--bg-surface-alt);">
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="prof-email" class="form-label">University Email</label>
-                <input type="email" id="prof-email" class="form-input" value="alex.morgan@apex.edu">
+                <label for="prof-email" class="form-label">IIUC Student Email</label>
+                <input type="email" id="prof-email" class="form-input" value="alex.morgan@iiuc.ac.bd">
               </div>
               <div class="form-group">
                 <label for="prof-phone" class="form-label">Phone Number</label>
-                <input type="tel" id="prof-phone" class="form-input" value="+1 (555) 019-2834">
+                <input type="tel" id="prof-phone" class="form-input" value="+880 1712-345678">
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="prof-address" class="form-label">Permanent Address</label>
-              <textarea id="prof-address" class="form-textarea" rows="3">742 Evergreen Terrace, Apt 4B, Science City, SC 90210</textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-sm" onclick="alert('Profile updated successfully!'); return false;">💾 Save Changes</button>
+            <button type="submit" class="btn btn-primary btn-sm" onclick="alert('IIUC Profile updated!'); return false;">💾 Save Changes</button>
           </form>
         </div>
-
       </section>
-
     </main>
 
     <!-- Aside Sidebar -->
-    <aside class="dashboard-aside" aria-label="Security & Emergency Contacts">
+    <aside class="dashboard-aside" aria-label="IIUC Contacts">
       <div class="aside-widget">
         <h3 class="aside-widget-title">
           <span>🚨</span> Emergency Contact
         </h3>
         <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
-          <strong>Name:</strong> Eleanor Morgan (Mother)<br>
-          <strong>Phone:</strong> +1 (555) 987-6543<br>
-          <strong>Relation:</strong> Primary Guardian
+          <strong>Guardian:</strong> Eleanor Morgan<br>
+          <strong>Phone:</strong> +880 1819-876543
         </p>
       </div>
     </aside>
-
   </div>
 
   <!-- Footer -->
   <footer class="dashboard-footer">
     <div class="footer-content-grid">
       <div class="footer-col">
-        <h3>Apex University</h3>
-        <p>Empowering future leaders through excellence in education, research, and innovation.</p>
+        <h3>International Islamic University Chittagong</h3>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh. Official IIUC Student Portal.</p>
       </div>
       <div class="footer-col">
         <h4>Navigation</h4>
@@ -175,20 +160,20 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Support</h4>
+        <h4>Services</h4>
         <div class="footer-links">
           <a href="results.html">Results & Grades</a>
           <a href="attendance.html">Attendance</a>
-          <a href="notices.html">Notices</a>
+          <a href="notices.html">IIUC Notices</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>📍 100 University Avenue, Science City<br>✉️ support@apex.edu</p>
+        <p>📍 Kumira, Chattogram, Bangladesh<br>✉️ info@iiuc.ac.bd</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Apex University Student Information System. All rights reserved.</p>
+      <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
     </div>
   </footer>
 

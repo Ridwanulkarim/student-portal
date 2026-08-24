@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Apex University Student Registration - Create your new student portal account.">
-  <title>Student Registration | Apex University</title>
+  <meta name="description" content="IIUC Student Registration - International Islamic University Chittagong.">
+  <title>Student Registration | IIUC</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="auth-page-wrapper">
 
-  <!-- Header: University Branding -->
+  <!-- Header: IIUC Branding -->
   <header class="auth-header">
-    <a href="index.html" class="auth-brand" aria-label="Apex University Homepage">
-      <div class="auth-brand-logo" aria-hidden="true">A</div>
+    <a href="index.html" class="auth-brand" aria-label="IIUC Homepage">
+      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
       <div class="auth-brand-text">
-        <h1>Apex University</h1>
-        <p>Official Student Portal</p>
+        <h1>International Islamic University Chittagong</h1>
+        <p>Official Student Portal (IIUC)</p>
       </div>
     </a>
     <div>
@@ -23,14 +23,14 @@
     </div>
   </header>
 
-  <!-- Main: Primary Unique Signup Content (Exactly one per page) -->
+  <!-- Main: Signup Form -->
   <main class="auth-container">
     <div class="auth-card auth-card-wide">
-      <h2 class="auth-title">Create Student Account</h2>
-      <p class="auth-subtitle">Register your university credentials to activate your digital portal.</p>
+      <h2 class="auth-title">Create IIUC Student Account</h2>
+      <p class="auth-subtitle">Register your matriculation credentials to activate your IIUC portal.</p>
 
-      <form action="index.html" method="GET" aria-label="Student Registration Form">
-        <!-- Form Row 1: Name & Student ID -->
+      <form action="index.html" method="GET" aria-label="IIUC Student Registration Form">
+        <!-- Form Row 1 -->
         <div class="form-row">
           <div class="form-group">
             <label for="fullname" class="form-label">Full Name <span class="required">*</span></label>
@@ -45,28 +45,28 @@
             >
           </div>
           <div class="form-group">
-            <label for="student-id" class="form-label">Student ID <span class="required">*</span></label>
+            <label for="student-id" class="form-label">Matric No. / Student ID <span class="required">*</span></label>
             <input 
               type="text" 
               id="student-id" 
               name="student_id" 
               class="form-input" 
-              placeholder="e.g. SU-2024-8842" 
+              placeholder="e.g. C201042" 
               required
             >
           </div>
         </div>
 
-        <!-- Form Row 2: Email & Phone -->
+        <!-- Form Row 2 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="email" class="form-label">University Email <span class="required">*</span></label>
+            <label for="email" class="form-label">IIUC Email <span class="required">*</span></label>
             <input 
               type="email" 
               id="email" 
               name="email" 
               class="form-input" 
-              placeholder="e.g. alex.morgan@apex.edu" 
+              placeholder="e.g. alex.morgan@iiuc.ac.bd" 
               required 
               autocomplete="email"
             >
@@ -78,43 +78,39 @@
               id="phone" 
               name="phone" 
               class="form-input" 
-              placeholder="+1 (555) 019-2834" 
+              placeholder="+880 1712-345678" 
               required 
               autocomplete="tel"
             >
           </div>
         </div>
 
-        <!-- Form Row 3: Department & Semester -->
+        <!-- Form Row 3 -->
         <div class="form-row">
           <div class="form-group">
             <label for="department" class="form-label">Department <span class="required">*</span></label>
             <select id="department" name="department" class="form-select" required>
               <option value="" disabled selected>Select Department</option>
-              <option value="cse">Computer Science & Engineering</option>
-              <option value="eee">Electrical & Electronic Engineering</option>
-              <option value="me">Mechanical Engineering</option>
-              <option value="bba">Business Administration</option>
-              <option value="arch">Architecture & Design</option>
+              <option value="cse" selected>Computer Science & Engineering (CSE)</option>
+              <option value="eee">Electrical & Electronic Engineering (EEE)</option>
+              <option value="cce">Computer & Communication Engineering (CCE)</option>
+              <option value="pharmacy">Pharmacy</option>
+              <option value="bba">Business Administration (DBA)</option>
+              <option value="ell">English Language & Literature (ELL)</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="semester" class="form-label">Academic Semester <span class="required">*</span></label>
+            <label for="semester" class="form-label">Semester <span class="required">*</span></label>
             <select id="semester" name="semester" class="form-select" required>
               <option value="" disabled selected>Select Current Semester</option>
-              <option value="sem1">Semester 1 (Freshman)</option>
-              <option value="sem2">Semester 2 (Freshman)</option>
-              <option value="sem3">Semester 3 (Sophomore)</option>
-              <option value="sem4">Semester 4 (Sophomore)</option>
-              <option value="sem5" selected>Semester 5 (Junior)</option>
-              <option value="sem6">Semester 6 (Junior)</option>
-              <option value="sem7">Semester 7 (Senior)</option>
-              <option value="sem8">Semester 8 (Senior)</option>
+              <option value="sem1">Autumn 2026 (Semester 1)</option>
+              <option value="sem5" selected>Spring 2026 (Semester 5)</option>
+              <option value="sem7">Autumn 2025 (Semester 7)</option>
             </select>
           </div>
         </div>
 
-        <!-- Form Row 4: Password & Confirm Password -->
+        <!-- Form Row 4 -->
         <div class="form-row">
           <div class="form-group">
             <label for="password" class="form-label">Password <span class="required">*</span></label>
@@ -142,11 +138,11 @@
           </div>
         </div>
 
-        <!-- Checkbox: Terms & Conditions -->
+        <!-- Terms -->
         <div class="form-checkbox-group">
           <input type="checkbox" id="terms" name="terms" class="form-checkbox" required>
           <label for="terms" class="form-checkbox-label">
-            I agree to the <a href="#">University IT Code of Conduct</a> and <a href="#">Privacy Policy</a>.
+            I agree to the <a href="#">IIUC IT Code of Conduct</a> and <a href="#">Privacy Policy</a>.
           </label>
         </div>
 
@@ -164,15 +160,15 @@
     </div>
   </main>
 
-  <!-- Footer: Institutional Links & Copyright -->
+  <!-- Footer -->
   <footer class="auth-footer">
     <nav class="auth-footer-nav" aria-label="Footer Navigation">
-      <a href="#">Help Desk</a>
+      <a href="#">IIUC Help Desk</a>
       <a href="#">Registrar Office</a>
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Use</a>
     </nav>
-    <p>&copy; 2026 Apex University Student Information System. All rights reserved.</p>
+    <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
   </footer>
 
 </body>

@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Apex University Student Portal - Course Attendance Analytics & History">
-  <title>Attendance Tracking | Apex University Student Portal</title>
+  <meta name="description" content="IIUC Student Portal - Course Attendance Tracking & Metrics">
+  <title>Attendance Tracking | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
 
   <!-- Header -->
   <header class="dashboard-header">
-    <a href="dashboard.html" class="portal-brand" aria-label="Apex University Portal Dashboard">
-      <div class="portal-logo" aria-hidden="true">A</div>
+    <a href="dashboard.html" class="portal-brand" aria-label="IIUC Portal Dashboard">
+      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
       <div class="portal-title-wrapper">
-        <h1>Apex University</h1>
-        <p>Student Portal & Academic Information System</p>
+        <h1>International Islamic University Chittagong</h1>
+        <p>Official Student Portal (IIUC)</p>
       </div>
     </a>
 
     <div class="user-profile-widget">
       <div class="user-details">
         <span class="user-name">Alex Morgan</span>
-        <span class="user-id">ID: SU-2024-8842</span>
+        <span class="user-id">Matric: C201042</span>
       </div>
       <div class="avatar-circle" title="Student Profile Avatar" aria-label="Student Profile Avatar">AM</div>
       <a href="index.html" class="btn btn-secondary btn-sm">Logout</a>
@@ -74,20 +74,17 @@
 
     <!-- Main Content -->
     <main class="dashboard-main">
-
-      <!-- Page Banner -->
       <section class="page-intro-banner">
         <div>
-          <h2 class="page-intro-title">Attendance Tracking & History</h2>
+          <h2 class="page-intro-title">Attendance Tracking & Record</h2>
           <p class="page-intro-subtitle">Overall Attendance Rate: <strong>94.2%</strong> (Eligible for Final Examinations)</p>
         </div>
-        <span class="badge badge-success" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Minimum Requirement: 75.0%</span>
+        <span class="badge badge-success" style="font-size: 0.85rem; padding: 0.5rem 1rem;">IIUC Requirement: Min 75.0%</span>
       </section>
 
-      <!-- Attendance Breakdown Table -->
       <section aria-label="Course Attendance Breakdown">
         <div class="table-responsive">
-          <table class="schedule-table" summary="Detailed attendance metrics per course including total sessions, present, absent, and percentage.">
+          <table class="schedule-table" summary="Detailed attendance metrics per course">
             <thead>
               <tr>
                 <th scope="col">Course Code</th>
@@ -101,7 +98,7 @@
             </thead>
             <tbody>
               <tr>
-                <td><strong>CSE-301</strong></td>
+                <td><strong>CSE-3501</strong></td>
                 <td>Data Structures & Algorithms</td>
                 <td>28</td>
                 <td>27</td>
@@ -110,7 +107,7 @@
                 <td><span class="badge badge-success">Eligible</span></td>
               </tr>
               <tr>
-                <td><strong>CSE-305</strong></td>
+                <td><strong>CSE-3505</strong></td>
                 <td>Database Management Systems</td>
                 <td>25</td>
                 <td>23</td>
@@ -119,7 +116,7 @@
                 <td><span class="badge badge-success">Eligible</span></td>
               </tr>
               <tr>
-                <td><strong>MAT-204</strong></td>
+                <td><strong>MATH-2401</strong></td>
                 <td>Discrete Mathematics</td>
                 <td>30</td>
                 <td>29</td>
@@ -127,51 +124,31 @@
                 <td><strong style="color: var(--success-text);">96.7%</strong></td>
                 <td><span class="badge badge-success">Eligible</span></td>
               </tr>
-              <tr>
-                <td><strong>EEE-210</strong></td>
-                <td>Digital Logic Design</td>
-                <td>30</td>
-                <td>27</td>
-                <td>3</td>
-                <td><strong style="color: var(--warning-text);">90.0%</strong></td>
-                <td><span class="badge badge-success">Eligible</span></td>
-              </tr>
-              <tr>
-                <td><strong>ENG-102</strong></td>
-                <td>Technical Writing</td>
-                <td>27</td>
-                <td>26</td>
-                <td>1</td>
-                <td><strong style="color: var(--success-text);">96.3%</strong></td>
-                <td><span class="badge badge-success">Eligible</span></td>
-              </tr>
             </tbody>
           </table>
         </div>
       </section>
-
     </main>
 
     <!-- Aside Sidebar -->
-    <aside class="dashboard-aside" aria-label="Attendance Policy Info">
+    <aside class="dashboard-aside" aria-label="IIUC Policy Info">
       <div class="aside-widget">
         <h3 class="aside-widget-title">
-          <span>ℹ️</span> Attendance Policy
+          <span>ℹ️</span> IIUC Attendance Rules
         </h3>
         <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
-          Students must maintain a minimum of <strong>75% attendance</strong> in each registered course to be eligible to sit for the end-of-semester final examinations.
+          Students must maintain a minimum of <strong>75% attendance</strong> to be eligible for semester final examinations according to IIUC ordinance.
         </p>
       </div>
     </aside>
-
   </div>
 
   <!-- Footer -->
   <footer class="dashboard-footer">
     <div class="footer-content-grid">
       <div class="footer-col">
-        <h3>Apex University</h3>
-        <p>Empowering future leaders through excellence in education, research, and innovation.</p>
+        <h3>International Islamic University Chittagong</h3>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh. Official IIUC Student Portal.</p>
       </div>
       <div class="footer-col">
         <h4>Navigation</h4>
@@ -182,7 +159,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Support</h4>
+        <h4>Services</h4>
         <div class="footer-links">
           <a href="schedule.html">Class Schedule</a>
           <a href="results.html">Results & Grades</a>
@@ -191,11 +168,11 @@
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>📍 100 University Avenue, Science City<br>✉️ support@apex.edu</p>
+        <p>📍 Kumira, Chattogram, Bangladesh<br>✉️ info@iiuc.ac.bd</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Apex University Student Information System. All rights reserved.</p>
+      <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
     </div>
   </footer>
 
