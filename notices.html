@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apex University Student Portal - Official Campus Notices & News Bulletin">
+  <title>Campus Notices | Apex University Student Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- Header -->
+  <header class="dashboard-header">
+    <a href="dashboard.html" class="portal-brand" aria-label="Apex University Portal Dashboard">
+      <div class="portal-logo" aria-hidden="true">A</div>
+      <div class="portal-title-wrapper">
+        <h1>Apex University</h1>
+        <p>Student Portal & Academic Information System</p>
+      </div>
+    </a>
+
+    <div class="user-profile-widget">
+      <div class="user-details">
+        <span class="user-name">Alex Morgan</span>
+        <span class="user-id">ID: SU-2024-8842</span>
+      </div>
+      <div class="avatar-circle" title="Student Profile Avatar" aria-label="Student Profile Avatar">AM</div>
+      <a href="index.html" class="btn btn-secondary btn-sm">Logout</a>
+    </div>
+  </header>
+
+  <!-- Layout Container -->
+  <div class="dashboard-layout">
+
+    <!-- Navigation -->
+    <nav class="dashboard-nav" aria-label="Portal Primary Navigation">
+      <div class="nav-menu">
+        <a href="dashboard.html" class="nav-link">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+          Dashboard
+        </a>
+        <a href="courses.html" class="nav-link">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.89 9L12 4.57 20.11 9 12 13.43 3.89 9zM5 13.78v4.44l7 3.82 7-3.82v-4.44l-7 3.82-7-3.82z"/></svg>
+          My Courses
+          <span class="badge badge-info nav-badge">5</span>
+        </a>
+        <a href="schedule.html" class="nav-link">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
+          Class Schedule
+        </a>
+        <a href="attendance.html" class="nav-link">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          Attendance
+        </a>
+        <a href="results.html" class="nav-link">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          Results & Grades
+        </a>
+        <a href="assignments.html" class="nav-link">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          Assignments
+          <span class="badge badge-warning nav-badge">3</span>
+        </a>
+        <a href="notices.html" class="nav-link active" aria-current="page">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+          Campus Notices
+        </a>
+        <a href="profile.html" class="nav-link">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          My Profile
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+
+      <!-- Page Banner -->
+      <section class="page-intro-banner">
+        <div>
+          <h2 class="page-intro-title">Campus Bulletin & Official Notices</h2>
+          <p class="page-intro-subtitle">Official announcements from the Registrar, Controller of Examinations, and Student Affairs.</p>
+        </div>
+        <div class="filter-tabs">
+          <a href="#" class="filter-tab active">All Notices</a>
+          <a href="#" class="filter-tab">Exams</a>
+          <a href="#" class="filter-tab">Events</a>
+          <a href="#" class="filter-tab">IT Maintenance</a>
+        </div>
+      </section>
+
+      <!-- Notices Section -->
+      <section aria-label="Official Campus Announcements">
+        <div class="announcements-list">
+
+          <!-- Notice 1 -->
+          <article class="announcement-card">
+            <div class="announcement-header">
+              <h3 class="announcement-title">Mid-Term Examination Schedule Released for Fall 2026</h3>
+              <span class="badge badge-info">August 22, 2026</span>
+            </div>
+            <p class="announcement-desc">
+              The Office of the Controller of Examinations has officially published the mid-term examination routine for all undergraduate programs. Mid-terms will commence on September 15, 2026. Admit cards will be available for download starting September 1st.
+            </p>
+            <a href="#" class="btn btn-secondary btn-sm" onclick="alert('Downloading Exam Routine PDF...'); return false;">📥 Download Routine (PDF)</a>
+          </article>
+
+          <!-- Notice 2 -->
+          <article class="announcement-card">
+            <div class="announcement-header">
+              <h3 class="announcement-title">Annual Apex University Coding Gala & Hackathon</h3>
+              <span class="badge badge-success">August 20, 2026</span>
+            </div>
+            <p class="announcement-desc">
+              Registration is now open for the 48-hour software development challenge. Prize pool includes $5,000 in tech rewards, direct internship interviews with corporate partners, and mentorship from lead software engineers.
+            </p>
+            <a href="#" class="btn btn-primary btn-sm" onclick="alert('Redirecting to Hackathon Registration...'); return false;">🚀 Register Team</a>
+          </article>
+
+          <!-- Notice 3 -->
+          <article class="announcement-card">
+            <div class="announcement-header">
+              <h3 class="announcement-title">Library Digital Portal Maintenance Notice</h3>
+              <span class="badge badge-warning">August 18, 2026</span>
+            </div>
+            <p class="announcement-desc">
+              Access to IEEE Xplore, ACM Digital Library, and internal e-book portals will experience brief maintenance on Saturday, August 29, from 02:00 AM to 06:00 AM.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Aside Sidebar -->
+    <aside class="dashboard-aside" aria-label="Notice Contacts">
+      <div class="aside-widget">
+        <h3 class="aside-widget-title">
+          <span>📢</span> Notice Board Office
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">
+          For queries regarding official announcements, contact the Registrar Office.<br><br>
+          <strong>Email:</strong> registrar@apex.edu<br>
+          <strong>Phone:</strong> +1 (800) 555-0100
+        </p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="dashboard-footer">
+    <div class="footer-content-grid">
+      <div class="footer-col">
+        <h3>Apex University</h3>
+        <p>Empowering future leaders through excellence in education, research, and innovation.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="notices.html">Notices</a>
+          <a href="courses.html">My Courses</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <div class="footer-links">
+          <a href="results.html">Results & Grades</a>
+          <a href="attendance.html">Attendance</a>
+          <a href="schedule.html">Schedule</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 100 University Avenue, Science City<br>✉️ support@apex.edu</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Apex University Student Information System. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
