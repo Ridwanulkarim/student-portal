@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apex University Student Portal Login - Secure portal access for students and faculty.">
+  <title>Student Portal Login | Apex University</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page-wrapper">
+
+  <!-- Header: University Branding -->
+  <header class="auth-header">
+    <a href="index.html" class="auth-brand" aria-label="Apex University Homepage">
+      <div class="auth-brand-logo" aria-hidden="true">A</div>
+      <div class="auth-brand-text">
+        <h1>Apex University</h1>
+        <p>Official Student Portal</p>
+      </div>
+    </a>
+    <div>
+      <a href="signup.html" class="btn btn-secondary btn-sm">Register Account</a>
+    </div>
+  </header>
+
+  <!-- Main: Primary Unique Login Content (Exactly one per page) -->
+  <main class="auth-container">
+    <div class="auth-card">
+      <h2 class="auth-title">Student Login</h2>
+      <p class="auth-subtitle">Access your courses, grades, schedule, and academic tools.</p>
+
+      <!-- Quick Demo Access Link -->
+      <div class="demo-banner" role="region" aria-label="Demo Notification">
+        <span>⚡ <strong>Quick Demo:</strong> Preview student dashboard directly</span>
+        <a href="dashboard.html">View Dashboard &rarr;</a>
+      </div>
+
+      <form action="dashboard.html" method="GET" aria-label="Student Portal Login Form">
+        <div class="form-group">
+          <label for="student-id" class="form-label">Student ID or Email <span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="student-id" 
+            name="student_id" 
+            class="form-input" 
+            placeholder="e.g. SU-2024-8842 or alex@apex.edu" 
+            required 
+            autocomplete="username"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Password <span class="required">*</span></label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            class="form-input" 
+            placeholder="Enter your secret password" 
+            required 
+            autocomplete="current-password"
+          >
+        </div>
+
+        <div class="auth-meta-links">
+          <div class="form-checkbox-group" style="margin-bottom: 0;">
+            <input type="checkbox" id="remember" name="remember" class="form-checkbox">
+            <label for="remember" class="form-checkbox-label">Remember me</label>
+          </div>
+          <a href="#" onclick="alert('Password reset instructions have been sent to your registered university email.'); return false;">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z"/>
+          </svg>
+          Sign In to Portal
+        </button>
+
+        <div class="auth-footer-link">
+          <p>Don't have an account yet? <a href="signup.html">Create a Student Account</a></p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer: Institutional Links & Copyright -->
+  <footer class="auth-footer">
+    <nav class="auth-footer-nav" aria-label="Footer Navigation">
+      <a href="#">Help Desk</a>
+      <a href="#">IT Support</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Campus Safety</a>
+    </nav>
+    <p>&copy; 2026 Apex University Student Information System. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
