@@ -1,7 +1,7 @@
 /* ==========================================================================
    IIUC Student Portal - Master Stylesheet
    International Islamic University Chittagong (IIUC)
-   Includes Login Page, Dashboard, Dropdown Menus, Course, Pre-Reg & Class Routine
+   Includes Login Page, Dashboard, Dropdown Menus, Course, Pre-Reg, Routine & Wifi Password
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -29,10 +29,11 @@
   --reg-cat-header-border: #ffeeba;
   --reg-table-header-bg: #f8f9fa;
 
-  /* Pre-Registration & Routine Container */
+  /* Pre-Registration, Routine & Wifi Form */
   --prereg-banner-bg: #2b90d9;
   --prereg-alert-bg: #ffe8cc;
   --prereg-alert-border: #ffd8a8;
+  --wifi-input-border: #9ccc65;   /* Light green input border */
 
   /* KPI Colors */
   --kpi-pink: #ff6b81;
@@ -345,7 +346,61 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. Class Routine Replica Specific Styles
+   5. Wifi Password Replica Specific Styles
+   -------------------------------------------------------------------------- */
+.wifi-form-container {
+  padding: 2rem 2.5rem;
+  max-width: 650px;
+}
+
+.wifi-form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.wifi-form-label {
+  width: 180px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.wifi-form-input {
+  width: 320px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--wifi-input-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease;
+}
+
+.wifi-form-input:focus {
+  border-color: #7cb342;
+  box-shadow: 0 0 0 2px rgba(124, 179, 66, 0.2);
+}
+
+.wifi-submit-btn {
+  background-color: #557297;
+  color: #ffffff;
+  border: none;
+  padding: 0.45rem 1.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-left: 180px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.wifi-submit-btn:hover {
+  background-color: #425978;
+}
+
+/* --------------------------------------------------------------------------
+   6. Class Routine Replica Specific Styles
    -------------------------------------------------------------------------- */
 .routine-title-header {
   text-align: center;
@@ -418,7 +473,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   6. IIUC Pre-Registration Page Replica Styles
+   7. IIUC Pre-Registration Page Replica Styles
    -------------------------------------------------------------------------- */
 .prereg-container {
   padding: 1rem 1.5rem;
@@ -467,7 +522,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   7. IIUC Course Registration Page Table Styles
+   8. IIUC Course Registration Page Table Styles
    -------------------------------------------------------------------------- */
 .reg-page-container {
   padding: 1rem 1.5rem;
@@ -594,7 +649,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   8. IIUC Main Header, Action Grid, 3-Column Dashboard Body
+   9. IIUC Main Header, Action Grid, 3-Column Dashboard Body
    -------------------------------------------------------------------------- */
 .portal-main-header {
   background-color: #ffffff;
@@ -1095,6 +1150,15 @@ img {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
+  }
+  .wifi-form-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+  .wifi-form-label, .wifi-form-input, .wifi-submit-btn {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
