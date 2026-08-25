@@ -3,179 +3,238 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Student Portal - Student Profile & Record">
+  <meta name="description" content="IIUC Student Profile Update - International Islamic University Chittagong">
   <title>Student Profile | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
 
-  <!-- Header -->
-  <header class="dashboard-header">
-    <a href="dashboard.html" class="portal-brand" aria-label="IIUC Portal Dashboard">
-      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
-      <div class="portal-title-wrapper">
+  <!-- 1. Top Cyan Utility Navigation Bar -->
+  <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
+    <div class="top-utility-left">
+      <!-- Students Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Students Menu">
+          <span>👥</span> Students ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="preregistration.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Pre Registration</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Registration</a>
+          <a href="paymenthistory.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment History</a>
+          <a href="printcourseregistration.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Print Course Registration</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Add Drop Courses</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Semester Transport Update</a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Result View</a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment Advising</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Withdraw</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Registration Summary</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Status</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Update Transport</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Set Major Courses</a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> MDP Result View</a>
+        </div>
+      </div>
+
+      <!-- Others Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Others Menu">
+          <span>🏢</span> Others ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="wifipassword.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Wifi Password</a>
+          <a href="complain.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Complain Box</a>
+          <a href="feecalculator.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Fee Calculator</a>
+          <a href="recentcomplain.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Recent Complain</a>
+        </div>
+      </div>
+
+      <span class="utility-item">⏱ TER ▾</span>
+      <span class="utility-item">💻 Application ▾</span>
+      <span class="utility-item">💬 IQAC ▾</span>
+    </div>
+
+    <div class="top-utility-right">
+      <!-- User Profile Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="User Profile Menu">
+          <span>👤</span> Mohammad Ridwanul Karim ▾
+        </button>
+        <div class="utility-dropdown-menu menu-right" role="menu">
+          <a href="index.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🔒</span> Logout</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🏠</span> Update Profile</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">⚙️</span> Change Password</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Main University Header -->
+  <header class="portal-main-header">
+    <a href="dashboard.html" class="iiuc-logo-group" aria-label="IIUC Portal Homepage">
+      <img src="assets/images/logo.png" alt="IIUC Official Crest Logo" class="iiuc-header-logo">
+      <div class="iiuc-title-block">
+        <h2>আন্তর্জাতিক ইসলামী বিশ্ববিদ্যালয় চট্টগ্রাম</h2>
         <h1>International Islamic University Chittagong</h1>
-        <p>Official Student Portal (IIUC)</p>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh</p>
       </div>
     </a>
 
-    <div class="user-profile-widget">
-      <div class="user-details">
-        <span class="user-name">Alex Morgan</span>
-        <span class="user-id">Matric: C201042</span>
+    <div class="header-search-widget">
+      <span class="current-date-text">August 26, 2026 Wednesday</span>
+      <div class="search-input-group">
+        <input type="text" class="search-input" placeholder="Search portal options..." aria-label="Search portal">
+        <button type="button" class="search-btn">Search & Find</button>
       </div>
-      <div class="avatar-circle" title="Student Profile Avatar" aria-label="Student Profile Avatar">AM</div>
-      <a href="index.html" class="btn btn-secondary btn-sm">Logout</a>
     </div>
   </header>
 
-  <!-- Layout Container -->
-  <div class="dashboard-layout">
-
-    <!-- Navigation -->
-    <nav class="dashboard-nav" aria-label="Portal Primary Navigation">
-      <div class="nav-menu">
-        <a href="dashboard.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
-          Dashboard
-        </a>
-        <a href="courses.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.89 9L12 4.57 20.11 9 12 13.43 3.89 9zM5 13.78v4.44l7 3.82 7-3.82v-4.44l-7 3.82-7-3.82z"/></svg>
-          My Courses
-          <span class="badge badge-info nav-badge">5</span>
-        </a>
-        <a href="schedule.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
-          Class Schedule
-        </a>
-        <a href="attendance.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          Attendance
-        </a>
-        <a href="results.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          Results & Grades
-        </a>
-        <a href="assignments.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-          Assignments
-          <span class="badge badge-warning nav-badge">3</span>
-        </a>
-        <a href="notices.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
-          Campus Notices
-        </a>
-        <a href="profile.html" class="nav-link active" aria-current="page">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          My Profile
-        </a>
+  <!-- 3. Profile Main Content Container -->
+  <main class="prereg-container">
+    <div class="prereg-card-wrapper">
+      
+      <!-- Cyan Banner Header with Green Tab Pill -->
+      <div class="prereg-cyan-header">
+        <span class="prereg-tab-pill">Profile</span>
       </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="dashboard-main">
-      <section class="page-intro-banner">
-        <div>
-          <h2 class="page-intro-title">IIUC Student Profile & Information</h2>
-          <p class="page-intro-subtitle">Manage your academic record, contact information, and security preferences.</p>
-        </div>
-      </section>
+      <!-- Peach Alert Banner -->
+      <div class="profile-alert-banner" role="alert">
+        Please update your profile with your Birth Certificate Number or National ID Number
+      </div>
 
-      <section class="profile-card-grid" aria-label="Student Personal Profile Form">
-        <div class="profile-sidebar-card">
-          <div class="profile-avatar-large">AM</div>
-          <h3 style="font-size: 1.2rem; color: var(--primary-dark);">Alex Morgan</h3>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Matric: C201042</p>
-          <span class="badge badge-success" style="margin-bottom: 1.5rem;">IIUC Regular Student</span>
+      <!-- Student Profile Form Grid -->
+      <form action="#" method="POST" onsubmit="alert('Profile Updated Successfully!'); return false;">
+        <div class="profile-page-grid">
+          
+          <!-- Column 1: Left Bio & Contact Fields -->
+          <div>
+            <div class="profile-field-row">
+              <span class="profile-field-label">Matric No</span>
+              <span class="profile-field-value-text">C243237</span>
+            </div>
 
-          <div style="text-align: left; border-top: 1px solid var(--border-color); padding-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">
-            <p style="margin-bottom: 0.5rem;"><strong>University:</strong> IIUC Kumira Campus</p>
-            <p style="margin-bottom: 0.5rem;"><strong>Department:</strong> Computer Science & Engineering</p>
-            <p style="margin-bottom: 0.5rem;"><strong>Degree:</strong> B.Sc. in CSE</p>
-            <p><strong>Semester:</strong> Spring 2026 (5th Sem)</p>
+            <div class="profile-field-row">
+              <span class="profile-field-label">Name</span>
+              <span class="profile-field-value-text">Mohammad Ridwanul Karim</span>
+            </div>
+
+            <div class="profile-field-row">
+              <span class="profile-field-label">Date of Birth</span>
+              <span class="profile-field-value-text">2005-04-30</span>
+            </div>
+
+            <div class="profile-field-row">
+              <span class="profile-field-label">Father Name</span>
+              <span class="profile-field-value-text">Mohammad Shajjadul Karim</span>
+            </div>
+
+            <div class="profile-field-row" style="align-items: flex-start;">
+              <span class="profile-field-label" style="padding-top: 0.15rem;">Present Address</span>
+              <span class="profile-field-value-text">417,Shafi Islam Building ### Sonashah Majar Road ### Eidgah Borofkol ### ### Rampur ### Halishahar ### Chattogram</span>
+            </div>
+
+            <div class="profile-field-row">
+              <label for="mobile_num" class="profile-field-label">Mobile Number</label>
+              <input type="text" id="mobile_num" name="mobile_num" class="profile-field-input" value="01862126812">
+            </div>
+
+            <div class="profile-field-row">
+              <label for="alt_num" class="profile-field-label">Alternative Number</label>
+              <input type="text" id="alt_num" name="alt_num" class="profile-field-input" value="01862126812">
+            </div>
+
+            <div class="profile-field-row">
+              <label for="email_addr" class="profile-field-label">Email</label>
+              <input type="email" id="email_addr" name="email_addr" class="profile-field-input" value="ridwanulk08@gmail.com">
+            </div>
+
+            <div class="profile-field-row">
+              <span class="profile-field-label">Gender</span>
+              <span class="profile-field-value-text">Male</span>
+            </div>
+
+            <div class="profile-field-row">
+              <span class="profile-field-label">Religion</span>
+              <span class="profile-field-value-text">Islam</span>
+            </div>
+
+            <div class="profile-field-row">
+              <label for="select_route" class="profile-field-label">Select Route</label>
+              <select id="select_route" name="select_route" class="profile-field-input">
+                <option value="agrabad_lucky">4 - Agrabad - Lucky plaza...</option>
+                <option value="chawkbazar">1 - Chawkbazar</option>
+                <option value="gachbaria">2 - Gachbaria</option>
+              </select>
+            </div>
           </div>
-        </div>
 
-        <div class="profile-main-card">
-          <h3 style="font-size: 1.15rem; color: var(--primary-dark); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent-blue);">
-            Contact & Academic Details
-          </h3>
-
-          <form action="#" method="POST" aria-label="Edit Profile Form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="prof-name" class="form-label">Full Name</label>
-                <input type="text" id="prof-name" class="form-input" value="Alex Morgan" readonly style="background-color: var(--bg-surface-alt);">
-              </div>
-              <div class="form-group">
-                <label for="prof-id" class="form-label">Matriculation No.</label>
-                <input type="text" id="prof-id" class="form-input" value="C201042" readonly style="background-color: var(--bg-surface-alt);">
-              </div>
+          <!-- Column 2: Center Mother, Address & ID Fields -->
+          <div>
+            <div class="profile-field-row">
+              <span class="profile-field-label">Mother Name</span>
+              <span class="profile-field-value-text">Khaleda Begum</span>
             </div>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label for="prof-email" class="form-label">IIUC Student Email</label>
-                <input type="email" id="prof-email" class="form-input" value="alex.morgan@iiuc.ac.bd">
-              </div>
-              <div class="form-group">
-                <label for="prof-phone" class="form-label">Phone Number</label>
-                <input type="tel" id="prof-phone" class="form-input" value="+880 1712-345678">
-              </div>
+            <div class="profile-field-row" style="align-items: flex-start;">
+              <span class="profile-field-label" style="padding-top: 0.15rem;">Permanent Address</span>
+              <span class="profile-field-value-text">North Pomra ### Rangunia ### Bulbulipara ### ### Rangunia ### Rangunia ### Chattogram</span>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-sm" onclick="alert('IIUC Profile updated!'); return false;">💾 Save Changes</button>
-          </form>
-        </div>
-      </section>
-    </main>
+            <div class="profile-field-row">
+              <label for="birth_cert_no" class="profile-field-label">Birth Certificate No.</label>
+              <input type="text" id="birth_cert_no" name="birth_cert_no" class="profile-field-input" value="20051591625111709">
+            </div>
 
-    <!-- Aside Sidebar -->
-    <aside class="dashboard-aside" aria-label="IIUC Contacts">
-      <div class="aside-widget">
-        <h3 class="aside-widget-title">
-          <span>🚨</span> Emergency Contact
-        </h3>
-        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
-          <strong>Guardian:</strong> Eleanor Morgan<br>
-          <strong>Phone:</strong> +880 1819-876543
-        </p>
-      </div>
-    </aside>
-  </div>
+            <div class="profile-field-row">
+              <label for="nid_no" class="profile-field-label">National ID No.</label>
+              <input type="text" id="nid_no" name="nid_no" class="profile-field-input" value="">
+            </div>
 
-  <!-- Footer -->
-  <footer class="dashboard-footer">
-    <div class="footer-content-grid">
-      <div class="footer-col">
-        <h3>International Islamic University Chittagong</h3>
-        <p>Kumira, Sitakunda, Chattogram, Bangladesh. Official IIUC Student Portal.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <div class="footer-links">
-          <a href="dashboard.html">Dashboard</a>
-          <a href="profile.html">My Profile</a>
-          <a href="courses.html">My Courses</a>
+            <div class="profile-field-row">
+              <span class="profile-field-label">Nationality</span>
+              <span class="profile-field-value-text">Bangladeshi</span>
+            </div>
+
+            <div class="profile-field-row">
+              <span class="profile-field-label">Department</span>
+              <span class="profile-field-value-text">Computer Science and Engineering</span>
+            </div>
+
+            <div class="profile-field-row">
+              <label for="select_station" class="profile-field-label">Select Station</label>
+              <select id="select_station" name="select_station" class="profile-field-input">
+                <option value="agrabad">Agrabad</option>
+                <option value="chawkbazar">Chawkbazar</option>
+                <option value="gachbaria">Gachbaria</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Column 3: Right Student Portrait Photo -->
+          <div class="profile-portrait-wrapper">
+            <img src="assets/images/student.png" alt="Mohammad Ridwanul Karim Student Portrait" class="profile-portrait-img">
+          </div>
+
         </div>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <div class="footer-links">
-          <a href="results.html">Results & Grades</a>
-          <a href="attendance.html">Attendance</a>
-          <a href="notices.html">IIUC Notices</a>
+
+        <!-- Submit Button Row -->
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <button type="submit" style="background-color: #557297; color: #ffffff; border: none; padding: 0.45rem 1.5rem; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-sm); cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">Submit</button>
         </div>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>📍 Kumira, Chattogram, Bangladesh<br>✉️ info@iiuc.ac.bd</p>
-      </div>
+      </form>
+
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
-    </div>
+  </main>
+
+  <!-- 4. IIUC Portal Footer -->
+  <footer class="iiuc-portal-footer">
+    <p>Copyright &copy; 2026 All rights reserved IIUC and Developed by</p>
   </footer>
+
+  <div class="footer-meta-bar">
+    <span>Page rendered in 0.0384 seconds.</span>
+    <span><a href="#">Legal</a> | <a href="#">Privacy Policy</a></span>
+  </div>
 
 </body>
 </html>

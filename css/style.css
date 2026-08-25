@@ -1,7 +1,7 @@
 /* ==========================================================================
    IIUC Student Portal - Master Stylesheet
    International Islamic University Chittagong (IIUC)
-   Includes Login, Dashboard, Tabs, Dropdowns, Course, Pre-Reg, Routine, Wifi, Complain, Fee Calc, Payment History, Print Course Reg & Full Syllabus
+   Includes Login, Dashboard, Tabs, Dropdowns, Course, Pre-Reg, Routine, Wifi, Complain, Fee Calc, Payment History, Print Course Reg, Full Syllabus & Profile
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -347,7 +347,80 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. IIUC Contact, Academic, Advisor & Syllabus Tabs Replica Styles
+   5. IIUC Profile Page Replica Styles
+   -------------------------------------------------------------------------- */
+.profile-alert-banner {
+  background-color: #ffd8be;
+  border: 1px solid #ffc2a1;
+  border-radius: var(--radius-sm);
+  color: #e00000;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 1.5rem 1.5rem 1.5rem;
+}
+
+.profile-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 220px;
+  gap: 1.5rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  align-items: start;
+}
+
+.profile-field-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.85rem;
+  font-size: 0.825rem;
+}
+
+.profile-field-label {
+  width: 140px;
+  color: #555555;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.profile-field-value-text {
+  font-weight: 700;
+  color: #111111;
+  flex: 1;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.profile-field-input {
+  width: 100%;
+  max-width: 260px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.825rem;
+  border: 1px solid var(--wifi-input-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  background-color: #ffffff;
+}
+
+.profile-field-input:focus {
+  border-color: #7cb342;
+  box-shadow: 0 0 0 2px rgba(124, 179, 66, 0.2);
+}
+
+.profile-portrait-wrapper {
+  text-align: right;
+}
+
+.profile-portrait-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+/* --------------------------------------------------------------------------
+   6. IIUC Contact, Academic, Advisor & Syllabus Tabs Replica Styles
    -------------------------------------------------------------------------- */
 .tab-panel-content {
   padding: 1.25rem;
@@ -557,7 +630,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   6. Print Course Registration Specific Replica Styles
+   7. Print Course Registration Specific Replica Styles
    -------------------------------------------------------------------------- */
 .print-load-btn {
   background-color: #00c0ef;
@@ -578,7 +651,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   7. Payment History Table Specific Replica Styles
+   8. Payment History Table Specific Replica Styles
    -------------------------------------------------------------------------- */
 .payment-table-wrapper {
   padding: 1rem 1.25rem 1.5rem 1.25rem;
@@ -651,7 +724,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   8. Recent Complain Table Specific Replica Styles
+   9. Recent Complain Table Specific Replica Styles
    -------------------------------------------------------------------------- */
 .recent-complain-table-wrapper {
   padding: 1rem 1.25rem 1.5rem 1.25rem;
@@ -682,7 +755,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   9. Complain Box & Wifi Password Form Specific Replica Styles
+   10. Complain Box & Wifi Password Form Specific Replica Styles
    -------------------------------------------------------------------------- */
 .wifi-form-container, .complain-form-container {
   padding: 2rem 2.5rem;
@@ -750,7 +823,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   10. Class Routine Replica Specific Styles
+   11. Class Routine Replica Specific Styles
    -------------------------------------------------------------------------- */
 .routine-title-header {
   text-align: center;
@@ -823,7 +896,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   11. IIUC Pre-Registration Page Replica Styles
+   12. IIUC Pre-Registration Page Replica Styles
    -------------------------------------------------------------------------- */
 .prereg-container {
   padding: 1rem 1.5rem;
@@ -873,7 +946,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   12. IIUC Course Registration Page Table Styles
+   13. IIUC Course Registration Page Table Styles
    -------------------------------------------------------------------------- */
 .reg-page-container {
   padding: 1rem 1.5rem;
@@ -1000,7 +1073,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   13. IIUC Main Header, Action Grid, 3-Column Dashboard Body
+   14. IIUC Main Header, Action Grid, 3-Column Dashboard Body
    -------------------------------------------------------------------------- */
 .portal-main-header {
   background-color: #ffffff;
@@ -1518,6 +1591,13 @@ img {
   .syllabus-filter-bar {
     flex-direction: column;
     align-items: stretch;
+  }
+  .profile-page-grid {
+    grid-template-columns: 1fr;
+  }
+  .profile-portrait-wrapper {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }
 
