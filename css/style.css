@@ -359,10 +359,10 @@ img {
 }
 
 .tab-green-title {
-  font-size: 1.6rem;
+  font-size: 1.65rem;
   font-weight: 700;
-  color: #1e7e34;
-  margin-bottom: 1.25rem;
+  color: #20c997;
+  margin-bottom: 0.75rem;
   border-bottom: 1px solid #e9ecef;
   padding-bottom: 0.5rem;
 }
@@ -392,6 +392,13 @@ img {
   margin-bottom: 1.25rem;
   border-bottom: 1px solid #e9ecef;
   padding-bottom: 0.5rem;
+}
+
+.syllabus-curriculum-subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1rem;
 }
 
 .contact-cards-grid {
@@ -497,43 +504,56 @@ img {
 .syllabus-table-wrapper {
   max-height: 480px;
   overflow-y: auto;
-  border: 1px solid var(--border-color);
+  border: 1px solid #a3c7ff;
   border-radius: var(--radius-sm);
 }
 
 .syllabus-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.775rem;
+  font-size: 0.8rem;
+  text-align: center;
+  border: 1px solid #a3c7ff;
 }
 
 .syllabus-table th {
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: #ffe49e;
+  color: #000000;
   font-weight: 700;
-  padding: 0.5rem 0.65rem;
+  padding: 0.6rem 0.5rem;
   position: sticky;
   top: 0;
   z-index: 10;
-  text-align: left;
+  text-align: center;
+  border: 1px solid #a3c7ff;
 }
 
 .syllabus-table td {
-  padding: 0.45rem 0.65rem;
-  border-bottom: 1px solid #e9ecef;
-  color: var(--text-main);
+  padding: 0.55rem 0.5rem;
+  border: 1px solid #dcdcdc;
+  color: #111111;
+  text-align: center;
 }
 
-.syllabus-sem-divider {
-  background-color: #fff3cd;
+.syllabus-table tbody tr:nth-child(odd) {
+  background-color: #fffae6;
+}
+
+.syllabus-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.syllabus-table tbody tr.syllabus-sem-divider {
+  background-color: #fff3cd !important;
   color: #856404;
   font-weight: 700;
 }
 
-.syllabus-sem-divider td {
+.syllabus-table tbody tr.syllabus-sem-divider td {
   padding: 0.45rem 0.65rem;
   border-top: 1px solid #ffeeba;
   border-bottom: 1px solid #ffeeba;
+  text-align: left;
 }
 
 /* --------------------------------------------------------------------------
