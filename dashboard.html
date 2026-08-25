@@ -262,57 +262,164 @@
       </div>
 
       <div class="overview-tabs-container">
-        <div class="overview-tab-header">
-          <button class="overview-tab-btn active">Overview</button>
-          <button class="overview-tab-btn">Contact</button>
-          <button class="overview-tab-btn">Academic</button>
-          <button class="overview-tab-btn">Advisor</button>
-          <button class="overview-tab-btn">Syllabus</button>
+        <div class="overview-tab-header" role="tablist">
+          <button type="button" class="overview-tab-btn active" onclick="switchTab('overview', this)">Overview</button>
+          <button type="button" class="overview-tab-btn" onclick="switchTab('contact', this)">Contact</button>
+          <button type="button" class="overview-tab-btn" onclick="switchTab('academic', this)">Academic</button>
+          <button type="button" class="overview-tab-btn" onclick="switchTab('advisor', this)">Advisor</button>
+          <button type="button" class="overview-tab-btn" onclick="switchTab('syllabus', this)">Syllabus</button>
         </div>
 
-        <div class="overview-grid-fields">
-          <div class="field-box">
-            <div class="field-label">Matric No</div>
-            <div class="field-value">C243237</div>
-          </div>
-          <div class="field-box">
-            <div class="field-label">Name</div>
-            <div class="field-value">Mohammad Ridwanul Karim</div>
-          </div>
-          <div class="field-box">
-            <div class="field-label">Date of Birth</div>
-            <div class="field-value">2005-04-30</div>
-          </div>
-          <div class="field-box">
-            <div class="field-label">Father</div>
-            <div class="field-value">Mohammad Shajjadul Karim</div>
-          </div>
-          <div class="field-box">
-            <div class="field-label">Mother</div>
-            <div class="field-value">Khaleda Begum</div>
-          </div>
-          <div class="field-box">
-            <div class="field-label">Mother</div>
-            <div class="field-value">Khaleda Begum</div>
-          </div>
-          <div class="field-box">
-            <div class="field-label">Religion</div>
-            <div class="field-value">Islam</div>
-          </div>
-          <div class="field-box">
-            <div class="field-label">Gender</div>
-            <div class="field-value">Male</div>
-          </div>
-          <div class="field-box">
-            <div class="field-label">Nationality</div>
-            <div class="field-value">Bangladeshi</div>
-          </div>
-          <div class="field-box">
-            <div class="field-label">Department</div>
-            <div class="field-value">Computer Science and Engineering</div>
+        <!-- 1. Overview Tab Panel -->
+        <div id="tab-overview" class="tab-panel-content active-panel">
+          <div class="overview-grid-fields">
+            <div class="field-box">
+              <div class="field-label">Matric No</div>
+              <div class="field-value">C243237</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Name</div>
+              <div class="field-value">Mohammad Ridwanul Karim</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Date of Birth</div>
+              <div class="field-value">2005-04-30</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Father</div>
+              <div class="field-value">Mohammad Shajjadul Karim</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Mother</div>
+              <div class="field-value">Khaleda Begum</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Religion</div>
+              <div class="field-value">Islam</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Gender</div>
+              <div class="field-value">Male</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Nationality</div>
+              <div class="field-value">Bangladeshi</div>
+            </div>
+            <div class="field-box" style="grid-column: 1 / -1;">
+              <div class="field-label">Department</div>
+              <div class="field-value">Computer Science and Engineering</div>
+            </div>
           </div>
         </div>
+
+        <!-- 2. Contact Tab Panel (Exact Screenshot Replica) -->
+        <div id="tab-contact" class="tab-panel-content">
+          <h3 class="tab-green-title">Contact</h3>
+          
+          <div class="contact-cards-grid">
+            <div class="contact-card-box">
+              <div class="contact-card-label">Present Address</div>
+              <div class="contact-card-value">417,Shafi Islam Building ### Sonashah Majar Road ### Eidgah Borofkol ### ### Rampur ### Halishahar ### Chattogram</div>
+            </div>
+
+            <div class="contact-card-box">
+              <div class="contact-card-label">Permanent Address</div>
+              <div class="contact-card-value">North Pomra ### Rangunia ### Bulbulipara ### ### Rangunia ### Rangunia ### Chattogram</div>
+            </div>
+
+            <div class="contact-card-box">
+              <div class="contact-card-label">Mobile</div>
+              <div class="contact-card-value">01862126812</div>
+            </div>
+
+            <div class="contact-card-box">
+              <div class="contact-card-label">Alternative Mobile</div>
+              <div class="contact-card-value">01862126812</div>
+            </div>
+
+            <div class="contact-card-box full-width">
+              <div class="contact-card-label">Email</div>
+              <div class="contact-card-value">ridwanulk08@gmail.com</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Academic Tab Panel -->
+        <div id="tab-academic" class="tab-panel-content">
+          <h3 class="tab-green-title">Academic Details</h3>
+          <div class="overview-grid-fields">
+            <div class="field-box">
+              <div class="field-label">Programme</div>
+              <div class="field-value">B.Sc. in Computer Science and Engineering</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Current Semester</div>
+              <div class="field-value">Autumn-2026 (4th Semester)</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Current CGPA</div>
+              <div class="field-value">3.213</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Completed Credits</div>
+              <div class="field-value">54.0 Credit Hours</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Advisor Tab Panel -->
+        <div id="tab-advisor" class="tab-panel-content">
+          <h3 class="tab-green-title">Academic Advisor</h3>
+          <div class="overview-grid-fields">
+            <div class="field-box">
+              <div class="field-label">Advisor Name</div>
+              <div class="field-value">Dr. Mohammad Shamsul Arefin</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Designation</div>
+              <div class="field-value">Professor & Head, Department of CSE</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Email</div>
+              <div class="field-value">advisor.cse@iiuc.ac.bd</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Office Location</div>
+              <div class="field-value">Building 2, Room 408</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Syllabus Tab Panel -->
+        <div id="tab-syllabus" class="tab-panel-content">
+          <h3 class="tab-green-title">Curriculum Syllabus</h3>
+          <div class="overview-grid-fields">
+            <div class="field-box">
+              <div class="field-label">Syllabus Curriculum</div>
+              <div class="field-value">CSE 2024-2028 (Outcome Based Education)</div>
+            </div>
+            <div class="field-box">
+              <div class="field-label">Total Required Credits</div>
+              <div class="field-value">161.5 Credit Hours</div>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <!-- JavaScript for Tab Switching -->
+      <script>
+        function switchTab(tabId, btnElement) {
+          const allTabs = document.querySelectorAll('.tab-panel-content');
+          allTabs.forEach(tab => tab.classList.remove('active-panel'));
+          
+          const allButtons = document.querySelectorAll('.overview-tab-btn');
+          allButtons.forEach(btn => btn.classList.remove('active'));
+
+          document.getElementById('tab-' + tabId).classList.add('active-panel');
+          btnElement.classList.add('active');
+        }
+      </script>
 
     </section>
 

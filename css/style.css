@@ -1,7 +1,7 @@
 /* ==========================================================================
    IIUC Student Portal - Master Stylesheet
    International Islamic University Chittagong (IIUC)
-   Includes Login, Dashboard, Dropdowns, Course, Pre-Reg, Routine, Wifi, Complain, Fee Calc, Payment History & Print Course Reg
+   Includes Login, Dashboard, Tabs, Dropdowns, Course, Pre-Reg, Routine, Wifi, Complain, Fee Calc, Payment History & Print Course Reg
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -347,7 +347,60 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. Print Course Registration Specific Replica Styles
+   5. IIUC Contact Tab & Overview Tab Panels Replica Styles
+   -------------------------------------------------------------------------- */
+.tab-panel-content {
+  padding: 1.25rem;
+  display: none;
+}
+
+.tab-panel-content.active-panel {
+  display: block;
+}
+
+.tab-green-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e7e34;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 0.5rem;
+}
+
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-card-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid #007bff;
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.1rem;
+}
+
+.contact-card-box.full-width {
+  grid-column: 1 / -1;
+}
+
+.contact-card-label {
+  font-size: 0.775rem;
+  color: #6c757d;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.contact-card-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+/* --------------------------------------------------------------------------
+   6. Print Course Registration Specific Replica Styles
    -------------------------------------------------------------------------- */
 .print-load-btn {
   background-color: #00c0ef;
@@ -368,7 +421,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   6. Payment History Table Specific Replica Styles
+   7. Payment History Table Specific Replica Styles
    -------------------------------------------------------------------------- */
 .payment-table-wrapper {
   padding: 1rem 1.25rem 1.5rem 1.25rem;
@@ -441,7 +494,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   7. Recent Complain Table Specific Replica Styles
+   8. Recent Complain Table Specific Replica Styles
    -------------------------------------------------------------------------- */
 .recent-complain-table-wrapper {
   padding: 1rem 1.25rem 1.5rem 1.25rem;
@@ -472,7 +525,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   8. Complain Box & Wifi Password Form Specific Replica Styles
+   9. Complain Box & Wifi Password Form Specific Replica Styles
    -------------------------------------------------------------------------- */
 .wifi-form-container, .complain-form-container {
   padding: 2rem 2.5rem;
@@ -540,7 +593,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   9. Class Routine Replica Specific Styles
+   10. Class Routine Replica Specific Styles
    -------------------------------------------------------------------------- */
 .routine-title-header {
   text-align: center;
@@ -613,7 +666,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   10. IIUC Pre-Registration Page Replica Styles
+   11. IIUC Pre-Registration Page Replica Styles
    -------------------------------------------------------------------------- */
 .prereg-container {
   padding: 1rem 1.5rem;
@@ -663,7 +716,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   11. IIUC Course Registration Page Table Styles
+   12. IIUC Course Registration Page Table Styles
    -------------------------------------------------------------------------- */
 .reg-page-container {
   padding: 1rem 1.5rem;
@@ -790,7 +843,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   12. IIUC Main Header, Action Grid, 3-Column Dashboard Body
+   13. IIUC Main Header, Action Grid, 3-Column Dashboard Body
    -------------------------------------------------------------------------- */
 .portal-main-header {
   background-color: #ffffff;
@@ -1124,6 +1177,7 @@ img {
   border-radius: var(--radius-sm);
   border: none;
   cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .overview-tab-btn.active {
@@ -1132,7 +1186,6 @@ img {
 }
 
 .overview-grid-fields {
-  padding: 1.25rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
@@ -1301,6 +1354,9 @@ img {
   .complain-form-label, .complain-form-input, .complain-form-select, .complain-form-textarea, .complain-submit-btn {
     width: 100%;
     margin-left: 0;
+  }
+  .contact-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
 
