@@ -3,349 +3,310 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Student Portal Dashboard - International Islamic University Chittagong.">
-  <title>Student Dashboard | IIUC Portal</title>
+  <meta name="description" content="International Islamic University Chittagong (IIUC) Student Portal Homepage">
+  <title>IIUC Student Portal - Homepage</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
 
-  <!-- Header: IIUC Branding, Student Profile & Logout -->
-  <header class="dashboard-header">
-    <a href="dashboard.html" class="portal-brand" aria-label="IIUC Portal Dashboard">
-      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
-      <div class="portal-title-wrapper">
+  <!-- 1. Top Cyan Utility Navigation Bar -->
+  <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
+    <div class="top-utility-left">
+      <span class="utility-item">👥 Students ▾</span>
+      <span class="utility-item">📖 Others ▾</span>
+      <span class="utility-item">⏱ TER ▾</span>
+      <span class="utility-item">💻 Application ▾</span>
+      <span class="utility-item">💬 IQAC ▾</span>
+    </div>
+    <div class="top-utility-right">
+      <span class="utility-item">👤 Mohammad Ridwanul Karim ▾</span>
+    </div>
+  </div>
+
+  <!-- 2. Main University Header (Logo & Search Bar) -->
+  <header class="portal-main-header">
+    <a href="dashboard.html" class="iiuc-logo-group" aria-label="IIUC Portal Homepage">
+      <img src="assets/images/logo.png" alt="IIUC Official Crest Logo" class="iiuc-header-logo">
+      <div class="iiuc-title-block">
+        <h2>আন্তর্জাতিক ইসলামী বিশ্ববিদ্যালয় চট্টগ্রাম</h2>
         <h1>International Islamic University Chittagong</h1>
-        <p>Official Student Portal (IIUC)</p>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh</p>
       </div>
     </a>
 
-    <!-- Student Profile & Quick Actions -->
-    <div class="user-profile-widget">
-      <div class="user-details">
-        <span class="user-name">Alex Morgan</span>
-        <span class="user-id">Matric: C201042</span>
+    <div class="header-search-widget">
+      <span class="current-date-text">August 25, 2026 Tuesday</span>
+      <div class="search-input-group">
+        <input type="text" class="search-input" placeholder="Search portal options..." aria-label="Search portal">
+        <button type="button" class="search-btn">Search & Find</button>
       </div>
-      <div class="avatar-circle" title="Student Profile Avatar" aria-label="Student Profile Avatar">AM</div>
-      <a href="index.html" class="btn btn-secondary btn-sm" aria-label="Log out of IIUC portal">
-        <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/>
-        </svg>
-        Logout
-      </a>
     </div>
   </header>
 
-  <!-- Main Dashboard Layout Container (Nav + Main + Aside) -->
-  <div class="dashboard-layout">
+  <!-- 3. Action Buttons Grid Bar (Row of Colored Quick Action Pills) -->
+  <nav class="action-grid-container" aria-label="Quick Action Grid">
+    <!-- Row 1 -->
+    <div class="action-buttons-grid">
+      <a href="courses.html" class="action-btn btn-act-blue">📂 Pre-Registration</a>
+      <a href="courses.html" class="action-btn btn-act-green">✔ Course Registration</a>
+      <a href="courses.html" class="action-btn btn-act-white">➕ Add/Drop</a>
+      <a href="courses.html" class="action-btn btn-act-red">❌ Withdraw</a>
+      <a href="courses.html" class="action-btn btn-act-teal">📘 MDP Registration</a>
+      <a href="schedule.html" class="action-btn btn-act-blue">📅 Class Routine</a>
+    </div>
 
-    <!-- Major Navigation Sidebar -->
-    <nav class="dashboard-nav" aria-label="Portal Primary Navigation">
-      <div class="nav-menu">
-        <a href="dashboard.html" class="nav-link active" aria-current="page">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
-          Dashboard
-        </a>
-        <a href="courses.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.89 9L12 4.57 20.11 9 12 13.43 3.89 9zM5 13.78v4.44l7 3.82 7-3.82v-4.44l-7 3.82-7-3.82z"/></svg>
-          My Courses
-          <span class="badge badge-info nav-badge">5</span>
-        </a>
-        <a href="schedule.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
-          Class Schedule
-        </a>
-        <a href="attendance.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          Attendance
-        </a>
-        <a href="results.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          Results & Grades
-        </a>
-        <a href="assignments.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-          Assignments
-          <span class="badge badge-warning nav-badge">3</span>
-        </a>
-        <a href="notices.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
-          Campus Notices
-        </a>
-        <a href="profile.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          My Profile
-        </a>
+    <!-- Row 2 -->
+    <div class="action-buttons-grid">
+      <a href="results.html" class="action-btn btn-act-blue">📘 Special Examination</a>
+      <a href="courses.html" class="action-btn btn-act-red">❌ Semester Drop</a>
+      <a href="notices.html" class="action-btn btn-act-teal">🌊 Complain</a>
+      <a href="results.html" class="action-btn btn-act-green">💳 Payment History</a>
+      <a href="results.html" class="action-btn btn-act-red">📄 Payment Slip</a>
+      <a href="courses.html" class="action-btn btn-act-blue">📊 Registration Summary</a>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="action-buttons-grid">
+      <a href="results.html" class="action-btn btn-act-white">📈 Result View</a>
+      <a href="courses.html" class="action-btn btn-act-blue">📚 Course Status</a>
+      <a href="results.html" class="action-btn btn-act-gold">📝 TER</a>
+      <a href="profile.html" class="action-btn btn-act-blue">👥 Siblings</a>
+      <a href="profile.html" class="action-btn btn-act-dark">👨‍🏫 Supervisor</a>
+      <a href="assignments.html" class="action-btn btn-act-green">📁 Proposal</a>
+    </div>
+
+    <!-- Row 4 (Security & Account Navigation) -->
+    <div class="action-buttons-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 0;">
+      <a href="profile.html" class="action-btn btn-act-white">🔐 Password</a>
+      <a href="profile.html" class="action-btn btn-act-blue">👤 Profile</a>
+      <a href="index.html" class="action-btn btn-act-dark">🚪 Logout</a>
+    </div>
+  </nav>
+
+  <!-- 4. 3-Column IIUC Main Dashboard Layout -->
+  <main class="portal-dashboard-grid">
+
+    <!-- Column 1: Left Student Bio Card -->
+    <article class="student-bio-card">
+      <div class="student-photo-wrapper">
+        <div class="avatar-circle" style="width: 80px; height: 80px; font-size: 2rem; margin: 0 auto 0.5rem auto;">MR</div>
       </div>
-    </nav>
 
-    <!-- Unique Primary Content -->
-    <main class="dashboard-main">
-
-      <!-- Welcome Banner -->
-      <section class="welcome-banner" aria-label="Welcome Section">
-        <div class="welcome-text">
-          <h2>Welcome back to IIUC, Alex Morgan! 👋</h2>
-          <p>Department of Computer Science & Engineering (CSE) | IIUC Kumira Campus</p>
-          <div class="welcome-badges">
-            <span class="welcome-badge-item">Spring Semester 2026</span>
-            <span class="welcome-badge-item">5th Semester (Junior)</span>
-            <span class="welcome-badge-item">Status: Regular</span>
-          </div>
+      <div class="bio-detail-list">
+        <div class="bio-item">
+          <span class="bio-icon">📞</span> 01862126812
         </div>
-      </section>
-
-      <!-- Academic Performance KPI Stats Overview -->
-      <section aria-label="Academic Statistics Overview">
-        <div class="section-header">
-          <h2 class="section-title">
-            <span class="section-title-icon">📊</span> Academic Performance
-          </h2>
+        <div class="bio-item">
+          <span class="bio-icon">✉️</span> ridwanulk08@gmail.com
         </div>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-label">Cumulative CGPA</div>
-            <div class="stat-value">3.84</div>
-            <div class="stat-foot">
-              <span class="badge badge-success">Top 5%</span> Out of 4.00
-            </div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-label">Enrolled Courses</div>
-            <div class="stat-value">5</div>
-            <div class="stat-foot">
-              <span class="badge badge-info">Spring 2026</span> 16.0 Credit Hours
-            </div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-label">Overall Attendance</div>
-            <div class="stat-value">94.2%</div>
-            <div class="stat-foot">
-              <span class="badge badge-success">Good</span> 132/140 Classes
-            </div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-label">Completed Credits</div>
-            <div class="stat-value">78</div>
-            <div class="stat-foot">
-              <span class="badge badge-info">B.Sc. Progress</span> 78 / 138 Credits
-            </div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-label">Pending Tasks</div>
-            <div class="stat-value">3</div>
-            <div class="stat-foot">
-              <span class="badge badge-warning">Due Soon</span> Next 7 days
-            </div>
-          </div>
+        <div class="bio-item">
+          <span class="bio-icon">📍</span> 417, Shafi Islam Building ### Sonashah Majar Road ### Eidgah Borofkol ### Halishahar ### Chattogram
         </div>
-      </section>
-
-      <!-- Current Enrolled Courses Summary -->
-      <section aria-label="Current Enrolled Courses Overview">
-        <div class="section-header">
-          <h2 class="section-title">
-            <span class="section-title-icon">📚</span> Enrolled Courses Overview
-          </h2>
-          <a href="courses.html" class="btn btn-secondary btn-sm">View All Courses &rarr;</a>
+        <div class="bio-item">
+          <span class="bio-icon">🎓</span> <strong>Max Semester:</strong> 12
         </div>
-
-        <div class="courses-grid">
-          <article class="course-card">
-            <div>
-              <div class="course-code">CSE-3501</div>
-              <h3 class="course-title">Data Structures & Algorithms</h3>
-              <div class="course-instructor">
-                <span>👨‍🏫 Prof. Dr. Sarah Jenkins</span>
-              </div>
-              <div class="course-meta">
-                <span>Credit: 4.0</span>
-                <span>Room: Academic Bldg 302</span>
-              </div>
-            </div>
-            <div class="progress-bar-container">
-              <div class="progress-label-row">
-                <span>Syllabus Progress</span>
-                <span>75%</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill" style="width: 75%;"></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="course-card">
-            <div>
-              <div class="course-code">CSE-3505</div>
-              <h3 class="course-title">Database Management Systems</h3>
-              <div class="course-instructor">
-                <span>👨‍🏫 Assoc. Prof. Robert Chen</span>
-              </div>
-              <div class="course-meta">
-                <span>Credit: 3.0</span>
-                <span>Room: CSE Lab 2B</span>
-              </div>
-            </div>
-            <div class="progress-bar-container">
-              <div class="progress-label-row">
-                <span>Syllabus Progress</span>
-                <span>60%</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill" style="width: 60%;"></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="course-card">
-            <div>
-              <div class="course-code">MATH-2401</div>
-              <h3 class="course-title">Discrete Mathematics & Graph Theory</h3>
-              <div class="course-instructor">
-                <span>👨‍🏫 Dr. Alan Turing</span>
-              </div>
-              <div class="course-meta">
-                <span>Credit: 3.0</span>
-                <span>Room: Science Hall 105</span>
-              </div>
-            </div>
-            <div class="progress-bar-container">
-              <div class="progress-label-row">
-                <span>Syllabus Progress</span>
-                <span>80%</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill" style="width: 80%;"></div>
-              </div>
-            </div>
-          </article>
+        <div class="bio-item">
+          <span class="bio-icon">👥</span> <strong>Siblings:</strong> -
         </div>
-      </section>
-
-      <!-- Today's Schedule -->
-      <section aria-label="Upcoming Schedule Overview">
-        <div class="section-header">
-          <h2 class="section-title">
-            <span class="section-title-icon">🗓️</span> Today's IIUC Class Routine
-          </h2>
-          <a href="schedule.html" class="btn btn-secondary btn-sm">Full Routine &rarr;</a>
+        <div class="bio-item">
+          <span class="bio-icon">🚌</span> <strong>Transport:</strong> Agrabad
         </div>
-
-        <div class="table-responsive">
-          <table class="schedule-table" summary="Today's class routine preview">
-            <thead>
-              <tr>
-                <th scope="col">Course</th>
-                <th scope="col">Time</th>
-                <th scope="col">Room / Lab</th>
-                <th scope="col">Instructor</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="course-pill">CSE-3501</span> — Data Structures</td>
-                <td>10:00 AM - 11:30 AM</td>
-                <td>Academic Bldg 302</td>
-                <td>Prof. Dr. Sarah Jenkins</td>
-                <td><span class="badge badge-success">Completed</span></td>
-              </tr>
-              <tr>
-                <td><span class="course-pill">CSE-3505</span> — Database Systems</td>
-                <td>01:30 PM - 03:00 PM</td>
-                <td>CSE Lab 2B</td>
-                <td>Assoc. Prof. Robert Chen</td>
-                <td><span class="badge badge-info">Next Class</span></td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="bio-item">
+          <span class="bio-icon">🛣️</span> <strong>Route:</strong> Agrabad
         </div>
-      </section>
-
-    </main>
-
-    <!-- Sidebar Aside -->
-    <aside class="dashboard-aside" aria-label="Quick Tools and Notices">
-      <div class="aside-widget">
-        <h3 class="aside-widget-title">
-          <span>🔗</span> IIUC Quick Actions
-        </h3>
-        <div class="quick-links-list">
-          <a href="courses.html" class="quick-link-item">
-            <span>📚</span> View Course Syllabi
-          </a>
-          <a href="assignments.html" class="quick-link-item">
-            <span>📝</span> Submit Assignments
-          </a>
-          <a href="results.html" class="quick-link-item">
-            <span>🎓</span> IIUC Grade Sheet
-          </a>
-          <a href="attendance.html" class="quick-link-item">
-            <span>📊</span> Attendance Record
-          </a>
+        <div class="bio-item">
+          <span class="bio-icon">🏫</span> <strong>Previous HS/Institute:</strong> Bakalia Government College
         </div>
       </div>
 
-      <div class="aside-widget">
-        <h3 class="aside-widget-title">
-          <span>⏰</span> Upcoming Deadlines
-        </h3>
-        <div class="deadlines-list">
-          <div class="deadline-item">
-            <div class="deadline-title">CSE-3501: Assignment #3</div>
-            <div class="deadline-sub">Binary Search Trees</div>
-            <div class="deadline-date">Due: Aug 26, 2026</div>
+      <div class="area-of-study-box">
+        <h4>Areas of Study</h4>
+        <p>Bachelor of Science in Computer Science and Engineering</p>
+      </div>
+    </article>
+
+    <!-- Column 2: Center Main Content Stream -->
+    <section class="center-content-stream">
+      
+      <!-- Tutorial Button -->
+      <div class="tutorial-btn-wrapper">
+        <button type="button" class="tutorial-btn">Pre Registration Tutorial</button>
+      </div>
+
+      <!-- Student Name Header Card -->
+      <div class="student-name-header-card">
+        <div class="student-name-blue-bar">
+          <span>👤 Mohammad Ridwanul Karim</span>
+        </div>
+        <div class="student-id-row">
+          <div>
+            <span>Student ID: </span>
+            <span class="id-badge-box">C243237</span>
           </div>
-          <div class="deadline-item">
-            <div class="deadline-title">DBMS Project Milestone 1</div>
-            <div class="deadline-sub">ER Diagram Design</div>
-            <div class="deadline-date">Due: Aug 29, 2026</div>
+          <div>
+            <span>Registration No: </span>
+            <span class="id-badge-box" style="background-color: #e6fffa; color: #047857;">0062420005101237</span>
           </div>
         </div>
       </div>
+
+      <!-- Banner 1: Gold Countdown -->
+      <div class="banner-gold">
+        Registration Left: 5Days 14H 27min 26s
+      </div>
+
+      <!-- Banner 2: Red Notice -->
+      <div class="banner-red-alert">
+        Dear Students, the Spring 2026 admit card cannot be downloaded unless the Autumn 2026 pre-registration is completed.
+      </div>
+
+      <!-- Banner 3: Pink Readmission Notice -->
+      <div class="banner-pink-alert">
+        A student shall have to take readmission if s/he obtains GPA below 2.00 in 3 consecutive semesters
+      </div>
+
+      <!-- Banner 4: Gold GPA Notice -->
+      <div class="banner-gold">
+        A student shall have to obtain minimum GPA 2.00 in each semester.
+      </div>
+
+      <!-- Daily Transport Booking Card -->
+      <div class="transport-booking-card">
+        <div class="transport-header-bar">
+          <span>Daily Transport Booking</span>
+          <span>🔄 ✖ ⚙</span>
+        </div>
+        <form action="#" method="POST" class="transport-form-row">
+          <input type="date" class="transport-input" value="2026-08-25" aria-label="Transport booking date">
+          <select class="transport-select" aria-label="Select Station">
+            <option value="" disabled selected>Select Station</option>
+            <option value="agrabad">Agrabad Station</option>
+            <option value="chawkbazar">Chawkbazar Station</option>
+            <option value="gachbaria">Gachbaria Station</option>
+          </select>
+          <button type="submit" class="transport-submit-btn" onclick="alert('Transport Booking Submitted'); return false;">Submit</button>
+        </form>
+      </div>
+
+      <!-- Overview / Tabs Section -->
+      <div class="overview-tabs-container">
+        <div class="overview-tab-header">
+          <button class="overview-tab-btn active">Overview</button>
+          <button class="overview-tab-btn">Contact</button>
+          <button class="overview-tab-btn">Academic</button>
+          <button class="overview-tab-btn">Advisor</button>
+          <button class="overview-tab-btn">Syllabus</button>
+        </div>
+
+        <div class="overview-grid-fields">
+          <div class="field-box">
+            <div class="field-label">Matric No</div>
+            <div class="field-value">C243237</div>
+          </div>
+          <div class="field-box">
+            <div class="field-label">Name</div>
+            <div class="field-value">Mohammad Ridwanul Karim</div>
+          </div>
+          <div class="field-box">
+            <div class="field-label">Date of Birth</div>
+            <div class="field-value">2005-04-30</div>
+          </div>
+          <div class="field-box">
+            <div class="field-label">Father</div>
+            <div class="field-value">Mohammad Shajjadul Karim</div>
+          </div>
+          <div class="field-box">
+            <div class="field-label">Mother</div>
+            <div class="field-value">Khaleda Begum</div>
+          </div>
+          <div class="field-box">
+            <div class="field-label">Mother</div>
+            <div class="field-value">Khaleda Begum</div>
+          </div>
+          <div class="field-box">
+            <div class="field-label">Religion</div>
+            <div class="field-value">Islam</div>
+          </div>
+          <div class="field-box">
+            <div class="field-label">Gender</div>
+            <div class="field-value">Male</div>
+          </div>
+          <div class="field-box">
+            <div class="field-label">Nationality</div>
+            <div class="field-value">Bangladeshi</div>
+          </div>
+          <div class="field-box">
+            <div class="field-label">Department</div>
+            <div class="field-value">Computer Science and Engineering</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Column 3: Right Sidebar Cards & Rules -->
+    <aside class="right-sidebar-stream" aria-label="Registration Rules and Statistics">
+      
+      <!-- Registration Rules Tab Box -->
+      <div class="registration-rules-card">
+        <div class="rules-tab-header">
+          <button class="rules-tab-btn active">Registration</button>
+          <button class="rules-tab-btn">Exam Rules</button>
+        </div>
+        <div class="rules-content-body">
+          <p style="margin-bottom: 0.5rem; font-weight: 600;">This is to inform all students that the Pre-Registration and Registration Confirmation process for Spring 2026: All students must carefully follow the instructions below:</p>
+          <ol>
+            <li>Students must complete their Pre-Registration within the scheduled Pre-Registration Dates.</li>
+            <li>Once submitted, you can edit and resubmit within the deadline. After deadline, no changes can be made.</li>
+            <li>If you do not complete Pre-Registration &rarr; You cannot submit to Advisor.</li>
+            <li>If you pre-registered but did not submit to Advisor &rarr; You will be treated as Not Registered.</li>
+            <li>If you completed both Pre-Registration and Advisor Submission but did not pay within the deadline &rarr; You will Not be Registered.</li>
+            <li>During Pre-Registration, Maximum credit is based on the most recent semester GPA. If GPA &gt; 0, After Result Publication, Maximum credit is based on newly earned GPA.</li>
+            <li>After Semester Results, prerequisite rules will apply. And if GPA increases &rarr; You may add/drop courses. If GPA decreases &rarr; You must reduce credit to match allowed limit. Advisor Submission will remain Blocked until credit matches your GPA limit.</li>
+            <li>After submitting to Advisor, Students cannot make changes. Advisors may adjust before deadline. Missing Advisor submission &rarr; counted as Not Registered.</li>
+            <li>If Payment Is Not Made: Pre-Registration will be CANCELLED and the semester will be marked as DROP.</li>
+            <li>Failure at any stage &rarr; Not Registered</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Outstanding Balance KPI -->
+      <div class="kpi-card-pink">
+        <div class="kpi-title">Outstanding Balance</div>
+        <div class="kpi-number">-7.5</div>
+      </div>
+
+      <!-- Current CGPA KPI -->
+      <div class="kpi-card-cyan">
+        <div class="kpi-title">Current CGPA</div>
+        <div class="kpi-number">3.213</div>
+      </div>
+
+      <!-- Min Degree Req KPI -->
+      <div class="kpi-card-white">
+        <div class="field-label">Minimum Degree Requirement</div>
+        <div class="field-value" style="font-size: 1.15rem; color: #047857;">CGPA: 2.50</div>
+      </div>
+
+      <!-- Required Credit Hours KPI -->
+      <div class="kpi-card-white">
+        <div class="field-label">Required Credit Hours</div>
+        <div class="field-value" style="font-size: 1.25rem;">163</div>
+      </div>
+
     </aside>
 
-  </div>
+  </main>
 
-  <!-- Footer -->
-  <footer class="dashboard-footer">
-    <div class="footer-content-grid">
-      <div class="footer-col">
-        <h3>International Islamic University Chittagong</h3>
-        <p>Kumira, Sitakunda, Chattogram, Bangladesh. Official Student Information System (IIUC).</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <div class="footer-links">
-          <a href="dashboard.html">Dashboard</a>
-          <a href="courses.html">My Courses</a>
-          <a href="schedule.html">Class Schedule</a>
-          <a href="results.html">Results & Grades</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>IIUC Services</h4>
-        <div class="footer-links">
-          <a href="attendance.html">Attendance</a>
-          <a href="assignments.html">Assignments</a>
-          <a href="notices.html">IIUC Notices</a>
-          <a href="profile.html">My Profile</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Contact Desk</h4>
-        <p>📍 Kumira, Chattogram-4318, Bangladesh<br>📞 +880 2334461900<br>✉️ info@iiuc.ac.bd</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
-      <div class="auth-footer-nav" style="margin: 0;">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Security</a>
-      </div>
-    </div>
+  <!-- 5. IIUC Portal Footer -->
+  <footer class="iiuc-portal-footer">
+    <p>Copyright &copy; 2026 All rights reserved IIUC and Developed by</p>
   </footer>
+
+  <div class="footer-meta-bar">
+    <span>Page rendered in 1.9869 seconds.</span>
+    <span><a href="#">Legal</a> | <a href="#">Privacy Policy</a></span>
+  </div>
 
 </body>
 </html>

@@ -31,19 +31,20 @@
 
       <!-- Quick Demo Access Link -->
       <div class="demo-banner" role="region" aria-label="Demo Notification">
-        <span>⚡ <strong>Quick Demo:</strong> Preview IIUC student dashboard</span>
+        <span>⚡ <strong>Quick Demo:</strong> Preview IIUC student portal homepage</span>
         <a href="dashboard.html">View Dashboard &rarr;</a>
       </div>
 
       <form action="dashboard.html" method="GET" aria-label="IIUC Student Portal Login Form">
         <div class="form-group">
-          <label for="student-id" class="form-label">Student Matric No. / Email <span class="required">*</span></label>
+          <label for="student-id" class="form-label">Student ID / Matric No. / Email <span class="required">*</span></label>
           <input 
             type="text" 
             id="student-id" 
             name="student_id" 
             class="form-input" 
-            placeholder="e.g. C201042 or alex@iiuc.ac.bd" 
+            value="C243237" 
+            placeholder="e.g. C243237 or ridwanulk08@gmail.com" 
             required 
             autocomplete="username"
           >
@@ -56,7 +57,8 @@
             id="password" 
             name="password" 
             class="form-input" 
-            placeholder="Enter your secret password" 
+            value="••••••••••••" 
+            placeholder="Enter your password" 
             required 
             autocomplete="current-password"
           >
@@ -64,10 +66,10 @@
 
         <div class="auth-meta-links">
           <div class="form-checkbox-group" style="margin-bottom: 0;">
-            <input type="checkbox" id="remember" name="remember" class="form-checkbox">
+            <input type="checkbox" id="remember" name="remember" class="form-checkbox" checked>
             <label for="remember" class="form-checkbox-label">Remember me</label>
           </div>
-          <a href="#" onclick="alert('Password reset instructions have been sent to your IIUC email.'); return false;">Forgot password?</a>
+          <a href="#" onclick="alert('Password reset instructions sent to ridwanulk08@gmail.com'); return false;">Forgot password?</a>
         </div>
 
         <button type="submit" class="btn btn-primary btn-block">
