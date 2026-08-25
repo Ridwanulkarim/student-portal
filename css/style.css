@@ -1,7 +1,7 @@
 /* ==========================================================================
    IIUC Student Portal - Master Stylesheet
    International Islamic University Chittagong (IIUC)
-   Includes Login, Dashboard, Tabs, Dropdowns, Course, Pre-Reg, Routine, Wifi, Complain, Fee Calc, Payment History & Print Course Reg
+   Includes Login, Dashboard, Tabs, Dropdowns, Course, Pre-Reg, Routine, Wifi, Complain, Fee Calc, Payment History, Print Course Reg & Full Syllabus
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -347,7 +347,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. IIUC Contact, Academic & Advisor Tabs Replica Styles
+   5. IIUC Contact, Academic, Advisor & Syllabus Tabs Replica Styles
    -------------------------------------------------------------------------- */
 .tab-panel-content {
   padding: 1.25rem;
@@ -380,6 +380,15 @@ img {
   font-size: 1.6rem;
   font-weight: 700;
   color: #fd7e14;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 0.5rem;
+}
+
+.tab-blue-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #007bff;
   margin-bottom: 1.25rem;
   border-bottom: 1px solid #e9ecef;
   padding-bottom: 0.5rem;
@@ -459,6 +468,72 @@ img {
   align-items: center;
   gap: 0.4rem;
   margin-top: 0.35rem;
+}
+
+.syllabus-filter-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.syllabus-search-input {
+  flex: 1;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.825rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  outline: none;
+}
+
+.syllabus-sem-select {
+  padding: 0.45rem 0.85rem;
+  font-size: 0.825rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: #ffffff;
+}
+
+.syllabus-table-wrapper {
+  max-height: 480px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+.syllabus-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.775rem;
+}
+
+.syllabus-table th {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.5rem 0.65rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  text-align: left;
+}
+
+.syllabus-table td {
+  padding: 0.45rem 0.65rem;
+  border-bottom: 1px solid #e9ecef;
+  color: var(--text-main);
+}
+
+.syllabus-sem-divider {
+  background-color: #fff3cd;
+  color: #856404;
+  font-weight: 700;
+}
+
+.syllabus-sem-divider td {
+  padding: 0.45rem 0.65rem;
+  border-top: 1px solid #ffeeba;
+  border-bottom: 1px solid #ffeeba;
 }
 
 /* --------------------------------------------------------------------------
@@ -992,7 +1067,7 @@ img {
 }
 
 .action-buttons-grid {
-  display grid;
+  display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 0.5rem;
   margin-bottom: 0.5rem;
@@ -1419,6 +1494,10 @@ img {
   }
   .contact-cards-grid {
     grid-template-columns: 1fr;
+  }
+  .syllabus-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
