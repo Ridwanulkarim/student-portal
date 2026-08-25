@@ -3,219 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Student Portal - Class Schedule & Weekly Routine">
-  <title>Class Schedule | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Class Routine - International Islamic University Chittagong">
+  <title>Class Routine | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
 
-  <!-- Header -->
-  <header class="dashboard-header">
-    <a href="dashboard.html" class="portal-brand" aria-label="IIUC Portal Dashboard">
-      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
-      <div class="portal-title-wrapper">
+  <!-- 1. Top Cyan Utility Navigation Bar -->
+  <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
+    <div class="top-utility-left">
+      <!-- Students Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Students Menu">
+          <span>👥</span> Students ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="preregistration.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Pre Registration</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Registration</a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment History</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Print Course Registration</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Add Drop Courses</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Semester Transport Update</a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Result View</a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment Advising</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Withdraw</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Registration Summary</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Status</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Update Transport</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Set Major Courses</a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> MDP Result View</a>
+        </div>
+      </div>
+
+      <!-- Others Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Others Menu">
+          <span>🏢</span> Others ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="notices.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Campus Notices</a>
+          <a href="schedule.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Class Timetable</a>
+        </div>
+      </div>
+
+      <span class="utility-item">⏱ TER ▾</span>
+      <span class="utility-item">💻 Application ▾</span>
+      <span class="utility-item">💬 IQAC ▾</span>
+    </div>
+
+    <div class="top-utility-right">
+      <!-- User Profile Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="User Profile Menu">
+          <span>👤</span> Mohammad Ridwanul Karim ▾
+        </button>
+        <div class="utility-dropdown-menu menu-right" role="menu">
+          <a href="index.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🔒</span> Logout</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🏠</span> Update Profile</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">⚙️</span> Change Password</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Main University Header -->
+  <header class="portal-main-header">
+    <a href="dashboard.html" class="iiuc-logo-group" aria-label="IIUC Portal Homepage">
+      <img src="assets/images/logo.png" alt="IIUC Official Crest Logo" class="iiuc-header-logo">
+      <div class="iiuc-title-block">
+        <h2>আন্তর্জাতিক ইসলামী বিশ্ববিদ্যালয় চট্টগ্রাম</h2>
         <h1>International Islamic University Chittagong</h1>
-        <p>Official Student Portal (IIUC)</p>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh</p>
       </div>
     </a>
 
-    <div class="user-profile-widget">
-      <div class="user-details">
-        <span class="user-name">Alex Morgan</span>
-        <span class="user-id">Matric: C201042</span>
+    <div class="header-search-widget">
+      <span class="current-date-text">August 25, 2026 Tuesday</span>
+      <div class="search-input-group">
+        <input type="text" class="search-input" placeholder="Search portal options..." aria-label="Search portal">
+        <button type="button" class="search-btn">Search & Find</button>
       </div>
-      <div class="avatar-circle" title="Student Profile Avatar" aria-label="Student Profile Avatar">AM</div>
-      <a href="index.html" class="btn btn-secondary btn-sm">Logout</a>
     </div>
   </header>
 
-  <!-- Layout Container -->
-  <div class="dashboard-layout">
-
-    <!-- Navigation -->
-    <nav class="dashboard-nav" aria-label="Portal Primary Navigation">
-      <div class="nav-menu">
-        <a href="dashboard.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
-          Dashboard
-        </a>
-        <a href="courses.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.89 9L12 4.57 20.11 9 12 13.43 3.89 9zM5 13.78v4.44l7 3.82 7-3.82v-4.44l-7 3.82-7-3.82z"/></svg>
-          My Courses
-          <span class="badge badge-info nav-badge">5</span>
-        </a>
-        <a href="schedule.html" class="nav-link active" aria-current="page">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
-          Class Schedule
-        </a>
-        <a href="attendance.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          Attendance
-        </a>
-        <a href="results.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          Results & Grades
-        </a>
-        <a href="assignments.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-          Assignments
-          <span class="badge badge-warning nav-badge">3</span>
-        </a>
-        <a href="notices.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
-          Campus Notices
-        </a>
-        <a href="profile.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          My Profile
-        </a>
+  <!-- 3. Class Routine Main Content Container -->
+  <main class="prereg-container">
+    <div class="prereg-card-wrapper">
+      
+      <!-- Cyan Banner Header with Green Tab Pill -->
+      <div class="prereg-cyan-header">
+        <span class="prereg-tab-pill">Class Routine</span>
       </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="dashboard-main">
-
-      <!-- Page Banner -->
-      <section class="page-intro-banner">
-        <div>
-          <h2 class="page-intro-title">Weekly Class Routine (IIUC)</h2>
-          <p class="page-intro-subtitle">Spring Semester 2026 | IIUC Kumira Campus Routine</p>
-        </div>
-        <button class="btn btn-secondary btn-sm" onclick="window.print();">🖨️ Print Routine</button>
-      </section>
-
-      <!-- Weekly Schedule Table -->
-      <section aria-label="Weekly Timetable Table">
-        <div class="table-responsive">
-          <table class="schedule-table" summary="Weekly class timetable matrix from Saturday to Thursday">
-            <thead>
-              <tr>
-                <th scope="col">Day</th>
-                <th scope="col">09:00 AM - 10:30 AM</th>
-                <th scope="col">10:45 AM - 12:15 PM</th>
-                <th scope="col">01:30 PM - 03:00 PM</th>
-                <th scope="col">03:15 PM - 04:45 PM</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th><strong>Saturday</strong></th>
-                <td>
-                  <strong style="color: var(--primary-dark);">CSE-3501</strong><br>
-                  <small>Academic Bldg 302</small><br>
-                  <span class="badge badge-info">Theory</span>
-                </td>
-                <td>
-                  <span style="color: var(--text-subtle);">Break / Study Hour</span>
-                </td>
-                <td>
-                  <strong style="color: var(--primary-dark);">CSE-3505</strong><br>
-                  <small>CSE Lab 2B</small><br>
-                  <span class="badge badge-warning">Lab Session</span>
-                </td>
-                <td>
-                  <span style="color: var(--text-subtle);">- Free Slot -</span>
-                </td>
-              </tr>
-
-              <tr>
-                <th><strong>Sunday</strong></th>
-                <td>
-                  <strong style="color: var(--primary-dark);">MATH-2401</strong><br>
-                  <small>Science Hall 105</small><br>
-                  <span class="badge badge-info">Theory</span>
-                </td>
-                <td>
-                  <strong style="color: var(--primary-dark);">EEE-2210</strong><br>
-                  <small>EEE Lab 101</small><br>
-                  <span class="badge badge-info">Theory</span>
-                </td>
-                <td>
-                  <span style="color: var(--text-subtle);">- Free Slot -</span>
-                </td>
-                <td>
-                  <strong style="color: var(--primary-dark);">ENG-1102</strong><br>
-                  <small>Arts Bldg 210</small><br>
-                  <span class="badge badge-success">Discussion</span>
-                </td>
-              </tr>
-
-              <tr>
-                <th><strong>Monday</strong></th>
-                <td>
-                  <strong style="color: var(--primary-dark);">CSE-3501</strong><br>
-                  <small>Academic Bldg 302</small><br>
-                  <span class="badge badge-info">Theory</span>
-                </td>
-                <td>
-                  <strong style="color: var(--primary-dark);">EEE-2210 Lab</strong><br>
-                  <small>Hardware Lab 1</small><br>
-                  <span class="badge badge-warning">Hardware Lab</span>
-                </td>
-                <td>
-                  <strong style="color: var(--primary-dark);">CSE-3505</strong><br>
-                  <small>CSE Lab 2B</small><br>
-                  <span class="badge badge-info">Theory</span>
-                </td>
-                <td>
-                  <span style="color: var(--text-subtle);">- Free Slot -</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- Aside Sidebar -->
-    <aside class="dashboard-aside" aria-label="IIUC Campus Map & Info">
-      <div class="aside-widget">
-        <h3 class="aside-widget-title">
-          <span>🏢</span> IIUC Building Locations
-        </h3>
-        <ul style="font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.5rem;">
-          <li><strong>Academic Bldg 302:</strong> 3rd Floor, Main Campus</li>
-          <li><strong>CSE Lab 2B:</strong> 2nd Floor, IT Building</li>
-          <li><strong>Science Hall 105:</strong> Ground Floor, Science Complex</li>
-        </ul>
+      <!-- Title Header Block -->
+      <div class="routine-title-header">
+        <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="routine-watermark-logo">
+        <h2 class="routine-uni-title">International Islamic University Chittagong</h2>
+        <h3 class="routine-sub-title">Class Routine of CSE, M, Autumn-2026 (Fourth Semester)</h3>
       </div>
-    </aside>
 
-  </div>
+      <!-- Class Routine 4-Column Table -->
+      <div class="routine-table-wrapper">
+        <table class="iiuc-routine-table" summary="Class Routine of CSE, M, Autumn-2026">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 60px;">SL.</th>
+              <th scope="col" style="width: 160px;"></th>
+              <th scope="col" style="width: 150px;">Days</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-sl">1</td>
+              <td class="col-spacer"></td>
+              <td class="col-days">Saturday</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="col-sl">2</td>
+              <td class="col-spacer"></td>
+              <td class="col-days">Sunday</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="col-sl">3</td>
+              <td class="col-spacer"></td>
+              <td class="col-days">Monday</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="col-sl">4</td>
+              <td class="col-spacer"></td>
+              <td class="col-days">Tuesday</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="col-sl">5</td>
+              <td class="col-spacer"></td>
+              <td class="col-days">Wednesday</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="col-sl">6</td>
+              <td class="col-spacer"></td>
+              <td class="col-days">Thursday</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="col-sl">7</td>
+              <td class="col-spacer"></td>
+              <td class="col-days">Friday</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-  <!-- Footer -->
-  <footer class="dashboard-footer">
-    <div class="footer-content-grid">
-      <div class="footer-col">
-        <h3>International Islamic University Chittagong</h3>
-        <p>Kumira, Sitakunda, Chattogram, Bangladesh. Official IIUC Student Portal.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <div class="footer-links">
-          <a href="dashboard.html">Dashboard</a>
-          <a href="courses.html">My Courses</a>
-          <a href="schedule.html">Class Schedule</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <div class="footer-links">
-          <a href="attendance.html">Attendance</a>
-          <a href="assignments.html">Assignments</a>
-          <a href="notices.html">IIUC Notices</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>📍 Kumira, Chattogram, Bangladesh<br>✉️ info@iiuc.ac.bd</p>
-      </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
-    </div>
+  </main>
+
+  <!-- 4. IIUC Portal Footer -->
+  <footer class="iiuc-portal-footer">
+    <p>Copyright &copy; 2026 All rights reserved IIUC and Developed by</p>
   </footer>
+
+  <div class="footer-meta-bar">
+    <span>Page rendered in 0.0292 seconds.</span>
+    <span><a href="#">Legal</a> | <a href="#">Privacy Policy</a></span>
+  </div>
 
 </body>
 </html>

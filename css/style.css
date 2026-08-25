@@ -1,7 +1,7 @@
 /* ==========================================================================
    IIUC Student Portal - Master Stylesheet
    International Islamic University Chittagong (IIUC)
-   Includes Login Page, Dashboard, Dropdown Menus, Course & Pre-Registration
+   Includes Login Page, Dashboard, Dropdown Menus, Course, Pre-Reg & Class Routine
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -29,7 +29,7 @@
   --reg-cat-header-border: #ffeeba;
   --reg-table-header-bg: #f8f9fa;
 
-  /* Pre-Registration Notice Box */
+  /* Pre-Registration & Routine Container */
   --prereg-banner-bg: #2b90d9;
   --prereg-alert-bg: #ffe8cc;
   --prereg-alert-border: #ffd8a8;
@@ -48,6 +48,7 @@
 
   /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Times New Roman", Times, Georgia, serif;
   
   /* Radius & Shadows */
   --radius-sm: 4px;
@@ -344,7 +345,80 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. IIUC Pre-Registration Page Specific Replica Styles
+   5. Class Routine Replica Specific Styles
+   -------------------------------------------------------------------------- */
+.routine-title-header {
+  text-align: center;
+  padding: 1.25rem 1rem 1rem 1rem;
+  position: relative;
+}
+
+.routine-watermark-logo {
+  position: absolute;
+  top: 1rem;
+  left: 1.25rem;
+  height: 48px;
+  width: auto;
+}
+
+.routine-uni-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 0.35rem;
+}
+
+.routine-sub-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #333333;
+}
+
+.routine-table-wrapper {
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  overflow-x: auto;
+}
+
+.iiuc-routine-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  border: 1px solid #777777;
+}
+
+.iiuc-routine-table th, .iiuc-routine-table td {
+  border: 1px solid #888888;
+  padding: 0.45rem 0.75rem;
+  color: #222222;
+}
+
+.iiuc-routine-table th {
+  font-weight: 700;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.iiuc-routine-table td.col-sl {
+  text-align: center;
+  width: 60px;
+  font-weight: 600;
+}
+
+.iiuc-routine-table td.col-days {
+  text-align: center;
+  width: 140px;
+  font-weight: 600;
+}
+
+.iiuc-routine-table td.col-spacer {
+  width: 160px;
+}
+
+/* --------------------------------------------------------------------------
+   6. IIUC Pre-Registration Page Replica Styles
    -------------------------------------------------------------------------- */
 .prereg-container {
   padding: 1rem 1.5rem;
@@ -393,7 +467,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   6. IIUC Course Registration Page Table Styles
+   7. IIUC Course Registration Page Table Styles
    -------------------------------------------------------------------------- */
 .reg-page-container {
   padding: 1rem 1.5rem;
@@ -520,7 +594,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   7. IIUC Main Header, Action Grid, 3-Column Dashboard Body
+   8. IIUC Main Header, Action Grid, 3-Column Dashboard Body
    -------------------------------------------------------------------------- */
 .portal-main-header {
   background-color: #ffffff;
