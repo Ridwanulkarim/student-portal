@@ -1,54 +1,47 @@
 /* ==========================================================================
-   IIUC Student Portal - Authentic Replica Master Stylesheet
+   IIUC Student Portal - Master Stylesheet
    International Islamic University Chittagong (IIUC)
-   Built with pure HTML5 & CSS3 matching exact portal UI
+   Includes exact replica of Login Page & Dashboard
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    1. CSS Custom Properties / Design Tokens
    -------------------------------------------------------------------------- */
 :root {
-  /* IIUC Portal Exact Palette */
-  --topbar-bg: #17a2b8;          /* Cyan/Teal top utility bar */
-  --topbar-text: #ffffff;
-  
-  --primary-blue: #007bff;        /* IIUC Primary Action Blue */
-  --primary-blue-hover: #0056b3;
-  --success-green: #28a745;       /* Action Green */
-  --danger-red: #dc3545;          /* Action Red / Alert Banner */
-  --info-teal: #17a2b8;           /* Action Teal */
-  --warning-gold: #ffc107;        /* Action Gold / Warning Banner */
-  --warning-gold-text: #856404;
-  --dark-btn: #343a40;            /* Dark Grey / Logout Button */
-  --secondary-btn: #6c757d;
+  /* IIUC Login Page Exact Colors */
+  --auth-bg-blue: #3598dc;        /* Solid Sky Blue background */
+  --auth-card-bg: #ffffff;
+  --auth-input-bg: #eef2f9;       /* Soft blue-tinted input box */
+  --auth-btn-green: #5cb85c;      /* IIUC Green Login Button */
+  --auth-btn-green-hover: #4cae4c;
 
-  /* Card Banners & KPIs */
-  --kpi-pink: #ff6b81;            /* Outstanding Balance card */
-  --kpi-cyan: #00b4d8;            /* CGPA Card */
-  --banner-pink: #f8d7da;         /* Alert red banner bg */
-  --banner-pink-text: #721c24;
+  /* IIUC Dashboard Colors */
+  --topbar-bg: #17a2b8;           /* Cyan topbar */
+  --primary-blue: #007bff;         /* Primary Action Blue */
+  --success-green: #28a745;
+  --danger-red: #dc3545;
+  --warning-gold: #ffc107;
+  --dark-btn: #343a40;
+
+  /* KPI Colors */
+  --kpi-pink: #ff6b81;
+  --kpi-cyan: #00b4d8;
 
   /* Neutrals */
-  --bg-page: #f4f6f9;            /* IIUC Body Background */
-  --bg-surface: #ffffff;         /* White Card Panels */
-  --bg-surface-alt: #f8f9fa;     /* Input fields & sub-boxes */
-  --border-color: #dee2e6;       /* Standard Divider Lines */
-  --border-light: #e9ecef;
-
-  /* Text Colors */
-  --text-main: #212529;          /* Main dark text */
-  --text-muted: #6c757d;         /* Secondary text */
-  --text-subtle: #adb5bd;
+  --bg-page: #f4f6f9;
+  --bg-surface: #ffffff;
+  --bg-surface-alt: #f8f9fa;
+  --border-color: #dee2e6;
+  --text-main: #212529;
+  --text-muted: #6c757d;
 
   /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   
-  /* Shadows & Radius */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Radius & Shadows */
   --radius-sm: 4px;
   --radius-md: 6px;
-  --radius-lg: 8px;
+  --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* --------------------------------------------------------------------------
@@ -76,7 +69,7 @@ body {
 }
 
 a {
-  color: var(--primary-blue);
+  color: #337ab7;
   text-decoration: none;
 }
 
@@ -90,18 +83,145 @@ img {
   display: block;
 }
 
-/* Accessible Outline Focus States */
 :focus-visible {
   outline: 2px solid var(--primary-blue);
   outline-offset: 2px;
 }
 
 /* --------------------------------------------------------------------------
-   3. IIUC Portal Top Utility Navigation Bar
+   3. IIUC Login & Signup Page Layout (Exact Match)
+   -------------------------------------------------------------------------- */
+.iiuc-auth-wrapper {
+  min-height: 100vh;
+  background-color: var(--auth-bg-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.iiuc-login-card {
+  width: 100%;
+  max-width: 480px;
+  background-color: #ffffff;
+  border-radius: var(--radius-sm);
+  padding: 2.25rem 2.5rem 1.75rem 2.5rem;
+  box-shadow: var(--shadow-card);
+  color: var(--text-main);
+}
+
+.iiuc-login-card-wide {
+  max-width: 620px;
+}
+
+/* Card Header */
+.iiuc-login-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.iiuc-login-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.iiuc-login-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4a4a4a;
+  line-height: 1.25;
+}
+
+/* Multi-color Rainbow Stripe Line */
+.rainbow-accent-bar {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #e9ecef 0%, #e9ecef 12%,
+    #ffc107 12%, #ffc107 24%,
+    #28a745 24%, #28a745 36%,
+    #dc3545 36%, #dc3545 48%,
+    #e83e8c 48%, #e83e8c 60%,
+    #6f42c1 60%, #6f42c1 72%,
+    #007bff 72%, #007bff 84%,
+    #17a2b8 84%, #17a2b8 100%
+  );
+  margin-bottom: 1.75rem;
+  border-radius: 2px;
+}
+
+/* Form Inputs */
+.iiuc-form-group {
+  margin-bottom: 0.85rem;
+}
+
+.iiuc-input, .iiuc-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #333333;
+  background-color: var(--auth-input-bg);
+  border: 1px solid #d9e2ec;
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.iiuc-input:focus, .iiuc-select:focus {
+  border-color: #337ab7;
+  background-color: #ffffff;
+}
+
+/* Submit Button */
+.iiuc-login-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--auth-btn-green);
+  border: 1px solid #4cae4c;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.15s ease;
+}
+
+.iiuc-login-btn:hover {
+  background-color: var(--auth-btn-green-hover);
+}
+
+/* Auth Card Footer Subtext */
+.iiuc-auth-footer {
+  text-align: center;
+  font-size: 0.775rem;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.iiuc-auth-footer a {
+  color: #337ab7;
+  font-weight: 600;
+}
+
+.ip-info-text {
+  font-size: 0.725rem;
+  color: #777777;
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. IIUC Dashboard Styles (Top utility, Header, Action Grid, 3-Col Body)
    -------------------------------------------------------------------------- */
 .top-utility-bar {
   background-color: var(--topbar-bg);
-  color: var(--topbar-text);
+  color: #ffffff;
   padding: 0.35rem 1.5rem;
   display: flex;
   align-items: center;
@@ -117,21 +237,13 @@ img {
 }
 
 .utility-item {
-  color: var(--topbar-text);
+  color: #ffffff;
   display: flex;
   align-items: center;
   gap: 0.35rem;
   cursor: pointer;
-  text-decoration: none !important;
 }
 
-.utility-item:hover {
-  opacity: 0.9;
-}
-
-/* --------------------------------------------------------------------------
-   4. IIUC Main Header (Logo & Search Date Bar)
-   -------------------------------------------------------------------------- */
 .portal-main-header {
   background-color: #ffffff;
   padding: 1rem 1.5rem;
@@ -139,14 +251,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .iiuc-logo-group {
   display: flex;
   align-items: center;
   gap: 1rem;
-  text-decoration: none !important;
 }
 
 .iiuc-header-logo {
@@ -211,13 +322,7 @@ img {
   cursor: pointer;
 }
 
-.search-btn:hover {
-  background-color: #bd2130;
-}
-
-/* --------------------------------------------------------------------------
-   5. Action Buttons Grid Bar (Colored Quick Action Pills)
-   -------------------------------------------------------------------------- */
+/* Action Buttons Grid Bar */
 .action-grid-container {
   background-color: #ffffff;
   padding: 1rem 1.5rem;
@@ -244,7 +349,6 @@ img {
   text-align: center;
   border: none;
   cursor: pointer;
-  transition: transform 0.1s ease, filter 0.1s ease;
   white-space: nowrap;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   text-decoration: none !important;
@@ -252,10 +356,8 @@ img {
 
 .action-btn:hover {
   filter: brightness(0.92);
-  transform: translateY(-1px);
 }
 
-/* Action Button Color Classes */
 .btn-act-blue { background-color: #007bff; }
 .btn-act-green { background-color: #28a745; }
 .btn-act-white { background-color: #ffffff; color: var(--text-main) !important; border: 1px solid var(--border-color); }
@@ -264,9 +366,7 @@ img {
 .btn-act-gold { background-color: #ffc107; color: #212529 !important; }
 .btn-act-dark { background-color: #343a40; }
 
-/* --------------------------------------------------------------------------
-   6. 3-Column IIUC Main Dashboard Layout
-   -------------------------------------------------------------------------- */
+/* 3-Column IIUC Main Dashboard Layout */
 .portal-dashboard-grid {
   display: grid;
   grid-template-columns: 240px 1fr 280px;
@@ -275,15 +375,12 @@ img {
   flex: 1;
 }
 
-/* --------------------------------------------------------------------------
-   7. Column 1: Left Student Bio Sidebar Card
-   -------------------------------------------------------------------------- */
 .student-bio-card {
   background-color: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 1.25rem 1rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   font-size: 0.8rem;
 }
 
@@ -292,20 +389,10 @@ img {
   margin-bottom: 1rem;
 }
 
-.student-avatar-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #007bff;
-  margin: 0 auto;
-}
-
 .bio-detail-list {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  color: var(--text-main);
 }
 
 .bio-item {
@@ -340,16 +427,12 @@ img {
   color: #007bff;
 }
 
-/* --------------------------------------------------------------------------
-   8. Column 2: Center Main Content Stream
-   -------------------------------------------------------------------------- */
 .center-content-stream {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
 }
 
-/* Pre-Registration Tutorial Button */
 .tutorial-btn-wrapper {
   text-align: center;
 }
@@ -365,13 +448,12 @@ img {
   cursor: pointer;
 }
 
-/* Student Welcome Banner Card (Blue Header) */
 .student-name-header-card {
   background-color: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .student-name-blue-bar {
@@ -380,9 +462,6 @@ img {
   padding: 0.6rem 1rem;
   font-size: 1rem;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .student-id-row {
@@ -401,7 +480,6 @@ img {
   font-weight: 700;
 }
 
-/* Warning & Announcement Banners */
 .banner-gold {
   background-color: #ffc107;
   color: #212529;
@@ -433,13 +511,11 @@ img {
   font-size: 0.85rem;
 }
 
-/* Transport Booking Card */
 .transport-booking-card {
   background-color: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
 }
 
 .transport-header-bar {
@@ -479,12 +555,10 @@ img {
   cursor: pointer;
 }
 
-/* Overview Tabs Container */
 .overview-tabs-container {
   background-color: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
   overflow: hidden;
 }
 
@@ -538,9 +612,6 @@ img {
   margin-top: 0.15rem;
 }
 
-/* --------------------------------------------------------------------------
-   9. Column 3: Right Sidebar Cards & Notices
-   -------------------------------------------------------------------------- */
 .right-sidebar-stream {
   display: flex;
   flex-direction: column;
@@ -551,7 +622,6 @@ img {
   background-color: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
   overflow: hidden;
 }
 
@@ -593,14 +663,12 @@ img {
   margin-bottom: 0.4rem;
 }
 
-/* KPI Cards Right Column */
 .kpi-card-pink {
   background-color: var(--kpi-pink);
   color: #ffffff;
   padding: 1rem;
   border-radius: var(--radius-sm);
   text-align: center;
-  box-shadow: var(--shadow-sm);
 }
 
 .kpi-card-cyan {
@@ -609,7 +677,6 @@ img {
   padding: 1rem;
   border-radius: var(--radius-sm);
   text-align: center;
-  box-shadow: var(--shadow-sm);
 }
 
 .kpi-card-white {
@@ -619,7 +686,6 @@ img {
   padding: 0.85rem;
   border-radius: var(--radius-sm);
   text-align: center;
-  box-shadow: var(--shadow-sm);
 }
 
 .kpi-title {
@@ -637,9 +703,6 @@ img {
   margin-top: 0.2rem;
 }
 
-/* --------------------------------------------------------------------------
-   10. IIUC Footer Component
-   -------------------------------------------------------------------------- */
 .iiuc-portal-footer {
   background-color: #343a40;
   color: #adb5bd;
@@ -659,9 +722,7 @@ img {
   border-top: 1px solid var(--border-color);
 }
 
-/* --------------------------------------------------------------------------
-   11. Responsive Styles
-   -------------------------------------------------------------------------- */
+/* Responsive Media Queries */
 @media (max-width: 1100px) {
   .portal-dashboard-grid {
     grid-template-columns: 220px 1fr;
@@ -685,9 +746,6 @@ img {
     align-items: flex-start;
     gap: 0.75rem;
   }
-  .header-search-widget {
-    align-items: flex-start;
-  }
 }
 
 @media (max-width: 500px) {
@@ -697,8 +755,7 @@ img {
   .overview-grid-fields {
     grid-template-columns: 1fr;
   }
-  .top-utility-bar {
-    flex-direction: column;
-    gap: 0.35rem;
+  .iiuc-login-card {
+    padding: 1.5rem;
   }
 }

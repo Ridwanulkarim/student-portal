@@ -3,99 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Student Portal Login - International Islamic University Chittagong.">
-  <title>Student Portal Login | IIUC</title>
+  <meta name="description" content="International Islamic University Chittagong (IIUC) Official Student Portal Login.">
+  <title>Student Login | International Islamic University Chittagong</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="auth-page-wrapper">
+<body>
 
-  <!-- Header: IIUC Branding -->
-  <header class="auth-header">
-    <a href="index.html" class="auth-brand" aria-label="IIUC Homepage">
-      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
-      <div class="auth-brand-text">
-        <h1>International Islamic University Chittagong</h1>
-        <p>Official Student Portal (IIUC)</p>
-      </div>
-    </a>
-    <div>
-      <a href="signup.html" class="btn btn-secondary btn-sm">Register Account</a>
-    </div>
-  </header>
-
-  <!-- Main: Login Form -->
-  <main class="auth-container">
-    <div class="auth-card">
-      <h2 class="auth-title">IIUC Student Login</h2>
-      <p class="auth-subtitle">Access your courses, grades, schedule, and academic tools.</p>
-
-      <!-- Quick Demo Access Link -->
-      <div class="demo-banner" role="region" aria-label="Demo Notification">
-        <span>⚡ <strong>Quick Demo:</strong> Preview IIUC student portal homepage</span>
-        <a href="dashboard.html">View Dashboard &rarr;</a>
+  <!-- IIUC Fullscreen Ocean Blue Auth Container -->
+  <main class="iiuc-auth-wrapper">
+    <div class="iiuc-login-card">
+      
+      <!-- Card Header: IIUC Crest Logo & Title -->
+      <div class="iiuc-login-header">
+        <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="iiuc-login-logo">
+        <h1 class="iiuc-login-title">International Islamic University Chittagong</h1>
       </div>
 
-      <form action="dashboard.html" method="GET" aria-label="IIUC Student Portal Login Form">
-        <div class="form-group">
-          <label for="student-id" class="form-label">Student ID / Matric No. / Email <span class="required">*</span></label>
+      <!-- Multi-color Accent Rainbow Stripe Bar -->
+      <div class="rainbow-accent-bar" role="presentation"></div>
+
+      <!-- Login Form -->
+      <form action="dashboard.html" method="GET" aria-label="IIUC Student Login Form">
+        <div class="iiuc-form-group">
+          <label for="student-id" class="sr-only" style="display:none;">Student ID</label>
           <input 
             type="text" 
             id="student-id" 
             name="student_id" 
-            class="form-input" 
+            class="iiuc-input" 
             value="C243237" 
-            placeholder="e.g. C243237 or ridwanulk08@gmail.com" 
+            placeholder="C243237" 
             required 
             autocomplete="username"
           >
         </div>
 
-        <div class="form-group">
-          <label for="password" class="form-label">Password <span class="required">*</span></label>
+        <div class="iiuc-form-group">
+          <label for="password" class="sr-only" style="display:none;">Password</label>
           <input 
             type="password" 
             id="password" 
             name="password" 
-            class="form-input" 
-            value="••••••••••••" 
-            placeholder="Enter your password" 
+            class="iiuc-input" 
+            value="••••••••" 
+            placeholder="••••••••" 
             required 
             autocomplete="current-password"
           >
         </div>
 
-        <div class="auth-meta-links">
-          <div class="form-checkbox-group" style="margin-bottom: 0;">
-            <input type="checkbox" id="remember" name="remember" class="form-checkbox" checked>
-            <label for="remember" class="form-checkbox-label">Remember me</label>
+        <button type="submit" class="iiuc-login-btn">Login</button>
+
+        <!-- Card Footer Info -->
+        <footer class="iiuc-auth-footer">
+          <p style="margin-bottom: 0.35rem;">
+            Copyright &copy; 2026 All rights reserved IIUC and <span style="color: #ff9800; font-weight: 700;">Developed by</span>
+          </p>
+          <p style="margin-bottom: 0.35rem;">
+            <a href="#" onclick="alert('Password reset link sent to your registered IIUC email.'); return false;">Forget Password</a> Only for Students &bull; <a href="signup.html">Sign Up</a>
+          </p>
+          <div class="ip-info-text">
+            <p>IP: 103.133.205.10, Country: Bangladesh, City: Dhaka</p>
+            <p style="font-size: 0.7rem; color: #888888; margin-top: 0.15rem;">(We will store your information)</p>
           </div>
-          <a href="#" onclick="alert('Password reset instructions sent to ridwanulk08@gmail.com'); return false;">Forgot password?</a>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z"/>
-          </svg>
-          Sign In to IIUC Portal
-        </button>
-
-        <div class="auth-footer-link">
-          <p>Don't have an account yet? <a href="signup.html">Create a Student Account</a></p>
-        </div>
+        </footer>
       </form>
+
     </div>
   </main>
-
-  <!-- Footer -->
-  <footer class="auth-footer">
-    <nav class="auth-footer-nav" aria-label="Footer Navigation">
-      <a href="#">IIUC Help Desk</a>
-      <a href="#">IT Services</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-    </nav>
-    <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
