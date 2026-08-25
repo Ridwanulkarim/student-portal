@@ -1,7 +1,7 @@
 /* ==========================================================================
    IIUC Student Portal - Master Stylesheet
    International Islamic University Chittagong (IIUC)
-   Includes Login, Dashboard, Dropdowns, Course, Pre-Reg, Routine, Wifi, Complain, Fee Calc & Payment History
+   Includes Login, Dashboard, Dropdowns, Course, Pre-Reg, Routine, Wifi, Complain, Fee Calc, Payment History & Print Course Reg
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -347,7 +347,28 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. Payment History Table Specific Replica Styles
+   5. Print Course Registration Specific Replica Styles
+   -------------------------------------------------------------------------- */
+.print-load-btn {
+  background-color: #00c0ef;
+  color: #ffffff;
+  border: none;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-left: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: background-color 0.15s ease;
+}
+
+.print-load-btn:hover {
+  background-color: #00acd6;
+}
+
+/* --------------------------------------------------------------------------
+   6. Payment History Table Specific Replica Styles
    -------------------------------------------------------------------------- */
 .payment-table-wrapper {
   padding: 1rem 1.25rem 1.5rem 1.25rem;
@@ -420,7 +441,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   6. Recent Complain Table Specific Replica Styles
+   7. Recent Complain Table Specific Replica Styles
    -------------------------------------------------------------------------- */
 .recent-complain-table-wrapper {
   padding: 1rem 1.25rem 1.5rem 1.25rem;
@@ -451,7 +472,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   7. Complain Box & Wifi Password Form Specific Replica Styles
+   8. Complain Box & Wifi Password Form Specific Replica Styles
    -------------------------------------------------------------------------- */
 .wifi-form-container, .complain-form-container {
   padding: 2rem 2.5rem;
@@ -519,7 +540,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   8. Class Routine Replica Specific Styles
+   9. Class Routine Replica Specific Styles
    -------------------------------------------------------------------------- */
 .routine-title-header {
   text-align: center;
@@ -592,7 +613,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   9. IIUC Pre-Registration Page Replica Styles
+   10. IIUC Pre-Registration Page Replica Styles
    -------------------------------------------------------------------------- */
 .prereg-container {
   padding: 1rem 1.5rem;
@@ -642,7 +663,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   10. IIUC Course Registration Page Table Styles
+   11. IIUC Course Registration Page Table Styles
    -------------------------------------------------------------------------- */
 .reg-page-container {
   padding: 1rem 1.5rem;
@@ -769,7 +790,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   11. IIUC Main Header, Action Grid, 3-Column Dashboard Body
+   12. IIUC Main Header, Action Grid, 3-Column Dashboard Body
    -------------------------------------------------------------------------- */
 .portal-main-header {
   background-color: #ffffff;
