@@ -1,7 +1,7 @@
 /* ==========================================================================
    IIUC Student Portal - Master Stylesheet
    International Islamic University Chittagong (IIUC)
-   Includes exact replica of Login Page, Dashboard, User & Students Dropdown Menus
+   Includes Login Page, Dashboard, Dropdown Menus & Course Registration Replica
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -15,7 +15,7 @@
   --auth-btn-green: #5cb85c;      /* IIUC Green Login Button */
   --auth-btn-green-hover: #4cae4c;
 
-  /* IIUC Dashboard Colors */
+  /* IIUC Dashboard & Registration Colors */
   --topbar-bg: #17a2b8;           /* Cyan topbar */
   --dropdown-btn-bg: #387687;     /* Dark Teal/Blue dropdown trigger pill */
   --primary-blue: #007bff;         /* Primary Action Blue */
@@ -23,6 +23,11 @@
   --danger-red: #dc3545;
   --warning-gold: #ffc107;
   --dark-btn: #343a40;
+
+  /* Registration Table Colors */
+  --reg-cat-header-bg: #fff3cd;   /* Light Gold/Yellow category header */
+  --reg-cat-header-border: #ffeeba;
+  --reg-table-header-bg: #f8f9fa;
 
   /* KPI Colors */
   --kpi-pink: #ff6b81;
@@ -213,7 +218,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   4. IIUC Dashboard Top Utility & Dropdown Popovers (Exact Replica)
+   4. IIUC Dashboard Top Utility & Dropdown Popovers
    -------------------------------------------------------------------------- */
 .top-utility-bar {
   background-color: var(--topbar-bg);
@@ -234,7 +239,6 @@ img {
   gap: 0.5rem;
 }
 
-/* Generic Utility Dropdown Container */
 .utility-dropdown-container {
   position: relative;
   display: inline-block;
@@ -263,7 +267,6 @@ img {
   background-color: var(--dropdown-btn-bg);
 }
 
-/* Dropdown Menu Popover Box */
 .utility-dropdown-menu {
   position: absolute;
   top: calc(100% + 8px);
@@ -276,20 +279,17 @@ img {
   padding: 0.4rem 0;
   z-index: 300;
 
-  /* Hidden by default */
   opacity: 0;
   visibility: hidden;
   transform: translateY(-6px);
   transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
 }
 
-/* Position right-aligned menus properly */
 .utility-dropdown-menu.menu-right {
   left: auto;
   right: 0;
 }
 
-/* Reveal Menu on Hover / Focus */
 .utility-dropdown-container:hover .utility-dropdown-menu,
 .utility-dropdown-container:focus-within .utility-dropdown-menu {
   opacity: 1;
@@ -297,7 +297,6 @@ img {
   transform: translateY(0);
 }
 
-/* Arrow Pointer on Top Left of Menu */
 .utility-dropdown-menu::before {
   content: '';
   position: absolute;
@@ -316,7 +315,6 @@ img {
   right: 20px;
 }
 
-/* Dropdown Menu Item Links */
 .dropdown-menu-item {
   display: flex;
   align-items: center;
@@ -341,7 +339,141 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. IIUC Main Header, Action Grid, 3-Column Dashboard Body
+   5. IIUC Course Registration Page Specific Replica Styles
+   -------------------------------------------------------------------------- */
+.reg-page-container {
+  padding: 1rem 1.5rem;
+  flex: 1;
+}
+
+.reg-cyan-subbanner {
+  background-color: #17a2b8;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  margin-bottom: 0.85rem;
+}
+
+.reg-student-info-box {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.825rem;
+  line-height: 1.6;
+}
+
+.reg-info-left, .reg-info-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-info-item {
+  color: var(--text-main);
+}
+
+.reg-payment-warning {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+/* Course Registration Table */
+.reg-table-wrapper {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.reg-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.reg-table th {
+  background-color: #f8f9fa;
+  color: var(--text-main);
+  font-weight: 700;
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid #e9ecef;
+}
+
+.reg-table td {
+  padding: 0.5rem 0.85rem;
+  border-bottom: 1px solid #e9ecef;
+  border-right: 1px solid #f1f3f5;
+  color: var(--text-main);
+}
+
+/* Category Row Headers */
+.reg-cat-row {
+  background-color: var(--reg-cat-header-bg);
+  border-top: 1px solid var(--reg-cat-header-border);
+  border-bottom: 1px solid var(--reg-cat-header-border);
+}
+
+.reg-cat-row td {
+  font-weight: 700;
+  color: #856404;
+  padding: 0.45rem 0.85rem;
+}
+
+/* Checkbox & Dropdown Controls */
+.reg-checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #007bff;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 0.35rem;
+}
+
+.reg-select-sub {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.775rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: #ffffff;
+}
+
+.prereq-text {
+  color: #721c24;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+.reg-submit-wrapper {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.reg-submit-btn {
+  background-color: #4682b4;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.reg-submit-btn:hover {
+  background-color: #36648b;
+}
+
+/* --------------------------------------------------------------------------
+   6. IIUC Main Header, Action Grid, 3-Column Dashboard Body
    -------------------------------------------------------------------------- */
 .portal-main-header {
   background-color: #ffffff;

@@ -3,229 +3,378 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Student Portal - My Enrolled Courses & Syllabi">
-  <title>My Courses | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Course Registration - International Islamic University Chittagong">
+  <title>Course Registration | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
 
-  <!-- Header -->
-  <header class="dashboard-header">
-    <a href="dashboard.html" class="portal-brand" aria-label="IIUC Portal Dashboard">
-      <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="brand-logo-img">
-      <div class="portal-title-wrapper">
+  <!-- 1. Top Utility Navigation Bar -->
+  <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
+    <div class="top-utility-left">
+      <!-- Students Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Students Menu">
+          <span>👥</span> Students ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Pre Registration</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Registration</a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment History</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Print Course Registration</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Add Drop Courses</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Semester Transport Update</a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Result View</a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment Advising</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Withdraw</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Registration Summary</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Status</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Update Transport</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Set Major Courses</a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> MDP Result View</a>
+        </div>
+      </div>
+
+      <!-- Others Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Others Menu">
+          <span>🏢</span> Others ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="notices.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Campus Notices</a>
+          <a href="schedule.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Class Timetable</a>
+        </div>
+      </div>
+
+      <span class="utility-item">⏱ TER ▾</span>
+      <span class="utility-item">💻 Application ▾</span>
+      <span class="utility-item">💬 IQAC ▾</span>
+    </div>
+
+    <div class="top-utility-right">
+      <!-- User Profile Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="User Profile Menu">
+          <span>👤</span> Mohammad Ridwanul Karim ▾
+        </button>
+        <div class="utility-dropdown-menu menu-right" role="menu">
+          <a href="index.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🔒</span> Logout</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🏠</span> Update Profile</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">⚙️</span> Change Password</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Main University Header -->
+  <header class="portal-main-header">
+    <a href="dashboard.html" class="iiuc-logo-group" aria-label="IIUC Portal Homepage">
+      <img src="assets/images/logo.png" alt="IIUC Official Crest Logo" class="iiuc-header-logo">
+      <div class="iiuc-title-block">
+        <h2>আন্তর্জাতিক ইসলামী বিশ্ববিদ্যালয় চট্টগ্রাম</h2>
         <h1>International Islamic University Chittagong</h1>
-        <p>Official Student Portal (IIUC)</p>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh</p>
       </div>
     </a>
 
-    <div class="user-profile-widget">
-      <div class="user-details">
-        <span class="user-name">Alex Morgan</span>
-        <span class="user-id">Matric: C201042</span>
+    <div class="header-search-widget">
+      <span class="current-date-text">August 25, 2026 Tuesday</span>
+      <div class="search-input-group">
+        <input type="text" class="search-input" placeholder="Search portal options..." aria-label="Search portal">
+        <button type="button" class="search-btn">Search & Find</button>
       </div>
-      <div class="avatar-circle" title="Student Profile Avatar" aria-label="Student Profile Avatar">AM</div>
-      <a href="index.html" class="btn btn-secondary btn-sm">Logout</a>
     </div>
   </header>
 
-  <!-- Layout Container -->
-  <div class="dashboard-layout">
+  <!-- 3. Course Registration Main Content Page -->
+  <main class="reg-page-container">
 
-    <!-- Navigation -->
-    <nav class="dashboard-nav" aria-label="Portal Primary Navigation">
-      <div class="nav-menu">
-        <a href="dashboard.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
-          Dashboard
-        </a>
-        <a href="courses.html" class="nav-link active" aria-current="page">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.89 9L12 4.57 20.11 9 12 13.43 3.89 9zM5 13.78v4.44l7 3.82 7-3.82v-4.44l-7 3.82-7-3.82z"/></svg>
-          My Courses
-          <span class="badge badge-info nav-badge">5</span>
-        </a>
-        <a href="schedule.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
-          Class Schedule
-        </a>
-        <a href="attendance.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          Attendance
-        </a>
-        <a href="results.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          Results & Grades
-        </a>
-        <a href="assignments.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-          Assignments
-          <span class="badge badge-warning nav-badge">3</span>
-        </a>
-        <a href="notices.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
-          Campus Notices
-        </a>
-        <a href="profile.html" class="nav-link">
-          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          My Profile
-        </a>
+    <!-- Sub-header Banner -->
+    <div class="reg-cyan-subbanner">
+      Course Registration
+    </div>
+
+    <!-- Student Registration Summary Header Box -->
+    <div class="reg-student-info-box">
+      <div class="reg-info-left">
+        <span class="reg-info-item"><strong>Matric No:</strong> C243237</span>
+        <span class="reg-info-item"><strong>Name:</strong> Mohammad Ridwanul Karim</span>
+        <span class="reg-info-item"><strong>Semester Name:</strong> Autumn-2026</span>
+        <span class="reg-info-item"><strong>Registration No:</strong> 0062420005101237</span>
+        <span class="reg-info-item"><strong>GPA:</strong> 3.503 and Max Off. Regular: 24, Additional D and Retake: 2 Course (Max 6 Credit)</span>
       </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="dashboard-main">
-      <section class="page-intro-banner">
-        <div>
-          <h2 class="page-intro-title">Enrolled Courses & Syllabi</h2>
-          <p class="page-intro-subtitle">Spring Semester 2026 | IIUC CSE Department | 16.0 Credit Hours</p>
-        </div>
-        <div class="filter-tabs">
-          <a href="#" class="filter-tab active">All Courses (5)</a>
-          <a href="#" class="filter-tab">Core CSE (3)</a>
-          <a href="#" class="filter-tab">Electives (2)</a>
-        </div>
-      </section>
-
-      <section aria-label="Course Syllabi & Cards">
-        <div class="courses-grid">
-          <article class="course-card">
-            <div>
-              <div class="course-code">CSE-3501</div>
-              <h3 class="course-title">Data Structures & Algorithms</h3>
-              <div class="course-instructor">
-                <span>👨‍🏫 Prof. Dr. Sarah Jenkins (IIUC CSE)</span>
-              </div>
-              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
-                Advanced algorithm analysis, asymptotic notation, balanced trees, graph traversal algorithms, dynamic programming, and NP-completeness.
-              </p>
-              <div class="course-meta">
-                <span>Credits: 4.0</span>
-                <span>Type: Core Theory + Lab</span>
-              </div>
-            </div>
-            <div class="progress-bar-container">
-              <div class="progress-label-row">
-                <span>Syllabus Covered</span>
-                <span>75%</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill" style="width: 75%;"></div>
-              </div>
-              <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
-                <a href="#" class="btn btn-secondary btn-sm" style="flex: 1;">View Syllabus</a>
-                <a href="#" class="btn btn-primary btn-sm" style="flex: 1;">Course Materials</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="course-card">
-            <div>
-              <div class="course-code">CSE-3505</div>
-              <h3 class="course-title">Database Management Systems</h3>
-              <div class="course-instructor">
-                <span>👨‍🏫 Assoc. Prof. Robert Chen</span>
-              </div>
-              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
-                Relational database modeling, Entity-Relationship diagrams, SQL query optimization, transaction management, indexing, and NoSQL fundamentals.
-              </p>
-              <div class="course-meta">
-                <span>Credits: 3.0</span>
-                <span>Type: Core Theory</span>
-              </div>
-            </div>
-            <div class="progress-bar-container">
-              <div class="progress-label-row">
-                <span>Syllabus Covered</span>
-                <span>60%</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill" style="width: 60%;"></div>
-              </div>
-              <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
-                <a href="#" class="btn btn-secondary btn-sm" style="flex: 1;">View Syllabus</a>
-                <a href="#" class="btn btn-primary btn-sm" style="flex: 1;">Course Materials</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="course-card">
-            <div>
-              <div class="course-code">MATH-2401</div>
-              <h3 class="course-title">Discrete Mathematics & Graph Theory</h3>
-              <div class="course-instructor">
-                <span>👨‍🏫 Dr. Alan Turing</span>
-              </div>
-              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
-                Mathematical logic, set theory, proof techniques, combinatorics, graph theory algorithms, Eulerian and Hamiltonian paths, trees.
-              </p>
-              <div class="course-meta">
-                <span>Credits: 3.0</span>
-                <span>Type: General Science</span>
-              </div>
-            </div>
-            <div class="progress-bar-container">
-              <div class="progress-label-row">
-                <span>Syllabus Covered</span>
-                <span>80%</span>
-              </div>
-              <div class="progress-track">
-                <div class="progress-fill" style="width: 80%;"></div>
-              </div>
-              <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
-                <a href="#" class="btn btn-secondary btn-sm" style="flex: 1;">View Syllabus</a>
-                <a href="#" class="btn btn-primary btn-sm" style="flex: 1;">Course Materials</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <!-- Aside Sidebar -->
-    <aside class="dashboard-aside" aria-label="Course Advisors & Quick Info">
-      <div class="aside-widget">
-        <h3 class="aside-widget-title">
-          <span>🎓</span> IIUC Academic Advisor
-        </h3>
-        <p style="font-size: 0.85rem; font-weight: 700; color: var(--primary-dark);">Prof. Dr. Sarah Jenkins</p>
-        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">Office: Academic Bldg 410<br>Hours: Tue & Thu 02:00 PM - 04:00 PM</p>
-        <a href="mailto:s.jenkins@iiuc.ac.bd" class="btn btn-secondary btn-sm btn-block">Email Advisor</a>
-      </div>
-    </aside>
-  </div>
-
-  <!-- Footer -->
-  <footer class="dashboard-footer">
-    <div class="footer-content-grid">
-      <div class="footer-col">
-        <h3>International Islamic University Chittagong</h3>
-        <p>Kumira, Sitakunda, Chattogram, Bangladesh. Official IIUC Student Portal.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <div class="footer-links">
-          <a href="dashboard.html">Dashboard</a>
-          <a href="courses.html">My Courses</a>
-          <a href="schedule.html">Class Schedule</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <div class="footer-links">
-          <a href="attendance.html">Attendance</a>
-          <a href="assignments.html">Assignments</a>
-          <a href="notices.html">IIUC Notices</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>📍 Kumira, Chattogram, Bangladesh<br>✉️ info@iiuc.ac.bd</p>
+      <div class="reg-info-right" style="text-align: right;">
+        <span class="reg-info-item"><strong>Department:</strong> Computer Science and Engineering</span>
+        <span class="reg-info-item"><strong>Program:</strong> Bachelor Program</span>
+        <span class="reg-info-item"><strong>Semester Version:</strong> Fifth Semester</span>
+        <span class="reg-info-item">First Installment: Previous Due: -7.5 + 56895, <span class="reg-payment-warning">Payment: Not Clear</span></span>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 International Islamic University Chittagong (IIUC). All rights reserved.</p>
-    </div>
+
+    <!-- Multi-Category Course Registration Form -->
+    <form action="#" method="POST" aria-label="IIUC Course Registration Form">
+      <div class="reg-table-wrapper">
+        <table class="reg-table" summary="IIUC Course Registration Table with Course Categories">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 140px;">Course Code</th>
+              <th scope="col">Course Name</th>
+              <th scope="col" style="width: 100px; text-align: center;">Credit Hours</th>
+              <th scope="col" style="width: 90px; text-align: center;">Section</th>
+              <th scope="col" style="width: 140px; text-align: center;">Sub Section</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!-- CATEGORY 1: Previous Retake Courses -->
+            <tr class="reg-cat-row">
+              <td colspan="5">Previous Retake Courses</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c1"> <label for="c1">CSE-1101</label></td>
+              <td>Computer Programming I</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;">
+                <select class="reg-select-sub"><option value="F" selected>F ▾</option><option value="F1">F1</option></select>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c2"> <label for="c2">CSE-1102</label></td>
+              <td>Computer Programming I Lab</td>
+              <td style="text-align: center;">1.5</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;">
+                <select class="reg-select-sub"><option value="F" selected>F ▾</option><option value="F1">F1</option></select>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c3"> <label for="c3">EEE-1122</label></td>
+              <td>Basic Electrical Engineering Lab</td>
+              <td style="text-align: center;">1.5</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;">
+                <select class="reg-select-sub"><option value="F" selected>F ▾</option><option value="F1">F1</option></select>
+              </td>
+            </tr>
+
+            <!-- CATEGORY 2: New Offered Courses -->
+            <tr class="reg-cat-row">
+              <td colspan="5">New Offered Courses</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c4"> <label for="c4">EEE-2421</label></td>
+              <td>Electrical Drives and Instrumentation</td>
+              <td style="text-align: center;">2</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c5"> <label for="c5">EEE-2422</label></td>
+              <td>Electrical Drives and Instrumentation Lab</td>
+              <td style="text-align: center;">1</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c6"> <label for="c6">CSE-3521</label></td>
+              <td>Computer Architecture</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c7"> <label for="c7">CSE-3523</label></td>
+              <td>Microprocessors, Microcontrollers and Embedded Systems</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c8"> <label for="c8">CSE-3524</label></td>
+              <td>Microprocessors, Microcontrollers and Embedded Systems Lab</td>
+              <td style="text-align: center;">1</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c9"> <label for="c9">CSE-3527</label></td>
+              <td>Compiler</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c10"> <label for="c10">CSE-3528</label></td>
+              <td>Compiler Lab</td>
+              <td style="text-align: center;">1</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c11"> <label for="c11">CSE-3529</label></td>
+              <td>Systems Analysis and Design</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" checked id="c12"> <label for="c12">CSE-3532</label></td>
+              <td>Tools and Technologies for Internet Programming</td>
+              <td style="text-align: center;">2</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c13"> <label for="c13">CSE-3520</label></td>
+              <td>Web Offing Orientation</td>
+              <td style="text-align: center;">2</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+
+            <!-- CATEGORY 3: Previous Missing Courses -->
+            <tr class="reg-cat-row">
+              <td colspan="5">Previous Missing Courses</td>
+            </tr>
+
+            <!-- CATEGORY 4: Advanced Courses -->
+            <tr class="reg-cat-row">
+              <td colspan="5">Advanced Courses</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" disabled id="c14"> <label for="c14">CSE-3533</label></td>
+              <td>Operating Systems</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td class="prereq-text">Prerequisite CSE-3501 not completed</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c15"> <label for="c15">CSE-3534</label></td>
+              <td>Operating Systems Lab</td>
+              <td style="text-align: center;">1</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c16"> <label for="c16">CSE-3535</label></td>
+              <td>Artificial Intelligence</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c17"> <label for="c17">CSE-3536</label></td>
+              <td>Artificial Intelligence Lab</td>
+              <td style="text-align: center;">1</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" disabled id="c18"> <label for="c18">CSE-3541</label></td>
+              <td>Software Engineering</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td class="prereq-text">Prerequisite CSE-3529 not completed</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c19"> <label for="c19">CSE-3542</label></td>
+              <td>Software Engineering Lab</td>
+              <td style="text-align: center;">1</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" disabled id="c20"> <label for="c20">CSE-3544</label></td>
+              <td>Software Development Lab</td>
+              <td style="text-align: center;">1</td>
+              <td style="text-align: center;">Male</td>
+              <td class="prereq-text">Prerequisite CSE-3522 not completed</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c21"> <label for="c21">ECON-3503</label></td>
+              <td>Principles of Economics</td>
+              <td style="text-align: center;">2</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c22"> <label for="c22">GENO-3503</label></td>
+              <td>History of the Emergence of Bangladesh</td>
+              <td style="text-align: center;">2</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" disabled id="c23"> <label for="c23">CSE-3631</label></td>
+              <td>Computer Networks</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td class="prereq-text">Prerequisite CSE-3525 not completed</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c24"> <label for="c24">CSE-3634</label></td>
+              <td>Computer Networks Lab</td>
+              <td style="text-align: center;">1</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c25"> <label for="c25">CSE-4765</label></td>
+              <td>Field Work</td>
+              <td style="text-align: center;">1</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+
+            <!-- CATEGORY 5: Suggest for Improvement -->
+            <tr class="reg-cat-row">
+              <td colspan="5">Suggest for Improvement</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c35"> <label for="c35">CSE-1101</label></td>
+              <td>Computer Programming I</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c36"> <label for="c36">CSE-1103</label></td>
+              <td>Discrete Mathematics</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="reg-checkbox" id="c37"> <label for="c37">MATH-1107</label></td>
+              <td>Mathematics I (Geometry and Differential Equations)</td>
+              <td style="text-align: center;">3</td>
+              <td style="text-align: center;">Male</td>
+              <td style="text-align: center;"><select class="reg-select-sub"><option value="F" selected>F ▾</option></select></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="reg-submit-wrapper">
+        <button type="submit" class="reg-submit-btn" onclick="alert('Course Registration Submitted to IIUC Advisor'); return false;">Submit</button>
+      </div>
+    </form>
+
+  </main>
+
+  <!-- 4. IIUC Portal Footer -->
+  <footer class="iiuc-portal-footer">
+    <p>Copyright &copy; 2026 All rights reserved IIUC and Developed by</p>
   </footer>
+
+  <div class="footer-meta-bar">
+    <span>Page rendered in 0.7087 seconds.</span>
+    <span><a href="#">Legal</a> | <a href="#">Privacy Policy</a></span>
+  </div>
 
 </body>
 </html>
