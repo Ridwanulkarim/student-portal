@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Class Routine - International Islamic University Chittagong">
-  <title>Class Routine | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Complain Box - International Islamic University Chittagong">
+  <title>Complain Box | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
@@ -35,9 +35,9 @@
         </div>
       </div>
 
-      <!-- Others Dropdown (Exact Replica) -->
+      <!-- Others Dropdown -->
       <div class="utility-dropdown-container">
-        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Others Menu">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Others Menu">
           <span>🏢</span> Others ▾
         </button>
         <div class="utility-dropdown-menu" role="menu">
@@ -88,78 +88,42 @@
     </div>
   </header>
 
-  <!-- 3. Class Routine Main Content Container -->
+  <!-- 3. Complain Box Content Page -->
   <main class="prereg-container">
     <div class="prereg-card-wrapper">
       
       <!-- Cyan Banner Header with Green Tab Pill -->
       <div class="prereg-cyan-header">
-        <span class="prereg-tab-pill">Class Routine</span>
+        <span class="prereg-tab-pill">Complain Box</span>
       </div>
 
-      <!-- Title Header Block -->
-      <div class="routine-title-header">
-        <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="routine-watermark-logo">
-        <h2 class="routine-uni-title">International Islamic University Chittagong</h2>
-        <h3 class="routine-sub-title">Class Routine of CSE, M, Autumn-2026 (Fourth Semester)</h3>
-      </div>
+      <!-- Complain Form Container -->
+      <div class="complain-form-container">
+        <form action="#" method="POST" aria-label="IIUC Student Complain Form">
+          
+          <div class="complain-form-row">
+            <label for="dept-name" class="complain-form-label">Department Name</label>
+            <select id="dept-name" name="department" class="complain-form-select" required>
+              <option value="" selected disabled>Department</option>
+              <option value="cse">Computer Science and Engineering</option>
+              <option value="eee">Electrical & Electronic Engineering</option>
+              <option value="bba">Business Administration</option>
+              <option value="ell">English Language & Literature</option>
+            </select>
+          </div>
 
-      <!-- Class Routine 4-Column Table -->
-      <div class="routine-table-wrapper">
-        <table class="iiuc-routine-table" summary="Class Routine of CSE, M, Autumn-2026">
-          <thead>
-            <tr>
-              <th scope="col" style="width: 60px;">SL.</th>
-              <th scope="col" style="width: 160px;"></th>
-              <th scope="col" style="width: 150px;">Days</th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="col-sl">1</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Saturday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">2</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Sunday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">3</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Monday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">4</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Tuesday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">5</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Wednesday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">6</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Thursday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">7</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Friday</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+          <div class="complain-form-row">
+            <label for="complain-subject" class="complain-form-label">Subject</label>
+            <input type="text" id="complain-subject" name="subject" class="complain-form-input" required>
+          </div>
+
+          <div class="complain-form-row">
+            <label for="complain-description" class="complain-form-label">Description</label>
+            <textarea id="complain-description" name="description" class="complain-form-textarea" required></textarea>
+          </div>
+
+          <button type="submit" class="complain-submit-btn" onclick="alert('Complain Submitted Successfully!'); return false;">Submit</button>
+        </form>
       </div>
 
     </div>

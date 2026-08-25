@@ -1,7 +1,7 @@
 /* ==========================================================================
    IIUC Student Portal - Master Stylesheet
    International Islamic University Chittagong (IIUC)
-   Includes Login Page, Dashboard, Dropdown Menus, Course, Pre-Reg, Routine & Wifi Password
+   Includes Login Page, Dashboard, Dropdown Menus, Course, Pre-Reg, Routine, Wifi & Complain Box
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -29,7 +29,7 @@
   --reg-cat-header-border: #ffeeba;
   --reg-table-header-bg: #f8f9fa;
 
-  /* Pre-Registration, Routine & Wifi Form */
+  /* Pre-Registration, Routine, Wifi Form & Complain Box */
   --prereg-banner-bg: #2b90d9;
   --prereg-alert-bg: #ffe8cc;
   --prereg-alert-border: #ffd8a8;
@@ -346,27 +346,28 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. Wifi Password Replica Specific Styles
+   5. Complain Box & Wifi Password Form Specific Replica Styles
    -------------------------------------------------------------------------- */
-.wifi-form-container {
+.wifi-form-container, .complain-form-container {
   padding: 2rem 2.5rem;
-  max-width: 650px;
+  max-width: 750px;
 }
 
-.wifi-form-row {
+.wifi-form-row, .complain-form-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1.25rem;
 }
 
-.wifi-form-label {
+.wifi-form-label, .complain-form-label {
   width: 180px;
   font-size: 0.85rem;
   font-weight: 600;
   color: #333333;
+  padding-top: 0.35rem;
 }
 
-.wifi-form-input {
+.wifi-form-input, .complain-form-input, .complain-form-select {
   width: 320px;
   padding: 0.5rem 0.75rem;
   font-size: 0.85rem;
@@ -377,12 +378,25 @@ img {
   transition: border-color 0.15s ease;
 }
 
-.wifi-form-input:focus {
+.complain-form-textarea {
+  width: 380px;
+  height: 100px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  border: 1px solid var(--wifi-input-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  background-color: #ffffff;
+  resize: vertical;
+}
+
+.wifi-form-input:focus, .complain-form-input:focus, .complain-form-select:focus, .complain-form-textarea:focus {
   border-color: #7cb342;
   box-shadow: 0 0 0 2px rgba(124, 179, 66, 0.2);
 }
 
-.wifi-submit-btn {
+.wifi-submit-btn, .complain-submit-btn {
   background-color: #557297;
   color: #ffffff;
   border: none;
@@ -395,7 +409,7 @@ img {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-.wifi-submit-btn:hover {
+.wifi-submit-btn:hover, .complain-submit-btn:hover {
   background-color: #425978;
 }
 
@@ -1151,12 +1165,13 @@ img {
     align-items: flex-start;
     gap: 0.75rem;
   }
-  .wifi-form-row {
+  .wifi-form-row, .complain-form-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.35rem;
   }
-  .wifi-form-label, .wifi-form-input, .wifi-submit-btn {
+  .wifi-form-label, .wifi-form-input, .wifi-submit-btn,
+  .complain-form-label, .complain-form-input, .complain-form-select, .complain-form-textarea, .complain-submit-btn {
     width: 100%;
     margin-left: 0;
   }
