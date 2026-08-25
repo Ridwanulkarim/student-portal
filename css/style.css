@@ -37,7 +37,7 @@
   --wifi-input-border: #9ccc65;   /* Light green input border */
 
   /* KPI Colors */
-  --kpi-pink: #ff6b81;
+  --kpi-pink: #f87171;
   --kpi-cyan: #00b4d8;
 
   /* Neutrals */
@@ -347,77 +347,18 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. IIUC Profile Page Replica Styles
+   5. IIUC Student Bio Avatar Circle Photo
    -------------------------------------------------------------------------- */
-.profile-alert-banner {
-  background-color: #ffd8be;
-  border: 1px solid #ffc2a1;
-  border-radius: var(--radius-sm);
-  color: #e00000;
-  font-weight: 700;
-  font-size: 1rem;
-  text-align: center;
-  padding: 0.75rem 1rem;
-  margin: 1.25rem 1.5rem 1.5rem 1.5rem;
+.student-avatar-circle-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin: 0 auto 0.5rem auto;
+  display: block;
 }
-
-.profile-page-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 220px;
-  gap: 1.5rem;
-  padding: 0 1.5rem 1.5rem 1.5rem;
-  align-items: start;
-}
-
-.profile-field-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.85rem;
-  font-size: 0.825rem;
-}
-
-.profile-field-label {
-  width: 140px;
-  color: #555555;
-  font-weight: 600;
-  flex-shrink: 0;
-}
-
-.profile-field-value-text {
-  font-weight: 700;
-  color: #111111;
-  flex: 1;
-  line-height: 1.4;
-  word-break: break-word;
-}
-
-.profile-field-input {
-  width: 100%;
-  max-width: 260px;
-  padding: 0.4rem 0.65rem;
-  font-size: 0.825rem;
-  border: 1px solid var(--wifi-input-border);
-  border-radius: var(--radius-sm);
-  outline: none;
-  background-color: #ffffff;
-}
-
-.profile-field-input:focus {
-  border-color: #7cb342;
-  box-shadow: 0 0 0 2px rgba(124, 179, 66, 0.2);
-}
-
-.profile-portrait-wrapper {
-  text-align: right;
-}
-
-.profile-portrait-img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  border: 1px solid #dcdcdc;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 
 /* --------------------------------------------------------------------------
    6. IIUC Contact, Academic, Advisor & Syllabus Tabs Replica Styles
@@ -429,6 +370,15 @@ img {
 
 .tab-panel-content.active-panel {
   display: block;
+}
+
+.tab-blue-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 0.5rem;
 }
 
 .tab-green-title {
@@ -453,15 +403,6 @@ img {
   font-size: 1.6rem;
   font-weight: 700;
   color: #fd7e14;
-  margin-bottom: 1.25rem;
-  border-bottom: 1px solid #e9ecef;
-  padding-bottom: 0.5rem;
-}
-
-.tab-blue-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #007bff;
   margin-bottom: 1.25rem;
   border-bottom: 1px solid #e9ecef;
   padding-bottom: 0.5rem;
@@ -1331,7 +1272,7 @@ img {
 }
 
 .banner-pink-alert {
-  background-color: #e63946;
+  background-color: #f87171;
   color: #ffffff;
   padding: 0.65rem 1rem;
   border-radius: var(--radius-sm);
@@ -1374,7 +1315,7 @@ img {
 }
 
 .transport-submit-btn {
-  background-color: #4682b4;
+  background-color: #557297;
   color: #ffffff;
   border: none;
   padding: 0.4rem 1rem;
@@ -1422,10 +1363,13 @@ img {
 }
 
 .field-box {
-  background-color: var(--bg-surface-alt);
+  background-color: #f8f9fa;
   padding: 0.6rem 0.85rem;
   border-radius: var(--radius-sm);
-  border: 1px solid #e9ecef;
+  border-left: 4px solid #007bff;
+  border-top: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
 }
 
 .field-label {
