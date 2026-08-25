@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Fee Calculator - International Islamic University Chittagong">
-  <title>Fee Calculator | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Recent Complain Status - International Islamic University Chittagong">
+  <title>Recent Complain | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
@@ -88,61 +88,49 @@
     </div>
   </header>
 
-  <!-- 3. Fee Calculator Content Page -->
+  <!-- 3. Recent Complain Content Page -->
   <main class="prereg-container">
     <div class="prereg-card-wrapper">
       
       <!-- Cyan Banner Header with Green Tab Pill -->
       <div class="prereg-cyan-header">
-        <span class="prereg-tab-pill">Fee Calculator</span>
+        <span class="prereg-tab-pill">Recent Complain</span>
       </div>
 
-      <!-- Fee Calculator Form Container -->
-      <div class="wifi-form-container" style="max-width: 800px;">
-        <form action="#" method="POST" aria-label="IIUC Fee Calculator Form">
-          
-          <div class="wifi-form-row">
-            <label for="fee-semester" class="wifi-form-label" style="width: 260px;">Semester</label>
-            <select id="fee-semester" name="semester" class="wifi-form-input" style="width: 260px;" required>
-              <option value="" disabled selected>Select Semester</option>
-              <option value="autumn2026">Autumn-2026</option>
-              <option value="spring2026">Spring-2026</option>
-              <option value="autumn2025">Autumn-2025</option>
-            </select>
-          </div>
-
-          <div class="wifi-form-row">
-            <label for="reg-credit-dc" class="wifi-form-label" style="width: 260px;">Regular Credit Hours (DC)</label>
-            <input type="number" id="reg-credit-dc" name="reg_credit_dc" class="wifi-form-input" style="width: 260px;" value="0" min="0">
-          </div>
-
-          <div class="wifi-form-row">
-            <label for="reg-credit-urc" class="wifi-form-label" style="width: 260px;">Regular Credit Hours (URC)</label>
-            <input type="number" id="reg-credit-urc" name="reg_credit_urc" class="wifi-form-input" style="width: 260px;" value="0" min="0">
-          </div>
-
-          <div class="wifi-form-row">
-            <label for="retake-credit-dc" class="wifi-form-label" style="width: 260px;">Retake Credit Hours (DC)</label>
-            <input type="number" id="retake-credit-dc" name="retake_credit_dc" class="wifi-form-input" style="width: 260px;" value="0" min="0">
-          </div>
-
-          <div class="wifi-form-row">
-            <label for="retake-credit-urc" class="wifi-form-label" style="width: 260px;">Retake Credit Hours (URC)</label>
-            <input type="number" id="retake-credit-urc" name="retake_credit_urc" class="wifi-form-input" style="width: 260px;" value="0" min="0">
-          </div>
-
-          <div class="wifi-form-row">
-            <label for="imp-credit-dc" class="wifi-form-label" style="width: 260px;">Improvement Credit Hours (DC)</label>
-            <input type="number" id="imp-credit-dc" name="imp_credit_dc" class="wifi-form-input" style="width: 260px;" value="0" min="0">
-          </div>
-
-          <div class="wifi-form-row">
-            <label for="imp-credit-urc" class="wifi-form-label" style="width: 260px;">Improvement Credit Hours (URC)</label>
-            <input type="number" id="imp-credit-urc" name="imp_credit_urc" class="wifi-form-input" style="width: 260px;" value="0" min="0">
-          </div>
-
-          <button type="submit" class="wifi-submit-btn" style="margin-left: 260px;" onclick="alert('Estimated Tuition Fee Calculated: BDT 56,895'); return false;">Submit</button>
-        </form>
+      <!-- Recent Complain Table Wrapper -->
+      <div class="recent-complain-table-wrapper">
+        <table class="recent-complain-table" summary="IIUC Recent Submitted Complains Status">
+          <thead>
+            <tr>
+              <th scope="col">SL</th>
+              <th scope="col">Department</th>
+              <th scope="col">Subject</th>
+              <th scope="col">Description</th>
+              <th scope="col">Date</th>
+              <th scope="col">Status</th>
+              <th scope="col">Forward Dept.</th>
+              <th scope="col">Status</th>
+              <th scope="col">Forward Teacher</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>CSE</td>
+              <td>Wi-Fi Connectivity Issue</td>
+              <td>Signal drops frequently in Room 304.</td>
+              <td>2026-08-20</td>
+              <td><span style="color: #856404; font-weight: 700;">Pending</span></td>
+              <td>IT Division</td>
+              <td>In Review</td>
+              <td>Prof. Rahman</td>
+              <td>Assigned</td>
+              <td><a href="#" class="btn btn-secondary btn-sm" onclick="alert('Viewing Complain Details'); return false;">View</a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
     </div>
