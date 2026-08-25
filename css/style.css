@@ -1,7 +1,7 @@
 /* ==========================================================================
    IIUC Student Portal - Master Stylesheet
    International Islamic University Chittagong (IIUC)
-   Includes exact replica of Login Page & Dashboard
+   Includes exact replica of Login Page, Dashboard, User & Students Dropdown Menus
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -17,6 +17,7 @@
 
   /* IIUC Dashboard Colors */
   --topbar-bg: #17a2b8;           /* Cyan topbar */
+  --dropdown-btn-bg: #387687;     /* Dark Teal/Blue dropdown trigger pill */
   --primary-blue: #007bff;         /* Primary Action Blue */
   --success-green: #28a745;
   --danger-red: #dc3545;
@@ -114,7 +115,6 @@ img {
   max-width: 620px;
 }
 
-/* Card Header */
 .iiuc-login-header {
   display: flex;
   align-items: center;
@@ -135,7 +135,6 @@ img {
   line-height: 1.25;
 }
 
-/* Multi-color Rainbow Stripe Line */
 .rainbow-accent-bar {
   height: 4px;
   width: 100%;
@@ -154,7 +153,6 @@ img {
   border-radius: 2px;
 }
 
-/* Form Inputs */
 .iiuc-form-group {
   margin-bottom: 0.85rem;
 }
@@ -177,7 +175,6 @@ img {
   background-color: #ffffff;
 }
 
-/* Submit Button */
 .iiuc-login-btn {
   width: 100%;
   padding: 0.75rem;
@@ -197,7 +194,6 @@ img {
   background-color: var(--auth-btn-green-hover);
 }
 
-/* Auth Card Footer Subtext */
 .iiuc-auth-footer {
   text-align: center;
   font-size: 0.775rem;
@@ -217,7 +213,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   4. IIUC Dashboard Styles (Top utility, Header, Action Grid, 3-Col Body)
+   4. IIUC Dashboard Top Utility & Dropdown Popovers (Exact Replica)
    -------------------------------------------------------------------------- */
 .top-utility-bar {
   background-color: var(--topbar-bg);
@@ -228,22 +224,125 @@ img {
   justify-content: space-between;
   font-size: 0.85rem;
   font-weight: 600;
+  position: relative;
+  z-index: 200;
 }
 
 .top-utility-left, .top-utility-right {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.5rem;
 }
 
-.utility-item {
+/* Generic Utility Dropdown Container */
+.utility-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.utility-dropdown-trigger {
+  background: transparent;
   color: #ffffff;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
   display: flex;
   align-items: center;
   gap: 0.35rem;
   cursor: pointer;
+  user-select: none;
+  border: none;
+  transition: background-color 0.15s ease;
 }
 
+.utility-dropdown-trigger.active-trigger,
+.utility-dropdown-trigger:hover,
+.utility-dropdown-container:hover .utility-dropdown-trigger,
+.utility-dropdown-container:focus-within .utility-dropdown-trigger {
+  background-color: var(--dropdown-btn-bg);
+}
+
+/* Dropdown Menu Popover Box */
+.utility-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  min-width: 240px;
+  padding: 0.4rem 0;
+  z-index: 300;
+
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+}
+
+/* Position right-aligned menus properly */
+.utility-dropdown-menu.menu-right {
+  left: auto;
+  right: 0;
+}
+
+/* Reveal Menu on Hover / Focus */
+.utility-dropdown-container:hover .utility-dropdown-menu,
+.utility-dropdown-container:focus-within .utility-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Arrow Pointer on Top Left of Menu */
+.utility-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #dcdcdc;
+  border-left: 1px solid #dcdcdc;
+  transform: rotate(45deg);
+}
+
+.utility-dropdown-menu.menu-right::before {
+  left: auto;
+  right: 20px;
+}
+
+/* Dropdown Menu Item Links */
+.dropdown-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #3b79a6 !important;
+  text-decoration: none !important;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-menu-item:hover {
+  background-color: #f0f4f8;
+  color: #0056b3 !important;
+}
+
+.dropdown-item-icon {
+  font-size: 0.85rem;
+  color: #3b79a6;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. IIUC Main Header, Action Grid, 3-Column Dashboard Body
+   -------------------------------------------------------------------------- */
 .portal-main-header {
   background-color: #ffffff;
   padding: 1rem 1.5rem;
@@ -322,7 +421,6 @@ img {
   cursor: pointer;
 }
 
-/* Action Buttons Grid Bar */
 .action-grid-container {
   background-color: #ffffff;
   padding: 1rem 1.5rem;
@@ -366,7 +464,6 @@ img {
 .btn-act-gold { background-color: #ffc107; color: #212529 !important; }
 .btn-act-dark { background-color: #343a40; }
 
-/* 3-Column IIUC Main Dashboard Layout */
 .portal-dashboard-grid {
   display: grid;
   grid-template-columns: 240px 1fr 280px;

@@ -12,14 +12,100 @@
   <!-- 1. Top Cyan Utility Navigation Bar -->
   <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
     <div class="top-utility-left">
-      <span class="utility-item">👥 Students ▾</span>
-      <span class="utility-item">📖 Others ▾</span>
+
+      <!-- Students Dropdown Container (Exact Replica) -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Students Menu">
+          <span>👥</span> Students ▾
+        </button>
+
+        <!-- Popover Dropdown Menu for Students -->
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Pre Registration
+          </a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Course Registration
+          </a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Payment History
+          </a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Print Course Registration
+          </a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Students Add Drop Courses
+          </a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Semester Transport Update
+          </a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Students Result View
+          </a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Payment Advising
+          </a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Course Withdraw
+          </a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Registration Summary
+          </a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Course Status
+          </a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Update Transport
+          </a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Set Major Courses
+          </a>
+          <a href="results.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> MDP Result View
+          </a>
+        </div>
+      </div>
+
+      <!-- Others Dropdown Container -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Others Menu">
+          <span>🏢</span> Others ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="notices.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Campus Notices
+          </a>
+          <a href="schedule.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">➲</span> Class Timetable
+          </a>
+        </div>
+      </div>
+
       <span class="utility-item">⏱ TER ▾</span>
       <span class="utility-item">💻 Application ▾</span>
       <span class="utility-item">💬 IQAC ▾</span>
     </div>
+
     <div class="top-utility-right">
-      <span class="utility-item">👤 Mohammad Ridwanul Karim ▾</span>
+      <!-- User Profile Dropdown Pill & Popover Menu -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="User Profile Menu">
+          <span>👤</span> Mohammad Ridwanul Karim ▾
+        </button>
+
+        <!-- Popover Dropdown Menu (Right Aligned) -->
+        <div class="utility-dropdown-menu menu-right" role="menu">
+          <a href="index.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">🔒</span> Logout
+          </a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">🏠</span> Update Profile
+          </a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem">
+            <span class="dropdown-item-icon">⚙️</span> Change Password
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -43,9 +129,8 @@
     </div>
   </header>
 
-  <!-- 3. Action Buttons Grid Bar (Row of Colored Quick Action Pills) -->
+  <!-- 3. Action Buttons Grid Bar -->
   <nav class="action-grid-container" aria-label="Quick Action Grid">
-    <!-- Row 1 -->
     <div class="action-buttons-grid">
       <a href="courses.html" class="action-btn btn-act-blue">📂 Pre-Registration</a>
       <a href="courses.html" class="action-btn btn-act-green">✔ Course Registration</a>
@@ -55,7 +140,6 @@
       <a href="schedule.html" class="action-btn btn-act-blue">📅 Class Routine</a>
     </div>
 
-    <!-- Row 2 -->
     <div class="action-buttons-grid">
       <a href="results.html" class="action-btn btn-act-blue">📘 Special Examination</a>
       <a href="courses.html" class="action-btn btn-act-red">❌ Semester Drop</a>
@@ -65,7 +149,6 @@
       <a href="courses.html" class="action-btn btn-act-blue">📊 Registration Summary</a>
     </div>
 
-    <!-- Row 3 -->
     <div class="action-buttons-grid">
       <a href="results.html" class="action-btn btn-act-white">📈 Result View</a>
       <a href="courses.html" class="action-btn btn-act-blue">📚 Course Status</a>
@@ -75,7 +158,6 @@
       <a href="assignments.html" class="action-btn btn-act-green">📁 Proposal</a>
     </div>
 
-    <!-- Row 4 (Security & Account Navigation) -->
     <div class="action-buttons-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 0;">
       <a href="profile.html" class="action-btn btn-act-white">🔐 Password</a>
       <a href="profile.html" class="action-btn btn-act-blue">👤 Profile</a>
@@ -128,12 +210,10 @@
     <!-- Column 2: Center Main Content Stream -->
     <section class="center-content-stream">
       
-      <!-- Tutorial Button -->
       <div class="tutorial-btn-wrapper">
         <button type="button" class="tutorial-btn">Pre Registration Tutorial</button>
       </div>
 
-      <!-- Student Name Header Card -->
       <div class="student-name-header-card">
         <div class="student-name-blue-bar">
           <span>👤 Mohammad Ridwanul Karim</span>
@@ -150,27 +230,22 @@
         </div>
       </div>
 
-      <!-- Banner 1: Gold Countdown -->
       <div class="banner-gold">
         Registration Left: 5Days 14H 27min 26s
       </div>
 
-      <!-- Banner 2: Red Notice -->
       <div class="banner-red-alert">
         Dear Students, the Spring 2026 admit card cannot be downloaded unless the Autumn 2026 pre-registration is completed.
       </div>
 
-      <!-- Banner 3: Pink Readmission Notice -->
       <div class="banner-pink-alert">
         A student shall have to take readmission if s/he obtains GPA below 2.00 in 3 consecutive semesters
       </div>
 
-      <!-- Banner 4: Gold GPA Notice -->
       <div class="banner-gold">
         A student shall have to obtain minimum GPA 2.00 in each semester.
       </div>
 
-      <!-- Daily Transport Booking Card -->
       <div class="transport-booking-card">
         <div class="transport-header-bar">
           <span>Daily Transport Booking</span>
@@ -188,7 +263,6 @@
         </form>
       </div>
 
-      <!-- Overview / Tabs Section -->
       <div class="overview-tabs-container">
         <div class="overview-tab-header">
           <button class="overview-tab-btn active">Overview</button>
@@ -247,7 +321,6 @@
     <!-- Column 3: Right Sidebar Cards & Rules -->
     <aside class="right-sidebar-stream" aria-label="Registration Rules and Statistics">
       
-      <!-- Registration Rules Tab Box -->
       <div class="registration-rules-card">
         <div class="rules-tab-header">
           <button class="rules-tab-btn active">Registration</button>
@@ -270,25 +343,21 @@
         </div>
       </div>
 
-      <!-- Outstanding Balance KPI -->
       <div class="kpi-card-pink">
         <div class="kpi-title">Outstanding Balance</div>
         <div class="kpi-number">-7.5</div>
       </div>
 
-      <!-- Current CGPA KPI -->
       <div class="kpi-card-cyan">
         <div class="kpi-title">Current CGPA</div>
         <div class="kpi-number">3.213</div>
       </div>
 
-      <!-- Min Degree Req KPI -->
       <div class="kpi-card-white">
         <div class="field-label">Minimum Degree Requirement</div>
         <div class="field-value" style="font-size: 1.15rem; color: #047857;">CGPA: 2.50</div>
       </div>
 
-      <!-- Required Credit Hours KPI -->
       <div class="kpi-card-white">
         <div class="field-label">Required Credit Hours</div>
         <div class="field-value" style="font-size: 1.25rem;">163</div>
