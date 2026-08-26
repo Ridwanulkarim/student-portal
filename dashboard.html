@@ -491,7 +491,58 @@
         </div>
       </div>
 
-      <!-- Vertical KPI Cards Stack -->
+      <!-- Registration Rules & Exam Rules Card (Placed UPPER / ABOVE Current CGPA per user request) -->
+      <div style="background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.03); margin-top: 1rem;">
+        
+        <!-- Header Tab Bar -->
+        <div style="background: #22b8cf; padding: 0.65rem 0.85rem; display: flex; gap: 0.5rem; align-items: center;">
+          <button type="button" id="btn-reg-rules" style="background: #0066ff; color: #ffffff; font-weight: 800; border: none; border-radius: 8px; padding: 0.55rem 1.25rem; font-size: 0.85rem; cursor: pointer; transition: all 0.2s ease;" onclick="switchRulesTab('reg')">Registration</button>
+          <button type="button" id="btn-exam-rules" style="background: transparent; color: #ffffff; font-weight: 700; border: none; padding: 0.55rem 1.25rem; font-size: 0.85rem; cursor: pointer; opacity: 0.9; transition: all 0.2s ease;" onclick="switchRulesTab('exam')">Exam Rules</button>
+        </div>
+
+        <!-- Card Body -->
+        <div style="padding: 1.15rem; font-size: 0.8rem; color: #475569; line-height: 1.5; max-height: 380px; overflow-y: auto;">
+          
+          <!-- Tab 1: Registration Rules -->
+          <div id="rules-sec-reg">
+            <p style="color: #64748b; font-weight: 600; margin-bottom: 0.85rem; font-size: 0.8rem;">
+              This is to inform all students that the Pre-Registration and Registration Confirmation process for Spring 2026. All students must carefully follow the instructions below:
+            </p>
+
+            <ol style="padding-left: 1.1rem; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; color: #334155;">
+              <li>Students must complete their Pre-Registration within the scheduled Pre-Registration Dates.</li>
+              <li>Once you submit Pre-Registration You may edit and resubmit within the deadline. After the deadline, no changes can be made.</li>
+              <li>If you do not complete Pre-Registration &rarr; You cannot submit to Advisor.</li>
+              <li>If you pre-registered but did not submit to Advisor &rarr; You will be treated as Not Registered.</li>
+              <li>If you completed both Pre-Registration and Advisor Submission but did not pay within the payment deadline &rarr; You will be Not Registered.</li>
+              <li>During Pre-Registration, Maximum credit is based on the most recent semester with GPA &gt; 0. After Result Publication, Maximum credit is based on the newly earned GPA.</li>
+              <li>After Semester Results, prerequisite rules will apply. And if GPA increases &rarr; You may add/drop courses. If GPA decreases &rarr; You must reduce credit to match allowed limit. Advisor Submission will remain blocked until credit matches your GPA limit.</li>
+              <li>After submitting it to Advisor, Students cannot make changes. Advisors may adjust before the advisor's deadline. Missing Advisor submission &rarr; counted as Not Registered.</li>
+              <li>After advising is over, ACFD will publish the payment notice and payment dates. Student portals will display: "Registration Confirmation Payment Required" with total payable amount. Students must pay within the given deadline.</li>
+              <li>If Payment Is Not Made: Pre-Registration will be CANCELLED, Advisor Confirmation will be CANCELLED and The semester will be marked as DROP.</li>
+              <li>Failure at any stage &rarr; Not Registered.</li>
+            </ol>
+          </div>
+
+          <!-- Tab 2: Exam Rules -->
+          <div id="rules-sec-exam" style="display: none;">
+            <p style="color: #64748b; font-weight: 600; margin-bottom: 0.85rem; font-size: 0.8rem;">
+              General Examination Conduct and Eligibility Criteria:
+            </p>
+
+            <ol style="padding-left: 1.1rem; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; color: #334155;">
+              <li>Admit Cards must be downloaded and printed prior to exam entry.</li>
+              <li>Minimum 75% class attendance required to qualify for Midterm and Final Exams.</li>
+              <li>Cell phones, smartwatches, and programmable devices are strictly prohibited in exam halls.</li>
+              <li>Students acquiring GPA below 2.00 in 3 consecutive semesters will face academic probation/readmission.</li>
+            </ol>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Vertical KPI Cards Stack (Positioned BELOW Registration Rules Card) -->
       <div class="vertical-kpi-stack">
         
         <!-- KPI 1: Current CGPA (Purple) -->
@@ -562,6 +613,37 @@
           row.style.display = 'none';
         }
       });
+    }
+
+    function switchRulesTab(tabKey) {
+      const btnReg = document.getElementById('btn-reg-rules');
+      const btnExam = document.getElementById('btn-exam-rules');
+      const secReg = document.getElementById('rules-sec-reg');
+      const secExam = document.getElementById('rules-sec-exam');
+
+      if (tabKey === 'reg') {
+        btnReg.style.background = '#0066ff';
+        btnReg.style.fontWeight = '800';
+        btnReg.style.opacity = '1';
+
+        btnExam.style.background = 'transparent';
+        btnExam.style.fontWeight = '700';
+        btnExam.style.opacity = '0.9';
+
+        secReg.style.display = 'block';
+        secExam.style.display = 'none';
+      } else {
+        btnExam.style.background = '#0066ff';
+        btnExam.style.fontWeight = '800';
+        btnExam.style.opacity = '1';
+
+        btnReg.style.background = 'transparent';
+        btnReg.style.fontWeight = '700';
+        btnReg.style.opacity = '0.9';
+
+        secReg.style.display = 'none';
+        secExam.style.display = 'block';
+      }
     }
   </script>
 
