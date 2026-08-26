@@ -50,17 +50,16 @@
       margin-bottom: 1rem;
       font-size: 0.825rem;
       color: #334155;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .official-ledger-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.8rem;
+      font-size: 0.775rem;
     }
 
     .official-ledger-table th {
-      background-color: #fce7f3; /* Warm yellow/amber accent header matching screenshot */
       background: #fde047;
       color: #0f172a;
       font-weight: 800;
@@ -79,7 +78,7 @@
       background-color: #e0f2fe !important;
       font-weight: 800;
       color: #0369a1;
-      font-size: 0.85rem;
+      font-size: 0.825rem;
     }
 
     .tuition-fee-tag-row {
@@ -95,7 +94,7 @@
       padding: 0.25rem 0.65rem;
       border-radius: 6px;
       display: inline-block;
-      font-size: 0.775rem;
+      font-size: 0.75rem;
       border: 1px solid #bbf7d0;
     }
 
@@ -109,7 +108,7 @@
     .grand-total-row {
       background-color: #fef08a;
       font-weight: 800;
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       color: #0f172a;
       border-top: 2px solid #0f172a !important;
     }
@@ -220,25 +219,20 @@
 
       <div style="padding: 1.25rem;">
         
-        <!-- Official Statement Document Card (Matching Uploaded Screenshot Exact Replica) -->
+        <!-- Official Statement Document Card (Exact Replica of User Text Data) -->
         <div class="official-payment-doc-card">
           
-          <div class="official-doc-header">
-            <img src="assets/images/logo.png" alt="IIUC Crest Logo">
-            <h2>International Islamic University Chittagong</h2>
-            <h3>Payment History</h3>
-          </div>
-
-          <!-- Student Meta Info Row -->
+          <!-- Student Meta Info Grid -->
           <div class="official-student-meta-grid">
             <div>
-              <p style="margin: 0 0 0.2rem 0;"><strong>MATRIC:</strong> C243237</p>
-              <p style="margin: 0 0 0.2rem 0;"><strong>NAME:</strong> Mohammad Ridwanul Karim</p>
-              <p style="margin: 0;"><strong>DEPARTMENT:</strong> Computer Science and Engineering</p>
+              <p style="margin: 0 0 0.2rem 0;"><strong>Matric No:</strong> C243237</p>
+              <p style="margin: 0 0 0.2rem 0;"><strong>Name:</strong> Mohammad Ridwanul Karim</p>
+              <p style="margin: 0;"><strong>Registration No.:</strong> 0062420005101237</p>
             </div>
             <div style="text-align: right;">
-              <p style="margin: 0 0 0.2rem 0;"><strong>DEGREE:</strong> Bachelor of Science in Computer Science and Engineering</p>
-              <p style="margin: 0;"><strong>REGISTRATION NO:</strong> 0062420005101237</p>
+              <p style="margin: 0 0 0.2rem 0;"><strong>Department:</strong> Computer Science and Engineering</p>
+              <p style="margin: 0 0 0.2rem 0;"><strong>Programme:</strong> Bachelor Program</p>
+              <p style="margin: 0;"><strong>Admission:</strong> Autumn-2024</p>
             </div>
           </div>
 
@@ -247,183 +241,187 @@
             <table class="official-ledger-table" summary="IIUC Student Official Payment Ledger Table">
               <thead>
                 <tr>
-                  <th style="width: 90px;">DATE</th>
-                  <th style="text-align: left; padding-left: 0.75rem;">DESCRIPTION</th>
-                  <th style="width: 90px;">DEBIT</th>
-                  <th style="width: 90px;">CREDIT</th>
-                  <th style="width: 100px;">NET PAYABLE</th>
-                  <th style="width: 100px;">PAYMENT</th>
-                  <th style="width: 90px;">BALANCE</th>
+                  <th style="width: 90px;">Date</th>
+                  <th style="text-align: left; padding-left: 0.75rem;">Description</th>
+                  <th style="width: 80px;">Debit</th>
+                  <th style="width: 80px;">Paid</th>
+                  <th style="width: 80px;">Exemption</th>
+                  <th style="width: 80px;">Waiver</th>
+                  <th style="width: 90px;">Balance</th>
                 </tr>
               </thead>
               <tbody>
                 
-                <!-- ================= SEMESTER 1: Autumn-2024 ================= -->
+                <!-- ================= ENROLLMENT 1: Autumn-2024 ================= -->
                 <tr class="cost-sheet-head-row">
-                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">Cost Sheet ( 1 ), Autumn-2024</td>
+                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">Enrollment 1: Autumn-2024</td>
                 </tr>
-                <tr><td>2024-08-15</td><td class="text-left">Admission Fee</td><td class="text-center">25000</td><td></td><td></td><td></td><td class="text-center">25000</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">Semester Fee</td><td class="text-center">15000</td><td></td><td></td><td></td><td class="text-center">40000</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">Library Fee</td><td class="text-center">2000</td><td></td><td></td><td></td><td class="text-center">42000</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">Rover Scout Fee</td><td class="text-center">50</td><td></td><td></td><td></td><td class="text-center">42050</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">Internet / ICT Fee</td><td class="text-center">1200</td><td></td><td></td><td></td><td class="text-center">43250</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">Development Fee</td><td class="text-center">1500</td><td></td><td></td><td></td><td class="text-center">44750</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">Lab Fee</td><td class="text-center">1500</td><td></td><td></td><td></td><td class="text-center">46250</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">Orientation Fee</td><td class="text-center">2500</td><td></td><td></td><td></td><td class="text-center">48750</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">GEEL-1106: Advanced English ( 2.00 CH ) Theory</td><td class="text-center">5000</td><td></td><td></td><td></td><td class="text-center">53750</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">CSE-1121: Computer Programming 1 ( 3.00 CH ) Theory</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">61250</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">CSE-1122: Computer Programming 1 Lab ( 1.50 CH ) Lab</td><td class="text-center">3750</td><td></td><td></td><td></td><td class="text-center">65000</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">EEE-1121: Basic Electrical Engineering ( 3.00 CH ) Theory</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">72500</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">EEE-1122: Basic Electrical Engineering Lab ( 1.50 CH ) Lab</td><td class="text-center">3750</td><td></td><td></td><td></td><td class="text-center">76250</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">GEEM-1101: Text of Ethics and Morality ( 1.00 CH ) Theory</td><td class="text-center">2500</td><td></td><td></td><td></td><td class="text-center">78750</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">MATH-1107: Mathematics I (Differential and Integral Calculus) ( 3.00 CH ) Theory</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">86250</td></tr>
-                <tr><td>2024-08-15</td><td class="text-left">PHY-1101: Physics I (Mechanics, Waves, Heat and Thermodynamics) ( 3.00 CH ) Theory</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">93750</td></tr>
+                <tr><td>2024-06-11</td><td class="text-left">Admission Fee</td><td class="text-center">30000</td><td></td><td></td><td></td><td class="text-center">30000</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">Semester Fee</td><td class="text-center">15000</td><td></td><td></td><td></td><td class="text-center">45000</td></tr>
+                <tr><td>2024-06-11</td><td class="text-left">Library Fee</td><td class="text-center">2000</td><td></td><td></td><td></td><td class="text-center">47000</td></tr>
+                <tr><td>2024-06-11</td><td class="text-left">Rover Scout Fee</td><td class="text-center">16</td><td></td><td></td><td></td><td class="text-center">47016</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">Establishment Fee</td><td class="text-center">4000</td><td></td><td></td><td></td><td class="text-center">51016</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">Development Fee</td><td class="text-center">5000</td><td></td><td></td><td></td><td class="text-center">56016</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">Lab Fee</td><td class="text-center">3000</td><td></td><td></td><td></td><td class="text-center">59016</td></tr>
+                <tr><td>2024-06-11</td><td class="text-left">Orientation Fee</td><td class="text-center">2500</td><td></td><td></td><td></td><td class="text-center">61516</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">CSE-1121 Computer Programming 1 (3X2590) Expelled</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">69286</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">CSE-1122 Computer Programming 1 Lab (1.5X2590) Expelled</td><td class="text-center">3885</td><td></td><td></td><td></td><td class="text-center">73171</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">EEE-1121 Basic Electrical Engineering (3X2590) Expelled</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">80941</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">EEE-1122 Basic Electrical Engineering Lab (1.5X2590) Expelled</td><td class="text-center">3885</td><td></td><td></td><td></td><td class="text-center">84826</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">GEEL-1106 Advanced English (2X1100) Expelled</td><td class="text-center">2200</td><td></td><td></td><td></td><td class="text-center">87026</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">GEEM-1101 Text of Ethics and Morality (1X1100)</td><td class="text-center">1100</td><td></td><td></td><td></td><td class="text-center">88126</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">MATH-1107 Mathematics I (Differential and Integral Calculus) (3X2590) Expelled</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">95896</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">PHY-1101 Physics I (Mechanics, Waves, Heat and Thermodynamics) (3X2590) Expelled</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">103666</td></tr>
                 <tr class="tuition-fee-tag-row">
-                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">(Fixed Tuition Fee = 44700)</td>
+                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">(Total Tuition Fee = 42150)</td>
                 </tr>
-                <tr><td>2024-08-20</td><td class="text-left">Bank Pay (DBBL Online)</td><td></td><td class="text-center">25000</td><td></td><td class="text-center">25000</td><td class="text-center">68750</td></tr>
-                <tr><td>2024-09-10</td><td class="text-left">Bank Pay (DBBL Online)</td><td></td><td class="text-center">44070</td><td></td><td class="text-center">44070</td><td class="text-center">24680</td></tr>
-                <tr><td>2024-11-15</td><td class="text-left">Bank Pay (DBBL Online - Advance)</td><td></td><td class="text-center">32180</td><td></td><td class="text-center">32180</td><td class="text-center">-7500</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">Exam Fee (18 CH - 0 CH)</td><td class="text-center">1800</td><td></td><td></td><td></td><td class="text-center">105466</td></tr>
+                <tr><td>2024-07-15</td><td class="text-left">Special Tuition Fee Waiver of 25 (%)</td><td></td><td></td><td></td><td class="text-center">10537.5</td><td class="text-center">94928.5</td></tr>
+                <tr><td>2024-06-11</td><td class="text-left">Bank Received: IBBL 374 , (salah.acfd)</td><td class="text-center">0</td><td class="text-center">105466</td><td></td><td></td><td class="text-center" style="color: #dc2626;">-10537.5</td></tr>
                 <tr>
                   <td colspan="7" class="text-left" style="padding-left: 0.75rem;">
-                    <span class="summary-badge-tag">Total Registered CH = 18 and Total Registered UCH = 0 (Passed: 0, Withdraw: 0, Retake: 0, SF: 0)</span>
-                    <br><span style="font-size: 0.725rem; color: #64748b; margin-top: 0.2rem; display: block;">Remarks: Deposit for Course, Hostel, Library, etc. = University General Account</span>
+                    <span class="summary-badge-tag">Total Registered DC = 15 and Total Registered URC = 3 (Dropped: 0, Withdraw: 0, Retake: 0, SP: 0)</span>
+                    <br><span style="font-size: 0.725rem; color: #64748b; margin-top: 0.2rem; display: block;">N.B: DC = Departmental Course, URC = University Requirement Course</span>
                   </td>
                 </tr>
                 <tr class="sem-balance-row">
-                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Semester Balance:</td>
-                  <td class="text-center">61570</td>
-                  <td class="text-center">69070</td>
-                  <td class="text-center">61570</td>
-                  <td class="text-center">69070</td>
-                  <td class="text-center" style="color: #dc2626;">-7500.0</td>
+                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Semester Balance</td>
+                  <td class="text-center">105466</td>
+                  <td class="text-center">105466</td>
+                  <td></td>
+                  <td class="text-center">10537.5</td>
+                  <td class="text-center" style="color: #dc2626;">-10537.5</td>
                 </tr>
 
-                <!-- ================= SEMESTER 2: Spring-2025 ================= -->
+                <!-- ================= ENROLLMENT 2: Spring-2025 ================= -->
                 <tr class="cost-sheet-head-row">
-                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">Cost Sheet ( 2 ), Spring-2025</td>
+                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">Enrollment 2: Spring-2025</td>
                 </tr>
-                <tr><td>2025-01-20</td><td class="text-left">Semester Fee</td><td class="text-center">15000</td><td></td><td></td><td></td><td class="text-center">15000</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">Development Fee</td><td class="text-center">1500</td><td></td><td></td><td></td><td class="text-center">16500</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">Library Fee</td><td class="text-center">2000</td><td></td><td></td><td></td><td class="text-center">18500</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">Lab Fee</td><td class="text-center">1500</td><td></td><td></td><td></td><td class="text-center">20000</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">CSE-1221: Computer Programming II ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">27500</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">CSE-1222: Computer Programming II Lab ( 1.50 CH )</td><td class="text-center">3750</td><td></td><td></td><td></td><td class="text-center">31250</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">CSE-1223: Discrete Mathematics ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">38750</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">CSE-1230: Competitive Programming 1 ( 1.00 CH )</td><td class="text-center">2500</td><td></td><td></td><td></td><td class="text-center">41250</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">EEE-1221: Electronics ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">48750</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">EEE-1222: Electronics Lab ( 1.50 CH )</td><td class="text-center">3750</td><td></td><td></td><td></td><td class="text-center">52500</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">GEED-1201: Basic Principles of Islam (‘Aqidah + ‘Ibadah) ( 2.00 CH )</td><td class="text-center">5000</td><td></td><td></td><td></td><td class="text-center">57500</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">MATH-1207: Mathematics II (Geometry and Differential Equations) ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">65000</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">PHY-1201: Physics II (Electromagnetism, Optics and Modern Physics) ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">72500</td></tr>
-                <tr><td>2025-01-20</td><td class="text-left">PHY-1204: Physics II Lab (Electromagnetism, Optics and Modern Physics) ( 1.50 CH )</td><td class="text-center">3750</td><td></td><td></td><td></td><td class="text-center">76250</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">Semester Fee</td><td class="text-center">15000</td><td></td><td></td><td></td><td class="text-center">4462.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">Establishment Fee</td><td class="text-center">4000</td><td></td><td></td><td></td><td class="text-center">8462.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">Development Fee</td><td class="text-center">3000</td><td></td><td></td><td></td><td class="text-center">11462.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">Lab Fee</td><td class="text-center">3000</td><td></td><td></td><td></td><td class="text-center">14462.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">CSE-1221 Computer Programming II (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">22232.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">CSE-1222 Computer Programming II Lab (1.5 X 2590)</td><td class="text-center">3885</td><td></td><td></td><td></td><td class="text-center">26117.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">CSE-1223 Discrete Mathematics (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">33887.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">CSE-1230 Competitive Programming 1 (1 X 2590)</td><td class="text-center">2590</td><td></td><td></td><td></td><td class="text-center">36477.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">EEE-1221 Electronics (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">44247.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">EEE-1222 Electronics Lab (1.5 X 2590)</td><td class="text-center">3885</td><td></td><td></td><td></td><td class="text-center">48132.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">GEED-1201 Basic Principles of Islam (‘Aqidah + ‘Ibadah)) (2 X 1100)</td><td class="text-center">2200</td><td></td><td></td><td></td><td class="text-center">50332.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">GEEM-1101 Text of Ethics and Morality (1 X 1100)</td><td class="text-center">1100</td><td></td><td></td><td></td><td class="text-center">51432.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">MATH-1207 Mathematics II (Geometry and Differential Equations) (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">59202.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">PHY-1201 Physics II (Electromagnetism, Optics and Modern Physics) (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">66972.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">PHY-1204 Physics II Lab (Electromagnetism, Optics and Modern Physics) (1.5 X 2590)</td><td class="text-center">3885</td><td></td><td></td><td></td><td class="text-center">70857.5</td></tr>
                 <tr class="tuition-fee-tag-row">
-                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">(Fixed Tuition Fee = 50250)</td>
+                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">(Total Tuition Fee = 56395)</td>
                 </tr>
-                <tr><td>2025-02-15</td><td class="text-left">Bank Pay (DBBL Online)</td><td></td><td class="text-center">20000</td><td></td><td class="text-center">20000</td><td class="text-center">56250</td></tr>
-                <tr><td>2025-04-10</td><td class="text-left">Bank Pay (DBBL Online)</td><td></td><td class="text-center">30710</td><td></td><td class="text-center">30710</td><td class="text-center">25540</td></tr>
-                <tr><td>2025-05-20</td><td class="text-left">Bank Pay (DBBL Online)</td><td></td><td class="text-center">7500</td><td></td><td class="text-center">7500</td><td class="text-center">0.0</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">Exam Fee (23.5 CH - 0 CH)</td><td class="text-center">2350</td><td></td><td></td><td></td><td class="text-center">73207.5</td></tr>
+                <tr><td>2025-02-20</td><td class="text-left">Bank Received: IBBL 374 , (bank_account)</td><td class="text-center">0</td><td class="text-center">30000</td><td></td><td></td><td class="text-center">43207.5</td></tr>
+                <tr><td>2025-07-07</td><td class="text-left">Bank Received: EXIM 2338 , (1204.AR)</td><td class="text-center">0</td><td class="text-center">43210</td><td></td><td></td><td class="text-center" style="color: #dc2626;">-2.5</td></tr>
                 <tr>
                   <td colspan="7" class="text-left" style="padding-left: 0.75rem;">
-                    <span class="summary-badge-tag">Total Registered CH = 20.5 and Total Registered UCH = 0 (Passed: 0, Withdraw: 0, Retake: 0, SF: 0)</span>
-                    <br><span style="font-size: 0.725rem; color: #64748b; margin-top: 0.2rem; display: block;">Remarks: Deposit for Course, Hostel, Library, etc. = University General Account</span>
+                    <span class="summary-badge-tag">Total Registered DC = 20.5 and Total Registered URC = 3 (Dropped: 0, Withdraw: 0, Retake: 0, SP: 0)</span>
+                    <br><span style="font-size: 0.725rem; color: #64748b; margin-top: 0.2rem; display: block;">N.B: DC = Departmental Course, URC = University Requirement Course</span>
                   </td>
                 </tr>
                 <tr class="sem-balance-row">
-                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Semester Balance:</td>
-                  <td class="text-center">58210</td>
-                  <td class="text-center">58210</td>
-                  <td class="text-center">58210</td>
-                  <td class="text-center">58210</td>
-                  <td class="text-center">0.0</td>
+                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Semester Balance</td>
+                  <td class="text-center">83745</td>
+                  <td class="text-center">73210</td>
+                  <td></td>
+                  <td class="text-center">0</td>
+                  <td class="text-center" style="color: #dc2626;">-2.5</td>
                 </tr>
                 <tr>
                   <td colspan="7" class="text-left" style="padding-left: 0.75rem; background-color: #f8fafc; font-weight: 700;">
-                    Completed Credit: 38.5
+                    Completed Credit: 23.5
                   </td>
                 </tr>
 
-                <!-- ================= SEMESTER 3: Autumn-2025 ================= -->
+                <!-- ================= ENROLLMENT 3: Autumn-2025 ================= -->
                 <tr class="cost-sheet-head-row">
-                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">Cost Sheet ( 3 ), Autumn-2025</td>
+                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">Enrollment 3: Autumn-2025</td>
                 </tr>
-                <tr><td>2025-08-01</td><td class="text-left">Semester Fee</td><td class="text-center">15000</td><td></td><td></td><td></td><td class="text-center">15000</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">Development Fee</td><td class="text-center">1500</td><td></td><td></td><td></td><td class="text-center">16500</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">Library Fee</td><td class="text-center">2000</td><td></td><td></td><td></td><td class="text-center">18500</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">Lab Fee</td><td class="text-center">1500</td><td></td><td></td><td></td><td class="text-center">20000</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">CHEM-2301: Chemistry ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">27500</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">CSE-2321: Data Structures ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">35000</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">CSE-2322: Data Structures Lab ( 1.00 CH )</td><td class="text-center">2500</td><td></td><td></td><td></td><td class="text-center">37500</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">CSE-2323: Digital Logic Design ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">45000</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">CSE-2324: Digital Logic Design Lab ( 1.50 CH )</td><td class="text-center">3750</td><td></td><td></td><td></td><td class="text-center">48750</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">CSE-2340: Software Development 1 ( 2.00 CH )</td><td class="text-center">5000</td><td></td><td></td><td></td><td class="text-center">53750</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">GEED-2302: Sciences of Quran and Hadith ( 1.00 CH )</td><td class="text-center">2500</td><td></td><td></td><td></td><td class="text-center">56250</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">GEED-2305: Comparative Religion ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">63750</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">MATH-2307: Mathematics III (Matrices, Linear System of Equations and Vector Analysis) ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">71250</td></tr>
-                <tr><td>2025-08-01</td><td class="text-left">STAT-2311: Probability and Statistics ( 2.00 CH )</td><td class="text-center">5000</td><td></td><td></td><td></td><td class="text-center">76250</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">Semester Fee</td><td class="text-center">15000</td><td></td><td></td><td></td><td class="text-center">14997.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">Establishment Fee</td><td class="text-center">4000</td><td></td><td></td><td></td><td class="text-center">18997.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">Development Fee</td><td class="text-center">3000</td><td></td><td></td><td></td><td class="text-center">21997.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">Lab Fee</td><td class="text-center">3000</td><td></td><td></td><td></td><td class="text-center">24997.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">CHEM-2301 Chemistry (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">32767.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">CSE-2321 Data Structures (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">40537.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">CSE-2322 Data Structures Lab (1 X 2590)</td><td class="text-center">2590</td><td></td><td></td><td></td><td class="text-center">43127.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">CSE-2323 Digital Logic Design (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">50897.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">CSE-2324 Digital Logic Design Lab (1.5 X 2590)</td><td class="text-center">3885</td><td></td><td></td><td></td><td class="text-center">54782.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">CSE-2340 Software Development 1 (2 X 2590)</td><td class="text-center">5180</td><td></td><td></td><td></td><td class="text-center">59962.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">GEED-2302 Sciences of Quran and Hadith (1 X 1100)</td><td class="text-center">1100</td><td></td><td></td><td></td><td class="text-center">61062.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">GEEL-1106 Advanced English (2 X 1100)</td><td class="text-center">2200</td><td></td><td></td><td></td><td class="text-center">63262.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">MATH-1107 Mathematics I (Differential and Integral Calculus) (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">71032.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">MATH-2307 Mathematics III (Matrices, Linear System of Equations and Vector Analysis) (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">78802.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">PHY-1101 Physics I (Mechanics, Waves, Heat and Thermodynamics) (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">86572.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">STAT-2311 Probability and Statistics (2 X 2590)</td><td class="text-center">5180</td><td></td><td></td><td></td><td class="text-center">91752.5</td></tr>
                 <tr class="tuition-fee-tag-row">
-                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">(Fixed Tuition Fee = 54750)</td>
+                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">(Total Tuition Fee = 66755)</td>
                 </tr>
-                <tr><td>2025-08-25</td><td class="text-left">Bank Pay (DBBL Online)</td><td></td><td class="text-center">20000</td><td></td><td class="text-center">20000</td><td class="text-center">56250</td></tr>
-                <tr><td>2025-10-15</td><td class="text-left">Bank Pay (DBBL Online)</td><td></td><td class="text-center">32710</td><td></td><td class="text-center">32710</td><td class="text-center">23540</td></tr>
-                <tr><td>2025-11-20</td><td class="text-left">Bank Pay (DBBL Online)</td><td></td><td class="text-center">10000</td><td></td><td class="text-center">10000</td><td class="text-center">0.0</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">Exam Fee (27.5 CH - 0 CH)</td><td class="text-center">2750</td><td></td><td></td><td></td><td class="text-center">94502.5</td></tr>
+                <tr><td>2025-09-21</td><td class="text-left">Bank Received: IBBL 374 , (bank_account)</td><td class="text-center">0</td><td class="text-center">30000</td><td></td><td></td><td class="text-center">64502.5</td></tr>
+                <tr><td>2025-12-22</td><td class="text-left">Bank Received: IBBL 374 , (1204.AR)</td><td class="text-center">0</td><td class="text-center">64510</td><td></td><td></td><td class="text-center" style="color: #dc2626;">-7.5</td></tr>
                 <tr>
                   <td colspan="7" class="text-left" style="padding-left: 0.75rem;">
-                    <span class="summary-badge-tag">Total Registered CH = 22.5 and Total Registered UCH = 0 (Passed: 0, Withdraw: 0, Retake: 0, SF: 0)</span>
-                    <br><span style="font-size: 0.725rem; color: #64748b; margin-top: 0.2rem; display: block;">Remarks: Deposit for Course, Hostel, Library, etc. = University General Account</span>
+                    <span class="summary-badge-tag">Total Registered DC = 24.5 and Total Registered URC = 3 (Dropped: 0, Withdraw: 0, Retake: 0, SP: 0)</span>
+                    <br><span style="font-size: 0.725rem; color: #64748b; margin-top: 0.2rem; display: block;">N.B: DC = Departmental Course, URC = University Requirement Course</span>
                   </td>
                 </tr>
                 <tr class="sem-balance-row">
-                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Semester Balance:</td>
-                  <td class="text-center">62710</td>
-                  <td class="text-center">62710</td>
-                  <td class="text-center">62710</td>
-                  <td class="text-center">62710</td>
-                  <td class="text-center">0.0</td>
+                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Semester Balance</td>
+                  <td class="text-center">94505</td>
+                  <td class="text-center">94510</td>
+                  <td></td>
+                  <td class="text-center">0</td>
+                  <td class="text-center" style="color: #dc2626;">-7.5</td>
                 </tr>
                 <tr>
                   <td colspan="7" class="text-left" style="padding-left: 0.75rem; background-color: #f8fafc; font-weight: 700;">
-                    Completed Credit: 61.0
+                    Completed Credit: 48
                   </td>
                 </tr>
 
-                <!-- ================= SEMESTER 4: Spring-2026 ================= -->
+                <!-- ================= ENROLLMENT 4: Spring-2026 ================= -->
                 <tr class="cost-sheet-head-row">
-                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">Cost Sheet ( 4 ), Spring-2026</td>
+                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">Enrollment 4: Spring-2026</td>
                 </tr>
-                <tr><td>2026-01-20</td><td class="text-left">Semester Fee</td><td class="text-center">15000</td><td></td><td></td><td></td><td class="text-center">15000</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">Development Fee</td><td class="text-center">1500</td><td></td><td></td><td></td><td class="text-center">16500</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">Library Fee</td><td class="text-center">2000</td><td></td><td></td><td></td><td class="text-center">18500</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">Lab Fee</td><td class="text-center">1500</td><td></td><td></td><td></td><td class="text-center">20000</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">CSE-2421: Computer Algorithms ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">27500</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">CSE-2422: Computer Algorithms Lab ( 1.00 CH )</td><td class="text-center">2500</td><td></td><td></td><td></td><td class="text-center">30000</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">CSE-2423: Database Management Systems ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">37500</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">CSE-2424: Database Management Systems Lab ( 1.50 CH )</td><td class="text-center">3750</td><td></td><td></td><td></td><td class="text-center">41250</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">CSE-2427: Theory of Computation ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">48750</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">CSE-2430: Competitive Programming II ( 1.00 CH )</td><td class="text-center">2500</td><td></td><td></td><td></td><td class="text-center">51250</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">EEE-2421: Electrical Drives and Instrumentation ( 2.00 CH )</td><td class="text-center">5000</td><td></td><td></td><td></td><td class="text-center">56250</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">EEE-2422: Electrical Drives and Instrumentation Lab ( 1.00 CH )</td><td class="text-center">2500</td><td></td><td></td><td></td><td class="text-center">58750</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">GEBL-2401: Bengali Language and Literature ( 2.00 CH )</td><td class="text-center">5000</td><td></td><td></td><td></td><td class="text-center">63750</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">MATH-2407: Mathematics IV (Complex Variable, Fourier Analysis and Z-transform) ( 3.00 CH )</td><td class="text-center">7500</td><td></td><td></td><td></td><td class="text-center">71250</td></tr>
-                <tr><td>2026-01-20</td><td class="text-left">ME-2412: Engineering Drawing Lab ( 1.00 CH )</td><td class="text-center">2500</td><td></td><td></td><td></td><td class="text-center">73750</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">Semester Fee</td><td class="text-center">15000</td><td></td><td></td><td></td><td class="text-center">14992.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">Establishment Fee</td><td class="text-center">4000</td><td></td><td></td><td></td><td class="text-center">18992.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">Development Fee</td><td class="text-center">3000</td><td></td><td></td><td></td><td class="text-center">21992.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">Lab Fee</td><td class="text-center">3000</td><td></td><td></td><td></td><td class="text-center">24992.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">ACC-2401 Financial and Managerial Accounting (2 X 2590)</td><td class="text-center">5180</td><td></td><td></td><td></td><td class="text-center">30172.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">CSE-2421 Computer Algorithms (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">37942.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">CSE-2422 Computer Algorithms Lab (1 X 2590)</td><td class="text-center">2590</td><td></td><td></td><td></td><td class="text-center">40532.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">CSE-2423 Database Management Systems (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">48302.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">CSE-2424 Database Management Systems Lab (1.5 X 2590)</td><td class="text-center">3885</td><td></td><td></td><td></td><td class="text-center">52187.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">CSE-2427 Theory of Computation (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">59957.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">CSE-2430 Competitive Programming II (1 X 2590)</td><td class="text-center">2590</td><td></td><td></td><td></td><td class="text-center">62547.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">EEE-1121 Basic Electrical Engineering (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">70317.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">GEBL-2401 Bengali Language and Lituratre (2 X 2590)</td><td class="text-center">5180</td><td></td><td></td><td></td><td class="text-center">75497.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">MATH-1107 Mathematics I (Differential and Integral Calculus) (3 X 1295) Retake</td><td class="text-center">3885</td><td></td><td></td><td></td><td class="text-center">79382.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">MATH-2407 Mathematics IV (Complex Variable, Fourier Analysis and Z-transform) (3 X 2590)</td><td class="text-center">7770</td><td></td><td></td><td></td><td class="text-center">87152.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">ME-2412 Engineering Drawing Lab (1 X 2590)</td><td class="text-center">2590</td><td></td><td></td><td></td><td class="text-center">89742.5</td></tr>
                 <tr class="tuition-fee-tag-row">
-                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">(Fixed Tuition Fee = 50750)</td>
+                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">(Total Tuition Fee = 64750)</td>
                 </tr>
-                <tr><td>2026-02-20</td><td class="text-left">Bank Pay (DBBL Online)</td><td></td><td class="text-center">20000</td><td></td><td class="text-center">20000</td><td class="text-center">53750</td></tr>
-                <tr><td>2026-04-15</td><td class="text-left">Bank Pay (DBBL Online)</td><td></td><td class="text-center">30710</td><td></td><td class="text-center">30710</td><td class="text-center">23040</td></tr>
-                <tr><td>2026-05-25</td><td class="text-left">Bank Pay (DBBL Online)</td><td></td><td class="text-center">8000</td><td></td><td class="text-center">8000</td><td class="text-center" style="color: #dc2626;">-7.5</td></tr>
+                <tr><td>2026-02-22</td><td class="text-left">Exam Fee (26.5 CH - 0 CH)</td><td class="text-center">2650</td><td></td><td></td><td></td><td class="text-center">92392.5</td></tr>
+                <tr><td>2026-04-08</td><td class="text-left">Bank Received: IBBL 374 , (bank_account)</td><td class="text-center">0</td><td class="text-center">37000</td><td></td><td></td><td class="text-center">55392.5</td></tr>
+                <tr><td>2026-07-02</td><td class="text-left">Bank Received: IBBL 374 , (bank_account)</td><td class="text-center">0</td><td class="text-center">55400</td><td></td><td></td><td class="text-center" style="color: #dc2626;">-7.5</td></tr>
                 <tr>
                   <td colspan="7" class="text-left" style="padding-left: 0.75rem;">
-                    <span class="summary-badge-tag">Total Registered CH = 20.5 and Total Registered UCH = 0 (Passed: 0, Withdraw: 0, Retake: 0, SF: 0)</span>
-                    <br><span style="font-size: 0.725rem; color: #64748b; margin-top: 0.2rem; display: block;">Remarks: Deposit for Course, Hostel, Library, etc. = University General Account</span>
+                    <span class="summary-badge-tag">Total Registered DC = 26.5 and Total Registered URC = 0 (Dropped: 0, Withdraw: 0, Retake: 3, SP: 0)</span>
+                    <br><span style="font-size: 0.725rem; color: #64748b; margin-top: 0.2rem; display: block;">N.B: DC = Departmental Course, URC = University Requirement Course</span>
                   </td>
                 </tr>
                 <tr class="sem-balance-row">
-                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Semester Balance:</td>
-                  <td class="text-center">58710</td>
-                  <td class="text-center">58710</td>
-                  <td class="text-center">58710</td>
-                  <td class="text-center">58710</td>
+                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Semester Balance</td>
+                  <td class="text-center">92400</td>
+                  <td class="text-center">92400</td>
+                  <td></td>
+                  <td class="text-center">0</td>
                   <td class="text-center" style="color: #dc2626;">-7.5</td>
                 </tr>
                 <tr>
@@ -432,43 +430,45 @@
                   </td>
                 </tr>
 
-                <!-- ================= SEMESTER 5: Autumn-2026 ================= -->
+                <!-- ================= ENROLLMENT 5: Autumn-2026 (Registration is Pending) ================= -->
                 <tr class="cost-sheet-head-row">
                   <td colspan="7" class="text-left" style="padding-left: 0.75rem;">
-                    Cost Sheet ( 5 ), Autumn-2026 <span style="background: #ef4444; color: #fff; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 0.5rem;">Registration in Progress</span>
+                    Enrollment 4: Autumn-2026 <span style="background: #ef4444; color: #fff; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 0.5rem;">Registration is Pending</span>
                   </td>
                 </tr>
                 <tr class="tuition-fee-tag-row">
-                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">(Fixed Tuition Fee = 0)</td>
+                  <td colspan="7" class="text-left" style="padding-left: 0.75rem;">(Total Tuition Fee = 0)</td>
                 </tr>
                 <tr>
                   <td colspan="7" class="text-left" style="padding-left: 0.75rem;">
-                    <span class="summary-badge-tag">Total Registered CH = 0 and Total Registered UCH = 0 (Passed: 0, Withdraw: 0, Retake: 0, SF: 0)</span>
-                    <br><span style="font-size: 0.725rem; color: #64748b; margin-top: 0.2rem; display: block;">Remarks: Deposit for Course, Hostel, Library, etc. = University General Account</span>
+                    <span class="summary-badge-tag">Total Registered DC = 0 and Total Registered URC = 0 (Dropped: 0, Withdraw: 0, Retake: 0, SP: 0)</span>
+                    <br><span style="font-size: 0.725rem; color: #64748b; margin-top: 0.2rem; display: block;">N.B: DC = Departmental Course, URC = University Requirement Course</span>
                   </td>
                 </tr>
                 <tr class="sem-balance-row">
-                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Semester Balance:</td>
+                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Semester Balance</td>
                   <td class="text-center">0</td>
                   <td class="text-center">0</td>
-                  <td class="text-center">0</td>
+                  <td></td>
                   <td class="text-center">0</td>
                   <td class="text-center" style="color: #dc2626;">-7.5</td>
                 </tr>
                 <tr>
                   <td colspan="7" class="text-left" style="padding-left: 0.75rem; background-color: #f8fafc; font-weight: 800; color: #0369a1;">
-                    Required Credit: 163, Completed Credit: 74.5, Balance Credit: 88.5
+                    Total Registered DC = 86.5 and Total Registered URC = 9
+                    <br>Required Credit: 163, Completed Credit: 74.5, Balance Credit: 88.5
+                    <br><span style="font-size: 0.725rem; color: #64748b; font-weight: 600;">N.B: DC = Departmental Course, URC = University Requirement Course</span>
                   </td>
                 </tr>
 
                 <!-- ================= GRAND TOTAL ROW ================= -->
                 <tr class="grand-total-row">
-                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Grand Total:</td>
-                  <td class="text-center">241200</td>
-                  <td class="text-center">248700</td>
-                  <td class="text-center">241200</td>
-                  <td class="text-center">248700</td>
-                  <td class="text-center" style="color: #dc2626;">-7500.0</td>
+                  <td colspan="2" class="text-right" style="padding-right: 1rem;">Grand Total</td>
+                  <td class="text-center">376116</td>
+                  <td class="text-center">365586</td>
+                  <td></td>
+                  <td class="text-center">10537.5</td>
+                  <td class="text-center" style="color: #dc2626;">-7.5</td>
                 </tr>
 
               </tbody>
