@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC MDP Result View - International Islamic University Chittagong">
-  <title>MDP Result View | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Registration Summary - International Islamic University Chittagong">
+  <title>Registration Summary | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .mdp-card-wrapper {
+    .reg-summary-card-wrapper {
       background: #ffffff;
       border-radius: 8px;
       border: 1px solid #cbd5e1;
@@ -16,15 +16,15 @@
       margin-bottom: 2rem;
     }
 
-    .mdp-cyan-header {
+    .reg-summary-cyan-header {
       background: #0284c7;
       padding: 0.65rem 1rem;
       display: flex;
       align-items: center;
     }
 
-    .mdp-tab-pill {
-      background: #16a34a;
+    .reg-summary-tab-pill {
+      background: #84cc16;
       color: #ffffff;
       font-weight: 700;
       font-size: 0.85rem;
@@ -32,77 +32,63 @@
       border-radius: 4px;
     }
 
-    .mdp-student-meta {
-      display: flex;
-      justify-content: space-between;
-      padding: 1rem 1.25rem 0.75rem 1.25rem;
-      font-size: 0.825rem;
-      color: #1e293b;
-      line-height: 1.5;
-    }
-
-    .mdp-results-table {
+    .reg-summary-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.8rem;
     }
 
-    .mdp-results-table th, .mdp-results-table td {
-      border: 1px solid #94a3b8;
-      padding: 0.45rem 0.5rem;
-      text-align: center;
-    }
-
-    .mdp-results-table th {
-      background-color: #ffffff;
-      font-weight: 700;
+    .reg-summary-table th {
+      background: #fde047;
       color: #0f172a;
-    }
-
-    .evaluation-section {
-      margin: 2rem auto 1.5rem auto;
-      max-width: 500px;
-      text-align: center;
-    }
-
-    .evaluation-title {
-      font-size: 1.05rem;
       font-weight: 800;
-      color: #0f172a;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
-      font-family: 'Times New Roman', Times, serif;
-    }
-
-    .evaluation-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-
-    .evaluation-table th, .evaluation-table td {
-      border: 1px solid #475569;
-      padding: 0.5rem 0.75rem;
       text-align: center;
+      padding: 0.55rem 0.4rem;
+      border: 1px solid #cbd5e1;
     }
 
-    .evaluation-table th {
+    .reg-summary-table td {
+      padding: 0.55rem 0.5rem;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+      color: #1e293b;
+    }
+
+    .action-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      justify-content: center;
+      align-items: center;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    .act-btn {
+      font-size: 0.7rem;
       font-weight: 700;
+      color: #ffffff;
+      border: none;
+      padding: 0.25rem 0.55rem;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      line-height: 1.2;
     }
 
-    .mdp-footer-note {
-      font-size: 0.725rem;
-      color: #475569;
-      line-height: 1.5;
-      padding: 1rem 1.25rem;
-      border-top: 1px solid #e2e8f0;
-    }
+    .btn-print-reg   { background-color: #00c0ef; }
+    .btn-pay-advising{ background-color: #00a65a; }
+    .btn-mid-admit   { background-color: #f39c12; }
+    .btn-final-admit { background-color: #dd4b39; }
+    .btn-grade-sheet { background-color: #0073b7; }
+    .btn-mid-routine { background-color: #00c0ef; }
+    .btn-final-routine{ background-color: #00a65a; }
   </style>
 </head>
 <body class="dashboard-body">
 
-  <!-- 1. Top Cyan Utility Navigation Bar -->
+  <!-- 1. Top Utility Navigation Bar -->
   <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
     <div class="top-utility-left">
       <!-- Students Dropdown -->
@@ -189,116 +175,137 @@
     </div>
   </header>
 
-  <!-- 3. MDP Result View Main Content Container -->
-  <main class="prereg-container" style="max-width: 1200px; margin: 1rem auto; padding: 0 1rem;">
-    <div class="mdp-card-wrapper">
+  <!-- 3. Registration Summary Main Content Page -->
+  <main class="prereg-container" style="max-width: 1250px; margin: 1rem auto; padding: 0 1rem;">
+    <div class="reg-summary-card-wrapper">
       
-      <!-- Cyan Header Banner -->
-      <div class="mdp-cyan-header">
-        <span class="mdp-tab-pill">MDP Result View</span>
+      <!-- Cyan Banner Header with Green Tab Pill -->
+      <div class="reg-summary-cyan-header">
+        <span class="reg-summary-tab-pill">Registration Summary</span>
       </div>
 
-      <!-- Student Meta Information -->
-      <div class="mdp-student-meta">
-        <div>
-          <p style="margin: 0 0 0.2rem 0;"><strong>Matric No:</strong> C243237</p>
-          <p style="margin: 0 0 0.2rem 0;"><strong>Registration No:</strong> 0062420005101237</p>
-          <p style="margin: 0;"><strong>Name:</strong> Mohammad Ridwanul Karim</p>
-        </div>
-        <div style="text-align: right;">
-          <p style="margin: 0 0 0.2rem 0;"><strong>Department:</strong> Computer Science and Engineering</p>
-          <p style="margin: 0 0 0.2rem 0;"><strong>Admission:</strong> Autumn-2024</p>
-          <p style="margin: 0;"><strong>Programme:</strong> Bachelor Program</p>
-        </div>
-      </div>
-
-      <!-- MDP Results Table -->
-      <div style="padding: 0 1.25rem; overflow-x: auto;">
-        <table class="mdp-results-table" summary="MDP Results Table">
+      <!-- Registration Summary Table -->
+      <div style="overflow-x: auto;">
+        <table class="reg-summary-table" summary="IIUC Student Registration Summary Table">
           <thead>
             <tr>
               <th style="width: 45px;">SL</th>
-              <th style="width: 100px;">Student ID</th>
-              <th style="text-align: left; padding-left: 0.65rem;">Name</th>
               <th style="width: 110px;">Semester</th>
-              <th style="text-align: left; padding-left: 0.65rem;">Course</th>
-              <th style="width: 70px;">Section</th>
-              <th style="width: 80px;">Class P.</th>
-              <th style="width: 70px;">Final</th>
-              <th style="width: 70px;">Total</th>
-              <th style="width: 70px;">Grade</th>
+              <th style="width: 130px;">Enrolled</th>
+              <th style="width: 80px;">Total CH</th>
+              <th style="width: 60px;">URC</th>
+              <th style="width: 60px;">DC</th>
+              <th style="width: 90px;">Cost</th>
+              <th style="width: 90px;">Payment</th>
+              <th style="width: 75px;">GPA</th>
+              <th style="width: 75px;">CGPA</th>
+              <th style="min-width: 360px;">Action</th>
             </tr>
           </thead>
           <tbody>
+            
+            <!-- ROW 1: Autumn-2024 -->
             <tr>
               <td>1</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 0.65rem;">Mohammad Ridwanul Karim</td>
               <td>Autumn-2024</td>
-              <td style="text-align: left; padding-left: 0.65rem;">MDP-1101 Tajweedul Quran-1</td>
-              <td>F</td>
-              <td>33</td>
-              <td>40</td>
-              <td>73</td>
-              <td>A-</td>
+              <td>First Semester</td>
+              <td>18</td>
+              <td>0</td>
+              <td>0</td>
+              <td>103750</td>
+              <td>105466</td>
+              <td>0.000</td>
+              <td><strong>3.761</strong></td>
+              <td>
+                <div class="action-btn-group">
+                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
+                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
+                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
+                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
+                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
+                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
+                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
+                </div>
+              </td>
             </tr>
+
+            <!-- ROW 2: Spring-2025 -->
             <tr>
               <td>2</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 0.65rem;">Mohammad Ridwanul Karim</td>
-              <td>Autumn-2025</td>
-              <td style="text-align: left; padding-left: 0.65rem;">MDP-2302A Tazkiyatun Nafl</td>
-              <td>F</td>
-              <td>45</td>
-              <td>29</td>
-              <td>74</td>
-              <td>A-</td>
+              <td>Spring-2025</td>
+              <td>Second Semester</td>
+              <td>23.5</td>
+              <td>0</td>
+              <td>0</td>
+              <td>83745</td>
+              <td>73210</td>
+              <td><strong>3.76</strong></td>
+              <td><strong>3.761</strong></td>
+              <td>
+                <div class="action-btn-group">
+                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
+                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
+                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
+                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
+                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
+                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
+                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
+                </div>
+              </td>
             </tr>
+
+            <!-- ROW 3: Autumn-2025 -->
             <tr>
               <td>3</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 0.65rem;">Mohammad Ridwanul Karim</td>
-              <td>Spring-2025</td>
-              <td style="text-align: left; padding-left: 0.65rem;">MDP-1201 Tajweedul Quran - 1</td>
-              <td>F</td>
-              <td>40</td>
-              <td>37</td>
-              <td>77</td>
-              <td>A</td>
+              <td>Autumn-2025</td>
+              <td>Third Semester</td>
+              <td>27.5</td>
+              <td>0</td>
+              <td>0</td>
+              <td>94505</td>
+              <td>94510</td>
+              <td><strong>3.14</strong></td>
+              <td><strong>3.761</strong></td>
+              <td>
+                <div class="action-btn-group">
+                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
+                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
+                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
+                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
+                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
+                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
+                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
+                </div>
+              </td>
             </tr>
+
+            <!-- ROW 4: Spring-2026 -->
+            <tr>
+              <td>4</td>
+              <td>Spring-2026</td>
+              <td>Fourth Semester</td>
+              <td>26.5</td>
+              <td>0</td>
+              <td>0</td>
+              <td>92400</td>
+              <td>92400</td>
+              <td><strong>3.912</strong></td>
+              <td><strong>3.761</strong></td>
+              <td>
+                <div class="action-btn-group">
+                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
+                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
+                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
+                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
+                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
+                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
+                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
+                </div>
+              </td>
+            </tr>
+
           </tbody>
         </table>
-      </div>
-
-      <!-- EVALUATION AREAS Table -->
-      <div class="evaluation-section">
-        <h4 class="evaluation-title">EVALUATION AREAS</h4>
-        <table class="evaluation-table" summary="Evaluation Areas Table">
-          <thead>
-            <tr>
-              <th style="width: 50%;">Avenues</th>
-              <th style="width: 25%;">Full Marks</th>
-              <th style="width: 25%;">Pass Marks</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: left; padding-left: 1rem; font-size: 1rem;">Class Performance</td>
-              <td>50</td>
-              <td>30</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; padding-left: 1rem; font-size: 1rem;">Final Examination</td>
-              <td>50</td>
-              <td>20</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Footer Note -->
-      <div class="mdp-footer-note">
-        MDP is one of the important components of academic programs that takes place in 1st, 2nd, 3rd, 4th, 5th & 6th Semester at undergraduate level as per prescribed syllabus. This course is designed with a view to making a student well acquainted with basic Islamic knowledge and contemporary issues as well. This may hopefully help a student to achieve moral and ethical upliftment.
       </div>
 
     </div>
