@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IIUC Student Course Evaluation Form - International Islamic University Chittagong">
+  <title>Student Course Evaluation Form | IIUC Student Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .survey-card-wrapper {
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      margin-bottom: 2rem;
+    }
+
+    .survey-cyan-header {
+      background: #0284c7;
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .survey-tab-pill {
+      background: #84cc16;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 4px;
+    }
+
+    .survey-form-container {
+      padding: 1.5rem 2rem 2.5rem 2rem;
+    }
+
+    .survey-page-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 1.5rem;
+    }
+
+    .survey-field-group {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      align-items: center;
+      margin-bottom: 1rem;
+      gap: 1rem;
+      max-width: 500px;
+    }
+
+    .survey-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .survey-select {
+      width: 100%;
+      padding: 0.45rem 0.65rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.825rem;
+      color: #1e293b;
+      background-color: #ffffff;
+    }
+
+    .survey-input-green {
+      width: 100%;
+      padding: 0.45rem 0.65rem;
+      border: 1px solid #a3e635;
+      border-radius: 4px;
+      font-size: 0.825rem;
+      color: #1e293b;
+      background-color: #ffffff;
+    }
+
+    .survey-rating-key {
+      font-size: 0.75rem;
+      color: #475569;
+      margin: 1.25rem 0 1rem 0;
+      line-height: 1.5;
+    }
+
+    .survey-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .survey-table th {
+      background: #f8fafc;
+      color: #0f172a;
+      font-weight: 800;
+      text-align: center;
+      padding: 0.55rem 0.4rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    .survey-table td {
+      padding: 0.55rem 0.65rem;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+    }
+
+    .survey-table tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .general-cat-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #1e293b;
+      margin-bottom: 1rem;
+    }
+
+    .survey-textarea-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .survey-textarea-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 0.35rem;
+    }
+
+    .survey-textarea {
+      width: 100%;
+      height: 70px;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.825rem;
+      color: #1e293b;
+      background-color: #ffffff;
+      resize: vertical;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+
+    .btn-survey-submit {
+      background-color: #5b6b8c;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: none;
+      padding: 0.55rem 1.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 1.5rem auto 0 auto;
+      display: block;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-survey-submit:hover {
+      background-color: #475569;
+    }
+  </style>
+</head>
+<body class="dashboard-body">
+
+  <!-- 1. Top Utility Navigation Bar -->
+  <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
+    <div class="top-utility-left">
+      <!-- Students Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Students Menu">
+          <span>👥</span> Students ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="preregistration.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Pre Registration</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Registration</a>
+          <a href="paymenthistory.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment History</a>
+          <a href="printcourseregistration.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Print Course Registration</a>
+          <a href="adddrop.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Add Drop Courses</a>
+          <a href="updatetransport.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Semester Transport Update</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Result View</a>
+          <a href="paymenthistory.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment Advising</a>
+          <a href="withdraw.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Withdraw</a>
+          <a href="registrationsummary.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Registration Summary</a>
+          <a href="coursestatus.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Status</a>
+          <a href="updatetransport.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Update Transport</a>
+          <a href="setmajorcourses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Set Major Courses</a>
+          <a href="mdpresult.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> MDP Result View</a>
+        </div>
+      </div>
+
+      <!-- Others Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Others Menu">
+          <span>🏢</span> Others ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="wifipassword.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Wifi Password</a>
+          <a href="complain.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Complain Box</a>
+          <a href="feecalculator.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Fee Calculator</a>
+          <a href="recentcomplain.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Recent Complain</a>
+        </div>
+      </div>
+
+      <!-- TER Dropdown Container -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="TER Menu">
+          <span>⏱</span> TER ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="ter.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> TER Submission</a>
+        </div>
+      </div>
+
+      <!-- Application Dropdown Container -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Application Menu">
+          <span>💻</span> Application ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="financialassistance.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Financial Assistance on GPA</a>
+          <a href="siblings.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Waiver on Siblings</a>
+          <a href="sschscscholarship.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Waiver on SSC HSC Result</a>
+          <a href="covidwaiver.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Waiver for Covid 19</a>
+          <a href="pendingapplication.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Pending Application</a>
+          <a href="specialarrangement.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Special Arrangment</a>
+          <a href="differentforms.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Different Type of Forms</a>
+          <a href="specialexam.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Special Examination</a>
+          <a href="readmission.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Readmission Application</a>
+          <a href="resultrecheck.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Result Recheck</a>
+          <a href="hostelapplication.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Hostel Application Form</a>
+          <a href="certificateapplication.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Application for Certificate/Testimonial</a>
+        </div>
+      </div>
+
+      <!-- IQAC Dropdown Container -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="IQAC Menu">
+          <span>💬</span> IQAC ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="coursesurvey.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Survey</a>
+          <a href="unauthorized.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Student Survey</a>
+          <a href="unauthorized.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Exit Survey</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="top-utility-right">
+      <!-- User Profile Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="User Profile Menu">
+          <span>👤</span> Mohammad Ridwanul Karim ▾
+        </button>
+        <div class="utility-dropdown-menu menu-right" role="menu">
+          <a href="index.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🔒</span> Logout</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🏠</span> Update Profile</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">⚙️</span> Change Password</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Main University Header -->
+  <header class="portal-main-header">
+    <a href="dashboard.html" class="iiuc-logo-group" aria-label="IIUC Portal Homepage">
+      <img src="assets/images/logo.png" alt="IIUC Official Crest Logo" class="iiuc-header-logo">
+      <div class="iiuc-title-block">
+        <h2>আন্তর্জাতিক ইসলামী বিশ্ববিদ্যালয় চট্টগ্রাম</h2>
+        <h1>International Islamic University Chittagong</h1>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh</p>
+      </div>
+    </a>
+
+    <div class="header-search-widget">
+      <span class="current-date-text">August 26, 2026 Wednesday</span>
+      <div class="search-input-group">
+        <input type="text" class="search-input" placeholder="Search portal options..." aria-label="Search portal">
+        <button type="button" class="search-btn" style="background: linear-gradient(to bottom, #f05050, #e74c3c); border-color: #d9534f;">Search & Find</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Student Course Evaluation Form Main Content Container -->
+  <main class="prereg-container" style="max-width: 1250px; margin: 1rem auto; padding: 0 1rem;">
+    <div class="survey-card-wrapper">
+      
+      <!-- Cyan Banner Header with Green Tab Pill -->
+      <div class="survey-cyan-header">
+        <span class="survey-tab-pill">Student course evaluation form</span>
+      </div>
+
+      <!-- Form Area -->
+      <div class="survey-form-container">
+        <h2 class="survey-page-title">Student course evaluation form</h2>
+
+        <form action="dashboard.html" method="GET">
+          
+          <div class="survey-field-group">
+            <label class="survey-label">Semester Name (*)</label>
+            <select name="semester" class="survey-select">
+              <option value="" selected>Select Semester</option>
+              <option value="autumn24">Autumn 2024</option>
+              <option value="spring25">Spring 2025</option>
+              <option value="autumn25">Autumn 2025</option>
+              <option value="spring26">Spring 2026</option>
+            </select>
+          </div>
+
+          <div class="survey-field-group">
+            <label class="survey-label">Course Name (*)</label>
+            <select name="course" class="survey-select">
+              <option value="" selected>Select Course</option>
+              <option value="cse1121">CSE-1121 Computer Programming 1</option>
+              <option value="eee1121">EEE-1121 Basic Electrical Engineering</option>
+              <option value="math1101">MATH-1101 Differential Calculus</option>
+              <option value="geel1106">GEEL-1106 Advanced English</option>
+            </select>
+          </div>
+
+          <div class="survey-field-group">
+            <label class="survey-label">Teacher Name (*)</label>
+            <select name="teacher" class="survey-select">
+              <option value="yasin" selected>Mohd. Yasin Sharif</option>
+              <option value="rayhan">Rayhanuzzaman</option>
+              <option value="ahsan">Dr. Md. Ahsanul Hoque</option>
+            </select>
+          </div>
+
+          <div class="survey-field-group">
+            <label class="survey-label">Year of Study (*)</label>
+            <input type="text" class="survey-input-green" style="height: 60px;">
+          </div>
+
+          <!-- Evaluation Rating Key -->
+          <div class="survey-rating-key">
+            <strong>5</strong> - Strongly Agree<br>
+            <strong>4</strong> - Agree<br>
+            <strong>3</strong> - Undecided<br>
+            <strong>2</strong> - Disagree<br>
+            <strong>1</strong> - Strongly Disagree
+          </div>
+
+          <!-- Rating Table -->
+          <table class="survey-table" summary="Student Course Evaluation Aspects Table">
+            <thead>
+              <tr>
+                <th style="text-align: left; padding-left: 0.75rem;">Aspects of Evaluation</th>
+                <th style="width: 45px;">5</th>
+                <th style="width: 45px;">4</th>
+                <th style="width: 45px;">3</th>
+                <th style="width: 45px;">2</th>
+                <th style="width: 45px;">1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> I was given enough information about the course at the beginning of the semester</td>
+                <td style="text-align: center;"><input type="radio" name="q1" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="q1" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="q1" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="q1" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="q1" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The course learning outcomes in the course plan clearly described what I was expected to learn at the end of the course.</td>
+                <td style="text-align: center;"><input type="radio" name="q2" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="q2" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="q2" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="q2" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="q2" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The course structure (divided into lectures, exercises/ lab sessions etc.) is appropriate for achieving the intended course learning outcomes.</td>
+                <td style="text-align: center;"><input type="radio" name="q3" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="q3" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="q3" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="q3" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="q3" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The course contents (including the supporting materials) were updated enough to support the course learning outcomes.</td>
+                <td style="text-align: center;"><input type="radio" name="q4" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="q4" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="q4" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="q4" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="q4" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The teaching method of the course was effective.</td>
+                <td style="text-align: center;"><input type="radio" name="q5" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="q5" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="q5" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="q5" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="q5" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The assessment (including all compulsory elements, exams, assignments etc.) tested our achievement of the intended course learning outcomes.</td>
+                <td style="text-align: center;"><input type="radio" name="q6" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="q6" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="q6" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="q6" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="q6" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The course load is appropriate to the number of credit hours.</td>
+                <td style="text-align: center;"><input type="radio" name="q7" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="q7" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="q7" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="q7" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="q7" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The overall classroom environment was conductive to learning.</td>
+                <td style="text-align: center;"><input type="radio" name="q8" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="q8" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="q8" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="q8" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="q8" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The importance of the course in the program.</td>
+                <td style="text-align: center;"><input type="radio" name="q9" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="q9" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="q9" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="q9" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="q9" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> I would recommend this course to a fellow student.</td>
+                <td style="text-align: center;"><input type="radio" name="q10" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="q10" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="q10" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="q10" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="q10" value="1"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- General Category Section -->
+          <h3 class="general-cat-title">General Category</h3>
+
+          <div class="survey-textarea-group">
+            <label class="survey-textarea-label">The best features of the Course were:</label>
+            <textarea name="best_features" class="survey-textarea"></textarea>
+          </div>
+
+          <div class="survey-textarea-group">
+            <label class="survey-textarea-label">The Course could have been improved by:</label>
+            <textarea name="improvements" class="survey-textarea"></textarea>
+          </div>
+
+          <button type="submit" class="btn-survey-submit">Submit</button>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 4. Main Footer -->
+  <footer class="portal-main-footer" style="text-align: center; padding: 1.5rem 0; color: #64748b; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem;">
+    <p>Copyright © 2026 All rights reserved IIUC | Developed by IT Division IIUC</p>
+    <p style="margin-top: 0.35rem; font-size: 0.75rem;">Page rendered in 0.0420 seconds. | <a href="#" style="color: #0284c7; text-decoration: none;">Legal</a> | <a href="#" style="color: #0284c7; text-decoration: none;">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
