@@ -3,13 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Scholarship on Siblings - International Islamic University Chittagong">
-  <title>Scholarship on Siblings | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Scholarship on SSC-HSC Result - International Islamic University Chittagong">
+  <title>Scholarship on SSC-HSC Result | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .sschsc-card-wrapper {
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      margin-bottom: 2rem;
+    }
+
+    .sschsc-cyan-header {
+      background: #0284c7;
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .sschsc-tab-pill {
+      background: #84cc16;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 4px;
+    }
+
+    .sschsc-form-container {
+      padding: 2.5rem 2rem;
+      max-width: 950px;
+    }
+
+    .sschsc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .sschsc-form-group {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      gap: 1rem;
+    }
+
+    .sschsc-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .sschsc-input-green {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #a3e635;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #1e293b;
+      background-color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    .sschsc-input-blue {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 2px solid #2563eb;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #1e293b;
+      background-color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    .sschsc-select {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.825rem;
+      color: #1e293b;
+      background-color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    .btn-sschsc-submit {
+      background-color: #5b6b8c;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: none;
+      padding: 0.55rem 1.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 1.5rem auto 0 auto;
+      display: block;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-sschsc-submit:hover {
+      background-color: #475569;
+    }
+  </style>
 </head>
 <body class="dashboard-body">
 
-  <!-- 1. Top Cyan Utility Navigation Bar -->
+  <!-- 1. Top Utility Navigation Bar -->
   <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
     <div class="top-utility-left">
       <!-- Students Dropdown -->
@@ -29,7 +131,6 @@
           <a href="withdraw.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Withdraw</a>
           <a href="registrationsummary.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Registration Summary</a>
           <a href="coursestatus.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Status</a>
-          <a href="siblings.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Scholarship on Siblings</a>
           <a href="updatetransport.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Update Transport</a>
           <a href="setmajorcourses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Set Major Courses</a>
           <a href="mdpresult.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> MDP Result View</a>
@@ -49,7 +150,7 @@
         </div>
       </div>
 
-      <!-- TER Dropdown -->
+      <!-- TER Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="TER Menu">
           <span>⏱</span> TER ▾
@@ -59,8 +160,9 @@
         </div>
       </div>
 
+      <!-- Application Dropdown Container -->
       <div class="utility-dropdown-container">
-        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Application Menu">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Application Menu">
           <span>💻</span> Application ▾
         </button>
         <div class="utility-dropdown-menu" role="menu">
@@ -78,6 +180,7 @@
           <a href="unauthorized.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Application for Certificate/Testimonial</a>
         </div>
       </div>
+
       <span class="utility-item">💬 IQAC ▾</span>
     </div>
 
@@ -116,90 +219,83 @@
     </div>
   </header>
 
-  <!-- 3. Scholarship on Siblings Main Content Page -->
-  <main class="prereg-container">
-    <div class="prereg-card-wrapper">
+  <!-- 3. Scholarship on SSC-HSC Result Main Content Container -->
+  <main class="prereg-container" style="max-width: 1200px; margin: 1rem auto; padding: 0 1rem;">
+    <div class="sschsc-card-wrapper">
       
-      <!-- Cyan Banner Header with Green Pill Tag -->
-      <div class="prereg-cyan-header">
-        <span class="prereg-tab-pill">Scholarship on Siblings</span>
+      <!-- Cyan Banner Header with Green Tab Pill -->
+      <div class="sschsc-cyan-header">
+        <span class="sschsc-tab-pill">Scholarship on SSC-HSC Result</span>
       </div>
 
-      <!-- Form Container Grid -->
-      <form action="#" method="POST" style="padding: 2rem 2.5rem;" onsubmit="alert('Scholarship on Siblings Application Submitted Successfully!'); return false;">
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 3rem; align-items: start;">
+      <!-- Form Area (2-Column Grid matching Screenshot) -->
+      <div class="sschsc-form-container">
+        <form action="dashboard.html" method="GET">
           
-          <!-- Left Column -->
-          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div class="sschsc-grid">
             
-            <div style="display: flex; align-items: center;">
-              <label for="student-id" style="width: 130px; font-weight: 700; font-size: 0.85rem; color: #222;">ID No</label>
-              <input type="text" id="student-id" name="student_id" value="C243237" readonly style="flex: 1; border: 1px solid #9ccc65; border-radius: 2px; padding: 0.4rem 0.6rem; font-size: 0.85rem; outline: none; background-color: #ffffff; color: #333333;">
+            <!-- Left Column -->
+            <div>
+              <div class="sschsc-form-group">
+                <label class="sschsc-label">ID No</label>
+                <input type="text" value="C243237" readonly class="sschsc-input-green">
+              </div>
+
+              <div class="sschsc-form-group">
+                <label class="sschsc-label">Semester</label>
+                <select name="semester" class="sschsc-select">
+                  <option value="" selected>Select Semester</option>
+                  <option value="autumn24">Autumn 2024</option>
+                  <option value="spring25">Spring 2025</option>
+                  <option value="autumn25">Autumn 2025</option>
+                  <option value="spring26">Spring 2026</option>
+                </select>
+              </div>
+
+              <div class="sschsc-form-group">
+                <label class="sschsc-label">SSC Year of Passing</label>
+                <input type="text" value="2021" class="sschsc-input-green">
+              </div>
+
+              <div class="sschsc-form-group">
+                <label class="sschsc-label">HSC Year of Passing</label>
+                <input type="text" value="2023" class="sschsc-input-green">
+              </div>
             </div>
 
-            <div style="display: flex; align-items: center;">
-              <label for="sibling-semester" style="width: 130px; font-weight: 700; font-size: 0.85rem; color: #222;">Semester</label>
-              <select id="sibling-semester" name="sibling_semester" style="flex: 1; border: 1px solid #9ccc65; border-radius: 2px; padding: 0.4rem 0.6rem; font-size: 0.85rem; outline: none; background-color: #ffffff; color: #333333;">
-                <option value="">Select Semester</option>
-                <option value="autumn-2026">Autumn-2026</option>
-                <option value="spring-2026">Spring-2026</option>
-              </select>
-            </div>
+            <!-- Right Column -->
+            <div>
+              <div class="sschsc-form-group">
+                <label class="sschsc-label">Name</label>
+                <input type="text" value="Mohammad Ridwanul Karim" readonly class="sschsc-input-green">
+              </div>
 
-            <div style="display: flex; align-items: center;">
-              <label for="siblings-id" style="width: 130px; font-weight: 700; font-size: 0.85rem; color: #222;">Siblings ID</label>
-              <input type="text" id="siblings-id" name="siblings_id" style="flex: 1; border: 1px solid #9ccc65; border-radius: 2px; padding: 0.4rem 0.6rem; font-size: 0.85rem; outline: none;">
-            </div>
+              <div class="sschsc-form-group">
+                <label class="sschsc-label">SSC GPA Without Additional Subject</label>
+                <input type="text" value="5.00" class="sschsc-input-green">
+              </div>
 
-            <div style="display: flex; align-items: center;">
-              <label for="justification" style="width: 130px; font-weight: 700; font-size: 0.85rem; color: #222;">Justification</label>
-              <input type="text" id="justification" name="justification" style="flex: 1; border: 1px solid #9ccc65; border-radius: 2px; padding: 0.4rem 0.6rem; font-size: 0.85rem; outline: none;">
+              <div class="sschsc-form-group">
+                <label class="sschsc-label">HSC GPA Without Additional Subject</label>
+                <input type="text" value="4.17" class="sschsc-input-blue">
+              </div>
             </div>
 
           </div>
 
-          <!-- Right Column -->
-          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-            
-            <div style="display: flex; align-items: center;">
-              <label for="student-name" style="width: 140px; font-weight: 700; font-size: 0.85rem; color: #222;">Name</label>
-              <input type="text" id="student-name" name="student_name" value="Mohammad Ridwanul Karim" style="flex: 1; border: 1px solid #9ccc65; border-radius: 2px; padding: 0.4rem 0.6rem; font-size: 0.85rem; outline: none; color: #333333;">
-            </div>
+          <button type="submit" class="btn-sschsc-submit">Submit</button>
 
-            <div style="display: flex; align-items: center;">
-              <label for="student-mobile" style="width: 140px; font-weight: 700; font-size: 0.85rem; color: #222;">Mobile</label>
-              <input type="text" id="student-mobile" name="student_mobile" value="" style="flex: 1; border: 1px solid #9ccc65; border-radius: 2px; padding: 0.4rem 0.6rem; font-size: 0.85rem; outline: none;">
-            </div>
-
-            <div style="display: flex; align-items: center;">
-              <label for="contact-address" style="width: 140px; font-weight: 700; font-size: 0.85rem; color: #222;">Contact Address</label>
-              <input type="text" id="contact-address" name="contact_address" value="" style="flex: 1; border: 1px solid #9ccc65; border-radius: 2px; padding: 0.4rem 0.6rem; font-size: 0.85rem; outline: none;">
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Centered Submit Button -->
-        <div style="text-align: center; margin-top: 2rem;">
-          <button type="submit" class="wifi-submit-btn" style="background-color: #557297; color: #ffffff; padding: 0.45rem 1.5rem; font-weight: 700; border-radius: 3px; border: none; cursor: pointer;">Submit</button>
-        </div>
-
-      </form>
+        </form>
+      </div>
 
     </div>
   </main>
 
-  <!-- 4. IIUC Portal Footer -->
-  <footer class="iiuc-portal-footer">
-    <p>Copyright &copy; 2026 All rights reserved IIUC and Developed by</p>
+  <!-- 4. Main Footer -->
+  <footer class="portal-main-footer" style="text-align: center; padding: 1.5rem 0; color: #64748b; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem;">
+    <p>Copyright © 2026 All rights reserved IIUC | Developed by IT Division IIUC</p>
+    <p style="margin-top: 0.35rem; font-size: 0.75rem;">Page rendered in 0.0730 seconds. | <a href="#" style="color: #0284c7; text-decoration: none;">Legal</a> | <a href="#" style="color: #0284c7; text-decoration: none;">Privacy Policy</a></p>
   </footer>
-
-  <div class="footer-meta-bar">
-    <span>Page rendered in 0.0412 seconds.</span>
-    <span><a href="#">Legal</a> | <a href="#">Privacy Policy</a></span>
-  </div>
 
 </body>
 </html>
