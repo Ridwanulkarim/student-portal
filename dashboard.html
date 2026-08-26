@@ -289,27 +289,60 @@
 
         </div>
 
-        <!-- Right: Daily Transport Booking Box -->
-        <div class="dribbble-chart-box" style="flex: 1;">
-          <h3 style="font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 0.85rem;">Daily Transport Booking</h3>
+        <!-- Right Column: Student Bio Details Cards (UPPER) + Daily Transport Booking (LOWER) -->
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 0.75rem;">
           
-          <form action="#" method="POST" onsubmit="alert('Transport Booking Request Submitted!'); return false;">
-            <div style="margin-bottom: 0.65rem;">
-              <label style="font-size: 0.725rem; font-weight: 700; color: #64748b; display: block; margin-bottom: 0.25rem;">Date</label>
-              <input type="text" class="search-input" value="2026-08-26" style="width: 100%; padding: 0.45rem 0.75rem; font-size: 0.825rem; background: #f8fafc;">
-            </div>
+          <!-- 1. Student Bio Card (Matching Uploaded Screenshot) -->
+          <div style="background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; padding: 1.15rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <img src="assets/images/student.png" alt="Student Avatar" style="width: 85px; height: 85px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.85rem auto; display: block; border: 3px solid #38bdf8; box-shadow: 0 0 14px rgba(56, 189, 248, 0.25);">
 
-            <div style="margin-bottom: 0.85rem;">
-              <label style="font-size: 0.725rem; font-weight: 700; color: #64748b; display: block; margin-bottom: 0.25rem;">Select Station</label>
-              <select class="search-input" style="width: 100%; padding: 0.45rem 0.75rem; font-size: 0.825rem; background: #f8fafc;">
-                <option value="Agrabad">Agrabad Station</option>
-                <option value="Halishahar">Halishahar Station</option>
-                <option value="Chawkbazar">Chawkbazar Station</option>
-              </select>
-            </div>
+            <ul class="bio-details-list" style="font-size: 0.8rem; color: #334155; line-height: 1.5; list-style: none;">
+              <li style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem;"><span class="bio-icon">📱</span> <strong>01862126812</strong></li>
+              <li style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem;"><span class="bio-icon">✉️</span> <strong>ridwanulk08@gmail.com</strong></li>
+              <li style="margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.5rem;"><span class="bio-icon">📍</span> <span>417,Shafi Islam Building ### Sonashah Majar Road ### Eidgah Borofkol ### Halishahar ### Chattogram</span></li>
+              <li style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem;"><span class="bio-icon">🎓</span> <span><strong>Max Semester:</strong> 12</span></li>
+              <li style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem;"><span class="bio-icon">👥</span> <span><strong>Siblings:</strong> -</span></li>
+              <li style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem;"><span class="bio-icon">🚌</span> <span><strong>Transport:</strong> Agrabad</span></li>
+              <li style="margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem;"><span class="bio-icon">🛣️</span> <span><strong>Route:</strong> Agrabad</span></li>
+            </ul>
+          </div>
 
-            <button type="submit" class="sidebar-promo-btn" style="width: 100%; padding: 0.5rem;">Book Transport</button>
-          </form>
+          <!-- 2. Previous ID/Institute Card -->
+          <div style="background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; padding: 0.85rem 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+            <span style="font-size: 0.775rem; color: #0f172a; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
+              <span>🎓</span> Previous ID/Institute: <strong style="color: #0f172a;">Bakalia Government College</strong>
+            </span>
+          </div>
+
+          <!-- 3. Areas of Study Card -->
+          <div style="background: #ffffff; border-radius: 14px; border: 1px solid #e2e8f0; padding: 0.85rem 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+            <span style="font-size: 0.75rem; color: #64748b; font-weight: 600; display: block; margin-bottom: 0.2rem;">Areas of Study</span>
+            <strong style="font-size: 0.85rem; color: #0284c7; font-weight: 800; display: block;">Bachelor of Science in Computer Science and Engineering</strong>
+          </div>
+
+          <!-- 4. Daily Transport Booking Box (Placed BELOW Student Bio Cards) -->
+          <div class="dribbble-chart-box">
+            <h3 style="font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 0.85rem;">Daily Transport Booking</h3>
+            
+            <form action="#" method="POST" onsubmit="alert('Transport Booking Request Submitted!'); return false;">
+              <div style="margin-bottom: 0.65rem;">
+                <label style="font-size: 0.725rem; font-weight: 700; color: #64748b; display: block; margin-bottom: 0.25rem;">Date</label>
+                <input type="text" class="search-input" value="2026-08-26" style="width: 100%; padding: 0.45rem 0.75rem; font-size: 0.825rem; background: #f8fafc;">
+              </div>
+
+              <div style="margin-bottom: 0.85rem;">
+                <label style="font-size: 0.725rem; font-weight: 700; color: #64748b; display: block; margin-bottom: 0.25rem;">Select Station</label>
+                <select class="search-input" style="width: 100%; padding: 0.45rem 0.75rem; font-size: 0.825rem; background: #f8fafc;">
+                  <option value="Agrabad">Agrabad Station</option>
+                  <option value="Halishahar">Halishahar Station</option>
+                  <option value="Chawkbazar">Chawkbazar Station</option>
+                </select>
+              </div>
+
+              <button type="submit" class="sidebar-promo-btn" style="width: 100%; padding: 0.5rem;">Book Transport</button>
+            </form>
+          </div>
+
         </div>
 
       </div>
