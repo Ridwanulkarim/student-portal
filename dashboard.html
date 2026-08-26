@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Student Portal Dashboard featuring exact Academic tab replica and vertical right sidebar KPI cards">
+  <meta name="description" content="IIUC Student Portal Dashboard featuring exact Academic tab replica placed down in center layout">
   <title>IIUC Student Portal - Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,7 +72,6 @@
       font-size: 0.9rem;
     }
 
-    /* Vertical Stack for Right Sidebar KPI Cards */
     .vertical-kpi-stack {
       display: flex;
       flex-direction: column;
@@ -221,8 +220,52 @@
         </div>
       </div>
 
-      <!-- Main Interactive Tabs Section (Exact Replica of Uploaded Academic Screenshot) -->
-      <div style="background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.03); overflow: hidden; margin-top: 0.5rem;">
+      <!-- Top Row: Charts & Daily Transport Booking Box -->
+      <div class="dribbble-charts-grid">
+        
+        <!-- Left: Statistics Bar Chart Box -->
+        <div class="dribbble-chart-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h3 style="font-size: 1rem; font-weight: 800; color: #0f172a;">Statistics</h3>
+            <span style="font-size: 0.75rem; color: #64748b; background: #f1f5f9; padding: 0.2rem 0.5rem; border-radius: 8px; font-weight: 600;">Yearly ▾</span>
+          </div>
+
+          <div style="display: flex; align-items: flex-end; justify-content: space-between; height: 120px; padding: 0 0.75rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5rem;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;"><div style="height: 35px; width: 16px; background: #e2e8f0; border-radius: 4px;"></div><span style="font-size: 0.7rem; color: #94a3b8;">2023</span></div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;"><div style="height: 60px; width: 16px; background: #e2e8f0; border-radius: 4px;"></div><span style="font-size: 0.7rem; color: #94a3b8;">2024</span></div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;"><div style="height: 50px; width: 16px; background: #e2e8f0; border-radius: 4px;"></div><span style="font-size: 0.7rem; color: #94a3b8;">2025</span></div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;"><div style="height: 100px; width: 16px; background: linear-gradient(180deg, #d946ef, #a855f7); border-radius: 4px; box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);"></div><span style="font-size: 0.75rem; font-weight: 800; color: #a855f7;">2026</span></div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;"><div style="height: 80px; width: 16px; background: #e2e8f0; border-radius: 4px;"></div><span style="font-size: 0.7rem; color: #94a3b8;">2027</span></div>
+          </div>
+        </div>
+
+        <!-- Right: Daily Transport Booking Box -->
+        <div class="dribbble-chart-box">
+          <h3 style="font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 0.85rem;">Daily Transport Booking</h3>
+          
+          <form action="#" method="POST" onsubmit="alert('Transport Booking Request Submitted!'); return false;">
+            <div style="margin-bottom: 0.65rem;">
+              <label style="font-size: 0.725rem; font-weight: 700; color: #64748b; display: block; margin-bottom: 0.25rem;">Date</label>
+              <input type="text" class="search-input" value="2026-08-26" style="width: 100%; padding: 0.45rem 0.75rem; font-size: 0.825rem; background: #f8fafc;">
+            </div>
+
+            <div style="margin-bottom: 0.85rem;">
+              <label style="font-size: 0.725rem; font-weight: 700; color: #64748b; display: block; margin-bottom: 0.25rem;">Select Station</label>
+              <select class="search-input" style="width: 100%; padding: 0.45rem 0.75rem; font-size: 0.825rem; background: #f8fafc;">
+                <option value="Agrabad">Agrabad Station</option>
+                <option value="Halishahar">Halishahar Station</option>
+                <option value="Chawkbazar">Chawkbazar Station</option>
+              </select>
+            </div>
+
+            <button type="submit" class="sidebar-promo-btn" style="width: 100%; padding: 0.5rem;">Book Transport</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Position: Royal Blue Academic & Database Tabs Section (Moved DOWN per User Request) -->
+      <div style="background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.03); overflow: hidden; margin-top: 1.25rem;">
         
         <!-- Royal Blue Header Bar with White Pills (Matching Uploaded Image) -->
         <div class="dribbble-tab-bar-container" role="tablist">
@@ -365,7 +408,7 @@
         </div>
       </div>
 
-      <!-- Vertical KPI Cards Stack (Transferred from 1st Image to 2nd Image Location) -->
+      <!-- Vertical KPI Cards Stack -->
       <div class="vertical-kpi-stack">
         
         <!-- KPI 1: Current CGPA (Purple) -->
