@@ -3,13 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Payment Slip - International Islamic University Chittagong">
-  <title>Payment Slip | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Update Transport - International Islamic University Chittagong">
+  <title>Update Transport | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .transport-card-wrapper {
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      margin-bottom: 2rem;
+    }
+
+    .transport-cyan-header {
+      background: #0284c7;
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .transport-tab-pill {
+      background: #84cc16;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 4px;
+    }
+
+    .transport-box-container {
+      max-width: 850px;
+      margin: 3rem auto;
+      border: 1px solid #60a5fa;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .transport-box-header {
+      background-color: #3b82f6;
+      color: #ffffff;
+      padding: 0.65rem 1rem;
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .transport-box-body {
+      padding: 1.5rem;
+      background-color: #ffffff;
+    }
+
+    .transport-form-row {
+      display: flex;
+      gap: 0.85rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .transport-select-route {
+      flex: 1;
+      min-width: 320px;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.825rem;
+      color: #1e293b;
+      background-color: #ffffff;
+    }
+
+    .transport-select-stoppage {
+      width: 160px;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.825rem;
+      color: #1e293b;
+      background-color: #ffffff;
+    }
+
+    .btn-transport-submit {
+      background-color: #5b6b8c;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: none;
+      padding: 0.55rem 1.35rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-transport-submit:hover {
+      background-color: #475569;
+    }
+  </style>
 </head>
 <body class="dashboard-body">
 
-  <!-- 1. Top Cyan Utility Navigation Bar -->
+  <!-- 1. Top Utility Navigation Bar -->
   <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
     <div class="top-utility-left">
       <!-- Students Dropdown -->
@@ -48,7 +144,7 @@
         </div>
       </div>
 
-      <!-- TER Dropdown -->
+      <!-- TER Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="TER Menu">
           <span>⏱</span> TER ▾
@@ -57,7 +153,6 @@
           <a href="ter.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> TER Submission</a>
         </div>
       </div>
-
       <span class="utility-item">💻 Application ▾</span>
       <span class="utility-item">💬 IQAC ▾</span>
     </div>
@@ -97,125 +192,65 @@
     </div>
   </header>
 
-  <!-- 3. Payment Slip Main Content Page -->
-  <main class="prereg-container">
-    <div class="prereg-card-wrapper">
+  <!-- 3. Update Transport Main Content Container -->
+  <main class="prereg-container" style="max-width: 1200px; margin: 1rem auto; padding: 0 1rem;">
+    <div class="transport-card-wrapper">
       
-      <!-- Cyan Banner Header with Green Pill Tag -->
-      <div class="prereg-cyan-header">
-        <span class="prereg-tab-pill">Payment Slip</span>
+      <!-- Cyan Banner Header with Green Tab Pill -->
+      <div class="transport-cyan-header">
+        <span class="transport-tab-pill">Update Transport</span>
       </div>
 
-      <!-- Payment Slip Table Wrapper -->
-      <div style="padding: 1.25rem;">
-        <table class="syllabus-table" summary="IIUC Student Payment Slip History Table">
-          <thead>
-            <tr>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700; width: 45px;">SL</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700; width: 100px;">ID</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700;">Name</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700; width: 110px;">Date</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700; width: 120px;">Reference</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700;">MR</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700; width: 110px;">Account</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700; width: 100px;">Amount</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700; width: 95px;">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 1rem;">Mohammad Ridwanul Karim</td>
-              <td>2024-06-11</td>
-              <td></td>
-              <td>5067-81774-2024-06-11</td>
-              <td>IBBL 374</td>
-              <td>105466</td>
-              <td><button type="button" class="action-btn btn-act-blue" style="font-size: 0.75rem; padding: 0.25rem 0.6rem; margin: 0 auto; display: block;" onclick="window.print()">MR Print</button></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 1rem;">Mohammad Ridwanul Karim</td>
-              <td>2025-02-20</td>
-              <td></td>
-              <td>12590-81774-2025-02-20</td>
-              <td>IBBL 374</td>
-              <td>30000</td>
-              <td><button type="button" class="action-btn btn-act-blue" style="font-size: 0.75rem; padding: 0.25rem 0.6rem; margin: 0 auto; display: block;" onclick="window.print()">MR Print</button></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 1rem;">Mohammad Ridwanul Karim</td>
-              <td>2025-07-07</td>
-              <td></td>
-              <td>20192-81774-2025-07-07</td>
-              <td>EXIM 2338</td>
-              <td>43210</td>
-              <td><button type="button" class="action-btn btn-act-blue" style="font-size: 0.75rem; padding: 0.25rem 0.6rem; margin: 0 auto; display: block;" onclick="window.print()">MR Print</button></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 1rem;">Mohammad Ridwanul Karim</td>
-              <td>2025-09-21</td>
-              <td></td>
-              <td>25285-81774-2025-09-21</td>
-              <td>IBBL 374</td>
-              <td>30000</td>
-              <td><button type="button" class="action-btn btn-act-blue" style="font-size: 0.75rem; padding: 0.25rem 0.6rem; margin: 0 auto; display: block;" onclick="window.print()">MR Print</button></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 1rem;">Mohammad Ridwanul Karim</td>
-              <td>2025-12-22</td>
-              <td></td>
-              <td>30417-81774-2025-12-22</td>
-              <td>IBBL 374</td>
-              <td>64510</td>
-              <td><button type="button" class="action-btn btn-act-blue" style="font-size: 0.75rem; padding: 0.25rem 0.6rem; margin: 0 auto; display: block;" onclick="window.print()">MR Print</button></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 1rem;">Mohammad Ridwanul Karim</td>
-              <td>2026-04-08</td>
-              <td></td>
-              <td>35228-81774-2026-04-08</td>
-              <td>IBBL 374</td>
-              <td>37000</td>
-              <td><button type="button" class="action-btn btn-act-blue" style="font-size: 0.75rem; padding: 0.25rem 0.6rem; margin: 0 auto; display: block;" onclick="window.print()">MR Print</button></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 1rem;">Mohammad Ridwanul Karim</td>
-              <td>2026-07-02</td>
-              <td></td>
-              <td>39577-81774-2026-07-02</td>
-              <td>IBBL 374</td>
-              <td>55400</td>
-              <td><button type="button" class="action-btn btn-act-blue" style="font-size: 0.75rem; padding: 0.25rem 0.6rem; margin: 0 auto; display: block;" onclick="window.print()">MR Print</button></td>
-            </tr>
-          </tbody>
-        </table>
+      <div style="padding: 2rem 1.25rem;">
+        
+        <!-- Centered Blue Transport Box Card -->
+        <div class="transport-box-container">
+          
+          <div class="transport-box-header">
+            <span>Transport</span>
+            <div style="display: flex; gap: 0.5rem; font-size: 0.8rem; cursor: pointer;">
+              <span>🔄</span>
+              <span>✖</span>
+              <span>⚙</span>
+            </div>
+          </div>
+
+          <div class="transport-box-body">
+            <form action="dashboard.html" method="GET" class="transport-form-row">
+              
+              <select name="route" class="transport-select-route" aria-label="Select Transport Route">
+                <option value="4" selected>4 - Agrabad - Lucky plaza-Bapari para-Police line-Boropul-A/C Masjid-Wapda-Taspia-Nayabazar-Sorai para-Sagorika mor - IIUC</option>
+                <option value="1">1 - Chawkbazar - GEC - Muradpur - IIUC</option>
+                <option value="2">2 - Halishahar - Boropul - Port Connecting Road - IIUC</option>
+                <option value="3">3 - Bahaddarhat - Oxygen - Kumira - IIUC</option>
+              </select>
+
+              <select name="stoppage" class="transport-select-stoppage" aria-label="Select Stoppage">
+                <option value="Agrabad" selected>Agrabad</option>
+                <option value="Lucky Plaza">Lucky Plaza</option>
+                <option value="Bapari Para">Bapari Para</option>
+                <option value="Boropul">Boropul</option>
+                <option value="Nayabazar">Nayabazar</option>
+                <option value="Sagorika Mor">Sagorika Mor</option>
+              </select>
+
+              <button type="submit" class="btn-transport-submit">Submit</button>
+
+            </form>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
   </main>
 
-  <!-- 4. IIUC Portal Footer -->
-  <footer class="iiuc-portal-footer">
-    <p>Copyright &copy; 2026 All rights reserved IIUC and Developed by</p>
+  <!-- 4. Main Footer -->
+  <footer class="portal-main-footer" style="text-align: center; padding: 1.5rem 0; color: #64748b; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem;">
+    <p>Copyright © 2026 All rights reserved IIUC | Developed by IT Division IIUC</p>
+    <p style="margin-top: 0.35rem; font-size: 0.75rem;">Page rendered in 0.0730 seconds. | <a href="#" style="color: #0284c7; text-decoration: none;">Legal</a> | <a href="#" style="color: #0284c7; text-decoration: none;">Privacy Policy</a></p>
   </footer>
-
-  <div class="footer-meta-bar">
-    <span>Page rendered in 0.0512 seconds.</span>
-    <span><a href="#">Legal</a> | <a href="#">Privacy Policy</a></span>
-  </div>
 
 </body>
 </html>
