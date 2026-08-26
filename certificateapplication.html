@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC MDP Result View - International Islamic University Chittagong">
-  <title>MDP Result View | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Apply for Certificate / Testimonial - International Islamic University Chittagong">
+  <title>Apply for Certificate | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .mdp-card-wrapper {
+    .cert-card-wrapper {
       background: #ffffff;
       border-radius: 8px;
       border: 1px solid #cbd5e1;
@@ -16,15 +16,15 @@
       margin-bottom: 2rem;
     }
 
-    .mdp-cyan-header {
+    .cert-cyan-header {
       background: #0284c7;
       padding: 0.65rem 1rem;
       display: flex;
       align-items: center;
     }
 
-    .mdp-tab-pill {
-      background: #16a34a;
+    .cert-tab-pill {
+      background: #84cc16;
       color: #ffffff;
       font-weight: 700;
       font-size: 0.85rem;
@@ -32,77 +32,143 @@
       border-radius: 4px;
     }
 
-    .mdp-student-meta {
-      display: flex;
-      justify-content: space-between;
-      padding: 1rem 1.25rem 0.75rem 1.25rem;
+    .cert-instructions-box {
+      background: #fafafa;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem auto;
+      max-width: 960px;
+    }
+
+    .cert-instructions-title {
+      color: #1d4ed8;
+      font-weight: 800;
+      font-size: 1.05rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .cert-instruction-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.85rem;
+      color: #1e293b;
+      line-height: 1.8;
+    }
+
+    .cert-instruction-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    .text-red-price {
+      color: #dc2626;
+      font-weight: 700;
+    }
+
+    .cert-form-container {
+      padding: 1rem 1.5rem 2.5rem 1.5rem;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .cert-form-group {
+      margin-bottom: 1.1rem;
+    }
+
+    .cert-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 0.35rem;
+    }
+
+    .cert-input-grey {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #1e293b;
+      background-color: #f1f5f9;
+      box-sizing: border-box;
+    }
+
+    .cert-input {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #a3e635;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #1e293b;
+      background-color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    .cert-select {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
       font-size: 0.825rem;
       color: #1e293b;
-      line-height: 1.5;
-    }
-
-    .mdp-results-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.8rem;
-    }
-
-    .mdp-results-table th, .mdp-results-table td {
-      border: 1px solid #94a3b8;
-      padding: 0.45rem 0.5rem;
-      text-align: center;
-    }
-
-    .mdp-results-table th {
       background-color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    .payment-sec-title {
+      font-size: 1.25rem;
       font-weight: 700;
-      color: #0f172a;
+      color: #1e293b;
+      margin-bottom: 1.25rem;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1.25rem;
     }
 
-    .evaluation-section {
-      margin: 2rem auto 1.5rem auto;
-      max-width: 500px;
-      text-align: center;
+    .payment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1.8fr;
+      gap: 1.5rem;
     }
 
-    .evaluation-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: #0f172a;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
-      font-family: 'Times New Roman', Times, serif;
-    }
-
-    .evaluation-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-
-    .evaluation-table th, .evaluation-table td {
-      border: 1px solid #475569;
-      padding: 0.5rem 0.75rem;
-      text-align: center;
-    }
-
-    .evaluation-table th {
-      font-weight: 700;
-    }
-
-    .mdp-footer-note {
+    .payment-note {
       font-size: 0.725rem;
       color: #475569;
-      line-height: 1.5;
-      padding: 1rem 1.25rem;
-      border-top: 1px solid #e2e8f0;
+      margin-top: 0.35rem;
+
+    }
+
+    .btn-cert-submit {
+      background-color: #5b6b8c;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: none;
+      padding: 0.55rem 1.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 2rem auto 0 auto;
+      display: block;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-cert-submit:hover {
+      background-color: #475569;
     }
   </style>
 </head>
 <body class="dashboard-body">
 
-  <!-- 1. Top Cyan Utility Navigation Bar -->
+  <!-- 1. Top Utility Navigation Bar -->
   <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
     <div class="top-utility-left">
       <!-- Students Dropdown -->
@@ -150,8 +216,10 @@
           <a href="ter.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> TER Submission</a>
         </div>
       </div>
+
+      <!-- Application Dropdown Container -->
       <div class="utility-dropdown-container">
-        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Application Menu">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Application Menu">
           <span>💻</span> Application ▾
         </button>
         <div class="utility-dropdown-menu" role="menu">
@@ -169,6 +237,7 @@
           <a href="certificateapplication.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Application for Certificate/Testimonial</a>
         </div>
       </div>
+
       <span class="utility-item">💬 IQAC ▾</span>
     </div>
 
@@ -207,116 +276,115 @@
     </div>
   </header>
 
-  <!-- 3. MDP Result View Main Content Container -->
-  <main class="prereg-container" style="max-width: 1200px; margin: 1rem auto; padding: 0 1rem;">
-    <div class="mdp-card-wrapper">
+  <!-- 3. Apply for Certificate Main Content Container -->
+  <main class="prereg-container" style="max-width: 1250px; margin: 1rem auto; padding: 0 1rem;">
+    <div class="cert-card-wrapper">
       
-      <!-- Cyan Header Banner -->
-      <div class="mdp-cyan-header">
-        <span class="mdp-tab-pill">MDP Result View</span>
+      <!-- Cyan Banner Header with Green Tab Pill -->
+      <div class="cert-cyan-header">
+        <span class="cert-tab-pill">Apply for Certificate</span>
       </div>
 
-      <!-- Student Meta Information -->
-      <div class="mdp-student-meta">
-        <div>
-          <p style="margin: 0 0 0.2rem 0;"><strong>Matric No:</strong> C243237</p>
-          <p style="margin: 0 0 0.2rem 0;"><strong>Registration No:</strong> 0062420005101237</p>
-          <p style="margin: 0;"><strong>Name:</strong> Mohammad Ridwanul Karim</p>
-        </div>
-        <div style="text-align: right;">
-          <p style="margin: 0 0 0.2rem 0;"><strong>Department:</strong> Computer Science and Engineering</p>
-          <p style="margin: 0 0 0.2rem 0;"><strong>Admission:</strong> Autumn-2024</p>
-          <p style="margin: 0;"><strong>Programme:</strong> Bachelor Program</p>
-        </div>
+      <!-- Before Filling Up the Form Notice Box -->
+      <div class="cert-instructions-box">
+        <h3 class="cert-instructions-title">📋 Before Filling Up the Form</h3>
+        <ul class="cert-instruction-list">
+          <li>💳 <strong>Payment via bKash:</strong> Dial <strong>*247#</strong> → Select <strong>Payment</strong> → Enter <strong>01973209030</strong> → Enter amount → Use your <strong>ID No.</strong> as reference → Counter No. <strong>1</strong> → Enter PIN.</li>
+          <li>🎓 <strong>Provisional Certificate (with Transcript):</strong> <span class="text-red-price">৳2040</span></li>
+          <li>📜 <strong>Original Certificate (with Transcript):</strong> <span class="text-red-price">৳3060</span></li>
+          <li>📄 <strong>Transcript Only:</strong> <span class="text-red-price">৳1020</span></li>
+          <li>📝 <strong>Medium of Instruction, Migration Certificate:</strong> <span class="text-red-price">৳205</span></li>
+        </ul>
       </div>
 
-      <!-- MDP Results Table -->
-      <div style="padding: 0 1.25rem; overflow-x: auto;">
-        <table class="mdp-results-table" summary="MDP Results Table">
-          <thead>
-            <tr>
-              <th style="width: 45px;">SL</th>
-              <th style="width: 100px;">Student ID</th>
-              <th style="text-align: left; padding-left: 0.65rem;">Name</th>
-              <th style="width: 110px;">Semester</th>
-              <th style="text-align: left; padding-left: 0.65rem;">Course</th>
-              <th style="width: 70px;">Section</th>
-              <th style="width: 80px;">Class P.</th>
-              <th style="width: 70px;">Final</th>
-              <th style="width: 70px;">Total</th>
-              <th style="width: 70px;">Grade</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 0.65rem;">Mohammad Ridwanul Karim</td>
-              <td>Autumn-2024</td>
-              <td style="text-align: left; padding-left: 0.65rem;">MDP-1101 Tajweedul Quran-1</td>
-              <td>F</td>
-              <td>33</td>
-              <td>40</td>
-              <td>73</td>
-              <td>A-</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 0.65rem;">Mohammad Ridwanul Karim</td>
-              <td>Autumn-2025</td>
-              <td style="text-align: left; padding-left: 0.65rem;">MDP-2302A Tazkiyatun Nafl</td>
-              <td>F</td>
-              <td>45</td>
-              <td>29</td>
-              <td>74</td>
-              <td>A-</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>C243237</td>
-              <td style="text-align: left; padding-left: 0.65rem;">Mohammad Ridwanul Karim</td>
-              <td>Spring-2025</td>
-              <td style="text-align: left; padding-left: 0.65rem;">MDP-1201 Tajweedul Quran - 1</td>
-              <td>F</td>
-              <td>40</td>
-              <td>37</td>
-              <td>77</td>
-              <td>A</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <!-- Form Area -->
+      <div class="cert-form-container">
+        <form action="dashboard.html" method="GET">
+          
+          <div class="cert-grid">
+            
+            <!-- Left Column -->
+            <div>
+              <div class="cert-form-group">
+                <label class="cert-label">ID/Matric No (*)</label>
+                <input type="text" value="C243237" readonly class="cert-input-grey">
+              </div>
 
-      <!-- EVALUATION AREAS Table -->
-      <div class="evaluation-section">
-        <h4 class="evaluation-title">EVALUATION AREAS</h4>
-        <table class="evaluation-table" summary="Evaluation Areas Table">
-          <thead>
-            <tr>
-              <th style="width: 50%;">Avenues</th>
-              <th style="width: 25%;">Full Marks</th>
-              <th style="width: 25%;">Pass Marks</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="text-align: left; padding-left: 1rem; font-size: 1rem;">Class Performance</td>
-              <td>50</td>
-              <td>30</td>
-            </tr>
-            <tr>
-              <td style="text-align: left; padding-left: 1rem; font-size: 1rem;">Final Examination</td>
-              <td>50</td>
-              <td>20</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              <div class="cert-form-group">
+                <label class="cert-label">Name</label>
+                <input type="text" value="Mohammad Ridwanul Karim" readonly class="cert-input-grey">
+              </div>
 
-      <!-- Footer Note -->
-      <div class="mdp-footer-note">
-        MDP is one of the important components of academic programs that takes place in 1st, 2nd, 3rd, 4th, 5th & 6th Semester at undergraduate level as per prescribed syllabus. This course is designed with a view to making a student well acquainted with basic Islamic knowledge and contemporary issues as well. This may hopefully help a student to achieve moral and ethical upliftment.
+              <div class="cert-form-group">
+                <label class="cert-label">Email (*)</label>
+                <input type="email" value="ridwanulk08@gmail.com" class="cert-input">
+              </div>
+
+              <div class="cert-form-group">
+                <label class="cert-label">Father Name (*)</label>
+                <input type="text" value="Mohammad Shajjadul Karim" class="cert-input">
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+              <div class="cert-form-group">
+                <label class="cert-label">Type (*)</label>
+                <select name="cert_type" class="cert-select">
+                  <option value="" selected>Select Certificate</option>
+                  <option value="provisional">Provisional Certificate (with Transcript)</option>
+                  <option value="original">Original Certificate (with Transcript)</option>
+                  <option value="transcript">Transcript Only</option>
+                  <option value="migration">Medium of Instruction, Migration Certificate</option>
+                </select>
+              </div>
+
+              <div class="cert-form-group">
+                <label class="cert-label">Date of Birth (*)</label>
+                <input type="text" value="2005-04-30" class="cert-input">
+              </div>
+
+              <div class="cert-form-group">
+                <label class="cert-label">Mobile (*)</label>
+                <input type="text" value="01862126812" class="cert-input">
+              </div>
+
+              <div class="cert-form-group">
+                <label class="cert-label">Mother Name (*)</label>
+                <input type="text" value="Khaleda Begum" class="cert-input">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Payment Information Sub-section -->
+          <h4 class="payment-sec-title">Payment Information</h4>
+
+          <div class="payment-grid">
+            <div class="cert-form-group">
+              <label class="cert-label">Payment Method</label>
+              <select name="pay_method" class="cert-select">
+                <option value="bkash" selected>bKash-01973209030</option>
+                <option value="nagad">Nagad</option>
+                <option value="rocket">Rocket</option>
+              </select>
+            </div>
+
+            <div class="cert-form-group">
+              <label class="cert-label">Amount (*)</label>
+              <input type="text" value="0" readonly class="cert-input-grey">
+            </div>
+
+            <div class="cert-form-group">
+              <label class="cert-label">Transaction Details (*)</label>
+              <input type="text" class="cert-input">
+              <p class="payment-note">Please mention Money Receipt No./Transaction ID, Date, Branch. <span style="color:#dc2626; font-style:italic;">If bKash, please input only bKash Transaction Number.</span></p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-cert-submit">Submit</button>
+
+        </form>
       </div>
 
     </div>
@@ -325,7 +393,7 @@
   <!-- 4. Main Footer -->
   <footer class="portal-main-footer" style="text-align: center; padding: 1.5rem 0; color: #64748b; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem;">
     <p>Copyright © 2026 All rights reserved IIUC | Developed by IT Division IIUC</p>
-    <p style="margin-top: 0.35rem; font-size: 0.75rem;">Page rendered in 0.0730 seconds. | <a href="#" style="color: #0284c7; text-decoration: none;">Legal</a> | <a href="#" style="color: #0284c7; text-decoration: none;">Privacy Policy</a></p>
+    <p style="margin-top: 0.35rem; font-size: 0.75rem;">Page rendered in 0.1813 seconds. | <a href="#" style="color: #0284c7; text-decoration: none;">Legal</a> | <a href="#" style="color: #0284c7; text-decoration: none;">Privacy Policy</a></p>
   </footer>
 
 </body>
