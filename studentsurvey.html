@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Student Course Evaluation Form - International Islamic University Chittagong">
-  <title>Student Course Evaluation Form | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Survey Questionnaire For Students - International Islamic University Chittagong">
+  <title>Student Survey | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .survey-card-wrapper {
+    .ssurvey-card-wrapper {
       background: #ffffff;
       border-radius: 8px;
       border: 1px solid #cbd5e1;
@@ -16,14 +16,14 @@
       margin-bottom: 2rem;
     }
 
-    .survey-cyan-header {
+    .ssurvey-cyan-header {
       background: #0284c7;
       padding: 0.65rem 1rem;
       display: flex;
       align-items: center;
     }
 
-    .survey-tab-pill {
+    .ssurvey-tab-pill {
       background: #84cc16;
       color: #ffffff;
       font-weight: 700;
@@ -32,33 +32,33 @@
       border-radius: 4px;
     }
 
-    .survey-form-container {
+    .ssurvey-form-container {
       padding: 1.5rem 2rem 2.5rem 2rem;
     }
 
-    .survey-page-title {
+    .ssurvey-page-title {
       font-size: 1.35rem;
       font-weight: 700;
       color: #1e293b;
       margin-bottom: 1.5rem;
     }
 
-    .survey-field-group {
+    .ssurvey-field-group {
       display: grid;
       grid-template-columns: 160px 1fr;
       align-items: center;
       margin-bottom: 1rem;
       gap: 1rem;
-      max-width: 500px;
+      max-width: 450px;
     }
 
-    .survey-label {
+    .ssurvey-label {
       font-size: 0.8rem;
       font-weight: 700;
       color: #334155;
     }
 
-    .survey-select {
+    .ssurvey-select {
       width: 100%;
       padding: 0.45rem 0.65rem;
       border: 1px solid #cbd5e1;
@@ -68,31 +68,30 @@
       background-color: #ffffff;
     }
 
-    .survey-input-green {
-      width: 100%;
-      padding: 0.45rem 0.65rem;
-      border: 1px solid #a3e635;
-      border-radius: 4px;
-      font-size: 0.825rem;
-      color: #1e293b;
-      background-color: #ffffff;
-    }
-
-    .survey-rating-key {
+    .ssurvey-rating-key {
       font-size: 0.75rem;
       color: #475569;
-      margin: 1.25rem 0 1rem 0;
+      margin: 1.25rem 0 1.5rem 0;
       line-height: 1.5;
     }
 
-    .survey-table {
+    .category-section-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #0369a1;
+      margin: 1.5rem 0 0.75rem 0;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.35rem;
+    }
+
+    .ssurvey-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.8rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
 
-    .survey-table th {
+    .ssurvey-table th {
       background: #f8fafc;
       color: #0f172a;
       font-weight: 800;
@@ -101,28 +100,21 @@
       border: 1px solid #e2e8f0;
     }
 
-    .survey-table td {
+    .ssurvey-table td {
       padding: 0.55rem 0.65rem;
       border: 1px solid #e2e8f0;
       color: #1e293b;
     }
 
-    .survey-table tr:nth-child(even) {
+    .ssurvey-table tr:nth-child(even) {
       background-color: #f8fafc;
     }
 
-    .general-cat-title {
-      font-size: 1rem;
-      font-weight: 800;
-      color: #1e293b;
-      margin-bottom: 1rem;
-    }
-
-    .survey-textarea-group {
+    .ssurvey-textarea-group {
       margin-bottom: 1.25rem;
     }
 
-    .survey-textarea-label {
+    .ssurvey-textarea-label {
       display: block;
       font-size: 0.8rem;
       font-weight: 700;
@@ -130,9 +122,9 @@
       margin-bottom: 0.35rem;
     }
 
-    .survey-textarea {
+    .ssurvey-textarea {
       width: 100%;
-      height: 70px;
+      height: 75px;
       padding: 0.5rem 0.75rem;
       border: 1px solid #cbd5e1;
       border-radius: 4px;
@@ -144,7 +136,7 @@
       box-sizing: border-box;
     }
 
-    .btn-survey-submit {
+    .btn-ssurvey-submit {
       background-color: #5b6b8c;
       color: #ffffff;
       font-weight: 700;
@@ -153,12 +145,12 @@
       padding: 0.55rem 1.75rem;
       border-radius: 4px;
       cursor: pointer;
-      margin: 1.5rem auto 0 auto;
+      margin: 2rem auto 0 auto;
       display: block;
       transition: background-color 0.2s ease;
     }
 
-    .btn-survey-submit:hover {
+    .btn-ssurvey-submit:hover {
       background-color: #475569;
     }
   </style>
@@ -284,24 +276,24 @@
     </div>
   </header>
 
-  <!-- 3. Student Course Evaluation Form Main Content Container -->
+  <!-- 3. Survey Questionnaire For Students Main Content Container -->
   <main class="prereg-container" style="max-width: 1250px; margin: 1rem auto; padding: 0 1rem;">
-    <div class="survey-card-wrapper">
+    <div class="ssurvey-card-wrapper">
       
       <!-- Cyan Banner Header with Green Tab Pill -->
-      <div class="survey-cyan-header">
-        <span class="survey-tab-pill">Student course evaluation form</span>
+      <div class="ssurvey-cyan-header">
+        <span class="ssurvey-tab-pill">Student Survey Form</span>
       </div>
 
       <!-- Form Area -->
-      <div class="survey-form-container">
-        <h2 class="survey-page-title">Student course evaluation form</h2>
+      <div class="ssurvey-form-container">
+        <h2 class="ssurvey-page-title">Survey Questionnaire For Students</h2>
 
         <form action="dashboard.html" method="GET">
           
-          <div class="survey-field-group">
-            <label class="survey-label">Semester Name (*)</label>
-            <select name="semester" class="survey-select">
+          <div class="ssurvey-field-group">
+            <label class="ssurvey-label">Semester Name (*)</label>
+            <select name="semester" class="ssurvey-select">
               <option value="" selected>Select Semester</option>
               <option value="autumn24">Autumn 2024</option>
               <option value="spring25">Spring 2025</option>
@@ -310,33 +302,8 @@
             </select>
           </div>
 
-          <div class="survey-field-group">
-            <label class="survey-label">Course Name (*)</label>
-            <select name="course" class="survey-select">
-              <option value="" selected>Select Course</option>
-              <option value="cse1121">CSE-1121 Computer Programming 1</option>
-              <option value="eee1121">EEE-1121 Basic Electrical Engineering</option>
-              <option value="math1101">MATH-1101 Differential Calculus</option>
-              <option value="geel1106">GEEL-1106 Advanced English</option>
-            </select>
-          </div>
-
-          <div class="survey-field-group">
-            <label class="survey-label">Teacher Name (*)</label>
-            <select name="teacher" class="survey-select">
-              <option value="yasin" selected>Mohd. Yasin Sharif</option>
-              <option value="rayhan">Rayhanuzzaman</option>
-              <option value="ahsan">Dr. Md. Ahsanul Hoque</option>
-            </select>
-          </div>
-
-          <div class="survey-field-group">
-            <label class="survey-label">Year of Study (*)</label>
-            <input type="text" class="survey-input-green" style="height: 60px;">
-          </div>
-
           <!-- Evaluation Rating Key -->
-          <div class="survey-rating-key">
+          <div class="ssurvey-rating-key">
             <strong>5</strong> - Strongly Agree<br>
             <strong>4</strong> - Agree<br>
             <strong>3</strong> - Undecided<br>
@@ -344,8 +311,9 @@
             <strong>1</strong> - Strongly Disagree
           </div>
 
-          <!-- Rating Table -->
-          <table class="survey-table" summary="Student Course Evaluation Aspects Table">
+          <!-- CATEGORY 1: Academic & Curriculum -->
+          <h3 class="category-section-title">Academic & Curriculum</h3>
+          <table class="ssurvey-table" summary="Academic & Curriculum Aspects Table">
             <thead>
               <tr>
                 <th style="text-align: left; padding-left: 0.75rem;">Aspects of Evaluation</th>
@@ -358,102 +326,123 @@
             </thead>
             <tbody>
               <tr>
-                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> I was given enough information about the course at the beginning of the semester</td>
-                <td style="text-align: center;"><input type="radio" name="q1" value="5"></td>
-                <td style="text-align: center;"><input type="radio" name="q1" value="4"></td>
-                <td style="text-align: center;"><input type="radio" name="q1" value="3"></td>
-                <td style="text-align: center;"><input type="radio" name="q1" value="2"></td>
-                <td style="text-align: center;"><input type="radio" name="q1" value="1"></td>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The curriculum is modern, well-structured, and aligned with industry standards.</td>
+                <td style="text-align: center;"><input type="radio" name="ac1" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="ac1" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="ac1" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="ac1" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="ac1" value="1"></td>
               </tr>
               <tr>
-                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The course learning outcomes in the course plan clearly described what I was expected to learn at the end of the course.</td>
-                <td style="text-align: center;"><input type="radio" name="q2" value="5"></td>
-                <td style="text-align: center;"><input type="radio" name="q2" value="4"></td>
-                <td style="text-align: center;"><input type="radio" name="q2" value="3"></td>
-                <td style="text-align: center;"><input type="radio" name="q2" value="2"></td>
-                <td style="text-align: center;"><input type="radio" name="q2" value="1"></td>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> Faculty members are accessible, knowledgeable, and helpful outside class hours.</td>
+                <td style="text-align: center;"><input type="radio" name="ac2" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="ac2" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="ac2" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="ac2" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="ac2" value="1"></td>
               </tr>
               <tr>
-                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The course structure (divided into lectures, exercises/ lab sessions etc.) is appropriate for achieving the intended course learning outcomes.</td>
-                <td style="text-align: center;"><input type="radio" name="q3" value="5"></td>
-                <td style="text-align: center;"><input type="radio" name="q3" value="4"></td>
-                <td style="text-align: center;"><input type="radio" name="q3" value="3"></td>
-                <td style="text-align: center;"><input type="radio" name="q3" value="2"></td>
-                <td style="text-align: center;"><input type="radio" name="q3" value="1"></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The course contents (including the supporting materials) were updated enough to support the course learning outcomes.</td>
-                <td style="text-align: center;"><input type="radio" name="q4" value="5"></td>
-                <td style="text-align: center;"><input type="radio" name="q4" value="4"></td>
-                <td style="text-align: center;"><input type="radio" name="q4" value="3"></td>
-                <td style="text-align: center;"><input type="radio" name="q4" value="2"></td>
-                <td style="text-align: center;"><input type="radio" name="q4" value="1"></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The teaching method of the course was effective.</td>
-                <td style="text-align: center;"><input type="radio" name="q5" value="5"></td>
-                <td style="text-align: center;"><input type="radio" name="q5" value="4"></td>
-                <td style="text-align: center;"><input type="radio" name="q5" value="3"></td>
-                <td style="text-align: center;"><input type="radio" name="q5" value="2"></td>
-                <td style="text-align: center;"><input type="radio" name="q5" value="1"></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The assessment (including all compulsory elements, exams, assignments etc.) tested our achievement of the intended course learning outcomes.</td>
-                <td style="text-align: center;"><input type="radio" name="q6" value="5"></td>
-                <td style="text-align: center;"><input type="radio" name="q6" value="4"></td>
-                <td style="text-align: center;"><input type="radio" name="q6" value="3"></td>
-                <td style="text-align: center;"><input type="radio" name="q6" value="2"></td>
-                <td style="text-align: center;"><input type="radio" name="q6" value="1"></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The course load is appropriate to the number of credit hours.</td>
-                <td style="text-align: center;"><input type="radio" name="q7" value="5"></td>
-                <td style="text-align: center;"><input type="radio" name="q7" value="4"></td>
-                <td style="text-align: center;"><input type="radio" name="q7" value="3"></td>
-                <td style="text-align: center;"><input type="radio" name="q7" value="2"></td>
-                <td style="text-align: center;"><input type="radio" name="q7" value="1"></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The overall classroom environment was conductive to learning.</td>
-                <td style="text-align: center;"><input type="radio" name="q8" value="5"></td>
-                <td style="text-align: center;"><input type="radio" name="q8" value="4"></td>
-                <td style="text-align: center;"><input type="radio" name="q8" value="3"></td>
-                <td style="text-align: center;"><input type="radio" name="q8" value="2"></td>
-                <td style="text-align: center;"><input type="radio" name="q8" value="1"></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> The importance of the course in the program.</td>
-                <td style="text-align: center;"><input type="radio" name="q9" value="5"></td>
-                <td style="text-align: center;"><input type="radio" name="q9" value="4"></td>
-                <td style="text-align: center;"><input type="radio" name="q9" value="3"></td>
-                <td style="text-align: center;"><input type="radio" name="q9" value="2"></td>
-                <td style="text-align: center;"><input type="radio" name="q9" value="1"></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> I would recommend this course to a fellow student.</td>
-                <td style="text-align: center;"><input type="radio" name="q10" value="5"></td>
-                <td style="text-align: center;"><input type="radio" name="q10" value="4"></td>
-                <td style="text-align: center;"><input type="radio" name="q10" value="3"></td>
-                <td style="text-align: center;"><input type="radio" name="q10" value="2"></td>
-                <td style="text-align: center;"><input type="radio" name="q10" value="1"></td>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> Practical lab sessions and workshops effectively enhance theoretical learning.</td>
+                <td style="text-align: center;"><input type="radio" name="ac3" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="ac3" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="ac3" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="ac3" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="ac3" value="1"></td>
               </tr>
             </tbody>
           </table>
 
-          <!-- General Category Section -->
-          <h3 class="general-cat-title">General Category</h3>
+          <!-- CATEGORY 2: Infrastructure & Facilities -->
+          <h3 class="category-section-title">Infrastructure & Campus Facilities</h3>
+          <table class="ssurvey-table" summary="Infrastructure Aspects Table">
+            <thead>
+              <tr>
+                <th style="text-align: left; padding-left: 0.75rem;">Aspects of Evaluation</th>
+                <th style="width: 45px;">5</th>
+                <th style="width: 45px;">4</th>
+                <th style="width: 45px;">3</th>
+                <th style="width: 45px;">2</th>
+                <th style="width: 45px;">1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> Classrooms, auditoriums, and seminar halls are well-equipped and comfortable.</td>
+                <td style="text-align: center;"><input type="radio" name="inf1" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="inf1" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="inf1" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="inf1" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="inf1" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> Computer labs, internet, and Wi-Fi infrastructure meet academic requirements.</td>
+                <td style="text-align: center;"><input type="radio" name="inf2" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="inf2" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="inf2" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="inf2" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="inf2" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> Transport service safety, scheduling, and route coverage are satisfactory.</td>
+                <td style="text-align: center;"><input type="radio" name="inf3" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="inf3" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="inf3" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="inf3" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="inf3" value="1"></td>
+              </tr>
+            </tbody>
+          </table>
 
-          <div class="survey-textarea-group">
-            <label class="survey-textarea-label">The best features of the Course were:</label>
-            <textarea name="best_features" class="survey-textarea"></textarea>
+          <!-- CATEGORY 3: Student Support Services -->
+          <h3 class="category-section-title">Support Services & Administration</h3>
+          <table class="ssurvey-table" summary="Support Services Aspects Table">
+            <thead>
+              <tr>
+                <th style="text-align: left; padding-left: 0.75rem;">Aspects of Evaluation</th>
+                <th style="width: 45px;">5</th>
+                <th style="width: 45px;">4</th>
+                <th style="width: 45px;">3</th>
+                <th style="width: 45px;">2</th>
+                <th style="width: 45px;">1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> Administrative offices respond promptly and courteously to student queries.</td>
+                <td style="text-align: center;"><input type="radio" name="sup1" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="sup1" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="sup1" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="sup1" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="sup1" value="1"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked style="margin-right: 0.5rem;"> Library books, e-journals, and digital cataloging services are easily accessible.</td>
+                <td style="text-align: center;"><input type="radio" name="sup2" value="5"></td>
+                <td style="text-align: center;"><input type="radio" name="sup2" value="4"></td>
+                <td style="text-align: center;"><input type="radio" name="sup2" value="3"></td>
+                <td style="text-align: center;"><input type="radio" name="sup2" value="2"></td>
+                <td style="text-align: center;"><input type="radio" name="sup2" value="1"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Feedback Textareas -->
+          <div class="ssurvey-textarea-group" style="margin-top: 2rem;">
+            <label class="ssurvey-textarea-label">What are the best aspects of studying at IIUC?</label>
+            <textarea name="best_aspects" class="ssurvey-textarea"></textarea>
           </div>
 
-          <div class="survey-textarea-group">
-            <label class="survey-textarea-label">The Course could have been improved by:</label>
-            <textarea name="improvements" class="survey-textarea"></textarea>
+          <div class="ssurvey-textarea-group">
+            <label class="ssurvey-textarea-label">What areas do you feel need immediate improvement?</label>
+            <textarea name="improvements" class="ssurvey-textarea"></textarea>
           </div>
 
-          <button type="submit" class="btn-survey-submit">Submit</button>
+          <div class="ssurvey-textarea-group">
+            <label class="ssurvey-textarea-label">Any additional feedback or suggestions for the university:</label>
+            <textarea name="suggestions" class="ssurvey-textarea"></textarea>
+          </div>
+
+          <button type="submit" class="btn-ssurvey-submit">Submit</button>
 
         </form>
       </div>
