@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Un-Athorized Access - IIUC Student Portal">
+  <title>Un-Athorized Access | IIUC Student Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9fb;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #111827;
+      text-align: center;
+    }
+
+    .unauthorized-card {
+      max-width: 600px;
+      padding: 3rem 2rem;
+    }
+
+    .unauthorized-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 2rem;
+      letter-spacing: -0.01em;
+    }
+
+    .unauthorized-subtitle {
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: #9ca3af;
+      margin-bottom: 1.25rem;
+    }
+
+    .unauthorized-desc {
+      font-size: 1.1rem;
+      color: #6b7280;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .btn-back-home {
+      background-color: #58256f;
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: 0.75rem 1.85rem;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      box-shadow: 0 2px 8px rgba(88, 37, 111, 0.25);
+    }
+
+    .btn-back-home:hover {
+      background-color: #461d59;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="unauthorized-card">
+    <h1 class="unauthorized-title">Un-Athorized Access</h1>
+    <h2 class="unauthorized-subtitle">Access Denied</h2>
+    <p class="unauthorized-desc">We are sorry but the page you are looking for does not exit. You could return to the homepage</p>
+    <a href="dashboard.html" class="btn-back-home">Back to home</a>
+  </main>
+
+</body>
+</html>
