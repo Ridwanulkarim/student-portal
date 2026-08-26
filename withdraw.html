@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Students Add Drop Courses - International Islamic University Chittagong">
-  <title>Students Add Drop Courses | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Course Withdraw - International Islamic University Chittagong">
+  <title>Course Withdraw | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="dashboard-body">
@@ -97,64 +97,51 @@
     </div>
   </header>
 
-  <!-- 3. Add Drop Courses Main Content Page -->
+  <!-- 3. Course Withdraw Main Content Page -->
   <main class="prereg-container">
-    <div class="prereg-card-wrapper">
+    <div class="prereg-card-wrapper" style="min-height: 260px;">
       
       <!-- Cyan Banner Header with Green Pill Tag -->
       <div class="prereg-cyan-header">
-        <span class="prereg-tab-pill">Course Registration</span>
+        <span class="prereg-tab-pill">Course Withdraw</span>
       </div>
 
-      <!-- Student Summary Header Box -->
-      <div class="reg-student-info-box" style="margin: 1rem 1.25rem 0.5rem 1.25rem; border: none; border-bottom: 1px solid #e9ecef; border-radius: 0;">
-        <div class="reg-info-left" style="line-height: 1.7;">
-          <span class="reg-info-item"><strong>Matric No:</strong> C243237</span>
-          <span class="reg-info-item"><strong>Name:</strong> Mohammad Ridwanul Karim</span>
-          <span class="reg-info-item"><strong>Semester Name:</strong> Autumn-2026</span>
-          <span class="reg-info-item"><strong>Registration No.:</strong> 0062420005101237</span>
-          <span class="reg-info-item"><strong>GPA:</strong> 3.912 and Max CH: Regular: 24, Additional:0 and Retake: 2 Course (Max 6 Credit)</span>
+      <!-- Semester Selection Bar -->
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.65rem; padding: 2.5rem 1.5rem; background-color: #ffffff;">
+        <label for="withdraw-sem-select" style="font-size: 0.85rem; font-weight: 600; color: #444444;">Semester</label>
+        
+        <select id="withdraw-sem-select" style="width: 180px; padding: 0.35rem 0.65rem; font-size: 0.85rem; border: 1px solid #cccccc; border-radius: var(--radius-sm); outline: none; background-color: #ffffff;">
+          <option value="">Select Semester</option>
+          <option value="autumn-2026">Autumn-2026</option>
+          <option value="spring-2026">Spring-2026</option>
+          <option value="autumn-2025">Autumn-2025</option>
+        </select>
+
+        <button type="button" class="print-load-btn" style="background-color: #00c0ef; color: #ffffff; padding: 0.35rem 1rem; border: none; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-sm); cursor: pointer;" onclick="loadWithdrawCourses()">Load</button>
+      </div>
+
+      <!-- Dynamic Course Withdraw Table Container -->
+      <div id="withdraw-courses-container" style="padding: 0 1.5rem 1.5rem 1.5rem; display: none;">
+        <div class="profile-alert-banner" style="margin: 0.5rem 0; background-color: #ffd8be; border: 1px solid #ffc2a1; color: #e00000; font-weight: 700; text-align: center; padding: 0.75rem; font-size: 0.875rem;">
+          No withdrawable courses found for the selected semester.
         </div>
-
-        <div class="reg-info-right" style="text-align: right; line-height: 1.7;">
-          <span class="reg-info-item"><strong>Department:</strong> Computer Science and Engineering</span>
-          <span class="reg-info-item"><strong>Programm:</strong> Bachelor Program</span>
-          <span class="reg-info-item"><strong>Semester Number:</strong> Fourth Semester</span>
-          <span class="reg-info-item">Registered Credit: 0, First Installment: Previous Due 0 +10000, <span class="reg-payment-warning">Payment Not Clear</span></span>
-        </div>
-      </div>
-
-      <!-- Red Pending Payment Alert -->
-      <div style="color: #e00000; font-weight: 700; text-align: center; margin: 0.5rem 1rem 0.85rem 1rem; font-size: 0.875rem;">
-        Your Registration is Still Pending for Registration Confirmation Payment. Go to payment history for details.
-      </div>
-
-      <!-- Add/Drop Table Wrapper -->
-      <div style="padding: 0 1.25rem 1.25rem 1.25rem;">
-        <table class="syllabus-table" summary="IIUC Add Drop Courses Table">
-          <thead>
-            <tr>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700;">Course Code</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700;">Course Name</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700; width: 120px;">Credit Hours</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700; width: 140px;">Section</th>
-              <th scope="col" style="background-color: #ffe49e; color: #000; font-weight: 700; width: 140px;">Sub Section</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="5" style="padding: 0.75rem; background-color: #ffffff;">
-                <div class="profile-alert-banner" style="margin: 0.25rem 0; background-color: #ffd8be; border: 1px solid #ffc2a1; color: #e00000; font-weight: 700; text-align: center; padding: 0.75rem; font-size: 0.875rem;">
-                  No Active Semester or already registered
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
       </div>
 
     </div>
   </main>
+
+  <script>
+    function loadWithdrawCourses() {
+      const selectVal = document.getElementById('withdraw-sem-select').value;
+      const container = document.getElementById('withdraw-courses-container');
+      if (selectVal !== '') {
+        container.style.display = 'block';
+      } else {
+        container.style.display = 'none';
+        alert('Please select a semester first.');
+      }
+    }
+  </script>
 
   <!-- 4. IIUC Portal Footer -->
   <footer class="iiuc-portal-footer">
@@ -162,7 +149,7 @@
   </footer>
 
   <div class="footer-meta-bar">
-    <span>Page rendered in 0.0521 seconds.</span>
+    <span>Page rendered in 0.0489 seconds.</span>
     <span><a href="#">Legal</a> | <a href="#">Privacy Policy</a></span>
   </div>
 
