@@ -3,13 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Pre Registration - International Islamic University Chittagong">
-  <title>Pre Registration | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Waiver for Covid 19 - International Islamic University Chittagong">
+  <title>Waiver for Covid 19 | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .covid-card-wrapper {
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      margin-bottom: 2rem;
+    }
+
+    .covid-cyan-header {
+      background: #0284c7;
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .covid-tab-pill {
+      background: #84cc16;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 4px;
+    }
+
+    .covid-form-container {
+      padding: 2.5rem 2rem;
+      max-width: 980px;
+    }
+
+    .covid-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .covid-form-group {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      gap: 1rem;
+    }
+
+    .covid-label {
+      font-size: 0.825rem;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .covid-input-green {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #a3e635;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #1e293b;
+      background-color: #ffffff;
+      box-sizing: border-box;
+    }
+
+    .covid-file-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .covid-file-note {
+      font-size: 0.725rem;
+      color: #475569;
+      font-style: italic;
+    }
+
+    .btn-covid-submit {
+      background-color: #5b6b8c;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: none;
+      padding: 0.55rem 1.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 1.5rem auto 0 auto;
+      display: block;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-covid-submit:hover {
+      background-color: #475569;
+    }
+  </style>
 </head>
 <body class="dashboard-body">
 
-  <!-- 1. Top Cyan Utility Navigation Bar -->
+  <!-- 1. Top Utility Navigation Bar -->
   <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
     <div class="top-utility-left">
       <!-- Students Dropdown -->
@@ -24,8 +116,8 @@
           <a href="printcourseregistration.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Print Course Registration</a>
           <a href="adddrop.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Add Drop Courses</a>
           <a href="updatetransport.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Semester Transport Update</a>
-          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Result View</a>
-          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment Advising</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Result View</a>
+          <a href="paymenthistory.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment Advising</a>
           <a href="withdraw.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Withdraw</a>
           <a href="registrationsummary.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Registration Summary</a>
           <a href="coursestatus.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Status</a>
@@ -35,7 +127,7 @@
         </div>
       </div>
 
-      <!-- Others Dropdown (Exact Replica) -->
+      <!-- Others Dropdown -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Others Menu">
           <span>🏢</span> Others ▾
@@ -48,7 +140,7 @@
         </div>
       </div>
 
-            <!-- TER Dropdown Container -->
+      <!-- TER Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="TER Menu">
           <span>⏱</span> TER ▾
@@ -57,8 +149,10 @@
           <a href="ter.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> TER Submission</a>
         </div>
       </div>
+
+      <!-- Application Dropdown Container -->
       <div class="utility-dropdown-container">
-        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Application Menu">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Application Menu">
           <span>💻</span> Application ▾
         </button>
         <div class="utility-dropdown-menu" role="menu">
@@ -76,6 +170,7 @@
           <a href="unauthorized.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Application for Certificate/Testimonial</a>
         </div>
       </div>
+
       <span class="utility-item">💬 IQAC ▾</span>
     </div>
 
@@ -106,42 +201,91 @@
     </a>
 
     <div class="header-search-widget">
-      <span class="current-date-text">August 25, 2026 Tuesday</span>
+      <span class="current-date-text">August 26, 2026 Wednesday</span>
       <div class="search-input-group">
         <input type="text" class="search-input" placeholder="Search portal options..." aria-label="Search portal">
-        <button type="button" class="search-btn">Search & Find</button>
+        <button type="button" class="search-btn" style="background: linear-gradient(to bottom, #f05050, #e74c3c); border-color: #d9534f;">Search & Find</button>
       </div>
     </div>
   </header>
 
-  <!-- 3. Pre-Registration Content Page -->
-  <main class="prereg-container">
-    <div class="prereg-card-wrapper">
+  <!-- 3. Waiver for Covid 19 Main Content Container -->
+  <main class="prereg-container" style="max-width: 1200px; margin: 1rem auto; padding: 0 1rem;">
+    <div class="covid-card-wrapper">
       
-      <!-- Cyan Header Bar with Green Pill -->
-      <div class="prereg-cyan-header">
-        <span class="prereg-tab-pill">Pre Registration</span>
+      <!-- Cyan Banner Header with Green Tab Pill -->
+      <div class="covid-cyan-header">
+        <span class="covid-tab-pill">Waiver for Covid 19</span>
       </div>
 
-      <!-- Card Body Content -->
-      <div class="prereg-body-content">
-        <div class="prereg-notice-alert" role="alert">
-          This is not Registration Time.
-        </div>
+      <!-- Form Area (2-Column Grid matching Screenshot) -->
+      <div class="covid-form-container">
+        <form action="dashboard.html" method="GET">
+          
+          <div class="covid-grid">
+            
+            <!-- Left Column -->
+            <div>
+              <div class="covid-form-group">
+                <label class="covid-label">ID No</label>
+                <input type="text" value="C243237" readonly class="covid-input-green">
+              </div>
+
+              <div class="covid-form-group">
+                <label class="covid-label">Justification</label>
+                <input type="text" class="covid-input-green">
+              </div>
+
+              <div class="covid-form-group">
+                <label class="covid-label">Upload Death Certificate</label>
+                <div class="covid-file-wrapper">
+                  <input type="file" class="covid-input-green" style="padding: 0.3rem;">
+                  <span class="covid-file-note">File name must contain single . (dot)</span>
+                </div>
+              </div>
+
+              <div class="covid-form-group">
+                <label class="covid-label">Upload Chairman/Commissioner Certificate</label>
+                <div class="covid-file-wrapper">
+                  <input type="file" class="covid-input-green" style="padding: 0.3rem;">
+                  <span class="covid-file-note">File name must contain single . (dot)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+              <div class="covid-form-group" style="grid-template-columns: 140px 1fr;">
+                <label class="covid-label">Name</label>
+                <input type="text" value="Mohammad Ridwanul Karim" readonly class="covid-input-green">
+              </div>
+
+              <div class="covid-form-group" style="grid-template-columns: 140px 1fr;">
+                <label class="covid-label">Mobile</label>
+                <input type="text" value="01862126812" class="covid-input-green">
+              </div>
+
+              <div class="covid-form-group" style="grid-template-columns: 140px 1fr;">
+                <label class="covid-label">Contact Address</label>
+                <input type="text" class="covid-input-green">
+              </div>
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn-covid-submit">Submit</button>
+
+        </form>
       </div>
 
     </div>
   </main>
 
-  <!-- 4. IIUC Portal Footer -->
-  <footer class="iiuc-portal-footer">
-    <p>Copyright &copy; 2026 All rights reserved IIUC and Developed by</p>
+  <!-- 4. Main Footer -->
+  <footer class="portal-main-footer" style="text-align: center; padding: 1.5rem 0; color: #64748b; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem;">
+    <p>Copyright © 2026 All rights reserved IIUC | Developed by IT Division IIUC</p>
+    <p style="margin-top: 0.35rem; font-size: 0.75rem;">Page rendered in 0.0730 seconds. | <a href="#" style="color: #0284c7; text-decoration: none;">Legal</a> | <a href="#" style="color: #0284c7; text-decoration: none;">Privacy Policy</a></p>
   </footer>
-
-  <div class="footer-meta-bar">
-    <span>Page rendered in 0.7087 seconds.</span>
-    <span><a href="#">Legal</a> | <a href="#">Privacy Policy</a></span>
-  </div>
 
 </body>
 </html>
