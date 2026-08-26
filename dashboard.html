@@ -427,32 +427,187 @@
             </div>
           </div>
 
-          <!-- TAB 5: SYLLABUS -->
+          <!-- TAB 5: SYLLABUS (CSE-Autumn-2024 Official 123 Courses) -->
           <div id="tab-sec-syllabus" class="tab-panel-content">
-            <h3 class="academic-tab-title" style="color: #0284c7;">Syllabus</h3>
-            <div class="syllabus-filter-bar">
-              <select id="exact-sem-filter" class="search-input" style="width: 160px;" onchange="filterExactSyllabus()">
-                <option value="all">All Semesters</option>
-                <option value="1">Semester 1</option><option value="2">Semester 2</option><option value="3">Semester 3</option><option value="4">Semester 4</option>
-              </select>
-              <input type="text" id="exact-search-input" class="search-input" placeholder="Search course..." style="width: 220px;" onkeyup="filterExactSyllabus()">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <h3 class="academic-tab-title" style="color: #0284c7; margin: 0;">Syllabus (CSE-Autumn-2024)</h3>
+              <span style="font-size: 0.8rem; font-weight: 700; color: #1e293b; background: #e0f2fe; padding: 0.35rem 0.85rem; border-radius: 20px;">Total Courses: 123</span>
             </div>
 
-            <div style="overflow-x: auto;">
-              <table class="syllabus-table" id="exact-master-syllabus-table">
-                <thead>
-                  <tr><th>SL</th><th>Course Code</th><th>Course Title</th><th>C.H</th><th>Sem</th></tr>
+            <div class="syllabus-filter-bar" style="margin-bottom: 1rem;">
+              <select id="exact-sem-filter" class="search-input" style="width: 170px;" onchange="filterExactSyllabus()">
+                <option value="all">All Semesters</option>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+                <option value="4">Semester 4</option>
+                <option value="5">Semester 5</option>
+                <option value="6">Semester 6</option>
+                <option value="7">Semester 7</option>
+                <option value="8">Semester 8</option>
+              </select>
+              <input type="text" id="exact-search-input" class="search-input" placeholder="Search course code or title..." style="width: 250px;" onkeyup="filterExactSyllabus()">
+            </div>
+
+            <div style="overflow-x: auto; max-height: 500px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 12px;">
+              <table class="syllabus-table" id="exact-master-syllabus-table" style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                <thead style="position: sticky; top: 0; z-index: 5;">
+                  <tr style="background: #0284c7; color: #ffffff;">
+                    <th style="padding: 0.65rem; width: 45px;">SL</th>
+                    <th style="padding: 0.65rem; width: 110px;">Course Code</th>
+                    <th style="padding: 0.65rem; text-align: left;">Course Title</th>
+                    <th style="padding: 0.65rem; width: 60px;">C.H</th>
+                    <th style="padding: 0.65rem; width: 60px;">Sem</th>
+                    <th style="padding: 0.65rem; width: 120px;">Pre. R</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr class="exact-sem-head" data-sem="1"><td colspan="5" style="background:#f1f5f9; font-weight:700;">Semester 1</td></tr>
-                  <tr class="exact-c-row" data-sem="1"><td>1</td><td>CSE-1121</td><td style="text-align:left;">Computer Programming 1</td><td>3</td><td>1</td></tr>
-                  <tr class="exact-c-row" data-sem="1"><td>2</td><td>CSE-1122</td><td style="text-align:left;">Computer Programming 1 Lab</td><td>1.5</td><td>1</td></tr>
-                  <tr class="exact-c-row" data-sem="1"><td>3</td><td>EEE-1121</td><td style="text-align:left;">Basic Electrical Engineering</td><td>3</td><td>1</td></tr>
-                  <tr class="exact-c-row" data-sem="1"><td>4</td><td>MATH-1107</td><td style="text-align:left;">Mathematics I</td><td>3</td><td>1</td></tr>
-                  
-                  <tr class="exact-sem-head" data-sem="2"><td colspan="5" style="background:#f1f5f9; font-weight:700;">Semester 2</td></tr>
-                  <tr class="exact-c-row" data-sem="2"><td>5</td><td>CSE-1221</td><td style="text-align:left;">Computer Programming II</td><td>3</td><td>2</td></tr>
-                  <tr class="exact-c-row" data-sem="2"><td>6</td><td>CSE-1223</td><td style="text-align:left;">Discrete Mathematics</td><td>3</td><td>2</td></tr>
+                  <!-- SEMESTER 1 -->
+                  <tr class="exact-sem-head" data-sem="1"><td colspan="6" style="background:#e0f2fe; color:#0369a1; font-weight:800; text-align:left; padding:0.6rem 0.85rem;">Semester 1</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>1</td><td>CSE-1121</td><td style="text-align:left;">Computer Programming 1</td><td>3</td><td>1</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>2</td><td>CSE-1122</td><td style="text-align:left;">Computer Programming 1 Lab</td><td>1.5</td><td>1</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>3</td><td>EEE-1121</td><td style="text-align:left;">Basic Electrical Engineering</td><td>3</td><td>1</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>4</td><td>EEE-1122</td><td style="text-align:left;">Basic Electrical Engineering Lab</td><td>1.5</td><td>1</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>5</td><td>GEEL-1106</td><td style="text-align:left;">Advanced English</td><td>2</td><td>1</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>6</td><td>GEEM-1101</td><td style="text-align:left;">Text of Ethics and Morality</td><td>1</td><td>1</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>7</td><td>MATH-1107</td><td style="text-align:left;">Mathematics I (Differential and Integral Calculus)</td><td>3</td><td>1</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>8</td><td>PHY-1101</td><td style="text-align:left;">Physics I (Mechanics, Waves, Heat and Thermodynamics)</td><td>3</td><td>1</td><td>-</td></tr>
+
+                  <!-- SEMESTER 2 -->
+                  <tr class="exact-sem-head" data-sem="2"><td colspan="6" style="background:#e0f2fe; color:#0369a1; font-weight:800; text-align:left; padding:0.6rem 0.85rem;">Semester 2</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>9</td><td>CSE-1221</td><td style="text-align:left;">Computer Programming II</td><td>3</td><td>2</td><td>CSE-1121</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>10</td><td>CSE-1222</td><td style="text-align:left;">Computer Programming II Lab</td><td>1.5</td><td>2</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>11</td><td>CSE-1223</td><td style="text-align:left;">Discrete Mathematics</td><td>3</td><td>2</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>12</td><td>CSE-1230</td><td style="text-align:left;">Competitive Programming 1</td><td>1</td><td>2</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>13</td><td>EEE-1221</td><td style="text-align:left;">Electronics</td><td>3</td><td>2</td><td>EEE-1121</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>14</td><td>EEE-1222</td><td style="text-align:left;">Electronics Lab</td><td>1.5</td><td>2</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>15</td><td>GEED-1201</td><td style="text-align:left;">Basic Principles of Islam (‘Aqidah + ‘Ibadah)</td><td>2</td><td>2</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>16</td><td>MATH-1207</td><td style="text-align:left;">Mathematics II (Geometry and Differential Equations)</td><td>3</td><td>2</td><td>MATH-1107</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>17</td><td>PHY-1201</td><td style="text-align:left;">Physics II (Electromagnetism, Optics and Modern Physics)</td><td>3</td><td>2</td><td>PHY-1101</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>18</td><td>PHY-1204</td><td style="text-align:left;">Physics II Lab (Electromagnetism, Optics and Modern Physics)</td><td>1.5</td><td>2</td><td>-</td></tr>
+
+                  <!-- SEMESTER 3 -->
+                  <tr class="exact-sem-head" data-sem="3"><td colspan="6" style="background:#e0f2fe; color:#0369a1; font-weight:800; text-align:left; padding:0.6rem 0.85rem;">Semester 3</td></tr>
+                  <tr class="exact-c-row" data-sem="3"><td>19</td><td>CHEM-2301</td><td style="text-align:left;">Chemistry</td><td>3</td><td>3</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="3"><td>20</td><td>CSE-2321</td><td style="text-align:left;">Data Structures</td><td>3</td><td>3</td><td>CSE-1121</td></tr>
+                  <tr class="exact-c-row" data-sem="3"><td>21</td><td>CSE-2322</td><td style="text-align:left;">Data Structures Lab</td><td>1</td><td>3</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="3"><td>22</td><td>CSE-2323</td><td style="text-align:left;">Digital Logic Design</td><td>3</td><td>3</td><td>EEE-1221</td></tr>
+                  <tr class="exact-c-row" data-sem="3"><td>23</td><td>CSE-2324</td><td style="text-align:left;">Digital Logic Design Lab</td><td>1.5</td><td>3</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="3"><td>24</td><td>CSE-2340</td><td style="text-align:left;">Software Development 1</td><td>2</td><td>3</td><td>CSE-1221</td></tr>
+                  <tr class="exact-c-row" data-sem="3"><td>25</td><td>GEED-2302</td><td style="text-align:left;">Sciences of Quran and Hadith</td><td>1</td><td>3</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="3"><td>26</td><td>GEED-2305</td><td style="text-align:left;">Comparative Religion</td><td>3</td><td>3</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="3"><td>27</td><td>MATH-2307</td><td style="text-align:left;">Mathematics III (Matrices, Linear System of Equations and Vector Analysis)</td><td>3</td><td>3</td><td>MATH-1207</td></tr>
+                  <tr class="exact-c-row" data-sem="3"><td>28</td><td>STAT-2311</td><td style="text-align:left;">Probability and Statistics</td><td>2</td><td>3</td><td>-</td></tr>
+
+                  <!-- SEMESTER 4 -->
+                  <tr class="exact-sem-head" data-sem="4"><td colspan="6" style="background:#e0f2fe; color:#0369a1; font-weight:800; text-align:left; padding:0.6rem 0.85rem;">Semester 4</td></tr>
+                  <tr class="exact-c-row" data-sem="4"><td>29</td><td>CSE-2421</td><td style="text-align:left;">Computer Algorithms</td><td>3</td><td>4</td><td>CSE-2321</td></tr>
+                  <tr class="exact-c-row" data-sem="4"><td>30</td><td>CSE-2422</td><td style="text-align:left;">Computer Algorithms Lab</td><td>1</td><td>4</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="4"><td>31</td><td>CSE-2423</td><td style="text-align:left;">Database Management Systems</td><td>3</td><td>4</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="4"><td>32</td><td>CSE-2424</td><td style="text-align:left;">Database Management Systems Lab</td><td>1.5</td><td>4</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="4"><td>33</td><td>CSE-2427</td><td style="text-align:left;">Theory of Computation</td><td>3</td><td>4</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="4"><td>34</td><td>CSE-2430</td><td style="text-align:left;">Competitive Programming II</td><td>1</td><td>4</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="4"><td>35</td><td>EEE-2421</td><td style="text-align:left;">Electrical Drives and Instrumentation</td><td>2</td><td>4</td><td>EEE-1221</td></tr>
+                  <tr class="exact-c-row" data-sem="4"><td>36</td><td>EEE-2422</td><td style="text-align:left;">Electrical Drives and Instrumentation Lab</td><td>1</td><td>4</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="4"><td>37</td><td>GEBL-2401</td><td style="text-align:left;">Bengali Language and Literature</td><td>2</td><td>4</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="4"><td>38</td><td>MATH-2407</td><td style="text-align:left;">Mathematics IV (Complex Variable, Fourier Analysis and Z-transform)</td><td>3</td><td>4</td><td>MATH-2307</td></tr>
+                  <tr class="exact-c-row" data-sem="4"><td>39</td><td>ME-2412</td><td style="text-align:left;">Engineering Drawing Lab</td><td>1</td><td>4</td><td>-</td></tr>
+
+                  <!-- SEMESTER 5 -->
+                  <tr class="exact-sem-head" data-sem="5"><td colspan="6" style="background:#e0f2fe; color:#0369a1; font-weight:800; text-align:left; padding:0.6rem 0.85rem;">Semester 5</td></tr>
+                  <tr class="exact-c-row" data-sem="5"><td>40</td><td>CSE-3521</td><td style="text-align:left;">Computer Architecture</td><td>3</td><td>5</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="5"><td>41</td><td>CSE-3523</td><td style="text-align:left;">Microprocessors, Microcontrollers and Embedded Systems</td><td>3</td><td>5</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="5"><td>42</td><td>CSE-3524</td><td style="text-align:left;">Microprocessors, Microcontrollers and Embedded Systems Lab</td><td>1</td><td>5</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="5"><td>43</td><td>CSE-3525</td><td style="text-align:left;">Data Communication</td><td>3</td><td>5</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="5"><td>44</td><td>CSE-3527</td><td style="text-align:left;">Compiler</td><td>3</td><td>5</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="5"><td>45</td><td>CSE-3528</td><td style="text-align:left;">Compiler Lab</td><td>1</td><td>5</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="5"><td>46</td><td>CSE-3529</td><td style="text-align:left;">Systems Analysis and Design</td><td>3</td><td>5</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="5"><td>47</td><td>CSE-3532</td><td style="text-align:left;">Tools and Technologies for Internet Programming</td><td>2</td><td>5</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="5"><td>48</td><td>GEED-3503</td><td style="text-align:left;">Political Thoughts and Social Behavior</td><td>1</td><td>5</td><td>-</td></tr>
+
+                  <!-- SEMESTER 6 -->
+                  <tr class="exact-sem-head" data-sem="6"><td colspan="6" style="background:#e0f2fe; color:#0369a1; font-weight:800; text-align:left; padding:0.6rem 0.85rem;">Semester 6</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>49</td><td>ACC-2401</td><td style="text-align:left;">Financial and Managerial Accounting</td><td>2</td><td>6</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>50</td><td>CSE-3631</td><td style="text-align:left;">Operating Systems</td><td>3</td><td>6</td><td>CSE-3521</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>51</td><td>CSE-3632</td><td style="text-align:left;">Operating Systems Lab</td><td>1</td><td>6</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>52</td><td>CSE-3633</td><td style="text-align:left;">Computer Networks</td><td>3</td><td>6</td><td>CSE-3525</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>53</td><td>CSE-3634</td><td style="text-align:left;">Computer Networks Lab</td><td>1.5</td><td>6</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>54</td><td>CSE-3635</td><td style="text-align:left;">Artificial Intelligence</td><td>3</td><td>6</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>55</td><td>CSE-3636</td><td style="text-align:left;">Artificial Intelligence Lab</td><td>1</td><td>6</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>56</td><td>CSE-3641</td><td style="text-align:left;">Software Engineering</td><td>3</td><td>6</td><td>CSE-3529</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>57</td><td>CSE-3642</td><td style="text-align:left;">Software Engineering Lab</td><td>1</td><td>6</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>58</td><td>CSE-3644</td><td style="text-align:left;">Software Development II Lab</td><td>1</td><td>6</td><td>CSE-3532</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>59</td><td>GEED-3604</td><td style="text-align:left;">Life and Teachings of Prophet Muhammad (SAAS)</td><td>1</td><td>6</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="6"><td>60</td><td>GEHE-3601</td><td style="text-align:left;">History of the Emergence of Bangladesh</td><td>2</td><td>6</td><td>-</td></tr>
+
+                  <!-- SEMESTER 7 -->
+                  <tr class="exact-sem-head" data-sem="7"><td colspan="6" style="background:#e0f2fe; color:#0369a1; font-weight:800; text-align:left; padding:0.6rem 0.85rem;">Semester 7</td></tr>
+                  <tr class="exact-c-row" data-sem="7"><td>61</td><td>CSE-4708</td><td style="text-align:left;">Field Work</td><td>1</td><td>7</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="7"><td>62</td><td>CSE-4741</td><td style="text-align:left;">Computer Graphics</td><td>3</td><td>7</td><td>MATH-2307</td></tr>
+                  <tr class="exact-c-row" data-sem="7"><td>63</td><td>CSE-4742</td><td style="text-align:left;">Computer Graphics Lab</td><td>1</td><td>7</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="7"><td>64</td><td>CSE-4743</td><td style="text-align:left;">Computer Security</td><td>2</td><td>7</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="7"><td>65</td><td>CSE-4744</td><td style="text-align:left;">Computer Security Lab</td><td>1</td><td>7</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="7"><td>66</td><td>CSE-4745</td><td style="text-align:left;">Numerical Methods</td><td>2</td><td>7</td><td>CSE-1121</td></tr>
+                  <tr class="exact-c-row" data-sem="7"><td>67</td><td>CSE-4746</td><td style="text-align:left;">Numerical Methods Lab</td><td>1</td><td>7</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="7"><td>68</td><td>CSE-4747</td><td style="text-align:left;">Mathematical Analysis for Computer Science</td><td>3</td><td>7</td><td>STAT-2311</td></tr>
+                  <tr class="exact-c-row" data-sem="7"><td>69</td><td>CSE-4750</td><td style="text-align:left;">Technical Writing and Presentation</td><td>1</td><td>7</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="7"><td>70</td><td>ECON-3501</td><td style="text-align:left;">Principles of Economics</td><td>2</td><td>7</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="7"><td>71</td><td>GEIH-4701</td><td style="text-align:left;">A Survey of Islamic History and Culture</td><td>1</td><td>7</td><td>-</td></tr>
+
+                  <!-- SEMESTER 8 -->
+                  <tr class="exact-sem-head" data-sem="8"><td colspan="6" style="background:#e0f2fe; color:#0369a1; font-weight:800; text-align:left; padding:0.6rem 0.85rem;">Semester 8</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>72</td><td>CSE-4800</td><td style="text-align:left;">Project / Thesis</td><td>4</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>73</td><td>CSE-4805</td><td style="text-align:left;">Social, Professional and Ethical Issues in Computing</td><td>2</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>74</td><td>CSE-4819</td><td style="text-align:left;">Special Topic on Computer Science and Engineering</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>75</td><td>CSE-4820</td><td style="text-align:left;">Special Topic on Computer Science and Engineering Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>76</td><td>CSE-4822</td><td style="text-align:left;">General Viva</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>77</td><td>CSE-4823</td><td style="text-align:left;">Fault Tolerant System</td><td>3</td><td>8</td><td>CSE-3521</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>78</td><td>CSE-4824</td><td style="text-align:left;">Fault Tolerant System Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>79</td><td>CSE-4825</td><td style="text-align:left;">Basic Graph Theory</td><td>3</td><td>8</td><td>CSE-2321</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>80</td><td>CSE-4826</td><td style="text-align:left;">Basic Graph Theory Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>81</td><td>CSE-4827</td><td style="text-align:left;">Simulation and Modeling</td><td>3</td><td>8</td><td>MATH-3501</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>82</td><td>CSE-4828</td><td style="text-align:left;">Simulation and Modeling Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>83</td><td>CSE-4839</td><td style="text-align:left;">Digital System Design</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>84</td><td>CSE-4840</td><td style="text-align:left;">Digital System Design Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>85</td><td>CSE-4843</td><td style="text-align:left;">Decision Support System and Expert System</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>86</td><td>CSE-4844</td><td style="text-align:left;">Decision Support System Expert System Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>87</td><td>CSE-4845</td><td style="text-align:left;">Distributed Database</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>88</td><td>CSE-4846</td><td style="text-align:left;">Distributed Database Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>89</td><td>CSE-4847</td><td style="text-align:left;">Software Project Management</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>90</td><td>CSE-4848</td><td style="text-align:left;">Software Project Management Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>91</td><td>CSE-4849</td><td style="text-align:left;">Software Quality Assurance</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>92</td><td>CSE-4850</td><td style="text-align:left;">Software Quality Assurance Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>93</td><td>CSE-4851</td><td style="text-align:left;">Wireless and Mobile Communication</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>94</td><td>CSE-4852</td><td style="text-align:left;">Wireless and Mobile Communication Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>95</td><td>CSE-4853</td><td style="text-align:left;">Optical Fiber Communication</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>96</td><td>CSE-4854</td><td style="text-align:left;">Optical Fiber Communication Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>97</td><td>CSE-4855</td><td style="text-align:left;">Communication Engineering</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>98</td><td>CSE-4856</td><td style="text-align:left;">Communication Engineering Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>99</td><td>CSE-4857</td><td style="text-align:left;">VLSI Design</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>100</td><td>CSE-4858</td><td style="text-align:left;">VLSI Design Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>101</td><td>CSE-4859</td><td style="text-align:left;">Real Time Embedded Systems</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>102</td><td>CSE-4860</td><td style="text-align:left;">Real Time Embedded Systems Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>103</td><td>CSE-4861</td><td style="text-align:left;">Multimedia Theory</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>104</td><td>CSE-4862</td><td style="text-align:left;">Multimedia Theory Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>105</td><td>CSE-4863</td><td style="text-align:left;">Digital Signal Processing</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>106</td><td>CSE-4864</td><td style="text-align:left;">Digital Signal Processing Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>107</td><td>CSE-4865</td><td style="text-align:left;">Bioinformatics</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>108</td><td>CSE-4866</td><td style="text-align:left;">Bioinformatics Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>109</td><td>CSE-4867</td><td style="text-align:left;">Speech and Language Processing</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>110</td><td>CSE-4868</td><td style="text-align:left;">Speech and Language Processing Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>111</td><td>CSE-4869</td><td style="text-align:left;">Geographical Information System</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>112</td><td>CSE-4870</td><td style="text-align:left;">Geographical Information System Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>113</td><td>CSE-4871</td><td style="text-align:left;">Neural Network and Fuzzy System</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>114</td><td>CSE-4872</td><td style="text-align:left;">Neural Network and Fuzzy System Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>115</td><td>CSE-4873</td><td style="text-align:left;">Computer Vision and Robotics</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>116</td><td>CSE-4874</td><td style="text-align:left;">Computer Vision and Robotics Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>117</td><td>CSE-4875</td><td style="text-align:left;">Pattern Recognition and Image Processing</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>118</td><td>CSE-4876</td><td style="text-align:left;">Pattern Recognition and Image Processing Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>119</td><td>CSE-4877</td><td style="text-align:left;">Machine Learning and Data Mining</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>120</td><td>CSE-4878</td><td style="text-align:left;">Machine Learning and Data Mining Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>121</td><td>CSE-4879</td><td style="text-align:left;">Computer Interfacing</td><td>3</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>122</td><td>CSE-4880</td><td style="text-align:left;">Computer Interfacing Lab</td><td>1</td><td>8</td><td>-</td></tr>
+                  <tr class="exact-c-row" data-sem="8"><td>123</td><td>MGT-3601</td><td style="text-align:left;">Industrial Management</td><td>2</td><td>8</td><td>-</td></tr>
                 </tbody>
               </table>
             </div>
