@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Registration Summary - International Islamic University Chittagong">
-  <title>Registration Summary | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Readmission Application - International Islamic University Chittagong">
+  <title>Readmission Application | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .reg-summary-card-wrapper {
+    .readmission-card-wrapper {
       background: #ffffff;
       border-radius: 8px;
       border: 1px solid #cbd5e1;
@@ -16,74 +16,102 @@
       margin-bottom: 2rem;
     }
 
-    .reg-summary-cyan-header {
+    .readmission-cyan-header {
       background: #0284c7;
-      padding: 0.65rem 1rem;
+      padding: 0.5rem 0.75rem 0 0.75rem;
       display: flex;
-      align-items: center;
+      gap: 0.35rem;
     }
 
-    .reg-summary-tab-pill {
-      background: #84cc16;
+    .readmission-tab-pill {
+      background: #0369a1;
       color: #ffffff;
       font-weight: 700;
-      font-size: 0.85rem;
-      padding: 0.3rem 0.85rem;
-      border-radius: 4px;
-    }
-
-    .reg-summary-table {
-      width: 100%;
-      border-collapse: collapse;
       font-size: 0.8rem;
+      padding: 0.4rem 0.85rem;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-block;
+      transition: background-color 0.2s ease;
     }
 
-    .reg-summary-table th {
-      background: #fde047;
-      color: #0f172a;
-      font-weight: 800;
-      text-align: center;
-      padding: 0.55rem 0.4rem;
-      border: 1px solid #cbd5e1;
+    .readmission-tab-pill.active {
+      background: #84cc16;
+      color: #ffffff;
     }
 
-    .reg-summary-table td {
-      padding: 0.55rem 0.5rem;
-      border: 1px solid #e2e8f0;
-      text-align: center;
+    .readmission-form-container {
+      padding: 2.5rem 2rem;
+      max-width: 650px;
+    }
+
+    .readmission-form-group {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      gap: 1rem;
+    }
+
+    .readmission-label {
+      font-size: 0.85rem;
+      font-weight: 700;
       color: #1e293b;
     }
 
-    .action-btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      justify-content: center;
-      align-items: center;
-      max-width: 380px;
-      margin: 0 auto;
+    .readmission-input-green {
+      max-width: 260px;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #a3e635;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #1e293b;
+      background-color: #ffffff;
     }
 
-    .act-btn {
-      font-size: 0.7rem;
-      font-weight: 700;
+    .readmission-select {
+      max-width: 200px;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.825rem;
+      color: #1e293b;
+      background-color: #ffffff;
+    }
+
+    .readmission-textarea {
+      max-width: 320px;
+      height: 70px;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #a3e635;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #1e293b;
+      background-color: #ffffff;
+      resize: vertical;
+      font-family: inherit;
+    }
+
+    .btn-readmission-submit {
+      background-color: #5b6b8c;
       color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
       border: none;
-      padding: 0.25rem 0.55rem;
+      padding: 0.55rem 1.35rem;
       border-radius: 4px;
       cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      line-height: 1.2;
+      margin-left: 140px;
+      margin-top: 0.5rem;
+      transition: background-color 0.2s ease;
     }
 
-    .btn-print-reg   { background-color: #00c0ef; }
-    .btn-pay-advising{ background-color: #00a65a; }
-    .btn-mid-admit   { background-color: #f39c12; }
-    .btn-final-admit { background-color: #dd4b39; }
-    .btn-grade-sheet { background-color: #0073b7; }
-    .btn-mid-routine { background-color: #00c0ef; }
-    .btn-final-routine{ background-color: #00a65a; }
+    .btn-readmission-submit:hover {
+      background-color: #475569;
+    }
   </style>
 </head>
 <body class="dashboard-body">
@@ -136,8 +164,10 @@
           <a href="ter.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> TER Submission</a>
         </div>
       </div>
+
+      <!-- Application Dropdown Container -->
       <div class="utility-dropdown-container">
-        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Application Menu">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Application Menu">
           <span>💻</span> Application ▾
         </button>
         <div class="utility-dropdown-menu" role="menu">
@@ -155,6 +185,7 @@
           <a href="unauthorized.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Application for Certificate/Testimonial</a>
         </div>
       </div>
+
       <span class="utility-item">💬 IQAC ▾</span>
     </div>
 
@@ -193,137 +224,60 @@
     </div>
   </header>
 
-  <!-- 3. Registration Summary Main Content Page -->
-  <main class="prereg-container" style="max-width: 1250px; margin: 1rem auto; padding: 0 1rem;">
-    <div class="reg-summary-card-wrapper">
+  <!-- 3. Readmission Application Main Content Container -->
+  <main class="prereg-container" style="max-width: 1200px; margin: 1rem auto; padding: 0 1rem;">
+    <div class="readmission-card-wrapper">
       
-      <!-- Cyan Banner Header with Green Tab Pill -->
-      <div class="reg-summary-cyan-header">
-        <span class="reg-summary-tab-pill">Registration Summary</span>
+      <!-- Cyan Banner Header with 2 Tab Pills -->
+      <div class="readmission-cyan-header">
+        <a href="#" class="readmission-tab-pill active">Readmission Application</a>
+        <a href="#" class="readmission-tab-pill">Recent Application</a>
       </div>
 
-      <!-- Registration Summary Table -->
-      <div style="overflow-x: auto;">
-        <table class="reg-summary-table" summary="IIUC Student Registration Summary Table">
-          <thead>
-            <tr>
-              <th style="width: 45px;">SL</th>
-              <th style="width: 110px;">Semester</th>
-              <th style="width: 130px;">Enrolled</th>
-              <th style="width: 80px;">Total CH</th>
-              <th style="width: 60px;">URC</th>
-              <th style="width: 60px;">DC</th>
-              <th style="width: 90px;">Cost</th>
-              <th style="width: 90px;">Payment</th>
-              <th style="width: 75px;">GPA</th>
-              <th style="width: 75px;">CGPA</th>
-              <th style="min-width: 360px;">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-            <!-- ROW 1: Autumn-2024 -->
-            <tr>
-              <td>1</td>
-              <td>Autumn-2024</td>
-              <td>First Semester</td>
-              <td>18</td>
-              <td>0</td>
-              <td>0</td>
-              <td>103750</td>
-              <td>105466</td>
-              <td>0.000</td>
-              <td><strong>3.761</strong></td>
-              <td>
-                <div class="action-btn-group">
-                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
-                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
-                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
-                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
-                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
-                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
-                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
-                </div>
-              </td>
-            </tr>
+      <!-- Form Area -->
+      <div class="readmission-form-container">
+        <form action="dashboard.html" method="GET">
+          
+          <div class="readmission-form-group">
+            <label class="readmission-label">ID No</label>
+            <input type="text" value="C243237" readonly class="readmission-input-green">
+          </div>
 
-            <!-- ROW 2: Spring-2025 -->
-            <tr>
-              <td>2</td>
-              <td>Spring-2025</td>
-              <td>Second Semester</td>
-              <td>23.5</td>
-              <td>0</td>
-              <td>0</td>
-              <td>83745</td>
-              <td>73210</td>
-              <td><strong>3.76</strong></td>
-              <td><strong>3.761</strong></td>
-              <td>
-                <div class="action-btn-group">
-                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
-                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
-                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
-                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
-                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
-                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
-                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
-                </div>
-              </td>
-            </tr>
+          <div class="readmission-form-group">
+            <label class="readmission-label">Name</label>
+            <input type="text" value="Mohammad Ridwanul Karim" readonly class="readmission-input-green">
+          </div>
 
-            <!-- ROW 3: Autumn-2025 -->
-            <tr>
-              <td>3</td>
-              <td>Autumn-2025</td>
-              <td>Third Semester</td>
-              <td>27.5</td>
-              <td>0</td>
-              <td>0</td>
-              <td>94505</td>
-              <td>94510</td>
-              <td><strong>3.14</strong></td>
-              <td><strong>3.761</strong></td>
-              <td>
-                <div class="action-btn-group">
-                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
-                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
-                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
-                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
-                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
-                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
-                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
-                </div>
-              </td>
-            </tr>
+          <div class="readmission-form-group">
+            <label class="readmission-label">Semester</label>
+            <select name="semester" class="readmission-select">
+              <option value="" selected>Select Semester</option>
+              <option value="autumn24">Autumn 2024</option>
+              <option value="spring25">Spring 2025</option>
+              <option value="autumn25">Autumn 2025</option>
+              <option value="spring26">Spring 2026</option>
+            </select>
+          </div>
 
-            <!-- ROW 4: Spring-2026 -->
-            <tr>
-              <td>4</td>
-              <td>Spring-2026</td>
-              <td>Fourth Semester</td>
-              <td>26.5</td>
-              <td>0</td>
-              <td>0</td>
-              <td>92400</td>
-              <td>92400</td>
-              <td><strong>3.912</strong></td>
-              <td><strong>3.761</strong></td>
-              <td>
-                <div class="action-btn-group">
-                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
-                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
-                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
-                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
-                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
-                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
-                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
-                </div>
-              </td>
-            </tr>
+          <div class="readmission-form-group">
+            <label class="readmission-label">Condition</label>
+            <select name="condition" class="readmission-select" style="max-width: 250px;">
+              <option value="" selected>Select Condition</option>
+              <option value="drop">Semester Drop</option>
+              <option value="expelled">Expelled</option>
+              <option value="financial">Financial Difficulty</option>
+              <option value="medical">Medical Grounds</option>
+            </select>
+          </div>
 
-          </tbody>
-        </table>
+          <div class="readmission-form-group" style="align-items: flex-start;">
+            <label class="readmission-label" style="margin-top: 0.35rem;">Description</label>
+            <textarea name="description" class="readmission-textarea"></textarea>
+          </div>
+
+          <button type="submit" class="btn-readmission-submit">Submit</button>
+
+        </form>
       </div>
 
     </div>
