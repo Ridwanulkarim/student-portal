@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Student Portal Dashboard featuring exact Academic tab replica">
+  <meta name="description" content="IIUC Student Portal Dashboard featuring exact Academic tab replica and vertical right sidebar KPI cards">
   <title>IIUC Student Portal - Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* Exact Royal Blue Tab Header Bar matching user's uploaded screenshot */
     .dribbble-tab-bar-container {
       background: #0066ff;
       border-top-left-radius: 14px;
@@ -71,6 +70,46 @@
       border-bottom: 1px solid #f1f5f9;
       color: #111111;
       font-size: 0.9rem;
+    }
+
+    /* Vertical Stack for Right Sidebar KPI Cards */
+    .vertical-kpi-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .vertical-kpi-card {
+      padding: 1.15rem 1.25rem;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .vertical-kpi-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .v-card-purple { background: #f3e8ff; border: 1px solid #e9d5ff; }
+    .v-card-pink   { background: #ffe4e6; border: 1px solid #fecdd3; }
+    .v-card-cyan   { background: #e0f2fe; border: 1px solid #bae6fd; }
+    .v-card-gold   { background: #fef3c7; border: 1px solid #fde68a; }
+
+    .v-kpi-val {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.1;
+    }
+
+    .v-kpi-lbl {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #64748b;
+      margin-top: 0.2rem;
     }
   </style>
 </head>
@@ -176,16 +215,8 @@
         </div>
       </div>
 
-      <!-- 4 Stat KPI Cards -->
-      <div class="dribbble-kpi-grid">
-        <div class="dribbble-kpi-card kpi-card-purple"><div class="kpi-icon-badge icon-purple">🎓</div><div><div class="kpi-info-val">3.761</div><div class="kpi-info-lbl">Current CGPA</div></div></div>
-        <div class="dribbble-kpi-card kpi-card-pink"><div class="kpi-icon-badge icon-pink">💳</div><div><div class="kpi-info-val">-7.5</div><div class="kpi-info-lbl">Outstanding Balance</div></div></div>
-        <div class="dribbble-kpi-card kpi-card-cyan"><div class="kpi-icon-badge icon-cyan">🏛️</div><div><div class="kpi-info-val">2.50</div><div class="kpi-info-lbl">Degree Requirement</div></div></div>
-        <div class="dribbble-kpi-card kpi-card-gold"><div class="kpi-icon-badge icon-gold">📚</div><div><div class="kpi-info-val">163</div><div class="kpi-info-lbl">Required Credits</div></div></div>
-      </div>
-
       <!-- Main Interactive Tabs Section (Exact Replica of Uploaded Academic Screenshot) -->
-      <div style="background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.03); overflow: hidden; margin-top: 1rem;">
+      <div style="background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.03); overflow: hidden; margin-top: 0.5rem;">
         
         <!-- Royal Blue Header Bar with White Pills (Matching Uploaded Image) -->
         <div class="dribbble-tab-bar-container" role="tablist">
@@ -309,8 +340,9 @@
 
     </main>
 
-    <!-- 3. Right Sidebar Panel -->
+    <!-- 3. Right Sidebar Panel (Calendar & Stacked Vertical KPI Cards from 1st Image) -->
     <aside class="dribbble-right-panel">
+      
       <!-- Calendar Widget -->
       <div class="dribbble-calendar-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem;">
@@ -325,6 +357,47 @@
           <span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
           <span>22</span><span>23</span><span>24</span><span>25</span><span style="background: #a855f7; color: #fff; border-radius: 50%; padding: 0.15rem; font-weight: 800;">26</span><span>27</span><span>28</span>
         </div>
+      </div>
+
+      <!-- Vertical KPI Cards Stack (Transferred from 1st Image to 2nd Image Location) -->
+      <div class="vertical-kpi-stack">
+        
+        <!-- KPI 1: Current CGPA (Purple) -->
+        <div class="vertical-kpi-card v-card-purple">
+          <div class="kpi-icon-badge icon-purple" style="background:#ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">🎓</div>
+          <div>
+            <div class="v-kpi-val">3.761</div>
+            <div class="v-kpi-lbl">Current CGPA</div>
+          </div>
+        </div>
+
+        <!-- KPI 2: Outstanding Balance (Pink) -->
+        <div class="vertical-kpi-card v-card-pink">
+          <div class="kpi-icon-badge icon-pink" style="background:#ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">💳</div>
+          <div>
+            <div class="v-kpi-val">-7.5</div>
+            <div class="v-kpi-lbl">Outstanding Balance</div>
+          </div>
+        </div>
+
+        <!-- KPI 3: Degree Requirement (Cyan) -->
+        <div class="vertical-kpi-card v-card-cyan">
+          <div class="kpi-icon-badge icon-cyan" style="background:#ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">🏛️</div>
+          <div>
+            <div class="v-kpi-val">2.50</div>
+            <div class="v-kpi-lbl">Degree Requirement</div>
+          </div>
+        </div>
+
+        <!-- KPI 4: Required Credits (Gold) -->
+        <div class="vertical-kpi-card v-card-gold">
+          <div class="kpi-icon-badge icon-gold" style="background:#ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">📚</div>
+          <div>
+            <div class="v-kpi-val">163</div>
+            <div class="v-kpi-lbl">Required Credits</div>
+          </div>
+        </div>
+
       </div>
 
     </aside>
