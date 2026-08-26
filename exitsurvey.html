@@ -3,13 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Class Routine - International Islamic University Chittagong">
-  <title>Class Routine | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Exit Survey - International Islamic University Chittagong">
+  <title>Exit Survey | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .exit-card-wrapper {
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      margin-bottom: 2rem;
+    }
+
+    .exit-cyan-header {
+      background: #0284c7;
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .exit-tab-pill {
+      background: #84cc16;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 4px;
+    }
+
+    .exit-content-container {
+      padding: 1.5rem 2rem 3rem 2rem;
+    }
+
+    .exit-page-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 1.5rem;
+    }
+
+    .exit-alert-box {
+      background-color: #fce8e6;
+      border: 1px solid #fca5a5;
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      color: #991b1b;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+      font-family: serif, 'Times New Roman', Georgia;
+    }
+  </style>
 </head>
 <body class="dashboard-body">
 
-  <!-- 1. Top Cyan Utility Navigation Bar -->
+  <!-- 1. Top Utility Navigation Bar -->
   <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
     <div class="top-utility-left">
       <!-- Students Dropdown -->
@@ -24,8 +73,8 @@
           <a href="printcourseregistration.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Print Course Registration</a>
           <a href="adddrop.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Add Drop Courses</a>
           <a href="updatetransport.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Semester Transport Update</a>
-          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Result View</a>
-          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment Advising</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Result View</a>
+          <a href="paymenthistory.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment Advising</a>
           <a href="withdraw.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Withdraw</a>
           <a href="registrationsummary.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Registration Summary</a>
           <a href="coursestatus.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Status</a>
@@ -35,7 +84,7 @@
         </div>
       </div>
 
-      <!-- Others Dropdown (Exact Replica) -->
+      <!-- Others Dropdown -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Others Menu">
           <span>🏢</span> Others ▾
@@ -48,7 +97,7 @@
         </div>
       </div>
 
-            <!-- TER Dropdown Container -->
+      <!-- TER Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="TER Menu">
           <span>⏱</span> TER ▾
@@ -57,6 +106,8 @@
           <a href="ter.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> TER Submission</a>
         </div>
       </div>
+
+      <!-- Application Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Application Menu">
           <span>💻</span> Application ▾
@@ -76,8 +127,10 @@
           <a href="certificateapplication.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Application for Certificate/Testimonial</a>
         </div>
       </div>
+
+      <!-- IQAC Dropdown Container -->
       <div class="utility-dropdown-container">
-        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="IQAC Menu">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="IQAC Menu">
           <span>💬</span> IQAC ▾
         </button>
         <div class="utility-dropdown-menu" role="menu">
@@ -86,6 +139,7 @@
           <a href="exitsurvey.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Exit Survey</a>
         </div>
       </div>
+
     </div>
 
     <div class="top-utility-right">
@@ -115,100 +169,41 @@
     </a>
 
     <div class="header-search-widget">
-      <span class="current-date-text">August 25, 2026 Tuesday</span>
+      <span class="current-date-text">August 26, 2026 Wednesday</span>
       <div class="search-input-group">
         <input type="text" class="search-input" placeholder="Search portal options..." aria-label="Search portal">
-        <button type="button" class="search-btn">Search & Find</button>
+        <button type="button" class="search-btn" style="background: linear-gradient(to bottom, #f05050, #e74c3c); border-color: #d9534f;">Search & Find</button>
       </div>
     </div>
   </header>
 
-  <!-- 3. Class Routine Main Content Container -->
-  <main class="prereg-container">
-    <div class="prereg-card-wrapper">
+  <!-- 3. Exit Survey Main Content Container -->
+  <main class="prereg-container" style="max-width: 1250px; margin: 1rem auto; padding: 0 1rem;">
+    <div class="exit-card-wrapper">
       
       <!-- Cyan Banner Header with Green Tab Pill -->
-      <div class="prereg-cyan-header">
-        <span class="prereg-tab-pill">Class Routine</span>
+      <div class="exit-cyan-header">
+        <span class="exit-tab-pill">Exit Survey</span>
       </div>
 
-      <!-- Title Header Block -->
-      <div class="routine-title-header">
-        <img src="assets/images/logo.png" alt="IIUC Crest Logo" class="routine-watermark-logo">
-        <h2 class="routine-uni-title">International Islamic University Chittagong</h2>
-        <h3 class="routine-sub-title">Class Routine of CSE, M, Autumn-2026 (Fourth Semester)</h3>
-      </div>
+      <!-- Content Area -->
+      <div class="exit-content-container">
+        <h2 class="exit-page-title">Survey Questionnaire For Students</h2>
 
-      <!-- Class Routine 4-Column Table -->
-      <div class="routine-table-wrapper">
-        <table class="iiuc-routine-table" summary="Class Routine of CSE, M, Autumn-2026">
-          <thead>
-            <tr>
-              <th scope="col" style="width: 60px;">SL.</th>
-              <th scope="col" style="width: 160px;"></th>
-              <th scope="col" style="width: 150px;">Days</th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="col-sl">1</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Saturday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">2</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Sunday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">3</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Monday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">4</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Tuesday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">5</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Wednesday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">6</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Thursday</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td class="col-sl">7</td>
-              <td class="col-spacer"></td>
-              <td class="col-days">Friday</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+        <!-- Soft Pink Alert Box -->
+        <div class="exit-alert-box">
+          You are not eligible for the Survey
+        </div>
       </div>
 
     </div>
   </main>
 
-  <!-- 4. IIUC Portal Footer -->
-  <footer class="iiuc-portal-footer">
-    <p>Copyright &copy; 2026 All rights reserved IIUC and Developed by</p>
+  <!-- 4. Main Footer -->
+  <footer class="portal-main-footer" style="text-align: center; padding: 1.5rem 0; color: #64748b; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem;">
+    <p>Copyright © 2026 All rights reserved IIUC | Developed by IT Division IIUC</p>
+    <p style="margin-top: 0.35rem; font-size: 0.75rem;">Page rendered in 0.0420 seconds. | <a href="#" style="color: #0284c7; text-decoration: none;">Legal</a> | <a href="#" style="color: #0284c7; text-decoration: none;">Privacy Policy</a></p>
   </footer>
-
-  <div class="footer-meta-bar">
-    <span>Page rendered in 0.0292 seconds.</span>
-    <span><a href="#">Legal</a> | <a href="#">Privacy Policy</a></span>
-  </div>
 
 </body>
 </html>
