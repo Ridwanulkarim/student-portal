@@ -3,12 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Student Portal Dashboard in Dribbble Design with All Functions">
+  <meta name="description" content="IIUC Student Portal Dashboard featuring exact Academic tab replica">
   <title>IIUC Student Portal - Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Exact Royal Blue Tab Header Bar matching user's uploaded screenshot */
+    .dribbble-tab-bar-container {
+      background: #0066ff;
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+      padding: 0.75rem 1rem;
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .dribbble-tab-pill-btn {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.55rem 1.35rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .dribbble-tab-pill-btn:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .dribbble-tab-pill-btn.active-tab {
+      background: #ffffff !important;
+      color: #0066ff !important;
+      font-weight: 800 !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .academic-tab-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #7c3aed;
+      margin: 1.25rem 0 0.85rem 0;
+    }
+
+    .academic-table-exact {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    .academic-table-exact th {
+      background-color: #f1f3f5;
+      color: #111111;
+      font-weight: 800;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .academic-table-exact td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #f1f5f9;
+      color: #111111;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body class="dashboard-body">
 
@@ -24,7 +88,7 @@
           <span>IIUC PORTAL</span>
         </a>
 
-        <!-- Navigation Links (Containing ALL Requested Portal Functions) -->
+        <!-- Navigation Links -->
         <ul class="dribbble-nav-list">
           <li><a href="dashboard.html" class="dribbble-nav-link active"><span>📊</span> Dashboard</a></li>
           <li><a href="preregistration.html" class="dribbble-nav-link"><span>📂</span> Pre-Registration</a></li>
@@ -51,7 +115,7 @@
         </ul>
       </div>
 
-      <!-- Sidebar Bottom Student Promo Character Card -->
+      <!-- Sidebar Bottom Student Promo Box -->
       <div class="sidebar-promo-box">
         <img src="assets/images/student.png" alt="Student Character" style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.5rem auto; border: 3px solid #a855f7;">
         <h4 style="font-size: 0.875rem; font-weight: 800; color: #1e1b4b; margin-bottom: 0.2rem;">Mohammad Ridwan</h4>
@@ -63,11 +127,10 @@
     <!-- 2. Center Main Dashboard Column -->
     <main class="dribbble-center-content">
 
-      <!-- Dribbble Top Bar (Title, Search, Utility Popovers & Profile) -->
+      <!-- Dribbble Top Bar -->
       <div class="dribbble-topbar">
         <h1 class="dribbble-page-title">Dashboard</h1>
 
-        <!-- Top Utility Menus (Students, Others, TER, Application, IQAC) -->
         <div style="display: flex; align-items: center; gap: 1rem;">
           <div class="utility-dropdown-container">
             <button type="button" class="utility-dropdown-trigger active-trigger" style="color: #0f172a !important; border: 1px solid #cbd5e1 !important; background: #f8fafc !important;">
@@ -101,13 +164,11 @@
           <span style="font-size: 0.825rem; font-weight: 700; color: #475569;">💻 Application</span>
           <span style="font-size: 0.825rem; font-weight: 700; color: #475569;">💬 IQAC</span>
 
-          <!-- Search Widget -->
-          <div class="dribbble-search-box" style="width: 220px;">
-            <input type="text" class="dribbble-search-input" placeholder="Search functions...">
+          <div class="dribbble-search-box" style="width: 200px;">
+            <input type="text" class="dribbble-search-input" placeholder="Search...">
             <button type="button" class="dribbble-search-btn-circle" aria-label="Search">🔍</button>
           </div>
 
-          <!-- User Profile Dropdown Pill -->
           <div style="display: flex; align-items: center; gap: 0.6rem; background: #f8fafc; padding: 0.35rem 0.75rem; border-radius: 30px; border: 1px solid #e2e8f0;">
             <img src="assets/images/student.png" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
             <span style="font-size: 0.825rem; font-weight: 700; color: #1e293b;">Mohammad Ridwanul Karim</span>
@@ -115,211 +176,141 @@
         </div>
       </div>
 
-      <!-- 4 Pastel Stat KPI Cards (Outstanding Balance, CGPA, Degree Requirement, Required Credits) -->
+      <!-- 4 Stat KPI Cards -->
       <div class="dribbble-kpi-grid">
-        
-        <!-- KPI 1: CGPA -->
-        <div class="dribbble-kpi-card kpi-card-purple">
-          <div class="kpi-icon-badge icon-purple">🎓</div>
-          <div>
-            <div class="kpi-info-val">3.761</div>
-            <div class="kpi-info-lbl">Current CGPA</div>
-          </div>
-        </div>
-
-        <!-- KPI 2: Outstanding Balance -->
-        <div class="dribbble-kpi-card kpi-card-pink">
-          <div class="kpi-icon-badge icon-pink">💳</div>
-          <div>
-            <div class="kpi-info-val">-7.5</div>
-            <div class="kpi-info-lbl">Outstanding Balance</div>
-          </div>
-        </div>
-
-        <!-- KPI 3: Degree Requirement -->
-        <div class="dribbble-kpi-card kpi-card-cyan">
-          <div class="kpi-icon-badge icon-cyan">🏛️</div>
-          <div>
-            <div class="kpi-info-val">2.50</div>
-            <div class="kpi-info-lbl">Degree Requirement</div>
-          </div>
-        </div>
-
-        <!-- KPI 4: Required Credits -->
-        <div class="dribbble-kpi-card kpi-card-gold">
-          <div class="kpi-icon-badge icon-gold">📚</div>
-          <div>
-            <div class="kpi-info-val">163</div>
-            <div class="kpi-info-lbl">Required Credits</div>
-          </div>
-        </div>
-
+        <div class="dribbble-kpi-card kpi-card-purple"><div class="kpi-icon-badge icon-purple">🎓</div><div><div class="kpi-info-val">3.761</div><div class="kpi-info-lbl">Current CGPA</div></div></div>
+        <div class="dribbble-kpi-card kpi-card-pink"><div class="kpi-icon-badge icon-pink">💳</div><div><div class="kpi-info-val">-7.5</div><div class="kpi-info-lbl">Outstanding Balance</div></div></div>
+        <div class="dribbble-kpi-card kpi-card-cyan"><div class="kpi-icon-badge icon-cyan">🏛️</div><div><div class="kpi-info-val">2.50</div><div class="kpi-info-lbl">Degree Requirement</div></div></div>
+        <div class="dribbble-kpi-card kpi-card-gold"><div class="kpi-icon-badge icon-gold">📚</div><div><div class="kpi-info-val">163</div><div class="kpi-info-lbl">Required Credits</div></div></div>
       </div>
 
-      <!-- Charts, Activity & Transport Booking Row -->
-      <div class="dribbble-charts-grid">
+      <!-- Main Interactive Tabs Section (Exact Replica of Uploaded Academic Screenshot) -->
+      <div style="background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0,0,0,0.03); overflow: hidden; margin-top: 1rem;">
         
-        <!-- Left: Statistics Bar Chart Box -->
-        <div class="dribbble-chart-box">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h3 style="font-size: 1rem; font-weight: 800; color: #0f172a;">Statistics</h3>
-            <span style="font-size: 0.75rem; color: #64748b; background: #f1f5f9; padding: 0.2rem 0.5rem; border-radius: 8px; font-weight: 600;">Yearly ▾</span>
-          </div>
-
-          <div style="display: flex; align-items: flex-end; justify-content: space-between; height: 120px; padding: 0 0.75rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5rem;">
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;"><div style="height: 35px; width: 16px; background: #e2e8f0; border-radius: 4px;"></div><span style="font-size: 0.7rem; color: #94a3b8;">2023</span></div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;"><div style="height: 60px; width: 16px; background: #e2e8f0; border-radius: 4px;"></div><span style="font-size: 0.7rem; color: #94a3b8;">2024</span></div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;"><div style="height: 50px; width: 16px; background: #e2e8f0; border-radius: 4px;"></div><span style="font-size: 0.7rem; color: #94a3b8;">2025</span></div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;"><div style="height: 100px; width: 16px; background: linear-gradient(180deg, #d946ef, #a855f7); border-radius: 4px; box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);"></div><span style="font-size: 0.75rem; font-weight: 800; color: #a855f7;">2026</span></div>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;"><div style="height: 80px; width: 16px; background: #e2e8f0; border-radius: 4px;"></div><span style="font-size: 0.7rem; color: #94a3b8;">2027</span></div>
-          </div>
+        <!-- Royal Blue Header Bar with White Pills (Matching Uploaded Image) -->
+        <div class="dribbble-tab-bar-container" role="tablist">
+          <button type="button" class="dribbble-tab-pill-btn" onclick="switchAcademicTab('overview', this)">Overview</button>
+          <button type="button" class="dribbble-tab-pill-btn" onclick="switchAcademicTab('contact', this)">Contact</button>
+          <button type="button" class="dribbble-tab-pill-btn active-tab" onclick="switchAcademicTab('academic', this)">Academic</button>
+          <button type="button" class="dribbble-tab-pill-btn" onclick="switchAcademicTab('advisor', this)">Advisor</button>
+          <button type="button" class="dribbble-tab-pill-btn" onclick="switchAcademicTab('syllabus', this)">Syllabus</button>
         </div>
 
-        <!-- Right: Daily Transport Booking Box -->
-        <div class="dribbble-chart-box">
-          <h3 style="font-size: 1rem; font-weight: 800; color: #0f172a; margin-bottom: 0.85rem;">Daily Transport Booking</h3>
+        <div style="padding: 1.5rem;">
           
-          <form action="#" method="POST" onsubmit="alert('Transport Booking Request Submitted!'); return false;">
-            <div style="margin-bottom: 0.65rem;">
-              <label style="font-size: 0.725rem; font-weight: 700; color: #64748b; display: block; margin-bottom: 0.25rem;">Date</label>
-              <input type="text" class="search-input" value="2026-08-26" style="width: 100%; padding: 0.45rem 0.75rem; font-size: 0.825rem; background: #f8fafc;">
+          <!-- TAB 1: OVERVIEW -->
+          <div id="tab-sec-overview" class="tab-panel-content">
+            <h3 class="academic-tab-title" style="color: #0066ff;">Overview</h3>
+            <div class="overview-grid-fields">
+              <div class="overview-field-card"><span class="overview-field-label">Matric No</span><span class="overview-field-value">C243237</span></div>
+              <div class="overview-field-card"><span class="overview-field-label">Name</span><span class="overview-field-value">Mohammad Ridwanul Karim</span></div>
+              <div class="overview-field-card"><span class="overview-field-label">Date of Birth</span><span class="overview-field-value">2005-04-30</span></div>
+              <div class="overview-field-card"><span class="overview-field-label">Father</span><span class="overview-field-value">Mohammad Shajjadul Karim</span></div>
+              <div class="overview-field-card"><span class="overview-field-label">Mother</span><span class="overview-field-value">Khaleda Begum</span></div>
+              <div class="overview-field-card"><span class="overview-field-label">Religion</span><span class="overview-field-value">Islam</span></div>
+              <div class="overview-field-card"><span class="overview-field-label">Gender</span><span class="overview-field-value">Male</span></div>
+              <div class="overview-field-card"><span class="overview-field-label">Nationality</span><span class="overview-field-value">Bangladeshi</span></div>
+              <div class="overview-field-card" style="grid-column: 1 / -1;"><span class="overview-field-label">Department</span><span class="overview-field-value">Computer Science and Engineering</span></div>
             </div>
+          </div>
 
-            <div style="margin-bottom: 0.85rem;">
-              <label style="font-size: 0.725rem; font-weight: 700; color: #64748b; display: block; margin-bottom: 0.25rem;">Select Station</label>
-              <select class="search-input" style="width: 100%; padding: 0.45rem 0.75rem; font-size: 0.825rem; background: #f8fafc;">
-                <option value="Agrabad">Agrabad Station</option>
-                <option value="Halishahar">Halishahar Station</option>
-                <option value="Chawkbazar">Chawkbazar Station</option>
-              </select>
+          <!-- TAB 2: CONTACT -->
+          <div id="tab-sec-contact" class="tab-panel-content">
+            <h3 class="academic-tab-title" style="color: #10b981;">Contact</h3>
+            <div class="contact-cards-grid">
+              <div class="contact-card-box full-width"><div class="contact-card-label">Present Address</div><div class="contact-card-value">417,Shafi Islam Building ### Sonashah Majar Road ### Eidgah Borofkol ### Halishahar ### Chattogram</div></div>
+              <div class="contact-card-box full-width"><div class="contact-card-label">Permanent Address</div><div class="contact-card-value">North Pomra ### Rangunia ### Bulbulipara ### Chattogram</div></div>
+              <div class="contact-card-box"><div class="contact-card-label">Student Phone</div><div class="contact-card-value">01862126812</div></div>
+              <div class="contact-card-box"><div class="contact-card-label">Email</div><div class="contact-card-value">ridwanulk08@gmail.com</div></div>
             </div>
-
-            <button type="submit" class="sidebar-promo-btn" style="width: 100%; padding: 0.5rem;">Book Transport</button>
-          </form>
-        </div>
-
-      </div>
-
-      <!-- Main Database Content Tabs (Overview, Contact, Academic, Advisor, Syllabus, Registration Rules, Exam Rules) -->
-      <div style="background: #ffffff; border-radius: 20px; border: 1px solid #f1f5f9; padding: 1.25rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);">
-        
-        <!-- Tab Header Bar -->
-        <div class="tab-buttons-bar" role="tablist" style="margin-bottom: 1.25rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <button type="button" class="tab-btn active" role="tab" onclick="switchDribbbleTab('overview', this)">Overview</button>
-          <button type="button" class="tab-btn" role="tab" onclick="switchDribbbleTab('contact', this)">Contact</button>
-          <button type="button" class="tab-btn" role="tab" onclick="switchDribbbleTab('academic', this)">Academic</button>
-          <button type="button" class="tab-btn" role="tab" onclick="switchDribbbleTab('advisor', this)">Advisor</button>
-          <button type="button" class="tab-btn" role="tab" onclick="switchDribbbleTab('syllabus', this)">Syllabus</button>
-          <button type="button" class="tab-btn" role="tab" onclick="switchDribbbleTab('regrules', this)">Registration Rules</button>
-          <button type="button" class="tab-btn" role="tab" onclick="switchDribbbleTab('examrules', this)">Exam Rules</button>
-        </div>
-
-        <!-- TAB 1: OVERVIEW -->
-        <div id="drib-overview-tab" class="tab-panel-content active-panel">
-          <h3 class="tab-blue-title" style="font-size: 1.25rem;">Overview</h3>
-          <div class="overview-grid-fields">
-            <div class="overview-field-card"><span class="overview-field-label">Matric No</span><span class="overview-field-value">C243237</span></div>
-            <div class="overview-field-card"><span class="overview-field-label">Name</span><span class="overview-field-value">Mohammad Ridwanul Karim</span></div>
-            <div class="overview-field-card"><span class="overview-field-label">Date of Birth</span><span class="overview-field-value">2005-04-30</span></div>
-            <div class="overview-field-card"><span class="overview-field-label">Father</span><span class="overview-field-value">Mohammad Shajjadul Karim</span></div>
-            <div class="overview-field-card"><span class="overview-field-label">Mother</span><span class="overview-field-value">Khaleda Begum</span></div>
-            <div class="overview-field-card"><span class="overview-field-label">Religion</span><span class="overview-field-value">Islam</span></div>
-            <div class="overview-field-card"><span class="overview-field-label">Gender</span><span class="overview-field-value">Male</span></div>
-            <div class="overview-field-card"><span class="overview-field-label">Nationality</span><span class="overview-field-value">Bangladeshi</span></div>
-            <div class="overview-field-card" style="grid-column: 1 / -1;"><span class="overview-field-label">Department</span><span class="overview-field-value">Computer Science and Engineering</span></div>
-          </div>
-        </div>
-
-        <!-- TAB 2: CONTACT -->
-        <div id="drib-contact-tab" class="tab-panel-content">
-          <h3 class="tab-green-title" style="font-size: 1.25rem;">Contact Details</h3>
-          <div class="contact-cards-grid">
-            <div class="contact-card-box full-width"><div class="contact-card-label">Present Address</div><div class="contact-card-value">417,Shafi Islam Building ### Sonashah Majar Road ### Eidgah Borofkol ### Halishahar ### Chattogram</div></div>
-            <div class="contact-card-box full-width"><div class="contact-card-label">Permanent Address</div><div class="contact-card-value">North Pomra ### Rangunia ### Bulbulipara ### Chattogram</div></div>
-            <div class="contact-card-box"><div class="contact-card-label">Student Phone</div><div class="contact-card-value">01862126812</div></div>
-            <div class="contact-card-box"><div class="contact-card-label">Email</div><div class="contact-card-value">ridwanulk08@gmail.com</div></div>
-          </div>
-        </div>
-
-        <!-- TAB 3: ACADEMIC -->
-        <div id="drib-academic-tab" class="tab-panel-content">
-          <h3 class="tab-purple-title" style="font-size: 1.25rem;">Academic Record</h3>
-          <table class="academic-table">
-            <thead>
-              <tr><th>Exam</th><th>Roll / Reg</th><th>Year</th><th>GPA</th><th>Board</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>HSC / Equivalent</td><td>120491 / 1814201948</td><td>2023</td><td>4.58</td><td>Chattogram</td></tr>
-              <tr><td>SSC / Equivalent</td><td>189201 / 1814201948</td><td>2021</td><td>5.00</td><td>Chattogram</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- TAB 4: ADVISOR -->
-        <div id="drib-advisor-tab" class="tab-panel-content">
-          <h3 class="tab-orange-title" style="font-size: 1.25rem;">Academic Advisor</h3>
-          <div class="advisor-card-box">
-            <div class="advisor-name">Dr. Mohammad Aman Ullah</div>
-            <div class="advisor-detail-item">🎓 Associate Professor, Dept of CSE</div>
-            <div class="advisor-detail-item">✉️ amanullah@iiuc.ac.bd | 📱 +8801819123456</div>
-          </div>
-        </div>
-
-        <!-- TAB 5: SYLLABUS (123 COURSES) -->
-        <div id="drib-syllabus-tab" class="tab-panel-content">
-          <h3 class="tab-blue-title" style="font-size: 1.25rem;">Syllabus (123 Courses)</h3>
-          <div class="syllabus-filter-bar">
-            <select id="drib-sem-filter" class="search-input" style="width: 160px;" onchange="filterDribSyllabus()">
-              <option value="all">All Semesters</option>
-              <option value="1">Semester 1</option><option value="2">Semester 2</option><option value="3">Semester 3</option><option value="4">Semester 4</option>
-            </select>
-            <input type="text" id="drib-search-input" class="search-input" placeholder="Search course code..." style="width: 220px;" onkeyup="filterDribSyllabus()">
           </div>
 
-          <div style="overflow-x: auto;">
-            <table class="syllabus-table" id="drib-master-syllabus-table">
+          <!-- TAB 3: ACADEMIC (EXACT REPLICA OF UPLOADED SCREENSHOT) -->
+          <div id="tab-sec-academic" class="tab-panel-content active-panel">
+            <h3 class="academic-tab-title">Academic</h3>
+            <div style="height: 1px; background: #e9ecef; width: 100%; margin-bottom: 1.5rem;"></div>
+
+            <table class="academic-table-exact" summary="Exact Academic Qualifications Summary Table">
               <thead>
-                <tr><th>SL</th><th>Course Code</th><th>Course Title</th><th>C.H</th><th>Sem</th></tr>
+                <tr>
+                  <th style="width: 70px;">SL</th>
+                  <th style="width: 140px;">Exam</th>
+                  <th>Board</th>
+                  <th>Gourp/Subject</th>
+                  <th style="width: 120px;">Year</th>
+                  <th style="width: 100px;">GPA</th>
+                </tr>
               </thead>
               <tbody>
-                <tr class="drib-sem-head" data-sem="1"><td colspan="5" style="background:#f1f5f9; font-weight:700;">Semester 1</td></tr>
-                <tr class="drib-c-row" data-sem="1"><td>1</td><td>CSE-1121</td><td style="text-align:left;">Computer Programming 1</td><td>3</td><td>1</td></tr>
-                <tr class="drib-c-row" data-sem="1"><td>2</td><td>CSE-1122</td><td style="text-align:left;">Computer Programming 1 Lab</td><td>1.5</td><td>1</td></tr>
-                <tr class="drib-c-row" data-sem="1"><td>3</td><td>EEE-1121</td><td style="text-align:left;">Basic Electrical Engineering</td><td>3</td><td>1</td></tr>
-                <tr class="drib-c-row" data-sem="1"><td>4</td><td>MATH-1107</td><td style="text-align:left;">Mathematics I</td><td>3</td><td>1</td></tr>
-                
-                <tr class="drib-sem-head" data-sem="2"><td colspan="5" style="background:#f1f5f9; font-weight:700;">Semester 2</td></tr>
-                <tr class="drib-c-row" data-sem="2"><td>5</td><td>CSE-1221</td><td style="text-align:left;">Computer Programming II</td><td>3</td><td>2</td></tr>
-                <tr class="drib-c-row" data-sem="2"><td>6</td><td>CSE-1223</td><td style="text-align:left;">Discrete Mathematics</td><td>3</td><td>2</td></tr>
+                <tr>
+                  <td>1</td>
+                  <td>SSC</td>
+                  <td>Chittagong Board</td>
+                  <td>Science</td>
+                  <td>2021</td>
+                  <td>5.00</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>HSC</td>
+                  <td>Chittagong Board</td>
+                  <td>Science</td>
+                  <td>2023</td>
+                  <td>4.67</td>
+                </tr>
               </tbody>
             </table>
           </div>
-        </div>
 
-        <!-- TAB 6: REGISTRATION RULES -->
-        <div id="drib-regrules-tab" class="tab-panel-content">
-          <h3 class="tab-blue-title" style="font-size: 1.25rem;">Registration Rules</h3>
-          <ol style="padding-left: 1.2rem; font-size: 0.85rem; line-height: 1.6; color: #334155;">
-            <li>Students must complete Pre-Registration within the scheduled dates.</li>
-            <li>Once submitted, you may edit & resubmit before deadline.</li>
-            <li>Prerequisite rules apply after semester result publication.</li>
-            <li>Pre-registration will be cancelled if payment is not completed within deadline.</li>
-          </ol>
-        </div>
+          <!-- TAB 4: ADVISOR -->
+          <div id="tab-sec-advisor" class="tab-panel-content">
+            <h3 class="academic-tab-title" style="color: #f59e0b;">Advisor</h3>
+            <div class="advisor-card-box">
+              <div class="advisor-name">Dr. Mohammad Aman Ullah</div>
+              <div class="advisor-detail-item">🎓 Associate Professor, Dept of CSE</div>
+              <div class="advisor-detail-item">✉️ amanullah@iiuc.ac.bd | 📱 +8801819123456</div>
+            </div>
+          </div>
 
-        <!-- TAB 7: EXAM RULES -->
-        <div id="drib-examrules-tab" class="tab-panel-content">
-          <h3 class="tab-purple-title" style="font-size: 1.25rem;">Exam Rules</h3>
-          <p style="font-size: 0.85rem; color: #334155; line-height: 1.6;">Admit cards cannot be downloaded unless pre-registration is completed. A student must maintain a minimum GPA of 2.00 in each semester.</p>
+          <!-- TAB 5: SYLLABUS -->
+          <div id="tab-sec-syllabus" class="tab-panel-content">
+            <h3 class="academic-tab-title" style="color: #0284c7;">Syllabus</h3>
+            <div class="syllabus-filter-bar">
+              <select id="exact-sem-filter" class="search-input" style="width: 160px;" onchange="filterExactSyllabus()">
+                <option value="all">All Semesters</option>
+                <option value="1">Semester 1</option><option value="2">Semester 2</option><option value="3">Semester 3</option><option value="4">Semester 4</option>
+              </select>
+              <input type="text" id="exact-search-input" class="search-input" placeholder="Search course..." style="width: 220px;" onkeyup="filterExactSyllabus()">
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="syllabus-table" id="exact-master-syllabus-table">
+                <thead>
+                  <tr><th>SL</th><th>Course Code</th><th>Course Title</th><th>C.H</th><th>Sem</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="exact-sem-head" data-sem="1"><td colspan="5" style="background:#f1f5f9; font-weight:700;">Semester 1</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>1</td><td>CSE-1121</td><td style="text-align:left;">Computer Programming 1</td><td>3</td><td>1</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>2</td><td>CSE-1122</td><td style="text-align:left;">Computer Programming 1 Lab</td><td>1.5</td><td>1</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>3</td><td>EEE-1121</td><td style="text-align:left;">Basic Electrical Engineering</td><td>3</td><td>1</td></tr>
+                  <tr class="exact-c-row" data-sem="1"><td>4</td><td>MATH-1107</td><td style="text-align:left;">Mathematics I</td><td>3</td><td>1</td></tr>
+                  
+                  <tr class="exact-sem-head" data-sem="2"><td colspan="5" style="background:#f1f5f9; font-weight:700;">Semester 2</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>5</td><td>CSE-1221</td><td style="text-align:left;">Computer Programming II</td><td>3</td><td>2</td></tr>
+                  <tr class="exact-c-row" data-sem="2"><td>6</td><td>CSE-1223</td><td style="text-align:left;">Discrete Mathematics</td><td>3</td><td>2</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
         </div>
 
       </div>
 
     </main>
 
-    <!-- 3. Right Sidebar Panel (Calendar, Class Schedule & Notice Board) -->
+    <!-- 3. Right Sidebar Panel -->
     <aside class="dribbble-right-panel">
-      
       <!-- Calendar Widget -->
       <div class="dribbble-calendar-card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem;">
@@ -336,82 +327,54 @@
         </div>
       </div>
 
-      <!-- Class Routine Schedule Cards -->
+      <!-- Routine Schedule Cards -->
       <div style="display: flex; flex-direction: column; gap: 0.65rem;">
         <h4 style="font-size: 0.875rem; font-weight: 800; color: #0f172a;">Class Routine</h4>
-        
         <div style="background: #ffffff; padding: 0.75rem; border-radius: 14px; border: 1px solid #f1f5f9; display: flex; align-items: center; gap: 0.65rem;">
           <img src="assets/images/student.png" alt="Teacher" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
-          <div>
-            <h5 style="font-size: 0.8rem; font-weight: 800; color: #0f172a;">Nathan Mcclam</h5>
-            <span style="font-size: 0.675rem; color: #64748b;">10 AM - 12 PM | CSE-2421</span>
-          </div>
+          <div><h5 style="font-size: 0.8rem; font-weight: 800; color: #0f172a;">Nathan Mcclam</h5><span style="font-size: 0.675rem; color: #64748b;">10 AM - 12 PM | CSE-2421</span></div>
         </div>
-
         <div style="background: #ffffff; padding: 0.75rem; border-radius: 14px; border: 1px solid #f1f5f9; display: flex; align-items: center; gap: 0.65rem;">
           <img src="assets/images/student.png" alt="Teacher" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
-          <div>
-            <h5 style="font-size: 0.8rem; font-weight: 800; color: #0f172a;">Daniel Veror</h5>
-            <span style="font-size: 0.675rem; color: #64748b;">10 AM - 12 PM | EEE-2421</span>
-          </div>
+          <div><h5 style="font-size: 0.8rem; font-weight: 800; color: #0f172a;">Daniel Veror</h5><span style="font-size: 0.675rem; color: #64748b;">10 AM - 12 PM | EEE-2421</span></div>
         </div>
       </div>
 
       <!-- Notice Board Widget -->
       <div class="notice-board-card">
         <h4 style="font-size: 0.875rem; font-weight: 800; color: #0f172a; margin-bottom: 0.75rem;">Notice Board</h4>
-        
-        <div class="notice-item-row">
-          <img src="assets/images/logo.png" alt="Notice" class="notice-thumb-img" style="background: #ede9fe; padding: 0.2rem;">
-          <div>
-            <h6 style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">Special Examination Notice</h6>
-            <span style="font-size: 0.675rem; color: #94a3b8;">By - Justin Langer</span>
-          </div>
-        </div>
-
-        <div class="notice-item-row">
-          <img src="assets/images/logo.png" alt="Notice" class="notice-thumb-img" style="background: #ffe4e6; padding: 0.2rem;">
-          <div>
-            <h6 style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">Time Extension Notice</h6>
-            <span style="font-size: 0.675rem; color: #94a3b8;">By - Daniel Veror</span>
-          </div>
-        </div>
-
-        <div class="notice-item-row">
-          <img src="assets/images/logo.png" alt="Notice" class="notice-thumb-img" style="background: #e0f2fe; padding: 0.2rem;">
-          <div>
-            <h6 style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">COVID-19 Vaccination Survey</h6>
-            <span style="font-size: 0.675rem; color: #94a3b8;">By - Jacob Oram</span>
-          </div>
-        </div>
+        <div class="notice-item-row"><img src="assets/images/logo.png" alt="Notice" class="notice-thumb-img" style="background: #ede9fe; padding: 0.2rem;"><div><h6 style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">Special Examination Notice</h6><span style="font-size: 0.675rem; color: #94a3b8;">By - Justin Langer</span></div></div>
+        <div class="notice-item-row"><img src="assets/images/logo.png" alt="Notice" class="notice-thumb-img" style="background: #ffe4e6; padding: 0.2rem;"><div><h6 style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">Time Extension Notice</h6><span style="font-size: 0.675rem; color: #94a3b8;">By - Daniel Veror</span></div></div>
+        <div class="notice-item-row"><img src="assets/images/logo.png" alt="Notice" class="notice-thumb-img" style="background: #e0f2fe; padding: 0.2rem;"><div><h6 style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">COVID-19 Vaccination Survey</h6><span style="font-size: 0.675rem; color: #94a3b8;">By - Jacob Oram</span></div></div>
       </div>
-
     </aside>
 
   </div>
 
-  <!-- JavaScript for Interactive Tabs -->
+  <!-- JavaScript for Switching Academic Tab Sections -->
   <script>
-    function switchDribbbleTab(tabId, btn) {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+    function switchAcademicTab(tabKey, btnElement) {
+      document.querySelectorAll('.dribbble-tab-pill-btn').forEach(btn => btn.classList.remove('active-tab'));
+      btnElement.classList.add('active-tab');
 
-      document.querySelectorAll('.tab-panel-content').forEach(p => p.classList.remove('active-panel'));
-      const target = document.getElementById('drib-' + tabId + '-tab');
-      if (target) target.classList.add('active-panel');
+      document.querySelectorAll('.tab-panel-content').forEach(panel => panel.classList.remove('active-panel'));
+      const targetPanel = document.getElementById('tab-sec-' + tabKey);
+      if (targetPanel) {
+        targetPanel.classList.add('active-panel');
+      }
     }
 
-    function filterDribSyllabus() {
-      const sem = document.getElementById('drib-sem-filter').value;
-      const q = document.getElementById('drib-search-input').value.toLowerCase();
+    function filterExactSyllabus() {
+      const sem = document.getElementById('exact-sem-filter').value;
+      const query = document.getElementById('exact-search-input').value.toLowerCase();
 
-      document.querySelectorAll('.drib-c-row').forEach(r => {
-        const sAttr = r.getAttribute('data-sem');
-        const text = r.innerText.toLowerCase();
-        if ((sem === 'all' || sAttr === sem) && (q === '' || text.includes(q))) {
-          r.style.display = '';
+      document.querySelectorAll('.exact-c-row').forEach(row => {
+        const sAttr = row.getAttribute('data-sem');
+        const text = row.innerText.toLowerCase();
+        if ((sem === 'all' || sAttr === sem) && (query === '' || text.includes(query))) {
+          row.style.display = '';
         } else {
-          r.style.display = 'none';
+          row.style.display = 'none';
         }
       });
     }
