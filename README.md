@@ -3,10 +3,9 @@
 ![IIUC Banner](https://img.shields.io/badge/IIUC-Student%20Portal-blue?style=for-the-badge&logo=education)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-A modern, responsive, and feature-rich **Student Portal System** designed and built for the students of **International Islamic University Chittagong (IIUC)**. This application provides a unified digital experience for course registration, academic result tracking, fee calculations, waiver applications, IQAC evaluations, thesis supervisor submissions, transport management, and student profile updating.
+A modern, responsive, and feature-rich **Student Portal System** designed and built for the students of **International Islamic University Chittagong (IIUC)** using **100% Pure HTML5 & CSS3**. This application provides a seamless digital experience for course registration, academic result tracking, fee calculations, waiver applications, IQAC evaluations, thesis supervisor submissions, transport management, and student profile updating without relying on JavaScript runtime dependencies.
 
 ---
 
@@ -122,16 +121,16 @@ To run this project locally on your machine:
    cd student-portal
    ```
 3. **Launch the web application**:
-   - Open `index.html` or `dashboard.html` directly in any modern web browser (Google Chrome, Mozilla Firefox, Safari, Microsoft Edge).
-   - Alternatively, use VS Code **Live Server** extension.
+   - Open `index.html` or `dashboard.html` directly in any modern web browser.
+   - Zero installation or build commands required.
 
 ---
 
 ## 🛠️ Technology Stack
 
 - **HTML5**: Semantic document structure (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`).
-- **CSS3**: Custom CSS variables, Flexbox layouts, CSS Grid systems, custom scrollbars, glassmorphism overlays, and responsive breakpoints.
-- **JavaScript ES6**: Client-side interactive modals, popover dropdown controllers, and tab switching handlers.
+- **CSS3**: Custom CSS variables, Flexbox layouts, CSS Grid systems, custom scrollbars, and responsive breakpoints.
+- **Pure Static Architecture**: 100% pure HTML & CSS build without JavaScript scripts or frameworks.
 
 ---
 
