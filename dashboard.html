@@ -256,10 +256,20 @@
             <button type="button" class="dribbble-search-btn-circle" aria-label="Search">🔍</button>
           </div>
 
-          <div style="display: flex; align-items: center; gap: 0.6rem; background: #f8fafc; padding: 0.35rem 0.75rem; border-radius: 30px; border: 1px solid #e2e8f0;">
-            <img src="assets/images/student.png" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover;">
-            <span style="font-size: 0.825rem; font-weight: 700; color: #1e293b;">Mohammad Ridwanul Karim</span>
+          <div class="utility-dropdown-container">
+        <button type="button" class="profile-pill-trigger" aria-haspopup="true" aria-label="User Profile Menu">
+          <img src="assets/images/student.png" alt="Mohammad Ridwanul Karim" class="profile-pill-avatar">
+          <div class="profile-pill-name">
+            <span class="profile-name-line">Mohammad</span>
+            <span class="profile-name-line">Ridwanul Karim</span>
           </div>
+        </button>
+        <div class="utility-dropdown-menu menu-right profile-popover-menu" role="menu">
+          <a href="index.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🔒</span> Logout</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🏠</span> Update Profile</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">⚙️</span> Change Password</a>
+        </div>
+      </div>
         </div>
       </div>
 

@@ -318,6 +318,59 @@ img {
   transform: rotate(45deg);
 }
 
+/* User Profile Rounded Pill Trigger (Exact Match for uploaded media_1787810339664.png) */
+.profile-pill-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: #f4f8fc;
+  border: 1px solid #d0e1f9;
+  border-radius: 40px;
+  padding: 0.25rem 1.25rem 0.25rem 0.3rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s ease;
+  color: #1e293b;
+  text-decoration: none !important;
+}
+
+.profile-pill-trigger:hover,
+.utility-dropdown-container:hover .profile-pill-trigger {
+  background: #e2eefb;
+  border-color: #b8d4f6;
+}
+
+.profile-pill-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.profile-pill-name {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.15;
+}
+
+.profile-name-line {
+  font-size: 0.825rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+}
+
+.profile-popover-menu {
+  min-width: 200px;
+  padding: 0.4rem 0;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #cbd5e1;
+}
+
 .utility-dropdown-menu.menu-right::before {
   left: auto;
   right: 20px;
