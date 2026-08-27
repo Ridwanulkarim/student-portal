@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IIUC Submit Thesis/Project Proposal - International Islamic University Chittagong">
+  <title>Thesis/Project Proposal | IIUC Student Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .proposal-card-wrapper {
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      margin-bottom: 2rem;
+    }
+
+    .proposal-cyan-header {
+      background: #0284c7;
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .proposal-tab-green {
+      background: #84cc16;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .proposal-tab-blue {
+      background: #0284c7;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 4px;
+      border: 1px solid #38bdf8;
+      cursor: pointer;
+    }
+
+    .proposal-form-container {
+      padding: 2rem 2.5rem 3rem 2.5rem;
+    }
+
+    .proposal-grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .proposal-field-row {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .proposal-label {
+      width: 140px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #334155;
+      flex-shrink: 0;
+    }
+
+    .proposal-select {
+      width: 220px;
+      padding: 0.45rem 0.65rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.825rem;
+      color: #1e293b;
+      background-color: #ffffff;
+    }
+
+    .proposal-input-green {
+      width: 100%;
+      padding: 0.45rem 0.65rem;
+      border: 1px solid #a3e635;
+      border-radius: 4px;
+      font-size: 0.825rem;
+      color: #1e293b;
+      background-color: #ffffff;
+    }
+
+    .proposal-textarea-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .proposal-textarea-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 0.35rem;
+    }
+
+    .proposal-textarea {
+      width: 100%;
+      height: 55px;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.825rem;
+      color: #1e293b;
+      background-color: #ffffff;
+      resize: vertical;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+
+    .btn-proposal-submit {
+      background-color: #5b6b8c;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: none;
+      padding: 0.55rem 1.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 1.5rem auto 0 auto;
+      display: block;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-proposal-submit:hover {
+      background-color: #475569;
+    }
+  </style>
+</head>
+<body class="dashboard-body">
+
+  <!-- 1. Top Utility Navigation Bar -->
+  <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
+    <div class="top-utility-left">
+      <!-- Students Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Students Menu">
+          <span>👥</span> Students ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="preregistration.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Pre Registration</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Registration</a>
+          <a href="paymenthistory.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment History</a>
+          <a href="printcourseregistration.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Print Course Registration</a>
+          <a href="adddrop.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Add Drop Courses</a>
+          <a href="updatetransport.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Semester Transport Update</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Result View</a>
+          <a href="paymenthistory.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment Advising</a>
+          <a href="withdraw.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Withdraw</a>
+          <a href="registrationsummary.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Registration Summary</a>
+          <a href="coursestatus.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Status</a>
+          <a href="updatetransport.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Update Transport</a>
+          <a href="setmajorcourses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Set Major Courses</a>
+          <a href="mdpresult.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> MDP Result View</a>
+        </div>
+      </div>
+
+      <!-- Others Dropdown -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Others Menu">
+          <span>🏢</span> Others ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="wifipassword.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Wifi Password</a>
+          <a href="complain.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Complain Box</a>
+          <a href="feecalculator.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Fee Calculator</a>
+          <a href="recentcomplain.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Recent Complain</a>
+        </div>
+      </div>
+
+      <!-- TER Dropdown Container -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="TER Menu">
+          <span>⏱</span> TER ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="ter.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> TER Submission</a>
+        </div>
+      </div>
+
+      <!-- Application Dropdown Container -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Application Menu">
+          <span>💻</span> Application ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="financialassistance.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Financial Assistance on GPA</a>
+          <a href="siblings.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Waiver on Siblings</a>
+          <a href="sschscscholarship.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Waiver on SSC HSC Result</a>
+          <a href="covidwaiver.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Waiver for Covid 19</a>
+          <a href="pendingapplication.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Pending Application</a>
+          <a href="specialarrangement.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Special Arrangment</a>
+          <a href="differentforms.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Different Type of Forms</a>
+          <a href="specialexam.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Special Examination</a>
+          <a href="readmission.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Readmission Application</a>
+          <a href="resultrecheck.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Result Recheck</a>
+          <a href="hostelapplication.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Hostel Application Form</a>
+          <a href="certificateapplication.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Application for Certificate/Testimonial</a>
+        </div>
+      </div>
+
+      <!-- IQAC Dropdown Container -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="IQAC Menu">
+          <span>💬</span> IQAC ▾
+        </button>
+        <div class="utility-dropdown-menu" role="menu">
+          <a href="coursesurvey.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Survey</a>
+          <a href="studentsurvey.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Student Survey</a>
+          <a href="exitsurvey.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Exit Survey</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="top-utility-right">
+      <!-- User Profile Dropdown Container -->
+      <div class="utility-dropdown-container">
+        <button type="button" class="profile-pill-trigger" aria-haspopup="true" aria-label="User Profile Menu">
+          <img src="assets/images/student.png" alt="Mohammad Ridwanul Karim" class="profile-pill-avatar">
+          <div class="profile-pill-name">
+            <span class="profile-name-line">Mohammad</span>
+            <span class="profile-name-line">Ridwanul Karim</span>
+          </div>
+        </button>
+        <div class="utility-dropdown-menu menu-right profile-popover-menu" role="menu">
+          <a href="index.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🔒</span> Logout</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">🏠</span> Update Profile</a>
+          <a href="profile.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">⚙️</span> Change Password</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Main University Header -->
+  <header class="portal-main-header">
+    <a href="dashboard.html" class="iiuc-logo-group" aria-label="IIUC Portal Homepage">
+      <img src="assets/images/logo.png" alt="IIUC Official Crest Logo" class="iiuc-header-logo">
+      <div class="iiuc-title-block">
+        <h2>আন্তর্জাতিক ইসলামী বিশ্ববিদ্যালয় চট্টগ্রাম</h2>
+        <h1>International Islamic University Chittagong</h1>
+        <p>Kumira, Sitakunda, Chattogram, Bangladesh</p>
+      </div>
+    </a>
+
+    <div class="header-search-widget">
+      <span class="current-date-text">August 27, 2026 Thursday</span>
+      <div class="search-input-group">
+        <input type="text" class="search-input" placeholder="Search portal options..." aria-label="Search portal">
+        <button type="button" class="search-btn" style="background: linear-gradient(to bottom, #f05050, #e74c3c); border-color: #d9534f;">Search & Find</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Submit Thesis/Project Proposal Main Content Container -->
+  <main class="prereg-container" style="max-width: 1250px; margin: 1rem auto; padding: 0 1rem;">
+    <div class="proposal-card-wrapper">
+      
+      <!-- Cyan Banner Header with Tabs -->
+      <div class="proposal-cyan-header">
+        <span class="proposal-tab-green">Submit Thesis/Project Proposal</span>
+        <span class="proposal-tab-blue">Update Reference</span>
+      </div>
+
+      <!-- Form Area -->
+      <div class="proposal-form-container">
+        <form action="dashboard.html" method="GET">
+          
+          <!-- Thesis/Project Type -->
+          <div class="proposal-field-row">
+            <label class="proposal-label">Thesis/Project Type</label>
+            <select name="type" class="proposal-select">
+              <option value="" selected>Select Type</option>
+              <option value="thesis">Thesis</option>
+              <option value="project">Project</option>
+            </select>
+          </div>
+
+          <!-- Co Authors Grid -->
+          <div class="proposal-grid-2col">
+            <div class="proposal-field-row" style="margin-bottom: 0;">
+              <label class="proposal-label">Co Author 1</label>
+              <input type="text" name="co_author_1" class="proposal-input-green">
+            </div>
+            <div class="proposal-field-row" style="margin-bottom: 0;">
+              <label class="proposal-label" style="width: 100px;">Co Author 2</label>
+              <input type="text" name="co_author_2" class="proposal-input-green">
+            </div>
+          </div>
+
+          <!-- Thesis/Project Title -->
+          <div class="proposal-textarea-group" style="margin-top: 1rem;">
+            <label class="proposal-textarea-label">Thesis/Project Title</label>
+            <textarea name="title" class="proposal-textarea" style="height: 45px;"></textarea>
+          </div>
+
+          <!-- Background -->
+          <div class="proposal-textarea-group">
+            <label class="proposal-textarea-label">Background</label>
+            <textarea name="background" class="proposal-textarea"></textarea>
+          </div>
+
+          <!-- Objective -->
+          <div class="proposal-textarea-group">
+            <label class="proposal-textarea-label">Objective</label>
+            <textarea name="objective" class="proposal-textarea"></textarea>
+          </div>
+
+          <!-- Outcome -->
+          <div class="proposal-textarea-group">
+            <label class="proposal-textarea-label">Outcome</label>
+            <textarea name="outcome" class="proposal-textarea"></textarea>
+          </div>
+
+          <!-- Methodology -->
+          <div class="proposal-textarea-group">
+            <label class="proposal-textarea-label">Methodology</label>
+            <textarea name="methodology" class="proposal-textarea"></textarea>
+          </div>
+
+          <button type="submit" class="btn-proposal-submit">Submit</button>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 4. Main Footer -->
+  <footer class="portal-main-footer" style="text-align: center; padding: 1.5rem 0; color: #64748b; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem;">
+    <p>Copyright © 2026 All rights reserved IIUC | Developed by IT Division IIUC</p>
+    <p style="margin-top: 0.35rem; font-size: 0.75rem;">Page rendered in 0.0420 seconds. | <a href="#" style="color: #0284c7; text-decoration: none;">Legal</a> | <a href="#" style="color: #0284c7; text-decoration: none;">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
