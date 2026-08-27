@@ -6,10 +6,136 @@
   <meta name="description" content="IIUC Student Profile Update - International Islamic University Chittagong">
   <title>Student Profile | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .profile-card-wrapper {
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      margin-bottom: 2rem;
+    }
+
+    .profile-cyan-header {
+      background: #0284c7;
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-tab-pill {
+      background: #84cc16;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 4px;
+    }
+
+    .profile-content-container {
+      padding: 1.5rem 2rem 2.5rem 2rem;
+    }
+
+    .profile-peach-alert {
+      background-color: #ffd8cc;
+      color: #dc2626;
+      font-weight: 800;
+      font-size: 0.95rem;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+    }
+
+    .profile-grid-3col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 240px;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .profile-field-row {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      align-items: center;
+      margin-bottom: 0.9rem;
+      gap: 0.75rem;
+    }
+
+    .profile-label {
+      font-size: 0.775rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .profile-value-text {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1e293b;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    .profile-input-green {
+      width: 100%;
+      padding: 0.4rem 0.6rem;
+      border: 1px solid #a3e635;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      color: #1e293b;
+      background-color: #ffffff;
+    }
+
+    .profile-select {
+      width: 100%;
+      padding: 0.4rem 0.6rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      color: #1e293b;
+      background-color: #ffffff;
+    }
+
+    .profile-portrait-box {
+      width: 100%;
+      height: 280px;
+      background: #b0e0e6;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #cbd5e1;
+    }
+
+    .profile-portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .btn-profile-submit {
+      background-color: #5b6b8c;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: none;
+      padding: 0.55rem 1.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 2rem auto 0 auto;
+      display: block;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-profile-submit:hover {
+      background-color: #475569;
+    }
+  </style>
 </head>
 <body class="dashboard-body">
 
-  <!-- 1. Top Cyan Utility Navigation Bar -->
+  <!-- 1. Top Utility Navigation Bar -->
   <div class="top-utility-bar" role="navigation" aria-label="Top Utility Bar">
     <div class="top-utility-left">
       <!-- Students Dropdown -->
@@ -24,8 +150,8 @@
           <a href="printcourseregistration.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Print Course Registration</a>
           <a href="adddrop.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Add Drop Courses</a>
           <a href="updatetransport.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Semester Transport Update</a>
-          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Result View</a>
-          <a href="results.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment Advising</a>
+          <a href="courses.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Students Result View</a>
+          <a href="paymenthistory.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Payment Advising</a>
           <a href="withdraw.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Withdraw</a>
           <a href="registrationsummary.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Registration Summary</a>
           <a href="coursestatus.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Course Status</a>
@@ -37,7 +163,7 @@
 
       <!-- Others Dropdown -->
       <div class="utility-dropdown-container">
-        <button type="button" class="utility-dropdown-trigger active-trigger" aria-haspopup="true" aria-label="Others Menu">
+        <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Others Menu">
           <span>🏢</span> Others ▾
         </button>
         <div class="utility-dropdown-menu" role="menu">
@@ -48,7 +174,7 @@
         </div>
       </div>
 
-            <!-- TER Dropdown Container -->
+      <!-- TER Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="TER Menu">
           <span>⏱</span> TER ▾
@@ -57,6 +183,8 @@
           <a href="ter.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> TER Submission</a>
         </div>
       </div>
+
+      <!-- Application Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Application Menu">
           <span>💻</span> Application ▾
@@ -76,6 +204,8 @@
           <a href="certificateapplication.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Application for Certificate/Testimonial</a>
         </div>
       </div>
+
+      <!-- IQAC Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="IQAC Menu">
           <span>💬</span> IQAC ▾
@@ -86,10 +216,11 @@
           <a href="exitsurvey.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Exit Survey</a>
         </div>
       </div>
+
     </div>
 
     <div class="top-utility-right">
-      <!-- User Profile Dropdown -->
+      <!-- User Profile Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="profile-pill-trigger" aria-haspopup="true" aria-label="User Profile Menu">
           <img src="assets/images/student.png" alt="Mohammad Ridwanul Karim" class="profile-pill-avatar">
@@ -119,161 +250,159 @@
     </a>
 
     <div class="header-search-widget">
-      <span class="current-date-text">August 26, 2026 Wednesday</span>
+      <span class="current-date-text">August 27, 2026 Thursday</span>
       <div class="search-input-group">
         <input type="text" class="search-input" placeholder="Search portal options..." aria-label="Search portal">
-        <button type="button" class="search-btn">Search & Find</button>
+        <button type="button" class="search-btn" style="background: linear-gradient(to bottom, #f05050, #e74c3c); border-color: #d9534f;">Search & Find</button>
       </div>
     </div>
   </header>
 
   <!-- 3. Profile Main Content Container -->
-  <main class="prereg-container">
-    <div class="prereg-card-wrapper">
+  <main class="prereg-container" style="max-width: 1250px; margin: 1rem auto; padding: 0 1rem;">
+    <div class="profile-card-wrapper">
       
       <!-- Cyan Banner Header with Green Tab Pill -->
-      <div class="prereg-cyan-header">
-        <span class="prereg-tab-pill">Profile</span>
+      <div class="profile-cyan-header">
+        <span class="profile-tab-pill">Profile</span>
       </div>
 
-      <!-- Peach Alert Banner -->
-      <div class="profile-alert-banner" role="alert">
-        Please update your profile with your Birth Certificate Number or National ID Number
-      </div>
+      <!-- Form Area -->
+      <div class="profile-content-container">
+        
+        <!-- Peach Warning Banner -->
+        <div class="profile-peach-alert">
+          Please update your profile with your Birth Certificate Number or National ID Number
+        </div>
 
-      <!-- Student Profile Form Grid -->
-      <form action="#" method="POST" onsubmit="alert('Profile Updated Successfully!'); return false;">
-        <div class="profile-page-grid">
+        <form action="dashboard.html" method="GET">
           
-          <!-- Column 1: Left Bio & Contact Fields -->
-          <div>
-            <div class="profile-field-row">
-              <span class="profile-field-label">Matric No</span>
-              <span class="profile-field-value-text">C243237</span>
+          <div class="profile-grid-3col">
+            
+            <!-- Column 1: Left Fields -->
+            <div>
+              <div class="profile-field-row">
+                <label class="profile-label">Matric No</label>
+                <span class="profile-value-text">C243237</span>
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Name</label>
+                <span class="profile-value-text">Mohammad Ridwanul Karim</span>
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Date of Birth</label>
+                <span class="profile-value-text">2005-04-30</span>
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Father Name</label>
+                <span class="profile-value-text">Mohammad Shajjadul Karim</span>
+              </div>
+
+              <div class="profile-field-row" style="align-items: flex-start;">
+                <label class="profile-label" style="padding-top: 0.15rem;">Present Address</label>
+                <span class="profile-value-text">417,Shafi Islam Building ### Sonashah Majar Road ### Eidgah Borofkol ### ### Rampur ### Halishahar ### Chattogram</span>
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Mobile Number</label>
+                <input type="text" name="mobile_num" class="profile-input-green" value="01862126812">
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Alternative Number</label>
+                <input type="text" name="alt_num" class="profile-input-green" value="01862126812">
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Email</label>
+                <input type="email" name="email" class="profile-input-green" value="ridwanulk08@gmail.com">
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Gender</label>
+                <span class="profile-value-text">Male</span>
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Religion</label>
+                <span class="profile-value-text">Islam</span>
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Select Route</label>
+                <select name="select_route" class="profile-select">
+                  <option value="agrabad_lucky" selected>4 - Agrabad - Lucky plaza...</option>
+                  <option value="chawkbazar">1 - Chawkbazar</option>
+                  <option value="gachbaria">2 - Gachbaria</option>
+                </select>
+              </div>
             </div>
 
-            <div class="profile-field-row">
-              <span class="profile-field-label">Name</span>
-              <span class="profile-field-value-text">Mohammad Ridwanul Karim</span>
+            <!-- Column 2: Middle Fields -->
+            <div>
+              <div class="profile-field-row">
+                <label class="profile-label">Mother Name</label>
+                <span class="profile-value-text">Khaleda Begum</span>
+              </div>
+
+              <div class="profile-field-row" style="align-items: flex-start;">
+                <label class="profile-label" style="padding-top: 0.15rem;">Permanent Address</label>
+                <span class="profile-value-text">North Pomra ### Rangunia ### Bulbulipara ### ### Rangunia ### Rangunia ### Chattogram</span>
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Birth Certificate No.</label>
+                <input type="text" name="birth_cert_no" class="profile-input-green" value="20051591625111709">
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">National ID No.</label>
+                <input type="text" name="nid_no" class="profile-input-green" value="">
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Nationality</label>
+                <span class="profile-value-text">Bangladeshi</span>
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Department</label>
+                <span class="profile-value-text">Computer Science and Engineering</span>
+              </div>
+
+              <div class="profile-field-row">
+                <label class="profile-label">Select Station</label>
+                <select name="select_station" class="profile-select">
+                  <option value="agrabad" selected>Agrabad</option>
+                  <option value="chawkbazar">Chawkbazar</option>
+                  <option value="gachbaria">Gachbaria</option>
+                </select>
+              </div>
             </div>
 
-            <div class="profile-field-row">
-              <span class="profile-field-label">Date of Birth</span>
-              <span class="profile-field-value-text">2005-04-30</span>
+            <!-- Column 3: Student Portrait Image -->
+            <div class="profile-portrait-box">
+              <img src="assets/images/student.png" alt="Student Portrait" class="profile-portrait-img">
             </div>
 
-            <div class="profile-field-row">
-              <span class="profile-field-label">Father Name</span>
-              <span class="profile-field-value-text">Mohammad Shajjadul Karim</span>
-            </div>
-
-            <div class="profile-field-row" style="align-items: flex-start;">
-              <span class="profile-field-label" style="padding-top: 0.15rem;">Present Address</span>
-              <span class="profile-field-value-text">417,Shafi Islam Building ### Sonashah Majar Road ### Eidgah Borofkol ### ### Rampur ### Halishahar ### Chattogram</span>
-            </div>
-
-            <div class="profile-field-row">
-              <label for="mobile_num" class="profile-field-label">Mobile Number</label>
-              <input type="text" id="mobile_num" name="mobile_num" class="profile-field-input" value="01862126812">
-            </div>
-
-            <div class="profile-field-row">
-              <label for="alt_num" class="profile-field-label">Alternative Number</label>
-              <input type="text" id="alt_num" name="alt_num" class="profile-field-input" value="01862126812">
-            </div>
-
-            <div class="profile-field-row">
-              <label for="email_addr" class="profile-field-label">Email</label>
-              <input type="email" id="email_addr" name="email_addr" class="profile-field-input" value="ridwanulk08@gmail.com">
-            </div>
-
-            <div class="profile-field-row">
-              <span class="profile-field-label">Gender</span>
-              <span class="profile-field-value-text">Male</span>
-            </div>
-
-            <div class="profile-field-row">
-              <span class="profile-field-label">Religion</span>
-              <span class="profile-field-value-text">Islam</span>
-            </div>
-
-            <div class="profile-field-row">
-              <label for="select_route" class="profile-field-label">Select Route</label>
-              <select id="select_route" name="select_route" class="profile-field-input">
-                <option value="agrabad_lucky">4 - Agrabad - Lucky plaza...</option>
-                <option value="chawkbazar">1 - Chawkbazar</option>
-                <option value="gachbaria">2 - Gachbaria</option>
-              </select>
-            </div>
           </div>
 
-          <!-- Column 2: Center Mother, Address & ID Fields -->
-          <div>
-            <div class="profile-field-row">
-              <span class="profile-field-label">Mother Name</span>
-              <span class="profile-field-value-text">Khaleda Begum</span>
-            </div>
+          <button type="submit" class="btn-profile-submit">Submit</button>
 
-            <div class="profile-field-row" style="align-items: flex-start;">
-              <span class="profile-field-label" style="padding-top: 0.15rem;">Permanent Address</span>
-              <span class="profile-field-value-text">North Pomra ### Rangunia ### Bulbulipara ### ### Rangunia ### Rangunia ### Chattogram</span>
-            </div>
-
-            <div class="profile-field-row">
-              <label for="birth_cert_no" class="profile-field-label">Birth Certificate No.</label>
-              <input type="text" id="birth_cert_no" name="birth_cert_no" class="profile-field-input" value="20051591625111709">
-            </div>
-
-            <div class="profile-field-row">
-              <label for="nid_no" class="profile-field-label">National ID No.</label>
-              <input type="text" id="nid_no" name="nid_no" class="profile-field-input" value="">
-            </div>
-
-            <div class="profile-field-row">
-              <span class="profile-field-label">Nationality</span>
-              <span class="profile-field-value-text">Bangladeshi</span>
-            </div>
-
-            <div class="profile-field-row">
-              <span class="profile-field-label">Department</span>
-              <span class="profile-field-value-text">Computer Science and Engineering</span>
-            </div>
-
-            <div class="profile-field-row">
-              <label for="select_station" class="profile-field-label">Select Station</label>
-              <select id="select_station" name="select_station" class="profile-field-input">
-                <option value="agrabad">Agrabad</option>
-                <option value="chawkbazar">Chawkbazar</option>
-                <option value="gachbaria">Gachbaria</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Column 3: Right Student Portrait Photo -->
-          <div class="profile-portrait-wrapper">
-            <img src="assets/images/student.png" alt="Mohammad Ridwanul Karim Student Portrait" class="profile-portrait-img">
-          </div>
-
-        </div>
-
-        <!-- Submit Button Row -->
-        <div style="text-align: center; margin-bottom: 2rem;">
-          <button type="submit" style="background-color: #557297; color: #ffffff; border: none; padding: 0.45rem 1.5rem; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-sm); cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">Submit</button>
-        </div>
-      </form>
+        </form>
+      </div>
 
     </div>
   </main>
 
-  <!-- 4. IIUC Portal Footer -->
-  <footer class="iiuc-portal-footer">
-    <p>Copyright &copy; 2026 All rights reserved IIUC and Developed by</p>
+  <!-- 4. Main Footer -->
+  <footer class="portal-main-footer" style="text-align: center; padding: 1.5rem 0; color: #64748b; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem;">
+    <p>Copyright © 2026 All rights reserved IIUC | Developed by IT Division IIUC</p>
+    <p style="margin-top: 0.35rem; font-size: 0.75rem;">Page rendered in 0.0420 seconds. | <a href="#" style="color: #0284c7; text-decoration: none;">Legal</a> | <a href="#" style="color: #0284c7; text-decoration: none;">Privacy Policy</a></p>
   </footer>
-
-  <div class="footer-meta-bar">
-    <span>Page rendered in 0.0384 seconds.</span>
-    <span><a href="#">Legal</a> | <a href="#">Privacy Policy</a></span>
-  </div>
 
 </body>
 </html>
