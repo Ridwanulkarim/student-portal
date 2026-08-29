@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IIUC Registration Summary - International Islamic University Chittagong">
-  <title>Registration Summary | IIUC Student Portal</title>
+  <meta name="description" content="IIUC Students Result View - International Islamic University Chittagong">
+  <title>Students Result View | IIUC Student Portal</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .reg-summary-card-wrapper {
+    .results-card-wrapper {
       background: #ffffff;
       border-radius: 8px;
       border: 1px solid #cbd5e1;
@@ -16,14 +16,14 @@
       margin-bottom: 2rem;
     }
 
-    .reg-summary-cyan-header {
+    .results-cyan-header {
       background: #0284c7;
       padding: 0.65rem 1rem;
       display: flex;
       align-items: center;
     }
 
-    .reg-summary-tab-pill {
+    .results-tab-pill {
       background: #84cc16;
       color: #ffffff;
       font-weight: 700;
@@ -32,58 +32,90 @@
       border-radius: 4px;
     }
 
-    .reg-summary-table {
+    .results-content-container {
+      padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+      overflow-x: auto;
+    }
+
+    .results-meta-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 0.75rem;
+      padding: 0 0.25rem;
+    }
+
+    .results-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.8rem;
-    }
-
-    .reg-summary-table th {
-      background: #fde047;
-      color: #0f172a;
-      font-weight: 800;
-      text-align: center;
-      padding: 0.55rem 0.4rem;
-      border: 1px solid #cbd5e1;
-    }
-
-    .reg-summary-table td {
-      padding: 0.55rem 0.5rem;
-      border: 1px solid #e2e8f0;
-      text-align: center;
+      font-size: 0.775rem;
       color: #1e293b;
     }
 
-    .action-btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      justify-content: center;
-      align-items: center;
-      max-width: 380px;
-      margin: 0 auto;
-    }
-
-    .act-btn {
-      font-size: 0.7rem;
+    .results-table th {
+      background-color: #fef08a; /* Yellowish header matching screenshot */
+      color: #1e293b;
       font-weight: 700;
-      color: #ffffff;
-      border: none;
-      padding: 0.25rem 0.55rem;
-      border-radius: 4px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      line-height: 1.2;
+      text-align: center;
+      padding: 0.5rem 0.4rem;
+      border: 1px solid #e2e8f0;
+      white-space: nowrap;
     }
 
-    .btn-print-reg   { background-color: #00c0ef; }
-    .btn-pay-advising{ background-color: #00a65a; }
-    .btn-mid-admit   { background-color: #f39c12; }
-    .btn-final-admit { background-color: #dd4b39; }
-    .btn-grade-sheet { background-color: #0073b7; }
-    .btn-mid-routine { background-color: #00c0ef; }
-    .btn-final-routine{ background-color: #00a65a; }
+    .results-table td {
+      padding: 0.45rem 0.5rem;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+
+    .results-table td.text-left {
+      text-align: left;
+    }
+
+    .results-table tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    .results-table tr:nth-child(odd) td {
+      background-color: #ffffff;
+    }
+
+    .results-summary-row td {
+      background-color: #ffffff !important;
+      font-weight: 700;
+      padding: 0.45rem 0.75rem;
+    }
+
+    .results-footer-row td {
+      background-color: #fef08a !important; /* Yellowish footer matching screenshot */
+      font-weight: 700;
+      font-size: 0.775rem;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    .grade-badge-aplus {
+      color: #15803d;
+      font-weight: 800;
+    }
+
+    .grade-badge-a {
+      color: #0369a1;
+      font-weight: 800;
+    }
+
+    .grade-badge-bplus {
+      color: #b45309;
+      font-weight: 800;
+    }
+
+    .grade-badge-b {
+      color: #6b21a8;
+      font-weight: 800;
+    }
   </style>
 </head>
 <body class="dashboard-body">
@@ -136,6 +168,8 @@
           <a href="ter.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> TER Submission</a>
         </div>
       </div>
+
+      <!-- Application Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="Application Menu">
           <span>💻</span> Application ▾
@@ -155,6 +189,8 @@
           <a href="certificateapplication.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Application for Certificate/Testimonial</a>
         </div>
       </div>
+
+      <!-- IQAC Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="utility-dropdown-trigger" aria-haspopup="true" aria-label="IQAC Menu">
           <span>💬</span> IQAC ▾
@@ -165,10 +201,11 @@
           <a href="exitsurvey.html" class="dropdown-menu-item" role="menuitem"><span class="dropdown-item-icon">➲</span> Exit Survey</a>
         </div>
       </div>
+
     </div>
 
     <div class="top-utility-right">
-      <!-- User Profile Dropdown -->
+      <!-- User Profile Dropdown Container -->
       <div class="utility-dropdown-container">
         <button type="button" class="profile-pill-trigger" aria-haspopup="true" aria-label="User Profile Menu">
           <img src="assets/images/student.png" alt="Mohammad Ridwanul Karim" class="profile-pill-avatar">
@@ -198,7 +235,7 @@
     </a>
 
     <div class="header-search-widget">
-      <span class="current-date-text">August 26, 2026 Wednesday</span>
+      <span class="current-date-text">August 29, 2026 Saturday</span>
       <div class="search-input-group">
         <input type="text" class="search-input" placeholder="Search portal options..." aria-label="Search portal">
         <button type="button" class="search-btn" style="background: linear-gradient(to bottom, #f05050, #e74c3c); border-color: #d9534f;">Search & Find</button>
@@ -206,137 +243,203 @@
     </div>
   </header>
 
-  <!-- 3. Registration Summary Main Content Page -->
+  <!-- 3. Result View Main Content Container -->
   <main class="prereg-container" style="max-width: 1250px; margin: 1rem auto; padding: 0 1rem;">
-    <div class="reg-summary-card-wrapper">
+    <div class="results-card-wrapper">
       
       <!-- Cyan Banner Header with Green Tab Pill -->
-      <div class="reg-summary-cyan-header">
-        <span class="reg-summary-tab-pill">Registration Summary</span>
+      <div class="results-cyan-header">
+        <span class="results-tab-pill">Students Result View</span>
       </div>
 
-      <!-- Registration Summary Table -->
-      <div style="overflow-x: auto;">
-        <table class="reg-summary-table" summary="IIUC Student Registration Summary Table">
+      <!-- Result Table Area -->
+      <div class="results-content-container">
+        
+        <!-- Top Semester Header Row -->
+        <div class="results-meta-top">
+          <span>Semester: Spring-2026</span>
+          <span>Semester Enrolled: Fourth Semester</span>
+        </div>
+
+        <!-- Grade Sheet Table -->
+        <table class="results-table">
           <thead>
             <tr>
-              <th style="width: 45px;">SL</th>
-              <th style="width: 110px;">Semester</th>
-              <th style="width: 130px;">Enrolled</th>
-              <th style="width: 80px;">Total CH</th>
-              <th style="width: 60px;">URC</th>
-              <th style="width: 60px;">DC</th>
-              <th style="width: 90px;">Cost</th>
-              <th style="width: 90px;">Payment</th>
-              <th style="width: 75px;">GPA</th>
-              <th style="width: 75px;">CGPA</th>
-              <th style="min-width: 360px;">Action</th>
+              <th style="width: 40px;">SL</th>
+              <th style="width: 80px;">ISCED Code</th>
+              <th style="width: 110px;">Course Code</th>
+              <th class="text-left">Course Name</th>
+              <th style="width: 90px;">Credit Hours</th>
+              <th style="width: 70px;">Grade</th>
+              <th style="width: 70px;">Point</th>
+              <th style="width: 90px;">Grade Point</th>
+              <th style="width: 100px;">Comments</th>
             </tr>
           </thead>
           <tbody>
-            
-            <!-- ROW 1: Autumn-2024 -->
             <tr>
               <td>1</td>
-              <td>Autumn-2024</td>
-              <td>First Semester</td>
-              <td>18</td>
-              <td>0</td>
-              <td>0</td>
-              <td>103750</td>
-              <td>105466</td>
-              <td>0.000</td>
-              <td><strong>3.761</strong></td>
-              <td>
-                <div class="action-btn-group">
-                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
-                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
-                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
-                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
-                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
-                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
-                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
-                </div>
-              </td>
+              <td>0411</td>
+              <td>ACC-2401</td>
+              <td class="text-left">Financial and Managerial Accounting</td>
+              <td>2.00</td>
+              <td><span class="grade-badge-aplus">A+</span></td>
+              <td>4.00</td>
+              <td>8.00</td>
+              <td></td>
             </tr>
-
-            <!-- ROW 2: Spring-2025 -->
             <tr>
               <td>2</td>
-              <td>Spring-2025</td>
-              <td>Second Semester</td>
-              <td>23.5</td>
-              <td>0</td>
-              <td>0</td>
-              <td>83745</td>
-              <td>73210</td>
-              <td><strong>3.76</strong></td>
-              <td><strong>3.761</strong></td>
-              <td>
-                <div class="action-btn-group">
-                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
-                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
-                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
-                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
-                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
-                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
-                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
-                </div>
-              </td>
+              <td>0613</td>
+              <td>CSE-2421</td>
+              <td class="text-left">Computer Algorithms</td>
+              <td>3.00</td>
+              <td><span class="grade-badge-a">A</span></td>
+              <td>3.75</td>
+              <td>11.25</td>
+              <td></td>
             </tr>
-
-            <!-- ROW 3: Autumn-2025 -->
             <tr>
               <td>3</td>
-              <td>Autumn-2025</td>
-              <td>Third Semester</td>
-              <td>27.5</td>
-              <td>0</td>
-              <td>0</td>
-              <td>94505</td>
-              <td>94510</td>
-              <td><strong>3.14</strong></td>
-              <td><strong>3.761</strong></td>
-              <td>
-                <div class="action-btn-group">
-                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
-                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
-                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
-                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
-                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
-                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
-                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
-                </div>
-              </td>
+              <td>0613</td>
+              <td>CSE-2422</td>
+              <td class="text-left">Computer Algorithms Lab</td>
+              <td>1.00</td>
+              <td><span class="grade-badge-aplus">A+</span></td>
+              <td>4.00</td>
+              <td>4.00</td>
+              <td></td>
             </tr>
-
-            <!-- ROW 4: Spring-2026 -->
             <tr>
               <td>4</td>
-              <td>Spring-2026</td>
-              <td>Fourth Semester</td>
-              <td>26.5</td>
-              <td>0</td>
-              <td>0</td>
-              <td>92400</td>
-              <td>92400</td>
-              <td><strong>3.912</strong></td>
-              <td><strong>3.761</strong></td>
-              <td>
-                <div class="action-btn-group">
-                  <a href="printcourseregistration.html" class="act-btn btn-print-reg">Print Registration</a>
-                  <a href="paymenthistory.html" class="act-btn btn-pay-advising">Payment Advising</a>
-                  <a href="#" class="act-btn btn-mid-admit">Mid Admit Card</a>
-                  <a href="#" class="act-btn btn-final-admit">Final Admit Card</a>
-                  <a href="results.html" class="act-btn btn-grade-sheet">Grade Sheet</a>
-                  <a href="schedule.html" class="act-btn btn-mid-routine">Mid Exam Routine</a>
-                  <a href="schedule.html" class="act-btn btn-final-routine">Final Exam Routine</a>
-                </div>
-              </td>
+              <td>0612</td>
+              <td>CSE-2423</td>
+              <td class="text-left">Database Management Systems</td>
+              <td>3.00</td>
+              <td><span class="grade-badge-aplus">A+</span></td>
+              <td>4.00</td>
+              <td>12.00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>0612</td>
+              <td>CSE-2424</td>
+              <td class="text-left">Database Management Systems Lab</td>
+              <td>1.50</td>
+              <td><span class="grade-badge-aplus">A+</span></td>
+              <td>4.00</td>
+              <td>6.00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>0612</td>
+              <td>CSE-2427</td>
+              <td class="text-left">Theory of Computation</td>
+              <td>3.00</td>
+              <td><span class="grade-badge-bplus">B+</span></td>
+              <td>3.25</td>
+              <td>9.75</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>0613</td>
+              <td>CSE-2430</td>
+              <td class="text-left">Competitive Programming II</td>
+              <td>1.00</td>
+              <td><span class="grade-badge-a">A</span></td>
+              <td>3.75</td>
+              <td>3.75</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>0713</td>
+              <td>EEE-1121</td>
+              <td class="text-left">Basic Electrical Engineering</td>
+              <td>3.00</td>
+              <td><span class="grade-badge-aplus">A+</span></td>
+              <td>4.00</td>
+              <td>12.00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>0232</td>
+              <td>GEBL-2401</td>
+              <td class="text-left">Bengali Language and Literature</td>
+              <td>2.00</td>
+              <td><span class="grade-badge-aplus">A+</span></td>
+              <td>4.00</td>
+              <td>8.00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>0541</td>
+              <td>MATH-1107</td>
+              <td class="text-left">Mathematics I (Differential and Integral Calculus)</td>
+              <td>3.00</td>
+              <td><span class="grade-badge-b">B</span></td>
+              <td>3.00</td>
+              <td>9.00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>0541</td>
+              <td>MATH-2407</td>
+              <td class="text-left">Mathematics IV (Complex Variable, Fourier Analysis and Z-transform)</td>
+              <td>3.00</td>
+              <td><span class="grade-badge-aplus">A+</span></td>
+              <td>4.00</td>
+              <td>12.00</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>0715</td>
+              <td>ME-2412</td>
+              <td class="text-left">Engineering Drawing Lab</td>
+              <td>1.00</td>
+              <td><span class="grade-badge-aplus">A+</span></td>
+              <td>4.00</td>
+              <td>4.00</td>
+              <td></td>
             </tr>
 
+            <!-- Summary Row 1 -->
+            <tr class="results-summary-row">
+              <td colspan="4" style="text-align: right;">Total Credit Hours</td>
+              <td>26.5</td>
+              <td colspan="2" style="text-align: right;">GPA</td>
+              <td>3.912</td>
+              <td></td>
+            </tr>
+
+            <!-- Summary Row 2 -->
+            <tr class="results-summary-row">
+              <td colspan="4" style="text-align: right;">Cumulative Credit Hours</td>
+              <td>78.5</td>
+              <td colspan="2" style="text-align: right;">CGPA (Attempted Credits)</td>
+              <td>3.761</td>
+              <td></td>
+            </tr>
           </tbody>
+          <tfoot>
+            <!-- Footer Summary Bar -->
+            <tr class="results-footer-row">
+              <td colspan="2" style="text-align: left;">Total Required Credit: 163</td>
+              <td colspan="2" style="text-align: left;">Total Completed Credit: 74.5</td>
+              <td colspan="2">CGP: 239.375</td>
+              <td colspan="2" style="text-align: left;">Balance Credit: 88.5</td>
+              <td style="text-align: right;">CGPA (Earned Credits): 3.761</td>
+            </tr>
+          </tfoot>
         </table>
+
       </div>
 
     </div>
@@ -345,7 +448,7 @@
   <!-- 4. Main Footer -->
   <footer class="portal-main-footer" style="text-align: center; padding: 1.5rem 0; color: #64748b; font-size: 0.8rem; border-top: 1px solid #e2e8f0; margin-top: 2rem;">
     <p>Copyright © 2026 All rights reserved IIUC | Developed by IT Division IIUC</p>
-    <p style="margin-top: 0.35rem; font-size: 0.75rem;">Page rendered in 0.0730 seconds. | <a href="#" style="color: #0284c7; text-decoration: none;">Legal</a> | <a href="#" style="color: #0284c7; text-decoration: none;">Privacy Policy</a></p>
+    <p style="margin-top: 0.35rem; font-size: 0.75rem;">Page rendered in 0.0420 seconds. | <a href="#" style="color: #0284c7; text-decoration: none;">Legal</a> | <a href="#" style="color: #0284c7; text-decoration: none;">Privacy Policy</a></p>
   </footer>
 
 </body>
