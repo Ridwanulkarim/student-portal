@@ -34,7 +34,28 @@
 
     .results-content-container {
       padding: 1.5rem 1.5rem 2.5rem 1.5rem;
-      overflow-x: auto;
+    }
+
+    .results-student-info-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 1rem 1.25rem;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 1.5rem;
+      font-size: 0.825rem;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    .info-left-group, .info-right-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-right-group {
+      text-align: right;
     }
 
     .results-meta-top {
@@ -46,6 +67,10 @@
       color: #1e293b;
       margin-bottom: 0.75rem;
       padding: 0 0.25rem;
+    }
+
+    .results-table-wrapper {
+      overflow-x: auto;
     }
 
     .results-table {
@@ -61,13 +86,13 @@
       font-weight: 700;
       text-align: center;
       padding: 0.5rem 0.4rem;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #cbd5e1;
       white-space: nowrap;
     }
 
     .results-table td {
       padding: 0.45rem 0.5rem;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #cbd5e1;
       text-align: center;
     }
 
@@ -94,7 +119,7 @@
       font-weight: 700;
       font-size: 0.775rem;
       padding: 0.55rem 0.75rem;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #cbd5e1;
     }
 
     .grade-badge-aplus {
@@ -249,12 +274,26 @@
       
       <!-- Cyan Banner Header with Green Tab Pill -->
       <div class="results-cyan-header">
-        <span class="results-tab-pill">Students Result View</span>
+        <span class="results-tab-pill">Result View</span>
       </div>
 
-      <!-- Result Table Area -->
+      <!-- Result View Content Area -->
       <div class="results-content-container">
         
+        <!-- Student Information Header Box (media_1787970950795.png) -->
+        <div class="results-student-info-box">
+          <div class="info-left-group">
+            <div><strong>Matric No:</strong> C243237</div>
+            <div><strong>Registration No:</strong> 0062420005101237</div>
+            <div><strong>Name:</strong> Mohammad Ridwanul Karim</div>
+          </div>
+          <div class="info-right-group">
+            <div><strong>Department:</strong> Computer Science and Engineering</div>
+            <div><strong>Admission:</strong> Autumn-2024</div>
+            <div><strong>Programme:</strong> Bachelor Program</div>
+          </div>
+        </div>
+
         <!-- Top Semester Header Row -->
         <div class="results-meta-top">
           <span>Semester: Spring-2026</span>
@@ -262,183 +301,185 @@
         </div>
 
         <!-- Grade Sheet Table -->
-        <table class="results-table">
-          <thead>
-            <tr>
-              <th style="width: 40px;">SL</th>
-              <th style="width: 80px;">ISCED Code</th>
-              <th style="width: 110px;">Course Code</th>
-              <th class="text-left">Course Name</th>
-              <th style="width: 90px;">Credit Hours</th>
-              <th style="width: 70px;">Grade</th>
-              <th style="width: 70px;">Point</th>
-              <th style="width: 90px;">Grade Point</th>
-              <th style="width: 100px;">Comments</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>0411</td>
-              <td>ACC-2401</td>
-              <td class="text-left">Financial and Managerial Accounting</td>
-              <td>2.00</td>
-              <td><span class="grade-badge-aplus">A+</span></td>
-              <td>4.00</td>
-              <td>8.00</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>0613</td>
-              <td>CSE-2421</td>
-              <td class="text-left">Computer Algorithms</td>
-              <td>3.00</td>
-              <td><span class="grade-badge-a">A</span></td>
-              <td>3.75</td>
-              <td>11.25</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>0613</td>
-              <td>CSE-2422</td>
-              <td class="text-left">Computer Algorithms Lab</td>
-              <td>1.00</td>
-              <td><span class="grade-badge-aplus">A+</span></td>
-              <td>4.00</td>
-              <td>4.00</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>0612</td>
-              <td>CSE-2423</td>
-              <td class="text-left">Database Management Systems</td>
-              <td>3.00</td>
-              <td><span class="grade-badge-aplus">A+</span></td>
-              <td>4.00</td>
-              <td>12.00</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>0612</td>
-              <td>CSE-2424</td>
-              <td class="text-left">Database Management Systems Lab</td>
-              <td>1.50</td>
-              <td><span class="grade-badge-aplus">A+</span></td>
-              <td>4.00</td>
-              <td>6.00</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>0612</td>
-              <td>CSE-2427</td>
-              <td class="text-left">Theory of Computation</td>
-              <td>3.00</td>
-              <td><span class="grade-badge-bplus">B+</span></td>
-              <td>3.25</td>
-              <td>9.75</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>0613</td>
-              <td>CSE-2430</td>
-              <td class="text-left">Competitive Programming II</td>
-              <td>1.00</td>
-              <td><span class="grade-badge-a">A</span></td>
-              <td>3.75</td>
-              <td>3.75</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>0713</td>
-              <td>EEE-1121</td>
-              <td class="text-left">Basic Electrical Engineering</td>
-              <td>3.00</td>
-              <td><span class="grade-badge-aplus">A+</span></td>
-              <td>4.00</td>
-              <td>12.00</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>0232</td>
-              <td>GEBL-2401</td>
-              <td class="text-left">Bengali Language and Literature</td>
-              <td>2.00</td>
-              <td><span class="grade-badge-aplus">A+</span></td>
-              <td>4.00</td>
-              <td>8.00</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>0541</td>
-              <td>MATH-1107</td>
-              <td class="text-left">Mathematics I (Differential and Integral Calculus)</td>
-              <td>3.00</td>
-              <td><span class="grade-badge-b">B</span></td>
-              <td>3.00</td>
-              <td>9.00</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>11</td>
-              <td>0541</td>
-              <td>MATH-2407</td>
-              <td class="text-left">Mathematics IV (Complex Variable, Fourier Analysis and Z-transform)</td>
-              <td>3.00</td>
-              <td><span class="grade-badge-aplus">A+</span></td>
-              <td>4.00</td>
-              <td>12.00</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>12</td>
-              <td>0715</td>
-              <td>ME-2412</td>
-              <td class="text-left">Engineering Drawing Lab</td>
-              <td>1.00</td>
-              <td><span class="grade-badge-aplus">A+</span></td>
-              <td>4.00</td>
-              <td>4.00</td>
-              <td></td>
-            </tr>
+        <div class="results-table-wrapper">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th style="width: 40px;">SL</th>
+                <th style="width: 80px;">ISCED Code</th>
+                <th style="width: 110px;">Course Code</th>
+                <th class="text-left">Course Name</th>
+                <th style="width: 90px;">Credit Hours</th>
+                <th style="width: 70px;">Grade</th>
+                <th style="width: 70px;">Point</th>
+                <th style="width: 90px;">Grade Point</th>
+                <th style="width: 100px;">Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>0411</td>
+                <td>ACC-2401</td>
+                <td class="text-left">Financial and Managerial Accounting</td>
+                <td>2.00</td>
+                <td><span class="grade-badge-aplus">A+</span></td>
+                <td>4.00</td>
+                <td>8.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>0613</td>
+                <td>CSE-2421</td>
+                <td class="text-left">Computer Algorithms</td>
+                <td>3.00</td>
+                <td><span class="grade-badge-a">A</span></td>
+                <td>3.75</td>
+                <td>11.25</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>0613</td>
+                <td>CSE-2422</td>
+                <td class="text-left">Computer Algorithms Lab</td>
+                <td>1.00</td>
+                <td><span class="grade-badge-aplus">A+</span></td>
+                <td>4.00</td>
+                <td>4.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>0612</td>
+                <td>CSE-2423</td>
+                <td class="text-left">Database Management Systems</td>
+                <td>3.00</td>
+                <td><span class="grade-badge-aplus">A+</span></td>
+                <td>4.00</td>
+                <td>12.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>0612</td>
+                <td>CSE-2424</td>
+                <td class="text-left">Database Management Systems Lab</td>
+                <td>1.50</td>
+                <td><span class="grade-badge-aplus">A+</span></td>
+                <td>4.00</td>
+                <td>6.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>0612</td>
+                <td>CSE-2427</td>
+                <td class="text-left">Theory of Computation</td>
+                <td>3.00</td>
+                <td><span class="grade-badge-bplus">B+</span></td>
+                <td>3.25</td>
+                <td>9.75</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>0613</td>
+                <td>CSE-2430</td>
+                <td class="text-left">Competitive Programming II</td>
+                <td>1.00</td>
+                <td><span class="grade-badge-a">A</span></td>
+                <td>3.75</td>
+                <td>3.75</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>0713</td>
+                <td>EEE-1121</td>
+                <td class="text-left">Basic Electrical Engineering</td>
+                <td>3.00</td>
+                <td><span class="grade-badge-aplus">A+</span></td>
+                <td>4.00</td>
+                <td>12.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>0232</td>
+                <td>GEBL-2401</td>
+                <td class="text-left">Bengali Language and Literature</td>
+                <td>2.00</td>
+                <td><span class="grade-badge-aplus">A+</span></td>
+                <td>4.00</td>
+                <td>8.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>0541</td>
+                <td>MATH-1107</td>
+                <td class="text-left">Mathematics I (Differential and Integral Calculus)</td>
+                <td>3.00</td>
+                <td><span class="grade-badge-b">B</span></td>
+                <td>3.00</td>
+                <td>9.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>0541</td>
+                <td>MATH-2407</td>
+                <td class="text-left">Mathematics IV (Complex Variable, Fourier Analysis and Z-transform)</td>
+                <td>3.00</td>
+                <td><span class="grade-badge-aplus">A+</span></td>
+                <td>4.00</td>
+                <td>12.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>0715</td>
+                <td>ME-2412</td>
+                <td class="text-left">Engineering Drawing Lab</td>
+                <td>1.00</td>
+                <td><span class="grade-badge-aplus">A+</span></td>
+                <td>4.00</td>
+                <td>4.00</td>
+                <td></td>
+              </tr>
 
-            <!-- Summary Row 1 -->
-            <tr class="results-summary-row">
-              <td colspan="4" style="text-align: right;">Total Credit Hours</td>
-              <td>26.5</td>
-              <td colspan="2" style="text-align: right;">GPA</td>
-              <td>3.912</td>
-              <td></td>
-            </tr>
+              <!-- Summary Row 1 -->
+              <tr class="results-summary-row">
+                <td colspan="4" style="text-align: right;">Total Credit Hours</td>
+                <td>26.5</td>
+                <td colspan="2" style="text-align: right;">GPA</td>
+                <td>3.912</td>
+                <td></td>
+              </tr>
 
-            <!-- Summary Row 2 -->
-            <tr class="results-summary-row">
-              <td colspan="4" style="text-align: right;">Cumulative Credit Hours</td>
-              <td>78.5</td>
-              <td colspan="2" style="text-align: right;">CGPA (Attempted Credits)</td>
-              <td>3.761</td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <!-- Footer Summary Bar -->
-            <tr class="results-footer-row">
-              <td colspan="2" style="text-align: left;">Total Required Credit: 163</td>
-              <td colspan="2" style="text-align: left;">Total Completed Credit: 74.5</td>
-              <td colspan="2">CGP: 239.375</td>
-              <td colspan="2" style="text-align: left;">Balance Credit: 88.5</td>
-              <td style="text-align: right;">CGPA (Earned Credits): 3.761</td>
-            </tr>
-          </tfoot>
-        </table>
+              <!-- Summary Row 2 -->
+              <tr class="results-summary-row">
+                <td colspan="4" style="text-align: right;">Cumulative Credit Hours</td>
+                <td>78.5</td>
+                <td colspan="2" style="text-align: right;">CGPA (Attempted Credits)</td>
+                <td>3.761</td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <!-- Footer Summary Bar -->
+              <tr class="results-footer-row">
+                <td colspan="2" style="text-align: left;">Total Required Credit: 163</td>
+                <td colspan="2" style="text-align: left;">Total Completed Credit: 74.5</td>
+                <td colspan="2">CGP: 239.375</td>
+                <td colspan="2" style="text-align: left;">Balance Credit: 88.5</td>
+                <td style="text-align: right;">CGPA (Earned Credits): 3.761</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
 
       </div>
 
